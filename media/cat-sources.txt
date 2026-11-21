@@ -1,0 +1,11 @@
+offers https://cdn.pixabay.com/photo/2016/11/17/04/22/burger-1830696_1280.jpg
+orient https://cdn.pixabay.com/photo/2022/03/11/10/06/wrap-7061741_1280.jpg
+west https://cdn.pixabay.com/photo/2014/09/03/15/05/sandwich-434658_1280.jpg
+fried https://cdn.pixabay.com/photo/2014/01/24/04/05/fried-chicken-250863_1280.jpg
+meals https://cdn.pixabay.com/photo/2017/02/15/12/22/meal-2068522_1280.jpg
+tagine https://cdn.pixabay.com/photo/2018/04/12/19/58/fish-casserole-3314639_1280.jpg
+fatta https://cdn.pixabay.com/photo/2017/09/04/22/41/ramadan-2715805_1280.jpg
+trays https://cdn.pixabay.com/photo/2022/05/05/06/05/mix-grill-platter-7175372_1280.jpg
+extras https://cdn.pixabay.com/photo/2016/04/25/01/58/french-fries-1351062_1280.jpg
+soup https://cdn.pixabay.com/photo/2016/05/08/15/04/turkish-food-1379238_1280.jpg
+drinks https://cdn.pixabay.com/photo/2020/05/11/15/06/food-5158707_1280.jpg
