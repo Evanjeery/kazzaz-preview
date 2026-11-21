@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Builds the static site into _site/: copies index.html, decodes small assets,
-# downloads the 10 Pixabay hero clips (Pixabay Content License) and compresses them.
+# downloads the 23 Pixabay and Pexels hero clips (Pixabay Content License) and compresses them.
 set -euo pipefail
 OUT="${1:-_site}"
 mkdir -p "$OUT/assets" "$OUT/media"
@@ -18,7 +18,7 @@ while read -r id url; do
 done < media/sources.txt
 ls -l "$OUT/media"; du -ch "$OUT"/media/*.mp4 | tail -1
 
-# Background music: 16 Pixabay tracks (non-AI, checked), trimmed to 150 s (Pixabay Content License), loudness-normalised, 64 kbps mp3
+# Background music: 22 Pixabay tracks (non-AI, checked), trimmed to 150 s (Pixabay Content License), loudness-normalised, 64 kbps mp3
 while read -r id url; do
   [ -z "$id" ] && continue
   curl -fL --retry 3 -e https://pixabay.com/ -A "Mozilla/5.0" -o "$tmp/m-$id.mp3" "$url"
