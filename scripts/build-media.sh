@@ -25,3 +25,11 @@ while read -r id url; do
   ffmpeg -nostdin -v error -y -i "$tmp/m-$id.mp3" -af loudnorm=I=-20:TP=-2:LRA=7 -ar 44100 -c:a libmp3lame -b:a 64k "$OUT/media/music-$id.mp3"
 done < media/music-sources.txt
 du -ch "$OUT"/media/music-*.mp3 | tail -1
+
+# Category photos: 11 real Pixabay photos (Pixabay Content License), cropped to 4:3 and compressed to webp
+while read -r id url; do
+  [ -z "$id" ] && continue
+  curl -fL --retry 3 -e https://pixabay.com/ -A "Mozilla/5.0" -o "$tmp/c-$id.jpg" "$url"
+  ffmpeg -nostdin -v error -y -i "$tmp/c-$id.jpg" -vf "scale=640:480:force_original_aspect_ratio=increase,crop=640:480" -c:v libwebp -q:v 68 "$OUT/media/cat-$id.webp"
+done < media/cat-sources.txt
+du -ch "$OUT"/media/cat-*.webp | tail -1
