@@ -36,3 +36,4 @@ du -ch "$OUT"/media/cat-*.webp | tail -1
 
 # Own photos supplied by the owner (stored as base64 text, decoded here); these override the stock photos
 for f in assets/cat-*-own.b64; do [ -e "$f" ] || continue; n=$(basename "$f" -own.b64); base64 -d "$f" > "$OUT/media/$n.webp"; done
+for f in assets/gal-*.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/$n.webp"; done
