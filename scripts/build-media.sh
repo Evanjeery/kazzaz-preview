@@ -28,6 +28,8 @@ while read -r id url; do
   curl -fL --retry 3 -e https://pixabay.com/ -A "Mozilla/5.0" -o "$tmp/m-$id.mp3" "$url"
   ffmpeg -nostdin -v error -y -i "$tmp/m-$id.mp3" -af loudnorm=I=-20:TP=-2:LRA=7 -t 150 -ar 44100 -c:a libmp3lame -b:a 64k "$OUT/media/music-$id.mp3"
 done < media/music-sources.txt
+# Track 17: audio supplied by the owner (stored as base64 text), exact segment, not trimmed
+base64 -d assets/music-clip.b64 > "$OUT/media/music-clip.mp3"
 du -ch "$OUT"/media/music-*.mp3 | tail -1
 
 # Category photos: 11 real Pixabay photos (Pixabay Content License), cropped to 4:3 and compressed to webp
