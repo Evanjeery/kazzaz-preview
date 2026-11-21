@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مطاعم القزاز | Al-Qazzaz</title>
+<meta name="description" content="مطاعم القزاز: فول وطعمية وشاورما وطواجن ومشويات في قلب القاهرة. الخط الساخن 16903.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16120F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مطاعم القزاز | Al-Qazzaz">
+<meta property="og:description" content="طعم القاهرة بتتبيلة القزاز">
+<meta property="og:image" content="assets/logo.webp">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16120f;--ink2:#211b16;--paper:#f7f0e4;--paper2:#efe5d3;--card:#fffaf0;--txt:#2a231b;--mut:#6f6250;--gold:#c9962c;--gold2:#e6b94d;--orange:#e8702a;--price:#c5530f;--line:#e0d2b6;
+--star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C9962C' stroke-width='1'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3Cpath d='M0 0L20 20M80 0L60 20M0 80L20 60M80 80L60 60'/%3E%3C/g%3E%3C/svg%3E");
+--sans:'IBM Plex Sans Arabic','Noto Sans SC',system-ui,sans-serif;--serif:Amiri,'Noto Sans SC',serif;--kufi:'Reem Kufi','IBM Plex Sans Arabic','Noto Sans SC',sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);background:var(--paper);color:var(--txt);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;line-height:1.3}
+[lang=zh] h1,[lang=zh] h2,[lang=zh] h3{font-family:'Noto Sans SC',sans-serif}
+.ic{width:1.25em;height:1.25em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.skip{position:absolute;inset-inline-start:8px;top:-60px;background:var(--gold2);color:#1b1205;padding:8px 14px;border-radius:6px;z-index:100;font-weight:700}
+.skip:focus{top:8px}
+/* nav */
+nav{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:26px;padding:calc(env(safe-area-inset-top,0px) + 10px) 5vw 10px;background:rgba(22,18,15,.94);backdrop-filter:blur(10px);color:#f3e6c8;border-bottom:1px solid rgba(230,185,77,.25)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.5rem var(--serif);margin-inline-end:auto;color:#f7efe0}
+[lang=zh] .brand{font-family:'Noto Sans SC',sans-serif}
+.brand img{width:40px;height:40px;border-radius:50%}
+nav .lk{color:#e9dcc0;text-decoration:none;font-weight:500;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav .lk:hover{color:var(--gold2);border-color:var(--orange)}
+.lang{display:flex;gap:2px;background:#2b241d;border-radius:99px;padding:3px}
+.lang button{font:600 .78rem var(--sans);padding:5px 11px;border-radius:99px;color:#c8b99b;background:none;border:0;cursor:pointer;min-height:30px}
+.lang button[aria-pressed=true]{background:var(--gold2);color:#1b1205}
+/* hero */
+.hero{position:relative;background:var(--ink);color:#f7efe0;overflow:hidden;isolation:isolate}
+.hero .poster,.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+.hero video{opacity:0;transition:opacity 1.2s ease}
+.hero video.on{opacity:1}
+.hero .veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(22,18,15,.8),rgba(22,18,15,.35) 60%,rgba(22,18,15,.6)),linear-gradient(rgba(22,18,15,.15),rgba(22,18,15,.7))}
+[dir=rtl] .hero .veil{background:linear-gradient(270deg,rgba(22,18,15,.8),rgba(22,18,15,.35) 60%,rgba(22,18,15,.6)),linear-gradient(rgba(22,18,15,.15),rgba(22,18,15,.7))}
+.hero .pat{position:absolute;inset:0;z-index:-1;background-image:var(--star);background-size:80px 80px;opacity:.07}
+.hero-in{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;max-width:1200px;margin:auto;padding:84px 5vw 76px;min-height:min(86vh,720px)}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--gold2);font:500 .9rem var(--kufi);letter-spacing:.06em;border:1px solid rgba(230,185,77,.45);padding:4px 14px;border-radius:99px;direction:ltr}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+h1{font-size:clamp(2.4rem,6vw,4.6rem);margin:18px 0 14px;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+[lang=zh] h1{font-size:clamp(2.1rem,5vw,3.8rem)}
+[dir=ltr] h1{font-size:clamp(2.2rem,5vw,4rem)}
+.hero p{font-size:1.15rem;color:#e6dac1;max-width:36ch;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:4px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s;border:1.5px solid transparent;min-height:48px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.b1{background:linear-gradient(var(--gold2),var(--gold));color:#1b1205}
+.b2{border-color:var(--orange);color:#fff;background:rgba(22,18,15,.35)}
+.b2 .ic{color:var(--orange)}
+.medal{display:grid;place-items:center}
+.arch{position:relative;width:min(360px,70vw);aspect-ratio:.82;border-radius:999px 999px 24px 24px;padding:14px;border:1.5px solid var(--gold);display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,rgba(201,150,44,.25),rgba(22,18,15,.45) 75%)}
+.arch::before{content:"";position:absolute;inset:8px;border:1px solid rgba(230,185,77,.45);border-radius:999px 999px 18px 18px}
+.arch img{width:84%;height:auto;filter:drop-shadow(0 12px 30px rgba(201,150,44,.4))}
+.strip{background:var(--gold2);color:#1b1205;border-block:3px double #1b1205}
+.strip div{max-width:1200px;margin:auto;display:flex;gap:12px 40px;justify-content:center;padding:12px 5vw;font-weight:700;flex-wrap:wrap}
+.strip span{display:flex;gap:8px;align-items:center}
+.strip a{text-decoration:none}
+/* sections */
+section{padding:76px 5vw}
+.wrap{max-width:1240px;margin:auto}
+.sec-h{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:34px;gap:6px}
+.sec-h h2{font-size:clamp(2.1rem,4.4vw,3.2rem)}
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);width:min(260px,70%)}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:var(--gold)}
+.orn svg{width:20px;height:20px;fill:var(--orange);stroke:none}
+/* category tiles */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:0;padding:0;list-style:none}
+.cat{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;min-height:200px;border-radius:130px 130px 16px 16px;padding:26px 16px 22px;text-align:center;color:#f7efe0;background:var(--ink2);border:1px solid rgba(230,185,77,.3);text-decoration:none;transition:transform .2s,border-color .2s,box-shadow .2s;cursor:pointer;font:inherit;width:100%}
+.cat:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 14px 30px rgba(22,18,15,.25)}
+.cat .ci{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;color:var(--gold2);border:1px solid rgba(230,185,77,.45);background:rgba(230,185,77,.08);margin-bottom:auto}
+.cat .ci .ic{width:34px;height:34px;stroke-width:1.4}
+.cat h3{font-size:1.45rem}
+.cat.feat{background:linear-gradient(135deg,var(--gold),#a97716);color:#1b1205;border-color:var(--orange)}
+.cat.feat .ci{color:#1b1205;border-color:rgba(27,18,5,.4);background:rgba(255,255,255,.2)}
+.cat.alt{background:#2e1a10}
+/* about */
+.about{background:var(--ink);color:#eadfc7;position:relative}
+.about::before{content:"";position:absolute;inset:0;background-image:var(--star);background-size:80px 80px;opacity:.06}
+.about .wrap{position:relative;display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}
+.about h2{font-size:clamp(2.4rem,5.5vw,4rem);color:var(--gold2);line-height:1.15}
+.about p{margin:0 0 1.1rem;font-size:1.06rem;max-width:64ch;color:#d9ccb0}
+.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid rgba(230,185,77,.35);margin-top:20px}
+.stat{padding:26px 12px;text-align:center}
+.stat+.stat{border-inline-start:1px solid rgba(230,185,77,.25)}
+.stat b{display:block;font:700 clamp(2.2rem,5vw,3.4rem)/1.1 var(--kufi);color:var(--gold2);direction:ltr}
+.stat span{color:#bfb094}
+/* menu */
+.menu{background:linear-gradient(rgba(239,229,211,.9),rgba(239,229,211,.9)),var(--star) var(--paper2);background-size:auto,80px 80px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:0 0 22px;scrollbar-width:thin;position:sticky;top:62px;z-index:20;background:linear-gradient(var(--paper2) 80%,transparent)}
+.tabs button{white-space:nowrap;padding:10px 18px;border-radius:4px;background:#fff8ea;border:1px solid var(--line);font:600 .95rem var(--sans);color:var(--txt);cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px}
+.tabs button .ic{color:var(--gold);width:1.2em;height:1.2em}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--gold2);border-color:var(--ink);box-shadow:inset 0 -3px 0 var(--orange)}
+.tabs button[aria-selected=true] .ic{color:var(--gold2)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.card{background:var(--card);border-radius:6px;border:1px solid var(--gold);box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px #e3cf9f;padding:26px 26px 20px}
+.card h3{font-size:1.7rem;margin-bottom:4px;color:var(--ink)}
+.tbl{display:grid;grid-template-columns:minmax(0,1fr) repeat(var(--n),var(--w));column-gap:8px;align-items:center}
+.tbl>*{padding:8px 0;border-bottom:1px dotted #cdb98f}
+.tbl>.h{border-bottom:2px solid var(--gold);padding:4px 0 6px;text-align:center}
+.tbl>.h i{display:inline-block;font:600 .7rem/1.25 var(--sans);font-style:normal;background:var(--ink);color:var(--gold2);border-radius:4px;padding:3px 6px;min-width:100%}
+.tbl>.h:first-child{background:none}
+.nm{font-weight:500;unicode-bidi:isolate;direction:rtl;line-height:1.5}
+[dir=ltr] .nm,[dir=ltr] .card h3 .ar{text-align:left}
+.tbl b{font:700 1rem var(--kufi);color:var(--price);text-align:center;white-space:nowrap}
+.tbl b.na{color:#b9a98a;font-weight:500}
+.tbl b[dir=rtl]{unicode-bidi:isolate}
+.tbl .d{grid-column:1/-1;font-size:.88rem;color:var(--mut);padding-top:0;direction:rtl;unicode-bidi:isolate;line-height:1.6}
+[dir=ltr] .tbl .d{text-align:left}
+.tbl>*:last-child,.tbl>.last{border-bottom:0}
+.gn{margin:12px 0 0;font-size:.88rem;color:var(--mut);background:rgba(232,112,42,.08);border-inline-start:3px solid var(--orange);padding:8px 12px;border-radius:2px;direction:rtl;unicode-bidi:isolate}
+[dir=ltr] .gn{text-align:left;border-inline-start:0;border-left:3px solid var(--orange)}
+.note{margin:26px 0 0;text-align:center;color:var(--mut);font-size:.92rem}
+.offers{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.of{position:relative;background:var(--ink);color:#f7efe0;border-radius:6px;border:1px solid var(--gold);box-shadow:inset 0 0 0 5px var(--ink),inset 0 0 0 6px rgba(230,185,77,.5);padding:34px 28px 26px;display:flex;flex-direction:column;gap:12px}
+.of em{position:absolute;top:0;inset-inline-end:26px;background:var(--orange);color:#fff;font:700 .75rem var(--sans);font-style:normal;padding:3px 12px 5px;border-radius:0 0 6px 6px}
+.of h3{font-size:1.7rem;color:var(--gold2)}
+.of p{margin:0;flex:1;direction:rtl;unicode-bidi:isolate}
+[dir=ltr] .of p{text-align:left}
+.pr{display:flex;align-items:baseline;gap:12px;border-top:1px solid rgba(230,185,77,.35);padding-top:12px}
+.pr b{font:700 2.2rem var(--kufi);color:var(--gold2)}
+.pr b span{font:500 .85rem var(--sans);color:#bfb094;margin-inline-start:6px}
+.pr s{color:#9d9078}
+/* branches */
+.brs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.br{background:var(--card);border:1px solid var(--gold);box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px #e3cf9f;border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.br .top{display:flex;gap:14px;align-items:flex-start}
+.br .pin{width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold2);display:grid;place-items:center;flex:none}
+.br h3{font-size:1.45rem}
+.br p{margin:2px 0 0;color:var(--mut);unicode-bidi:isolate}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.acts a{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:4px;font-weight:600;text-decoration:none;border:1.5px solid var(--gold);min-height:44px}
+.acts a:first-child{background:var(--ink);color:var(--gold2);border-color:var(--ink)}
+.acts a:hover{border-color:var(--orange)}
+.hot{margin-top:40px;text-align:center;background:var(--ink);color:#f7efe0;border-radius:6px;border:1px solid var(--gold);box-shadow:inset 0 0 0 6px var(--ink),inset 0 0 0 7px rgba(230,185,77,.5);padding:44px 20px}
+.hot b{display:block;font:700 clamp(3.2rem,11vw,5.5rem)/1.15 var(--kufi);color:var(--gold2);direction:ltr}
+.hot .lbl{color:#cdbf9f;font-size:1.1rem}
+.hot .btn{margin-top:14px}
+footer{background:var(--ink);color:#bfb094;text-align:center;padding:26px 5vw calc(env(safe-area-inset-bottom,0px) + 26px);font-size:.9rem;border-top:3px double var(--gold)}
+footer small{display:block;margin-top:4px;color:#8f8369}
+.fab{position:fixed;inset-inline-start:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:45;width:56px;height:56px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.fab .ic{width:26px;height:26px;stroke-width:1.8}
+@media(max-width:900px){.cats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){
+nav{gap:12px}nav .lk{display:none}.brand{font-size:1.25rem}.brand span{display:none}
+.hero-in{grid-template-columns:1fr;gap:24px;padding:36px 6vw 48px;min-height:0}
+.medal{order:-1}.arch{width:min(220px,52vw)}
+.hero p{max-width:none}
+.cats{grid-template-columns:1fr 1fr;gap:12px}
+.cat{border-radius:90px 90px 14px 14px;min-height:160px;padding:18px 10px 16px}
+.cat .ci{width:50px;height:50px}.cat .ci .ic{width:28px;height:28px}.cat h3{font-size:1.2rem}
+section{padding:52px 5vw}
+.about .wrap{grid-template-columns:1fr;gap:12px}
+.grid,.brs{grid-template-columns:1fr}
+.card{padding:22px 16px 16px}
+.tabs{top:56px}
+.strip div{gap:8px 20px;font-size:.9rem}
+.lang button{padding:5px 8px;font-size:.72rem}
+}
+@media(max-width:420px){.tbl{--w:3.1rem!important;column-gap:4px}.tbl.wide{--w:4.9rem!important}.tbl>.h i{font-size:.62rem;padding:3px 3px}.btn{padding:12px 18px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 11.6V4.5a1 1 0 0 1 1-1h7.1l8.9 8.9a1 1 0 0 1 0 1.4l-6.7 6.7a1 1 0 0 1-1.4 0z"/><circle cx="8" cy="8" r="1.4"/><path d="M12.5 13.5l3-3"/></symbol>
+<symbol id="i-pita" viewBox="0 0 24 24"><path d="M3 16a9 9 0 0 1 18 0z"/><path d="M4.5 19.5h15"/><circle cx="8.5" cy="12.6" r="1.1"/><circle cx="12" cy="10.2" r="1.1"/><circle cx="15.5" cy="12.6" r="1.1"/></symbol>
+<symbol id="i-burger" viewBox="0 0 24 24"><path d="M4 10.5a8 6.5 0 0 1 16 0z"/><path d="M3 13.6c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0"/><path d="M3.5 16.4h17"/><path d="M5 16.4a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3"/></symbol>
+<symbol id="i-chicken" viewBox="0 0 24 24"><path d="M14.6 3.6a5.6 5.6 0 0 1 4.4 9.3 5.6 5.6 0 0 1-7.5.7L5.8 19.3"/><path d="M14.6 3.6a5.6 5.6 0 0 0-5 8"/><path d="M5.8 19.3l-1.9.4.3-1.9M5.8 19.3l.3 2 1.9-.5"/><path d="M13.4 8.3a2.4 2.4 0 0 1 2.3 2.3"/></symbol>
+<symbol id="i-cloche" viewBox="0 0 24 24"><path d="M3.5 17a8.5 8.5 0 0 1 17 0z"/><path d="M2.5 20h19"/><path d="M12 8.5V6.6"/><circle cx="12" cy="5.6" r="1"/></symbol>
+<symbol id="i-tagine" viewBox="0 0 24 24"><path d="M12 3.2l-6 8.3h12z"/><path d="M12 1.9v1.3"/><path d="M3.5 11.5h17l-1.6 7.2a1.2 1.2 0 0 1-1.2.9H6.3a1.2 1.2 0 0 1-1.2-.9z"/></symbol>
+<symbol id="i-fatta" viewBox="0 0 24 24"><path d="M3 11.5h18a9 7.5 0 0 1-18 0z"/><path d="M7 11.5a5 4 0 0 1 10 0"/><path d="M8.5 20.7h7"/><path d="M10 8.3l.8-1.6M14 8.3l-.8-1.6"/></symbol>
+<symbol id="i-tray" viewBox="0 0 24 24"><ellipse cx="12" cy="13.5" rx="8" ry="4.5"/><ellipse cx="12" cy="13.5" rx="4.6" ry="2.4"/><path d="M4 13.5H1.8M22.2 13.5H20"/><path d="M8 8.4c.4-1.4 1.6-2 2.4-1M13.6 7.4c.8-1 2-.4 2.4 1"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.8v8.4M7.8 12h8.4"/></symbol>
+<symbol id="i-soup" viewBox="0 0 24 24"><path d="M3 12h18a9 7.5 0 0 1-18 0z"/><path d="M8.5 20.5h7"/><path d="M8.5 8.6c0-1.6 1.5-1.6 1.5-3.2M12.7 8.6c0-1.6 1.5-1.6 1.5-3.2"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 8.5h12l-1.3 11.2a1.2 1.2 0 0 1-1.2 1H8.5a1.2 1.2 0 0 1-1.2-1z"/><path d="M5 8.5h14"/><path d="M13 8.5l1.2-5.2 3.3-1"/><path d="M7.4 13h9.2"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.3s7-6.1 7-11.6a7 7 0 0 0-14 0c0 5.500 7 11.600 7 11.600z"/><circle cx="12" cy="9.6" r="2.6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.6l1.9 4.9-2.4 1.5a11.500 11.500 0 0 0 5.900 5.900l1.500-2.400 4.900 1.900V19a1.800 1.800 0 0 1-1.900 1.800A16.500 16.500 0 0 1 3.200 5.400 1.800 1.800 0 0 1 5 3.500z"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4.500L3.500 6.500v13L9 17.500l6 2 5.500-2v-13L15 6.500z"/><path d="M9 4.500v13M15 6.500v13"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 1.500l2.300 5.300 5.700-1.100-1.100 5.700 4.100 4.100-5.700 1.100-2.800 5-2.800-5-5.700-1.100 4.100-4.100L4 5.700l5.700 1.100z" stroke="none"/></symbol>
+</defs></svg>
+<a class="skip" href="#menu" data-i="skip"></a>
+<nav>
+<a class="brand" href="#top"><img src="assets/logo.webp" alt="" width="40" height="40"><span data-i="brand"></span></a>
+<a class="lk" href="#about" data-i="n1"></a><a class="lk" href="#menu" data-i="n2"></a><a class="lk" href="#branches" data-i="n3"></a>
+<div class="lang" id="lang" role="group" aria-label="Language"><button data-l="0" lang="ar">عربي</button><button data-l="1" lang="en">EN</button><button data-l="2" lang="de">DE</button><button data-l="3" lang="fr">FR</button><button data-l="4" lang="zh">中文</button></div>
+</nav>
+
+<header class="hero" id="top">
+<img class="poster" id="poster" src="media/hero-135131.webp" alt="" fetchpriority="high">
+<div class="veil"></div><div class="pat"></div>
+<div class="hero-in">
+<div>
+<span class="eyebrow"><i></i>ALL YOU CRAVE</span>
+<h1 data-i="h1"></h1>
+<p data-i="hp"></p>
+<div class="btns"><a class="btn b1" href="#menu"><svg class="ic"><use href="#i-cloche"/></svg><span data-i="b1"></span></a><a class="btn b2" href="#branches"><svg class="ic"><use href="#i-pin"/></svg><span data-i="b2"></span></a></div>
+</div>
+<div class="medal"><div class="arch"><img src="assets/logo.webp" alt="Al-Qazzaz — All You Crave" width="300" height="300"></div></div>
+</div>
+</header>
+<div class="strip"><div>
+<a href="tel:16903"><span><svg class="ic"><use href="#i-phone"/></svg><span><span data-i="s2"></span> 16903</span></span></a>
+<span><svg class="ic"><use href="#i-pita"/></svg><span data-i="st1"></span></span>
+<span><svg class="ic"><use href="#i-chicken"/></svg><span data-i="st2"></span></span>
+<span><svg class="ic"><use href="#i-tagine"/></svg><span data-i="st3"></span></span>
+</div></div>
+
+<section id="pick"><div class="wrap">
+<div class="sec-h"><h2 data-i="pk"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<ul class="cats" id="tiles"></ul>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+<h2 data-i="at"></h2><div><p data-i="ap1"></p><p data-i="ap2"></p></div>
+<div class="stats"><div class="stat"><b>1998</b><span data-i="s3"></span></div><div class="stat"><b>4</b><span data-i="s1"></span></div><div class="stat"><b>16903</b><span data-i="s2"></span></div></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+<div class="sec-h"><h2 data-i="mt"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<div class="tabs" role="tablist" id="cats"></div>
+<div id="mc" role="tabpanel"></div>
+<p class="note" data-i="mn"></p>
+</div></section>
+
+<section id="branches"><div class="wrap">
+<div class="sec-h"><h2 data-i="bt"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<div class="brs" id="br"></div>
+<div class="hot"><div class="lbl" data-i="ht"></div><b>16903</b><a class="btn b1" href="tel:16903"><svg class="ic"><use href="#i-phone"/></svg><span data-i="cn"></span></a></div>
+</div></section>
+<footer>© <span id="y"></span> <span data-i="brand"></span> · <span data-i="ft"></span><small>Hero videos: Pixabay</small></footer>
+<a class="fab" href="tel:16903" aria-label="16903"><svg class="ic"><use href="#i-phone"/></svg></a>
+
+<script>
+const VIDEOS=['135131','223565','248445','252077','262458'];
+const LC=['ar','en','de','fr','zh'];
+const T={
+brand:["القزاز","Al-Qazzaz","Al-Qazzaz","Al-Qazzaz","卡扎兹"],
+n1:["حكايتنا","Our story","Über uns","Notre histoire","品牌故事"],
+n2:["المنيو","Menu","Speisekarte","Menu","菜单"],
+n3:["الفروع","Branches","Filialen","Restaurants","分店"],
+h1:["طعم القاهرة بتتبيلة القزاز","The taste of Cairo, marinated the Qazzaz way","Der Geschmack Kairos, mariniert nach Qazzaz-Art","Le goût du Caire, mariné à la façon Qazzaz","开罗的味道，卡扎兹秘制腌料"],
+hp:["فول وطعمية وشاورما وطواجن ومشويات وساندويتشات في قلب القاهرة.","Foul, ta’miya, shawarma, tagines, grills and sandwiches in the heart of Cairo.","Ful, Ta’miya, Schawarma, Tajines, Grillgerichte und Sandwiches im Herzen Kairos.","Foul, ta’miya, chawarma, tajines, grillades et sandwichs au cœur du Caire.","蚕豆泥、塔米亚、沙威玛、塔吉锅、烧烤和三明治，尽在开罗市中心。"],
+b1:["شوف المنيو","View the menu","Speisekarte ansehen","Voir le menu","查看菜单"],
+b2:["أقرب فرع","Find a branch","Filiale finden","Trouver un restaurant","查找分店"],
+at:["حكايتنا","Our story","Unsere Geschichte","Notre histoire","我们的故事"],
+ap1:["القزاز من أشهر مطاعم وسط البلد في القاهرة منذ 1998. بدأ بالأكل الشعبي المصري الأصيل: الفول بعشرة أشكال، والطعمية والفلافل بالإسكندراني، والبطاطس والباذنجان والمسقعة والبيض، تتقدم في ساندويتش شامي أو علبة أو طلب.","Al-Qazzaz has been one of downtown Cairo’s best-known restaurants since 1998. It started with honest Egyptian street food: foul in ten styles, ta’miya and Alexandrian-style falafel, potatoes, aubergine, moussaka and eggs, served as a pita sandwich, a box or a full portion.","Al-Qazzaz gehört seit 1998 zu den bekanntesten Restaurants der Kairoer Innenstadt. Angefangen hat alles mit ehrlicher ägyptischer Straßenküche: Ful in zehn Varianten, Ta’miya und Falafel nach Alexandriner Art, Kartoffeln, Auberginen, Moussaka und Eier, serviert im Pita-Sandwich, in der Box oder als ganze Portion.","Al-Qazzaz est l’un des restaurants les plus connus du centre-ville du Caire depuis 1998. Tout a commencé avec la vraie cuisine de rue égyptienne : foul en dix versions, ta’miya et falafel à l’alexandrine, pommes de terre, aubergines, moussaka et œufs, servis en sandwich pita, en boîte ou en portion.","自1998年起，卡扎兹就是开罗市中心最知名的餐厅之一。它从地道的埃及街头美食起家：十种做法的蚕豆泥、塔米亚和亚历山大式法拉费，还有土豆、茄子、茄盒和鸡蛋，可做成皮塔三明治、盒装或整份。"],
+ap2:["ومع السنين كبر المنيو: شاورما وحواوشي وبرجر وساندويتشات دجاج وجمبري، وفراخ مقلية بعلب العائلة، وفتات وطواجن ووجبات مشوية، وصواني للعزومات. وكله بتتبيلة القزاز المعروفة، سواء في الفرع أو دليفري على 16903.","The menu has grown since: shawarma, hawawshi, burgers, chicken and shrimp sandwiches, family boxes of fried chicken, fatta, tagines, grills and big trays for gatherings. All of it carries the Qazzaz marinade, in the branch or delivered on 16903.","Die Karte ist seither gewachsen: Schawarma, Hawawschi, Burger, Hähnchen- und Garnelen-Sandwiches, Fried-Chicken-Familienboxen, Fatta, Tajines, Grillgerichte und große Platten für Gäste. Alles mit der Qazzaz-Marinade, im Restaurant oder per Lieferung unter 16903.","Le menu s’est étoffé : chawarma, hawawchi, burgers, sandwichs au poulet et aux crevettes, boîtes familiales de poulet frit, fatta, tajines, grillades et grands plateaux pour les repas en groupe. Le tout relevé par la marinade Qazzaz, sur place ou en livraison au 16903.","菜单也随之丰富：沙威玛、哈瓦维希、汉堡、鸡肉和虾肉三明治、家庭炸鸡桶、法塔、塔吉锅、烧烤，以及适合聚餐的大拼盘。全部使用卡扎兹秘制腌料，可到店享用，也可拨打16903外送。"],
+s1:["فروع في القاهرة","Cairo branches","Filialen in Kairo","restaurants au Caire","开罗分店"],
+s2:["الخط الساخن","Hotline","Hotline","Ligne directe","热线"],
+s3:["بداية الحكاية","Founded","Gegründet","Fondé en","创立"],
+mt:["المنيو","Menu","Speisekarte","Menu","菜单"],
+mn:["الأسعار بالجنيه المصري وتشمل ضريبة القيمة المضافة. أسماء الأصناف بالعربية.","Prices are in Egyptian pounds and include VAT. Dish names are in Arabic.","Preise in ägyptischen Pfund inkl. MwSt. Gerichtenamen auf Arabisch.","Prix en livres égyptiennes, TVA incluse. Noms des plats en arabe.","价格以埃及镑计，含增值税。菜名为阿拉伯语。"],
+bt:["فروعنا","Our branches","Unsere Filialen","Nos restaurants","我们的分店"],
+ht:["الطلب والتوصيل","Orders & delivery","Bestellung & Lieferung","Commandes & livraison","订餐与外卖"],
+cn:["اتصل دلوقتي","Call now","Jetzt anrufen","Appeler maintenant","立即致电"],
+ft:["جميع الحقوق محفوظة","All rights reserved","Alle Rechte vorbehalten","Tous droits réservés","版权所有"],
+call:["اتصل","Call","Anrufen","Appeler","致电"],map:["الخريطة","Map","Karte","Carte","地图"],
+cur:["ج.م","EGP","EGP","EGP","埃镑"],newb:["جديد","New","Neu","Nouveau","新品"],
+offn:["على كل سندوتش أو وجبة هتاخد خصم 50% على الصنف التاني من نفس النوع.","On every sandwich or meal, get 50% off the second item of the same type.","Auf jedes Sandwich oder Gericht: 50 % Rabatt auf den zweiten Artikel derselben Art.","Sur chaque sandwich ou plat : 50 % de réduction sur le deuxième article du même type.","每份三明治或正餐，同类第二份享五折。"]};
+const CL={bo:["علبة / طلب","Box / portion","Box / Portion","Boîte / portion","盒装 / 份"],sh:["ساندويتش شامي","Pita sandwich","Pita-Sandwich","Sandwich pita","皮塔三明治"],bx:["علبة","Box","Box","Boîte","盒装"],od:["طلب","Portion","Portion","Portion","份"],kz:["كايزر","Kaiser","Kaiser","Kaiser","凯撒面包"],md:["وسط","Medium","Mittel","Moyen","中"],lg:["كبير","Large","Groß","Grand","大"],sm:["صغير","Small","Klein","Petit","小"],jb:["جامبو","Jumbo","Jumbo","Jumbo","特大"],fm:["فينو وسط","Medium roll","Brötchen M","Petit pain M","中号面包"],fl:["فينو كبير","Large roll","Brötchen L","Petit pain L","大号面包"],rl:["خبز رول","Wrap","Wrap","Wrap","卷饼"],L:["L","L","L","L","L"],XL:["XL","XL","XL","XL","XL"]};
+const g=(t,c,r,n)=>({t,c:c?c.split(','):[],n,r:r.trim().split('\n').map(l=>{let d='';if(l.includes('~'))[l,d]=l.split('~');const[a,...p]=l.split('|');return[a,p,d]})});
+const OF=[[1,'2 وجبة بروستد (2 قطعة)',230,172.5],[2,'2 وجبة ميكس القزاز (وجبة كاملة)',430,322.5],[3,'فتة شاورما لحم وسط + فتة شاورما دجاج وسط',275,215],[4,'2 ساندويتش شاورما رول (لحم + دجاج)',230,177.5],[5,'حواوشي سجق كبير + حواوشي لحم كبير + 2 مخلل',175,132.5],[6,'2 شوربة عدس بالزبدة',100,75],[7,'4 ساندويتش (بطاطس صوابع + مسقعة + فول + طعمية)',0,45]];
+const C=[
+{n:["العروض","Deals","Angebote","Offres","优惠套餐"],of:1},
+{n:["ساندويتش شرقي","Egyptian sandwiches","Ägyptische Sandwiches","Sandwichs égyptiens","埃及风味三明治"],g:[
+g('فول','sh,bo',`فول محوج|10|35
+فول زيت زيتون|16|45
+فول إسكندراني|16|45
+فول زيت ذرة|14|38
+فول زيت حار|14|38
+فول بالزبدة|16|45
+فول بالأومليت|27|
+فول بالسجق|29|80
+فول بالبيض|21|
+فول بالصلصة|14|38`),
+g('فلافل (طعمية)','sh',`فلافل|10
+فلافل إسكندراني|16
+فلافل بالبيض|21
+ميكس|18
+ديناميت|22
+عجة طعمية|22`),
+g('بطاطس','sh,bx,od',`بطاطس بانية|18||30
+بطاطس مهروسة|15|18|
+بطاطس فارم شامي|20||35
+بطاطس إسكندراني|24||
+بطاطس شيبسي|18||30`),
+g('جبنة وخضار وبيض','sh,bx',`جبنة بالطماطم|15|22
+جبنة مقلية شامي|40|
+باذنجان مقلي|18|
+باذنجان إسكندراني|23|
+بابا غنوج|15|25
+مسقعة|15|25
+شكشوكة|25|25
+بيض مسلوق|20|
+بيض إسكندراني|24|
+أومليت سادة|32|
+أومليت بالسجق|63|`),
+g('جديد من القزاز','sh,od',`فلافل بالبسطرمة|38|21
+فلافل بالرومي|38|21
+فلافل بالشيدر|38|21
+فلافل ليمون معصفر|16|12
+فلافل كيري|35|30
+فول ليمون معصفر|16|45`),
+g('على الفينو والرول','fm,fl,rl',`أومليت بالبسطرمة|52|57|65
+جبنة رومي|45|50|
+مربى بالقشدة|45|50|
+حلاوة بالقشدة|45|50|
+جبنة مقلية|50|60|60
+بطاطس فارم|30|37|40
+فلافل|||30`,'الساندويتش في خبز بلدي بإضافة 3 جنيه.')]},
+{n:["ساندويتش غربي","Western sandwiches","Westliche Sandwiches","Sandwichs à l’occidentale","西式三明治"],g:[
+g('شاورما وبرجر','kz,md,lg',`شاورما لحم|70|115|135
+برجر سادة|65||85
+برجر بالبيض|70||90
+برجر بالجبنة|70||90
+برجر بيض وجبنة|75||100
+تريند برجر (لحم / دجاج)|||95 / 100`),
+g('حواوشي','md,lg',`حواوشي مصري|65|85
+حواوشي بالسجق|70|90
+حواوشي شيدر / رومي||105
+حواوشي ميكس جبن||110
+حواوشي دجاج|60|75
+حواوشي شاورما لحم|115|
+حواوشي شاورما دجاج|100|`),
+g('دجاج وجمبري','kz,md,lg',`شاورما دجاج|60|90|105
+دجاج بانية||80|90
+دجاج ستربس||80|90
+دجاج فاهيتا||80|90
+شيش طاووق||80|90
+دجاج مكسيكي||80|90
+برجر دجاج|60||75
+جمبري بانية||100|110
+إضافة جبنة||13|18`),
+g('ساندويتش القزاز','md,lg',`كفتة جريل|65|75
+هوت دوج مكسيكي|65|75
+كبدة بانية|65|75
+كبدة إسكندراني|65|75
+سجق شرقي|65|75`),
+g('ساندويتش رول','L,XL',`شاورما (دجاج / لحم) رول|105 / 125|115 / 140
+شاورما مكس رول|135|150
+دجاج بانية بالشيدر رول|95|
+طاووق رول|90|
+شرمب رول|105|
+ستربس بالجبنة الشيدر رول|95|
+دجاج (مكسيكي / فاهيتا) رول|90|
+(بيكيني / سجق / كفتة) رول|75|
+كبدة إسكندراني رول|75|`)]},
+{n:["فرايد تشيكن","Fried chicken","Fried Chicken","Poulet frit","炸鸡"],g:[
+g('','',`سوبر 2 سناكس|115
+سوبر 5 دينر ستربس|185
+سوبر 4 دينر|225
+سوبر 9 فاميلي ميل|445
+سوبر 8 + 4 فاميلي مكس|545
+سوبر 8 + 8 فاميلي مكس|650
+سوبر 10 + 10 فاميلي مكس|840`,'يقدم مع الوجبات: أرز بسمتي / خبز / شيبسي / توميه / كاتشب، مع إضافات أخرى لبعض الوجبات.')]},
+{n:["الوجبات","Meals","Hauptgerichte","Plats","正餐"],g:[
+g('وجبات مميزة','',`وجبة دجاج ¼ (ورك / صدر)|140 / 130
+وجبة دجاج ½|185
+وجبة لحم بلدي محمر|290
+وجبة طاجن خضار باللحم البلدي|290
+وجبة موزة ضاني باللحم البلدي|465`,'جميع الوجبات يقدم معها خضار اليوم والأرز والسلطة والخبز الطازج.'),
+g('وجبات القزاز','',`ميكس القزاز (شيش طاووق مع دجاج بانية والكفتة على الجريل)|215
+كبدة (بانية / إسكندراني)|165
+كفتة جريل|165
+شاورما لحم|315
+شاورما دجاج|290
+شيش طاووق|185
+دجاج بانية|185
+جمبري|225`,'جميع الوجبات يقدم معها الأرز البسمتي والسلطة والخبز الطازج.')]},
+{n:["الطواجن","Tagines","Tajines","Tajines","塔吉锅"],g:[
+g('','',`طاجن مسقعة باللحم|150
+طاجن حمام بالفريك|180
+طاجن ورق عنب بالكوارع البلدي|275
+طاجن لحم بلدي بالبصل|295
+طاجن عكاوي بلدي|350`)]},
+{n:["الفتات","Fatta","Fatta","Fatta","法塔"],g:[
+g('فتة الشاورما','md,lg,jb',`فتة شاورما دجاج|120|135|160
+فتة شاورما لحم|155|175|195
+فتة شاورما ميكس|165|185|205`),
+g('فتات بلدي','',`فتة كوارع بلدي|275
+فتة موزة ضاني بلدي|450
+فتة لحم محمر بلدي|275`),
+g('روزي','',`ليفر روزي|65
+تشيكن روزي|75
+شرمب روزي|100`)]},
+{n:["صواني القزاز","Qazzaz trays","Qazzaz-Platten","Plateaux Qazzaz","卡扎兹拼盘"],g:[
+g('صواني لـ 3 أفراد','',`صنية الأكيل (تكفي 3 أفراد)|300~4 شيش طاووق – 2 كفتة لحم – 2 حواوشي دجاج ميني – 2 ممبار – 3 ورق عنب
+صنية البركة (تكفي 3 أفراد)|360~فرد حمام – 3 شيش طاووق – 2 حواوشي دجاج ميني – 2 كفتة لحم – 2 ممبار`,'يقدم مع كل صنية: نصف كيلو أرز بسمتي – 2 سمبوسك بالجبنة – بطاطس شيبسي – 2 سلطة من (طحينة / خضراء / مخلل / توميه).'),
+g('صواني لـ 8 أفراد','',`صنية العزومة (تكفي 8 أفراد)|1060~دجاجة كاملة – 8 شيش طاووق – 8 كفتة لحم – 8 سجق شرقي – 4 حواوشي دجاج ميني
+صنية العزوة (تكفي 8 أفراد)|2025~2 دجاجة كاملة – 2 فرد حمام – موزة ضاني – لحم محمر – 8 كفتة لحم – 4 حواوشي دجاج ميني`,'يقدم مع كل صنية: كيلو أرز بسمتي – 4 سمبوسك بالجبنة – 4 ممبار – 8 ورق عنب – 8 محشي مشكل – 2 شوربة لسان عصفور – 2 خضار اليوم – 2 بطاطس شيبسي – 4 خبز طازج – 4 سلطة من اختياركم.'),
+g('مقبلات ومحاشي','',`صنية مقبلات مشكلة (وزن 1.5 كجم)|285~4 محشي كوسة – 4 محشي فلفل – 4 محشي باذنجان – 12 محشي ورق عنب – 6 كبيبة – 3 سمبوسك جبنة – 6 سمبوسك لحمة – 6 ممبار
+صنية محاشي مشكلة (وزن 1.5 كجم)|250~6 محشي كوسة – 5 محشي فلفل – 6 محشي باذنجان – 16 محشي ورق عنب`)]},
+{n:["طلبات إضافية","Extras","Beilagen","Accompagnements","加点"],g:[
+g('','',`محشي مشكل|45
+ورق عنب|45
+½ دجاج روستو|170
+حمام محشي|170
+طبق مقبلات|110
+طلب سمبوسك|60
+طلب كبيبة|50
+طلب ممبار|77
+مكرونة بشاميل (باللحم المفروم والموتزاريلا)|65
+أرز بسمتي|25
+أرز بالشعرية|30
+خضار (تورلي / بامية ...)|38
+باكت فارم|35`)]},
+{n:["الشوربة والسلطات","Soups & salads","Suppen & Salate","Soupes & salades","汤与沙拉"],g:[
+g('','sm,lg',`عدس سادة|40|45
+عدس بالزبدة|45|50
+شوربة كوارع||150
+لسان عصفور||28
+سلطة ثومية|12|20
+سلطة خضراء|12|25
+سلطة طحينة|15|
+كول سلو|12|25
+باذنجان مخلل|15|20
+مخلل مشكل|12|15
+ليمون معصفر||20`)]},
+{n:["المشروبات والحلو","Drinks & sweets","Getränke & Süßes","Boissons & douceurs","饮品与甜点"],g:[
+g('','',`أم علي|45
+كريم كراميل|40
+أرز باللبن|35
+رايب|30
+مياه غازية (كانز)|20
+مياه صغيرة|15
+مياه كبيرة|19`)]}];
+const en1=["2 Mohamed Roshdy St., Opera Square","38 Sabry Abou Alam St., off Talaat Harb Sq.","163 Hegaz St., Hegaz Square, Heliopolis","2A Alawi St., opposite the Ministry of Awqaf, Abdeen"];
+const B=[
+[["وسط البلد – الأوبرا","Downtown – Opera","Innenstadt – Oper","Centre-ville – Opéra","市中心·歌剧院"],"2 شارع محمد رشدي، ميدان الأوبرا"],
+[["وسط البلد – طلعت حرب","Downtown – Talaat Harb","Innenstadt – Talaat Harb","Centre-ville – Talaat Harb","市中心·塔拉特哈布"],"38 شارع صبري أبو علم، متفرع من ميدان طلعت حرب"],
+[["مصر الجديدة – الحجاز","Heliopolis – Hegaz","Heliopolis – Hegaz","Héliopolis – Hegaz","赫利奥波利斯·希贾兹"],"163 شارع الحجاز، ميدان الحجاز، مصر الجديدة"],
+[["عابدين – علوي","Abdeen – Alawi St.","Abdeen – Alawi-Straße","Abdine – rue Alawi","阿卜丁·阿拉维街"],"2 أ شارع علوي، أمام وزارة الأوقاف، عابدين"]];
+
+const T2={
+skip:["تخطّى إلى المنيو","Skip to menu","Zur Speisekarte","Aller au menu","跳到菜单"],
+pk:["اختار اللي نفسك فيه","Pick what you crave","Worauf hast du Lust?","Qu’est-ce qui vous tente ?","选择你的最爱"],
+st1:["ساندويتش شرقي وغربي","Egyptian & western sandwiches","Ägyptische & westliche Sandwiches","Sandwichs égyptiens et occidentaux","埃及与西式三明治"],
+st2:["فرايد تشيكن","Fried chicken","Fried Chicken","Poulet frit","炸鸡"],
+st3:["وجبات وفتات وطواجن","Meals, fatta & tagines","Gerichte, Fatta & Tajines","Plats, fatta et tajines","正餐、法塔与塔吉锅"],
+desc:["مطاعم القزاز: فول وطعمية وشاورما وطواجن ومشويات في قلب القاهرة. الخط الساخن 16903.","Al-Qazzaz restaurants: foul, ta’miya, shawarma, tagines and grills in the heart of Cairo. Hotline 16903.","Al-Qazzaz: Ful, Ta’miya, Schawarma, Tajines und Grillgerichte im Herzen Kairos. Hotline 16903.","Al-Qazzaz : foul, ta’miya, chawarma, tajines et grillades au cœur du Caire. Ligne 16903.","卡扎兹餐厅：蚕豆泥、塔米亚、沙威玛、塔吉锅和烧烤，位于开罗市中心。热线16903。"]};
+Object.assign(T,T2);
+const ICONS=['tag','pita','burger','chicken','cloche','tagine','fatta','tray','plus','soup','cup'];
+const ic=n=>`<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const $=s=>document.querySelector(s);let L=0,cat=0;
+const AR=s=>`<span lang="ar" dir="rtl" class="ar">${s}</span>`;
+const grp=x=>{const n=x.c.length;const wide=x.r.some(([a,p])=>p.some(v=>v.includes('/')));
+let h=`<div class="card">${x.t?`<h3>${AR(x.t)}</h3>`:''}<div class="tbl${wide?' wide':''}" style="--n:${n||1};--w:${wide?'5.6rem':'4.2rem'}">`;
+if(n)h+=`<span></span>${x.c.map(k=>`<span class="h"><i>${CL[k][L]}</i></span>`).join('')}`;
+x.r.forEach(([a,p,d])=>{h+=`<span class="nm" lang="ar">${a}</span>`;for(let i=0;i<(n||1);i++){const v=p[i];h+=v?`<b${v.includes('/')?' dir="rtl"':''}>${v}</b>`:`<b class="na" aria-label="—">–</b>`}if(d)h+=`<span class="d" lang="ar">${d}</span>`});
+h+='</div>';if(x.n)h+=`<p class="gn" lang="ar">${x.n}</p>`;return h+'</div>'};
+const offers=()=>`<div class="offers">${OF.map(o=>`<div class="of"><em>${T.newb[L]}</em><h3>${L?'Al-Dafa '+o[0]:AR('الدفا '+o[0])}</h3><p lang="ar">${o[1]}</p><div class="pr"><b>${o[3]}<span>${T.cur[L]}</span></b>${o[2]?`<s>${o[2]}</s>`:''}</div></div>`).join('')}</div><p class="gn" style="max-width:720px;margin-inline:auto">${T.offn[L]}</p>`;
+function render(){
+document.documentElement.lang=LC[L];document.documentElement.dir=L?'ltr':'rtl';
+document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T[e.dataset.i][L]);
+document.querySelectorAll('#lang button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.l===L));
+$('#tiles').innerHTML=C.map((c,i)=>`<li><a class="cat${i===0?' feat':''}" href="#menu" data-c="${i}"><span class="ci">${ic(ICONS[i])}</span><h3>${c.n[L]}</h3></a></li>`).join('')+`<li><a class="cat alt" href="#branches"><span class="ci">${ic('pin')}</span><h3>${T.n3[L]}</h3></a></li>`;
+$('#cats').innerHTML=C.map((c,i)=>`<button role="tab" id="t${i}" aria-selected="${i===cat}" data-c="${i}">${ic(ICONS[i])}${c.n[L]}</button>`).join('');
+const c=C[cat];$('#mc').setAttribute('aria-labelledby','t'+cat);$('#mc').innerHTML=c.of?offers():`<div class="grid">${c.g.map(grp).join('')}</div>`;
+$('#br').innerHTML=B.map((b,i)=>{const a=L?en1[i]:b[1];return`<div class="br"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p>${a}</p></div></div><div class="acts"><a href="tel:16903">${ic('phone')}${T.call[L]} 16903</a><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Al-Qazzaz restaurant '+en1[i])}" target="_blank" rel="noopener">${ic('map')}${T.map[L]}</a></div></div>`}).join('');
+const t=L?'Al-Qazzaz Restaurants':'مطاعم القزاز | Al-Qazzaz';document.title=t;
+const md=document.querySelector('meta[name=description]');if(md)md.content=T.desc[L];
+try{localStorage.setItem('lng',L)}catch(e){}}
+$('#lang').onclick=e=>{const b=e.target.closest('button');if(b){L=+b.dataset.l;render()}};
+$('#cats').onclick=e=>{const b=e.target.closest('button');if(b){cat=+b.dataset.c;render();$('#t'+cat).focus({preventScroll:true});$('#t'+cat).scrollIntoView({block:'nearest',inline:'center'})}};
+$('#tiles').onclick=e=>{const a=e.target.closest('a[data-c]');if(a){cat=+a.dataset.c;render()}};
+try{const q=new URLSearchParams(location.search).get('lang');const i=LC.indexOf(q);if(i>=0)L=i;else{const s=+localStorage.getItem('lng');if(s>=0&&s<5&&localStorage.getItem('lng')!==null)L=s}}catch(e){}
+$('#y').textContent=new Date().getFullYear();
+render();
+/* hero video pool: random on every load, then keeps rotating */
+(function(){
+const poster=$('#poster'),hero=$('#top');
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cn=navigator.connection||{};const slow=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||'');
+let last=null;try{last=localStorage.getItem('hv')}catch(e){}
+const pick=ex=>{const p=VIDEOS.filter(v=>v!==ex);return p[Math.floor(Math.random()*p.length)]};
+let cur=pick(last);try{localStorage.setItem('hv',cur)}catch(e){}
+poster.src='media/hero-'+cur+'.webp';
+if(rm||slow)return;
+const mk=()=>{const v=document.createElement('video');v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='auto';v.setAttribute('aria-hidden','true');v.tabIndex=-1;hero.insertBefore(v,poster.nextSibling);return v};
+let active=null;
+const play=id=>{const v=mk();v.src='media/hero-'+id+'.mp4';
+v.addEventListener('canplay',()=>{v.play().then(()=>{v.classList.add('on');poster.src='media/hero-'+id+'.webp';if(active){const o=active;o.classList.remove('on');setTimeout(()=>o.remove(),1400)}active=v}).catch(()=>v.remove())},{once:true});
+v.addEventListener('ended',()=>{cur=pick(cur);play(cur)},{once:true});
+v.addEventListener('error',()=>v.remove(),{once:true})};
+play(cur);
+document.addEventListener('visibilitychange',()=>{if(active)document.hidden?active.pause():active.play().catch(()=>{})});
+})();
+</script>
+</body>
+</html>
