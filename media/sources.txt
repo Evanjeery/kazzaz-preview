@@ -8,3 +8,14 @@
 55718 https://cdn.pixabay.com/video/2020/11/07/55718-503971825_large.mp4
 131220 https://cdn.pixabay.com/video/2022/09/13/131220-750216623_large.mp4
 77540 https://cdn.pixabay.com/video/2021/06/13/77540-562572367_large.mp4
+32546598 https://videos.pexels.com/video-files/32546598/13879991_1920_1080_24fps.mp4
+39307446 https://videos.pexels.com/video-files/39307446/16725792_1800_1440_60fps.mp4
+7367890 https://videos.pexels.com/video-files/7367890/7367890-hd_1920_1080_24fps.mp4
+32537396 https://videos.pexels.com/video-files/32537396/13875826_1920_1080_24fps.mp4
+7575443 https://videos.pexels.com/video-files/7575443/7575443-hd_1920_1080_24fps.mp4
+7574281 https://videos.pexels.com/video-files/7574281/7574281-hd_1920_1080_24fps.mp4
+38144359 https://videos.pexels.com/video-files/38144359/16194344_1920_1080_50fps.mp4
+7575431 https://videos.pexels.com/video-files/7575431/7575431-hd_1920_1080_24fps.mp4
+3209830 https://videos.pexels.com/video-files/3209830/3209830-hd_1920_1080_25fps.mp4
+20131338 https://videos.pexels.com/video-files/20131338/20131338-hd_1920_1080_25fps.mp4
+30356622 https://videos.pexels.com/video-files/30356622/13012108_1920_1080_30fps.mp4
