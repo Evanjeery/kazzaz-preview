@@ -18,6 +18,9 @@ jobs:
       url: ${{ steps.dep.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
       - run: bash scripts/build-media.sh _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
