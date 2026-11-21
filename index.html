@@ -210,6 +210,7 @@ footer>*{position:relative;z-index:2}
 @media(max-width:700px){.gst{width:min(100%,calc(72vh));aspect-ratio:1/1;border-radius:16px;margin-top:24px}.gnv{width:36px;height:36px}.gnv.p{left:8px}.gnv.n{right:8px}}
 @media(max-width:360px){.gst{border-radius:12px}.gst::after{inset:6px}}
 @media(prefers-reduced-motion:reduce){.gs{transition:none!important}}
+#mus.wait{animation:wp 1s ease-in-out infinite}@keyframes wp{50%{opacity:.45}}
 #ld{position:fixed;inset:0;z-index:99999;background:#0b0907;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s;animation:ldo 0s 9s forwards}#ld.off{opacity:0;pointer-events:none}#ld img{width:110px;height:110px;object-fit:contain}#ld i{display:block;width:140px;height:3px;background:#2a2218;overflow:hidden;border-radius:2px}#ld i:after{content:'';display:block;height:100%;width:40%;background:#d9a43a;animation:ldb 1.2s ease-in-out infinite}@keyframes ldb{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}@keyframes ldo{to{opacity:0;visibility:hidden}}
 #flamev{position:fixed;left:0;bottom:0;width:100%;height:58vh;object-fit:cover;object-position:center bottom;mix-blend-mode:screen;z-index:9998;pointer-events:none;display:none;-webkit-mask-image:linear-gradient(to top,#000 45%,transparent 100%);mask-image:linear-gradient(to top,#000 45%,transparent 100%);filter:brightness(1.55) saturate(1.25)}
 #flame{position:fixed;inset:0;width:100%;height:100%;z-index:9998;pointer-events:none;display:none}
@@ -606,7 +607,7 @@ document.addEventListener('visibilitychange',()=>{if(active)document.hidden?acti
 })();
 
 /* background music: random track, random start, starts on first user gesture */
-(()=>{const TR=['ney-faiyum', 'oud-alec', 'oud-mountain', 'oud-india', 'oud-jonas', 'egypt-elijah', 'egypt-echo-ancient', 'egypt-echo-the', 'egypt-echo', 'pyramids', 'egypt-hitslab', 'egypt-krasno', 'egypt-starostin', 'egypt-mfcc', 'abydos-moon', 'cairo-lounge'];const box=document.getElementById('mus');if(!box)return;
+(()=>{const TR=['ney-faiyum', 'oud-alec', 'oud-mountain', 'oud-india', 'egypt-elijah', 'egypt-echo-ancient', 'egypt-echo-the', 'egypt-echo', 'pyramids', 'egypt-hitslab', 'egypt-krasno', 'egypt-starostin', 'egypt-mfcc', 'abydos-moon', 'cairo-lounge', 'clip'];const box=document.getElementById('mus');if(!box)return;
 let vol=.35,muted=false,started=false;try{const v=parseFloat(sessionStorage.getItem('mvol'));if(v>=0&&v<=1)vol=v;muted=sessionStorage.getItem('mmute')==='1'}catch(e){}
 let ti=Math.floor(Math.random()*TR.length);const au=new Audio();au.preload=((navigator.connection||{}).saveData||/(^|-)2g$/.test((navigator.connection||{}).effectiveType||''))?'metadata':'auto';au.loop=false;au.src='media/music-'+TR[ti]+'.mp3';
 const skip=d=>{ti=(ti+d+TR.length)%TR.length;au.src='media/music-'+TR[ti]+'.mp3';started=true;au.muted=muted;au.volume=vol;au.play().catch(()=>{})};
@@ -621,8 +622,9 @@ const paint=()=>{sl.value=Math.round((muted?0:vol)*100);sl.style.setProperty('--
 const labels=()=>{box.setAttribute('aria-label',T.mu5[L]);sl.setAttribute('aria-label',T.mu6[L]);paint()};
 window.__musLabels=labels;
 let dur=0;const go=()=>{if(started)return;started=true;['pointerdown','keydown','touchend','click'].forEach(e=>removeEventListener(e,go,true));
- const d=au.duration;if(isFinite(d)&&d>20){try{au.currentTime=d*(.05+Math.random()*.8)}catch(e){}}
- au.volume=0;au.muted=muted;au.play().then(()=>{let t=0;const iv=setInterval(()=>{t+=.05;au.volume=Math.min(vol,vol*t/1.2);if(t>=1.2){clearInterval(iv);au.volume=vol}},50)}).catch(()=>{started=false;['pointerdown','keydown','touchend','click'].forEach(e=>addEventListener(e,go,true))})};
+ const d=au.duration;if(isFinite(d)&&d>20&&TR[ti]!=='clip'){try{au.currentTime=d*(.05+Math.random()*.8)}catch(e){}}
+ const st=()=>{au.volume=0;au.muted=muted;au.play().then(()=>{let t=0;const iv=setInterval(()=>{t+=.05;au.volume=Math.min(vol,vol*t/1.2);if(t>=1.2){clearInterval(iv);au.volume=vol}},50)}).catch(()=>{started=false;['pointerdown','keydown','touchend','click'].forEach(e=>addEventListener(e,go,true))})};
+  if(au.readyState>=3)st();else{au.preload='auto';box.classList.add('wait');box.setAttribute('aria-busy','true');let ok=false;const fin=()=>{if(ok)return;ok=true;box.classList.remove('wait');box.removeAttribute('aria-busy');st()};au.addEventListener('canplaythrough',fin,{once:true});setTimeout(fin,15000)}};
 au.addEventListener('loadedmetadata',()=>{box.hidden=false;labels();['pointerdown','keydown','touchend','click'].forEach(e=>addEventListener(e,go,true))});
 au.addEventListener('error',()=>{box.hidden=true});
 sl.oninput=()=>{vol=sl.value/100;muted=false;paint()};
