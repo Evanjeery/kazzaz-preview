@@ -624,7 +624,7 @@ window.__musLabels=labels;
 let dur=0;const go=()=>{if(started)return;started=true;['pointerdown','keydown','touchend','click'].forEach(e=>removeEventListener(e,go,true));
  const d=au.duration;if(isFinite(d)&&d>20&&TR[ti]!=='clip'){try{au.currentTime=d*(.05+Math.random()*.8)}catch(e){}}
  const st=()=>{au.volume=0;au.muted=muted;au.play().then(()=>{let t=0;const iv=setInterval(()=>{t+=.05;au.volume=Math.min(vol,vol*t/1.2);if(t>=1.2){clearInterval(iv);au.volume=vol}},50)}).catch(()=>{started=false;['pointerdown','keydown','touchend','click'].forEach(e=>addEventListener(e,go,true))})};
-  if(au.readyState>=3)st();else{au.preload='auto';box.classList.add('wait');box.setAttribute('aria-busy','true');let ok=false;const fin=()=>{if(ok)return;ok=true;box.classList.remove('wait');box.removeAttribute('aria-busy');st()};au.addEventListener('canplaythrough',fin,{once:true});setTimeout(fin,15000)}};
+  if(au.readyState>=3)st();else{au.preload='auto';box.classList.add('wait');box.setAttribute('aria-busy','true');let ok=false;const fin=()=>{if(ok)return;ok=true;box.classList.remove('wait');box.removeAttribute('aria-busy');st()};au.addEventListener('canplaythrough',fin,{once:true})}};
 au.addEventListener('loadedmetadata',()=>{box.hidden=false;labels();['pointerdown','keydown','touchend','click'].forEach(e=>addEventListener(e,go,true))});
 au.addEventListener('error',()=>{box.hidden=true});
 sl.oninput=()=>{vol=sl.value/100;muted=false;paint()};
