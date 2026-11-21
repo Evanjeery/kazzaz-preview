@@ -17,3 +17,11 @@ while read -r id url; do
   ffmpeg -nostdin -v error -y -ss 2 -i "$tmp/$id.mp4" -frames:v 1 -vf scale=960:-1 -c:v libwebp -q:v 60 "$OUT/media/hero-$id.webp"
 done < media/sources.txt
 ls -l "$OUT/media"; du -ch "$OUT"/media/*.mp4 | tail -1
+
+# Background music: 4 Pixabay tracks (Pixabay Content License), loudness-normalised, 64 kbps mp3
+while read -r id url; do
+  [ -z "$id" ] && continue
+  curl -fL --retry 3 -e https://pixabay.com/ -A "Mozilla/5.0" -o "$tmp/m-$id.mp3" "$url"
+  ffmpeg -nostdin -v error -y -i "$tmp/m-$id.mp3" -af loudnorm=I=-20:TP=-2:LRA=7 -ar 44100 -c:a libmp3lame -b:a 64k "$OUT/media/music-$id.mp3"
+done < media/music-sources.txt
+du -ch "$OUT"/media/music-*.mp3 | tail -1
