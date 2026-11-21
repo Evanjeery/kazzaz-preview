@@ -18,3 +18,7 @@ All clips are from Pixabay and used under the Pixabay Content License (free for 
 # Music
 
 16 oud / ney / Egyptian tracks from Pixabay (Pixabay Content License). Pages marked "AI generated" on Pixabay were excluded. IDs and download links are in `media/music-sources.txt`.
+
+# Pexels clips (Pexels licence, free to use, no watermark)
+
+Food on fire: 20131338, 30356622, 3209830, 32546598, 39307446, 7367890 (checked: no visible brand or logo). Egyptian artifacts and sculptures: 32537396, 38144359, 7574281, 7575431, 7575443. Page URL pattern: https://www.pexels.com/video/ID/ . The hero alternates a heritage clip and a cooking clip.
