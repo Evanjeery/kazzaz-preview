@@ -324,7 +324,7 @@ section{padding:52px 5vw}
 <a class="fab" href="tel:16903" aria-label="16903"><svg class="ic"><use href="#i-phone"/></svg></a>
 
 <script>
-const VIDEOS=['135131','223565','248445','252077','262458','112040','131220','55718','266835','77540'];
+const VIDEOS=['135131', '223565', '248445', '252077', '262458', '112040', '131220', '55718', '266835', '77540', '32537396', '38144359', '7574281', '7575431', '7575443'],FOOD=['20131338',  '30356622', '3209830', '32546598',  '39307446', '7367890'];
 const LC=['ar','en','de','fr','zh'];
 const T={
 brand:["القزاز","Al-Kazzaz","Al-Kazzaz","Al-Kazzaz","卡扎兹"],
@@ -581,14 +581,15 @@ const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const cn=navigator.connection||{};const slow=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||'');
 let last=null;try{last=localStorage.getItem('hv')}catch(e){}
 const pick=ex=>{const p=VIDEOS.filter(v=>v!==ex);return p[Math.floor(Math.random()*p.length)]};
-let cur=pick(last);try{localStorage.setItem('hv',cur)}catch(e){}
+const pickF=ex=>{const p=FOOD.filter(v=>v!==ex);return p[Math.floor(Math.random()*p.length)]};
+let cur=pick(last),foodNext=true,lastH=cur,lastF=null;try{localStorage.setItem('hv',cur)}catch(e){}
 poster.src='media/hero-'+cur+'.webp';
 if(rm||slow)return;
 const mk=()=>{const v=document.createElement('video');v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='auto';v.setAttribute('aria-hidden','true');v.tabIndex=-1;hero.insertBefore(v,poster.nextSibling);return v};
 let active=null;
 const play=id=>{const v=mk();v.src='media/hero-'+id+'.mp4';
 v.addEventListener('canplay',()=>{v.play().then(()=>{v.classList.add('on');poster.src='media/hero-'+id+'.webp';if(active){const o=active;o.classList.remove('on');setTimeout(()=>o.remove(),1400)}active=v}).catch(()=>v.remove())},{once:true});
-v.addEventListener('ended',()=>{cur=pick(cur);play(cur)},{once:true});
+v.addEventListener('ended',()=>{if(foodNext){cur=pickF(lastF);lastF=cur}else{cur=pick(lastH);lastH=cur}foodNext=!foodNext;play(cur)},{once:true});
 v.addEventListener('error',()=>v.remove(),{once:true})};
 play(cur);
 
@@ -596,7 +597,7 @@ document.addEventListener('visibilitychange',()=>{if(active)document.hidden?acti
 })();
 
 /* background music: random track, random start, starts on first user gesture */
-(()=>{const TR=['ney-faiyum', 'oud-alec', 'oud-mountain', 'oud-india', 'oud-jonas', 'egypt-elijah', 'egypt-echo-ancient', 'egypt-echo-the', 'egypt-echo', 'pyramids', 'egypt-hitslab', 'egypt-krasno', 'egypt-starostin', 'egypt-mfcc', 'abydos-moon', 'cairo-lounge'];const box=document.getElementById('mus');if(!box)return;
+(()=>{const TR=['ney-faiyum', 'oud-alec', 'oud-mountain', 'oud-india', 'oud-jonas', 'egypt-elijah', 'egypt-echo-ancient', 'egypt-echo-the', 'egypt-echo', 'pyramids', 'egypt-hitslab', 'egypt-krasno', 'egypt-starostin', 'egypt-mfcc', 'abydos-moon', 'cairo-lounge', 'ph-229891', 'ph-181070', 'ph-445402', 'ph-407414', 'ph-500585', 'ph-443397'];const box=document.getElementById('mus');if(!box)return;
 let vol=.35,muted=false,started=false;try{const v=parseFloat(sessionStorage.getItem('mvol'));if(v>=0&&v<=1)vol=v;muted=sessionStorage.getItem('mmute')==='1'}catch(e){}
 let ti=Math.floor(Math.random()*TR.length);const au=new Audio();au.preload='metadata';au.loop=false;au.src='media/music-'+TR[ti]+'.mp3';
 const skip=d=>{ti=(ti+d+TR.length)%TR.length;au.src='media/music-'+TR[ti]+'.mp3';started=true;au.muted=muted;au.volume=vol;au.play().catch(()=>{})};
