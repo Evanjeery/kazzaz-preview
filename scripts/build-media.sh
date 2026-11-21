@@ -18,6 +18,10 @@ while read -r id url; do
 done < media/sources.txt
 ls -l "$OUT/media"; du -ch "$OUT"/media/*.mp4 | tail -1
 
+# Real fire footage for the flame sweep (Mixkit Stock Video Free License, flames on black, no audio), 540p, 6 s
+curl -fL --retry 3 -A "Mozilla/5.0" -o "$tmp/fire.mp4" https://assets.mixkit.co/videos/3753/3753-720.mp4
+ffmpeg -nostdin -v error -y -ss 1 -t 6 -i "$tmp/fire.mp4" -an -vf "scale=-2:540,fps=24" -c:v libx264 -preset slow -crf 30 -pix_fmt yuv420p -movflags +faststart "$OUT/media/fire.mp4"
+
 # Background music: 22 Pixabay tracks (non-AI, checked), trimmed to 150 s (Pixabay Content License), loudness-normalised, 64 kbps mp3
 while read -r id url; do
   [ -z "$id" ] && continue
