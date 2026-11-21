@@ -14,3 +14,9 @@ egypt-starostin https://cdn.pixabay.com/download/audio/2024/11/11/audio_4f8c482b
 egypt-mfcc https://cdn.pixabay.com/download/audio/2025/01/13/audio_580b3b48fa.mp3?filename=mfcc-egypt-egypt-egyptian-desert-music-287496.mp3
 abydos-moon https://cdn.pixabay.com/download/audio/2024/04/11/audio_4793fffb0a.mp3?filename=abydos_music-middle-eastern-moon-201542.mp3
 cairo-lounge https://cdn.pixabay.com/download/audio/2025/06/03/audio_80438b2a83.mp3?filename=cairomusic-arabian-lounge-353872.mp3
+ph-229891 https://cdn.pixabay.com/download/audio/2024/08/04/audio_e2b7caa00c.mp3?filename=raven1023-dawn-of-the-pharaohs-229891.mp3
+ph-181070 https://cdn.pixabay.com/download/audio/2023/12/12/audio_e3ef9d0810.mp3?filename=onetent-ancient-181070.mp3
+ph-445402 https://cdn.pixabay.com/download/audio/2025/12/11/audio_86c6453aba.mp3?filename=backgroundmusicmaster-ancient-histroy-445402.mp3
+ph-407414 https://cdn.pixabay.com/download/audio/2025/09/20/audio_d7ddfcb11d.mp3?filename=arizonaguide-anguish-of-the-pharaoh-407414.mp3
+ph-500585 https://cdn.pixabay.com/download/audio/2026/03/12/audio_9ac009e5ac.mp3?filename=elijah_k-cairo-500585.mp3
+ph-443397 https://cdn.pixabay.com/download/audio/2025/12/03/audio_45c4157627.mp3?filename=patrizioyoga-dance-of-pharaoh-olistik-sound-project-443397.mp3
