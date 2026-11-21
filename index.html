@@ -67,6 +67,7 @@ h1{font-size:clamp(2.4rem,6vw,4.6rem);margin:18px 0 14px;text-shadow:0 4px 30px 
 html[dir=rtl] .mus{inset-inline-end:auto;right:auto;left:18px}
 .mb{width:40px;height:40px;border-radius:50%;border:1px solid rgba(230,185,77,.5);background:transparent;color:var(--gold2);cursor:pointer;display:grid;place-items:center;padding:0}
 .mb:hover{border-color:var(--orange)}
+.mb.sm{width:34px;height:34px}.mb.sm svg{width:18px;height:18px}
 .mb.big{width:44px;height:44px;background:var(--gold);color:#1b1205;border-color:var(--gold)}
 .mb svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .mb.big .son{fill:currentColor;stroke-width:1.6}.mb.big .soff{display:none;fill:currentColor}
@@ -80,7 +81,7 @@ html[dir=rtl] .mus{inset-inline-end:auto;right:auto;left:18px}
 .mv{display:flex;gap:3px;align-items:flex-end;height:20px;margin:0 4px}
 .mv i{width:4px;border-radius:2px;background:rgba(230,185,77,.3)}
 .mv i.on{background:var(--orange)}
-@media(max-width:820px){footer{padding-bottom:96px}html[dir=rtl] .mus{left:12px}.mus{inset-inline-end:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 96px);max-width:calc(100vw - 24px)}.mr{width:96px}}
+@media(max-width:820px){footer{padding-bottom:96px}html[dir=rtl] .mus{left:12px}.mus{inset-inline-end:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 96px);max-width:calc(100vw - 24px)}.mr{width:64px}.mb.sm{width:32px;height:32px}}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:4px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s;border:1.5px solid transparent;min-height:48px}
 .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.25)}
@@ -319,11 +320,11 @@ section{padding:52px 5vw}
 </div></section>
 <footer><div class="fglow"></div><canvas id="fire" aria-hidden="true"></canvas>© <span id="y"></span> <span data-i="brand"></span> · <span data-i="ft"></span><small>Hero videos: Pixabay · Emoji graphics: Twemoji (CC-BY 4.0)</small></footer>
 <canvas id="smoke" aria-hidden="true"></canvas><canvas id="flame" aria-hidden="true"></canvas>
-<div class="mus" id="mus" hidden role="group"><button type="button" id="mmu" class="mb big"><svg viewBox="0 0 24 24" aria-hidden="true" class="son"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.8a7.6 7.6 0 0 1 0 10.4"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="soff"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button><input type="range" id="mvr" class="mr" min="0" max="100" step="1" value="35"></div>
+<div class="mus" id="mus" hidden role="group"><button type="button" id="mmu" class="mb big"><svg viewBox="0 0 24 24" aria-hidden="true" class="son"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.8a7.6 7.6 0 0 1 0 10.4"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="soff"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button><button type="button" id="mpv" class="mb sm" aria-label="Previous track / السابق"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6v12M18 6l-8 6 8 6z"/></svg></button><button type="button" id="mnx" class="mb sm" aria-label="Next track / التالي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 6v12M6 6l8 6-8 6z"/></svg></button><input type="range" id="mvr" class="mr" min="0" max="100" step="1" value="35"></div>
 <a class="fab" href="tel:16903" aria-label="16903"><svg class="ic"><use href="#i-phone"/></svg></a>
 
 <script>
-const VIDEOS=['135131','223565','248445','252077','262458'];
+const VIDEOS=['135131','223565','248445','252077','262458','112040','131220','55718','266835','77540'];
 const LC=['ar','en','de','fr','zh'];
 const T={
 brand:["القزاز","Al-Kazzaz","Al-Kazzaz","Al-Kazzaz","卡扎兹"],
@@ -595,9 +596,11 @@ document.addEventListener('visibilitychange',()=>{if(active)document.hidden?acti
 })();
 
 /* background music: random track, random start, starts on first user gesture */
-(()=>{const TR=['caravan','arabesque','oud1','oud2'];const box=document.getElementById('mus');if(!box)return;
+(()=>{const TR=['ney-faiyum', 'oud-alec', 'oud-mountain', 'oud-india', 'oud-jonas', 'egypt-elijah', 'egypt-echo-ancient', 'egypt-echo-the', 'egypt-echo', 'pyramids', 'egypt-hitslab', 'egypt-krasno', 'egypt-starostin', 'egypt-mfcc', 'abydos-moon', 'cairo-lounge'];const box=document.getElementById('mus');if(!box)return;
 let vol=.35,muted=false,started=false;try{const v=parseFloat(sessionStorage.getItem('mvol'));if(v>=0&&v<=1)vol=v;muted=sessionStorage.getItem('mmute')==='1'}catch(e){}
-const id=TR[Math.floor(Math.random()*TR.length)];const au=new Audio();au.preload='metadata';au.loop=true;au.src='media/music-'+id+'.mp3';
+let ti=Math.floor(Math.random()*TR.length);const au=new Audio();au.preload='metadata';au.loop=false;au.src='media/music-'+TR[ti]+'.mp3';
+const skip=d=>{ti=(ti+d+TR.length)%TR.length;au.src='media/music-'+TR[ti]+'.mp3';started=true;au.muted=muted;au.volume=vol;au.play().catch(()=>{})};
+au.addEventListener('ended',()=>skip(1));
 const sl=document.getElementById('mvr');
 const paint=()=>{sl.value=Math.round((muted?0:vol)*100);sl.style.setProperty('--p',sl.value+'%');box.classList.toggle('muted',muted||vol===0);au.volume=vol;au.muted=muted;const m=document.getElementById('mmu');m.setAttribute('aria-label',muted?T.mu4[L]:T.mu3[L]);m.setAttribute('aria-pressed',muted);try{sessionStorage.setItem('mvol',vol);sessionStorage.setItem('mmute',muted?'1':'0')}catch(e){}};
 const labels=()=>{box.setAttribute('aria-label',T.mu5[L]);sl.setAttribute('aria-label',T.mu6[L]);paint()};
@@ -608,8 +611,9 @@ let dur=0;const go=()=>{if(started)return;started=true;['pointerdown','keydown',
 au.addEventListener('loadedmetadata',()=>{box.hidden=false;labels();['pointerdown','keydown','touchend','click'].forEach(e=>addEventListener(e,go,true))});
 au.addEventListener('error',()=>{box.hidden=true});
 sl.oninput=()=>{vol=sl.value/100;muted=false;paint()};
+document.getElementById('mpv').onclick=()=>skip(-1);document.getElementById('mnx').onclick=()=>skip(1);
 document.getElementById('mmu').onclick=()=>{muted=!muted;if(!muted&&vol===0)vol=.3;paint()};
-paint();window.__aud=au;window.__musId=id})();
+paint();window.__aud=au;window.__musId=()=>TR[ti]})();
 
 /* subtle grill VFX: faint smoke drift over the site + embers at the footer. Pure canvas, paused off-screen/hidden, off for reduced motion */
 (()=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
