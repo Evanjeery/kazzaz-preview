@@ -9,3 +9,12 @@ All clips are from Pixabay and used under the Pixabay Content License (free for 
 | 248445 | https://pixabay.com/videos/camels-desert-sunset-silhouette-248445/ | samirsmier |
 | 252077 | https://pixabay.com/videos/pyramids-camels-egypt-country-land-252077/ | julientromeur |
 | 262458 | https://pixabay.com/videos/pyramids-egypt-desert-egyptian-262458/ | peggy_marco |
+| 112040 | https://pixabay.com/videos/camel-desert-dromedary-animals-112040/ | Pixabay |
+| 131220 | https://pixabay.com/videos/desert-sand-egypt-culture-131220/ | Pixabay |
+| 55718 | https://pixabay.com/videos/pyramid-sand-grave-desert-travel-55718/ | Pixabay |
+| 266835 | https://pixabay.com/videos/pyramide-de-gizeh-egypt-pyramide-266835/ | Pixabay |
+| 77540 | https://pixabay.com/videos/pharaoh-sweetcorn-antique-giza-77540/ | Pixabay |
+
+# Music
+
+16 oud / ney / Egyptian tracks from Pixabay (Pixabay Content License). Pages marked "AI generated" on Pixabay were excluded. IDs and download links are in `media/music-sources.txt`.
