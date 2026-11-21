@@ -19,3 +19,6 @@
 3209830 https://videos.pexels.com/video-files/3209830/3209830-hd_1920_1080_25fps.mp4
 20131338 https://videos.pexels.com/video-files/20131338/20131338-hd_1920_1080_25fps.mp4
 30356622 https://videos.pexels.com/video-files/30356622/13012108_1920_1080_30fps.mp4
+27906026 https://videos.pexels.com/video-files/27906026/12259038_1280_720_30fps.mp4
+35007854 https://videos.pexels.com/video-files/35007854/14830733_1280_720_50fps.mp4
+5528177 https://videos.pexels.com/video-files/5528177/5528177-hd_1280_720_50fps.mp4
