@@ -763,7 +763,7 @@ play(cur);
 
 const syncMotion=()=>{if(!active)return;if(document.hidden||window.__motionPaused())active.pause();else active.play().then(()=>{active.classList.add('on');setTimeout(prefetch,1500)}).catch(()=>{})};document.addEventListener('visibilitychange',syncMotion);addEventListener('kazzaz-motion',syncMotion);
 }
-startHeritageVideo()
+startHeritageVideo();
 
 /* Shared music controls. Playback may need a user gesture. */
 (()=>{
