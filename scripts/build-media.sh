@@ -4,7 +4,7 @@
 set -euo pipefail
 OUT="${1:-_site}"
 mkdir -p "$OUT/assets" "$OUT/media"
-cp index.html "$OUT/index.html"
+cp index.html about.html careers.html "$OUT/"
 base64 -d assets/logo.b64 > "$OUT/assets/logo.webp"
 base64 -d assets/favicon-32.b64 > "$OUT/assets/favicon-32.png"
 
