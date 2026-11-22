@@ -1,4 +1,4 @@
-/* TEMPORARY no-bird version: logo holds 60 s -> burns to ash/smoke -> gone 30 s -> smoke and fire return and the logo reappears. Previous bird version is in git history. Original header: phoenix (Phoenix by NORBERTO-3D, CC-BY 4.0, rendered sprite sheet) flies in -> fog -> logo (60 s) -> burns to ash -> phoenix rises, shakes off ash, flies away -> repeats 30 s later. Set scene deferred. */
+/* TEMPORARY no-bird version: logo holds 10 s -> burns to ash/smoke -> gone 20 s -> flames rebuild the logo bottom to top. Previous bird version is in git history. Original header: phoenix (Phoenix by NORBERTO-3D, CC-BY 4.0, rendered sprite sheet) flies in -> fog -> logo (60 s) -> burns to ash -> phoenix rises, shakes off ash, flies away -> repeats 30 s later. Set scene deferred. */
 (()=>{
 const img=document.querySelector('.arch img');if(!img)return;
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm)return;
@@ -46,12 +46,12 @@ function drawHeap(cx,gy,a){return;if(heap<1)return;const h=(heap/260)*26*hs,w=70
 const oc=document.createElement('canvas'),oz=oc.getContext('2d',{willReadFrequently:true});let base=null,NZ=null,N=64;
 const mkNoise=()=>{NZ=new Float32Array(N*N);let a=new Float32Array(N*N).map(()=>Math.random());for(let it=0;it<1;it++){const b=new Float32Array(N*N);for(let y=0;y<N;y++)for(let x=0;x<N;x++){let s=0;for(let dy=-2;dy<=2;dy++)for(let dx=-2;dx<=2;dx++)s+=a[((y+dy+N)%N)*N+((x+dx+N)%N)];b[y*N+x]=s/25}a=b}let lo=1,hi=0;a.forEach(v=>{lo=Math.min(lo,v);hi=Math.max(hi,v)});for(let i=0;i<N*N;i++)NZ[i]=(a[i]-lo)/(hi-lo)};
 function prepBase(sz){oc.width=oc.height=sz;oz.clearRect(0,0,sz,sz);oz.drawImage(img,0,0,sz,sz);try{base=oz.getImageData(0,0,sz,sz)}catch(e){base=null}if(!NZ)mkNoise()}
-function burnFrame(p,x0,y0,sz,dt){/* p 0..1, x0/y0 top-left */ if(!base)return false;const out=oz.createImageData(sz,sz),s=base.data,o=out.data;const band=.16;let cnt=0;
- for(let y=0;y<sz;y++){const gy=y/sz;for(let x=0;x<sz;x++){const i=(y*sz+x)*4;if(s[i+3]<8)continue;const fx=x*N/sz,fy=y*N/sz,ix=fx|0,iy=fy|0,tx=fx-ix,ty=fy-iy,jx=(ix+1)%N,jy=(iy+1)%N,nv=(NZ[iy*N+ix]*(1-tx)+NZ[iy*N+jx]*tx)*(1-ty)+(NZ[jy*N+ix]*(1-tx)+NZ[jy*N+jx]*tx)*ty;const b=(1-gy)*.4+nv*.6;const th=p*(1+band+.05);
+function burnFrame(p,x0,y0,sz,dt,rev){/* p 0..1, x0/y0 top-left */ if(!base)return false;const out=oz.createImageData(sz,sz),s=base.data,o=out.data;const band=.16;let cnt=0;
+ for(let y=0;y<sz;y++){const gy=y/sz;for(let x=0;x<sz;x++){const i=(y*sz+x)*4;if(s[i+3]<8)continue;const fx=x*N/sz,fy=y*N/sz,ix=fx|0,iy=fy|0,tx=fx-ix,ty=fy-iy,jx=(ix+1)%N,jy=(iy+1)%N,nv=(NZ[iy*N+ix]*(1-tx)+NZ[iy*N+jx]*tx)*(1-ty)+(NZ[jy*N+ix]*(1-tx)+NZ[jy*N+jx]*tx)*ty;const b=(rev?gy:1-gy)*.4+nv*.6;const th=p*(1+band+.05);
   if(b<th-band){/*burned*/continue}if(b<th){const k=(th-b)/band;const v=cl(235*(1-k)+25*k,0,255);o[i]=o[i+1]=o[i+2]=v;o[i+3]=s[i+3]*(1-k*k*.85);if(Math.random()<.003*60*dt&&cnt<14){cnt++;FL.push({x:cx+(x0+x-cx)*SC,y:cy+(y0+y-cy)*SC,vx:rnd(-12,12),vy:rnd(-70,-30),r:rnd(6,12)*sz/300*SC,t:0,life:rnd(.7,1.3),ph:rnd(0,6)});if(Math.random()<.5)AS.push({x:cx+(x0+x-cx)*SC,y:cy+(y0+y-cy)*SC,vx:rnd(-20,20),vy:rnd(-10,20),m:rnd(.5,1),s:rnd(1.5,3.2)*sz/300*SC,c:(120+Math.random()*110)|0,a:rnd(.6,1),t:0,ph:rnd(0,6),land:true,cx0:hcx})}}else{o[i]=s[i];o[i+1]=s[i+1];o[i+2]=s[i+2];o[i+3]=s[i+3]}}}
  oz.putImageData(out,0,0);g.drawImage(oc,x0,y0);return true}
 /* timeline */
-let ph='hold',pt=0,dir=1,seed=0;const T={fly:2.8,morph:1.0,rise:1.1,strike:.35,fog:3.2,burn:5.5,emerge:2.0,shake:1.6,away:3.2};
+let ph='hold',pt=0,dir=1,seed=0;const T={fly:2.8,morph:1.0,rise:1.1,strike:.35,fog:3.2,burn:5.5,ret:5.5,emerge:2.0,shake:1.6,away:3.2};
 let struck=false,fogDone=false,sz=300,cx=0,cy=0,gy=0,u=1,lastBurnP=0;
 const rect=()=>{const r=img.getBoundingClientRect();sz=Math.round(r.width/SC*SC);cx=r.left+r.width/2;cy=r.top+r.height/2;u=r.width/(300*SC)/1;gy=cy+r.height*.52;return r};
 window.__logo={get ph(){return ph},get t(){return pt},go(p,t){ph=p;pt=t||0;struck=false;fogDone=false}};
@@ -72,8 +72,10 @@ function tick(now){requestAnimationFrame(tick);let rdt=Math.min(1,(now-last)/100
  else if(ph==='strike'){const k=cl(pt/T.strike);const l=46*(1-k*k);setFig(hoverX-14*S,hoverY+88*S,S,l,1);if(k>=1&&!struck){struck=true;
    const gx=hoverX-14*S+34*S,gyy=hoverY+88*S;for(let i=0;i<(mob?26:44);i++)smoke(gx+rnd(-20,20)*u,gyy+rnd(-8,6)*u,rnd(35,90)*u,rnd(.55,.9),rnd(-140,140)*u,rnd(-110,-5)*u,rnd(2.4,3.8))}
   if(pt>=T.strike+.05)setPh('fog')}
- else if(ph==='fog'){const k=cl(pt/T.fog);phoenix(hoverX,hoverY+Math.sin(pt*4)*3,ux*.95,0,0,dir,1-ez(cl(k*1.6)),0);if(pt<2.4)for(let q=0;q<3;q++)if(Math.random()<.8)FL.push({x:cx+rnd(-60,60)*u,y:cy+rnd(-5,85)*u,vx:rnd(-12,12),vy:rnd(-60,-30),r:rnd(7,13)*u,t:0,life:rnd(.8,1.4),ph:rnd(0,6)});
-  img.style.opacity=String(ez(cl((pt-.7)/1.8)));if(pt>=T.fog){img.style.opacity='1';setPh('hold');}}
+ else if(ph==='fog'){const k=cl(pt/T.ret);if(!base)prepBase(Math.round(r.width/SC*SC));const s2=Math.round(r.width/SC*SC);const x1=cx-s2/2,y1=cy-s2/2;
+  img.style.opacity='0';g.save();g.translate(cx,cy);g.scale(SC,SC);g.translate(-cx,-cy);const pp=1-1.25*k;if(!burnFrame(pp,x1,y1,s2,dt,true)){img.style.opacity=String(k)}g.restore();
+  if(!base){for(let i=0;i<3;i++)FL.push({x:cx+rnd(-80,80)*u,y:cy+(.5-k)*160*u,vx:0,vy:-60,r:rnd(8,18)*u,t:0,life:.8,ph:rnd(0,6)})}
+  if(pt>=T.ret){img.style.opacity='1';setPh('hold')}}
  else if(ph==='hold'){img.style.opacity='1';if(pt>=cfg.hold){prepBase(Math.round(r.width/SC*SC));setPh('burn');img.style.opacity='1'}}
  else if(ph==='burn'){const p=cl(pt/T.burn);const s2=Math.round(r.width/SC*SC);const x0=cx-r.width/2,y0=cy-r.height/2;/* draw burning logo at scaled size */
   img.style.opacity='0';g.save();g.translate(cx,cy);g.scale(SC,SC);g.translate(-cx,-cy);const x1=cx-s2/2,y1=cy-s2/2;if(!burnFrame(p,x1,y1,s2,dt)){img.style.opacity=String(1-p)}g.restore();
