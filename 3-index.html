@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مطاعم القزاز | Al-Kazzaz</title>
+<meta name="description" content="مطاعم القزاز: فول وطعمية وشاورما وطواجن ومشويات في قلب القاهرة. الخط الساخن 16903.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16120F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مطاعم القزاز | Al-Kazzaz">
+<meta property="og:description" content="طعم القاهرة بتتبيلة القزاز">
+<meta property="og:image" content="assets/logo.webp">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16120f;--ink2:#211b16;--paper:#f7f0e4;--paper2:#efe5d3;--card:#fffaf0;--txt:#2a231b;--mut:#6f6250;--gold:#c9962c;--gold2:#e6b94d;--orange:#e8702a;--price:#c5530f;--line:#e0d2b6;
+--star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C9962C' stroke-width='1'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3Cpath d='M0 0L20 20M80 0L60 20M0 80L20 60M80 80L60 60'/%3E%3C/g%3E%3C/svg%3E");
+--sans:'IBM Plex Sans Arabic','Noto Sans SC',system-ui,sans-serif;--serif:Amiri,'Noto Sans SC',serif;--kufi:'Reem Kufi','IBM Plex Sans Arabic','Noto Sans SC',sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);background:var(--paper);color:var(--txt);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;line-height:1.3}
+[lang=zh] h1,[lang=zh] h2,[lang=zh] h3{font-family:'Noto Sans SC',sans-serif}
+.ic{width:1.25em;height:1.25em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.skip{position:absolute;inset-inline-start:8px;top:-60px;background:var(--gold2);color:#1b1205;padding:8px 14px;border-radius:6px;z-index:100;font-weight:700}
+.skip:focus{top:8px}
+/* nav */
+nav{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:26px;padding:calc(env(safe-area-inset-top,0px) + 10px) 5vw 10px;background:rgba(22,18,15,.94);backdrop-filter:blur(10px);color:#f3e6c8;border-bottom:1px solid rgba(230,185,77,.25)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.5rem var(--serif);margin-inline-end:auto;color:#f7efe0}
+[lang=zh] .brand{font-family:'Noto Sans SC',sans-serif}
+.brand img{width:40px;height:40px;border-radius:50%}
+nav .lk{color:#e9dcc0;text-decoration:none;font-weight:500;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav .lk:hover{color:var(--gold2);border-color:var(--orange)}
+.lang{display:flex;gap:2px;background:#2b241d;border-radius:99px;padding:3px}
+.lang button{font:600 .78rem var(--sans);padding:5px 11px;border-radius:99px;color:#c8b99b;background:none;border:0;cursor:pointer;min-height:30px}
+.lang button[aria-pressed=true]{background:var(--gold2);color:#1b1205}
+/* hero */
+.hero{position:relative;background:var(--ink);color:#f7efe0;overflow:hidden;isolation:isolate}
+.hero .poster,.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+@media(min-aspect-ratio:1/1){.hero video.pv{object-fit:contain}.hero .poster.pb{filter:blur(28px) brightness(.75);transform:scale(1.2)}}
+.hero video{opacity:0;transition:opacity 1.2s ease}
+.hero video.on{opacity:1}
+.hero .veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(22,18,15,.8),rgba(22,18,15,.35) 60%,rgba(22,18,15,.6)),linear-gradient(rgba(22,18,15,.15),rgba(22,18,15,.7))}
+[dir=rtl] .hero .veil{background:linear-gradient(270deg,rgba(22,18,15,.8),rgba(22,18,15,.35) 60%,rgba(22,18,15,.6)),linear-gradient(rgba(22,18,15,.15),rgba(22,18,15,.7))}
+.hero .pat{position:absolute;inset:0;z-index:-1;background-image:var(--star);background-size:80px 80px;opacity:.07}
+.hero-in{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;max-width:1700px;margin:auto;padding:84px 3vw 76px;min-height:min(86vh,720px)}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--gold2);font:500 .9rem var(--kufi);letter-spacing:.06em;border:1px solid rgba(230,185,77,.45);padding:4px 14px;border-radius:99px;direction:ltr}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+h1{font-size:clamp(2.4rem,6vw,4.6rem);margin:18px 0 14px;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+[lang=zh] h1{font-size:clamp(2.1rem,5vw,3.8rem)}
+[dir=ltr] h1{font-size:clamp(2.2rem,5vw,4rem)}
+.hero p{font-size:1.15rem;color:#e6dac1;max-width:36ch;margin:0 0 28px}
+.verse{margin:22px 0 28px;padding:0;border:0}
+.verse .va{font:700 clamp(1.7rem,3.6vw,2.7rem)/1.8 var(--serif);color:var(--gold2);margin:0;max-width:none;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+.verse .vt{font-size:1.1rem;color:#efe3c8;margin:10px 0 0;max-width:46ch;font-style:italic}
+[dir=ltr] .verse .va{font-size:clamp(1.35rem,2.5vw,2.05rem)}
+[lang=ar] .verse .vt{display:none}
+.verse cite{display:block;margin-top:12px;font-style:normal;font-size:.85rem;color:#cdbb92;letter-spacing:.03em}
+.verse cite::before{content:"";display:inline-block;width:28px;height:1px;background:var(--orange);vertical-align:middle;margin-inline-end:10px}
+.mus{position:fixed;inset-inline-end:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(22,18,15,.88);border:1px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.35);direction:ltr;backdrop-filter:blur(6px)}
+.mus[hidden]{display:none}
+html[dir=rtl] .mus{inset-inline-end:auto;right:auto;left:18px}
+.mb{width:40px;height:40px;border-radius:50%;border:1px solid rgba(230,185,77,.5);background:transparent;color:var(--gold2);cursor:pointer;display:grid;place-items:center;padding:0}
+.mb:hover{border-color:var(--orange)}
+.mb.sm{width:34px;height:34px}.mb.sm svg{width:18px;height:18px}
+.mb.big{width:44px;height:44px;background:var(--gold);color:#1b1205;border-color:var(--gold)}
+.mb svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mb.big .son{fill:currentColor;stroke-width:1.6}.mb.big .soff{display:none;fill:currentColor}
+.mus.muted .mb.big .son{display:none}.mus.muted .mb.big .soff{display:block}
+.mr{-webkit-appearance:none;appearance:none;width:120px;height:28px;background:transparent;margin:0 4px;cursor:pointer;touch-action:none;--p:35%}
+.mr::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--orange) var(--p),rgba(230,185,77,.3) var(--p))}
+.mr::-moz-range-track{height:6px;border-radius:3px;background:rgba(230,185,77,.3)}
+.mr::-moz-range-progress{height:6px;border-radius:3px;background:var(--orange)}
+.mr::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);border:2px solid #1b1205;margin-top:-8px;box-shadow:0 0 0 1px var(--gold)}
+.mr::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--gold);border:2px solid #1b1205}
+.mv{display:flex;gap:3px;align-items:flex-end;height:20px;margin:0 4px}
+.mv i{width:4px;border-radius:2px;background:rgba(230,185,77,.3)}
+.mv i.on{background:var(--orange)}
+@media(max-width:820px){footer{padding-bottom:96px}html[dir=rtl] .mus{left:12px}.mus{inset-inline-end:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 96px);max-width:calc(100vw - 24px)}.mr{width:64px}.mb.sm{width:32px;height:32px}}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:4px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s;border:1.5px solid transparent;min-height:48px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.b1{background:linear-gradient(var(--gold2),var(--gold));color:#1b1205}
+.b2{border-color:var(--orange);color:#fff;background:rgba(22,18,15,.35)}
+.b2 .ic{color:var(--orange)}
+.medal{display:flex;justify-content:flex-start;align-items:center;direction:ltr}
+@media(min-width:821px){[dir=ltr] .medal{order:-1;justify-content:flex-start}[dir=ltr] .hero-in{grid-template-columns:.8fr 1.2fr}[dir=rtl] .medal{justify-content:flex-start}}
+.arch{position:relative;width:min(360px,70vw);display:grid;place-items:center}
+.arch img{width:100%;height:auto;filter:drop-shadow(0 12px 30px rgba(201,150,44,.4))}
+.strip{background:linear-gradient(180deg,#1d1712,#14100d);color:#f3e6c8;border-block:1px solid rgba(230,185,77,.28);position:relative;z-index:2}
+.strip div{max-width:1200px;margin:auto;display:flex;gap:12px 14px;justify-content:center;padding:14px 5vw;flex-wrap:wrap}
+.strip .chip{appearance:none;display:flex;gap:10px;align-items:center;padding:9px 20px 9px 10px;border-radius:999px;background:rgba(255,248,234,.05);border:1px solid rgba(230,185,77,.32);color:#f3e6c8;font:600 .98rem var(--sans);cursor:pointer;min-height:46px;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .25s,border-color .25s,box-shadow .25s,color .25s}
+.strip .chip .ic{box-sizing:content-box;width:20px;height:20px;padding:6px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1205;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.strip .chip::after{content:"";width:7px;height:7px;border-inline-end:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.55;transition:transform .25s,opacity .25s}
+.strip .chip:hover,.strip .chip:focus-visible{transform:translateY(-3px);background:rgba(230,185,77,.14);border-color:var(--gold2);color:#fff3d0;box-shadow:0 8px 22px rgba(0,0,0,.4),0 0 0 3px rgba(232,112,42,.18)}
+.strip .chip:hover .ic{transform:rotate(-12deg) scale(1.12)}
+.strip .chip:hover::after{opacity:1;transform:rotate(45deg) translate(2px,0)}
+.strip .chip:active{transform:translateY(0) scale(.97)}
+.strip .chip:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.subrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px 5vw 14px;background:#14100d;border-bottom:1px solid rgba(230,185,77,.28);animation:subin .25s ease}
+.subrow[hidden]{display:none}
+.subrow button{display:flex;align-items:center;gap:8px;padding:8px 16px;min-height:44px;border-radius:999px;background:rgba(230,185,77,.12);border:1px solid rgba(230,185,77,.45);color:#f3e6c8;font:600 .92rem var(--sans);cursor:pointer;transition:background .2s,transform .2s,border-color .2s}
+.subrow button:hover,.subrow button:focus-visible{background:rgba(230,185,77,.28);border-color:var(--gold2);transform:translateY(-2px);outline:none}
+.subrow .em{width:1.3em;height:1.3em}
+.strip .chip[aria-expanded=true]{background:rgba(230,185,77,.2);border-color:var(--gold2)}
+.strip .chip[aria-expanded=true]::after{transform:rotate(-135deg) translateY(-2px);opacity:1}
+@keyframes subin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.subrow{animation:none}.subrow button{transition:none}}
+@media(max-width:600px){.subrow{justify-content:flex-start;padding:8px 4vw 12px}.subrow button{font-size:.84rem;padding:6px 12px}}
+@media(prefers-reduced-motion:reduce){.strip .chip,.strip .chip .ic,.strip .chip::after{transition:none}}
+/* sections */
+section{padding:76px 5vw}
+.wrap{max-width:1240px;margin:auto}
+.sec-h{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:34px;gap:6px}
+.sec-h h2{font-size:clamp(2.1rem,4.4vw,3.2rem)}
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);width:min(260px,70%)}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:var(--gold)}
+.orn svg{width:20px;height:20px;fill:var(--orange);stroke:none}
+/* category tiles */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:0;padding:0;list-style:none}
+.cat{position:relative;display:flex;align-items:flex-end;justify-content:center;aspect-ratio:3/3.4;border-radius:150px 150px 18px 18px;overflow:hidden;text-align:center;color:#fff8e8;background:#1b1610;border:2px solid var(--gold);text-decoration:none;transition:transform .25s,box-shadow .25s,border-color .25s;cursor:pointer;font:inherit;width:100%;padding:0;isolation:isolate}
+.cat .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s}
+.cat::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,14,8,0) 38%,rgba(20,14,8,.55) 68%,rgba(14,10,5,.92) 100%)}
+.cat::after{content:"";position:absolute;inset:7px;border-radius:143px 143px 12px 12px;border:1px solid rgba(240,200,110,.45);pointer-events:none}
+.cat h3{position:relative;font-size:1.4rem;margin:0;padding:0 14px 20px;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.cat:hover{transform:translateY(-5px);border-color:var(--orange);box-shadow:0 16px 34px rgba(22,18,15,.35)}
+.cat:hover .ph{transform:scale(1.07)}
+.cat.feat{border-color:var(--orange);box-shadow:0 0 0 3px rgba(230,126,34,.25),0 14px 30px rgba(22,18,15,.3)}
+.cat.feat h3{color:var(--gold2)}
+/* about */
+.about{background:var(--ink);color:#eadfc7;position:relative}
+.about::before{content:"";position:absolute;inset:0;background-image:var(--star);background-size:80px 80px;opacity:.06}
+.about .wrap{position:relative;display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}
+.about h2{font-size:clamp(2.4rem,5.5vw,4rem);color:var(--gold2);line-height:1.15}
+.about p{margin:0 0 1.1rem;font-size:1.06rem;max-width:64ch;color:#d9ccb0}
+.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid rgba(230,185,77,.35);margin-top:20px}
+.stat{padding:26px 12px;text-align:center}
+.stat+.stat{border-inline-start:1px solid rgba(230,185,77,.25)}
+.stat b{display:block;font:700 clamp(2.2rem,5vw,3.4rem)/1.1 var(--kufi);color:var(--gold2);direction:ltr}
+.stat span{color:#bfb094}
+/* menu */
+.menu{background:linear-gradient(rgba(239,229,211,.9),rgba(239,229,211,.9)),var(--star) var(--paper2);background-size:auto,80px 80px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:0 0 22px;scrollbar-width:thin;position:sticky;top:62px;z-index:20;background:linear-gradient(var(--paper2) 80%,transparent)}
+.tabs button{white-space:nowrap;padding:10px 18px;border-radius:4px;background:#fff8ea;border:1px solid var(--line);font:600 .95rem var(--sans);color:var(--txt);cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px}
+.em{display:inline-block;width:1.3em;height:1.3em;flex:none}
+.tabs button .em{width:1.4em;height:1.4em}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--gold2);border-color:var(--ink);box-shadow:inset 0 -3px 0 var(--orange)}
+.tabs button[aria-selected=true] .ic{color:var(--gold2)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.card{background:var(--card);border-radius:6px;border:1px solid var(--gold);box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px #e3cf9f;padding:26px 26px 20px}
+.card h3{font-size:1.7rem;margin-bottom:4px;color:var(--ink)}
+.tbl{display:grid;grid-template-columns:minmax(0,1fr) repeat(var(--n),var(--w));column-gap:8px;align-items:center}
+.tbl>*{padding:8px 0;border-bottom:1px dotted #cdb98f}
+.tbl>.h{border-bottom:2px solid var(--gold);padding:4px 0 6px;text-align:center}
+.tbl>.h i{display:inline-block;font:600 .7rem/1.25 var(--sans);font-style:normal;background:var(--ink);color:var(--gold2);border-radius:4px;padding:3px 6px;min-width:100%}
+.tbl>.h:first-child{background:none}
+.nm{font-weight:500;unicode-bidi:isolate;direction:rtl;line-height:1.5}
+[dir=ltr] .nm{direction:ltr}
+.nm small,.of p small,.card h3 .ar2{display:block;font:400 .8rem/1.5 var(--ar-font,'IBM Plex Sans Arabic',sans-serif);color:var(--mut);direction:rtl;text-align:left}
+.card h3 .ar2{font-size:.9rem;margin-top:2px}
+.of p small{color:#bfae8a;margin-top:6px}
+[dir=ltr] .nm,[dir=ltr] .card h3 .ar{text-align:left}
+.tbl b{font:700 1rem var(--kufi);color:var(--price);text-align:center;white-space:nowrap}
+.tbl b.na{color:#b9a98a;font-weight:500}
+.tbl b[dir=rtl]{unicode-bidi:isolate}
+.tbl .d{grid-column:1/-1;font-size:.88rem;color:var(--mut);padding-top:0;direction:rtl;unicode-bidi:isolate;line-height:1.6}
+[dir=ltr] .tbl .d{text-align:left;direction:ltr}
+.tbl>*:last-child,.tbl>.last{border-bottom:0}
+.gn{margin:12px 0 0;font-size:.88rem;color:var(--mut);background:rgba(232,112,42,.08);border-inline-start:3px solid var(--orange);padding:8px 12px;border-radius:2px;direction:rtl;unicode-bidi:isolate}
+[dir=ltr] .gn{direction:ltr;text-align:left;border-inline-start:0;border-left:3px solid var(--orange)}
+.note{margin:26px 0 0;text-align:center;color:var(--mut);font-size:.92rem}
+.offers{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.of{position:relative;background:var(--ink);color:#f7efe0;border-radius:6px;border:1px solid var(--gold);box-shadow:inset 0 0 0 5px var(--ink),inset 0 0 0 6px rgba(230,185,77,.5);padding:34px 28px 26px;display:flex;flex-direction:column;gap:12px}
+.of em{position:absolute;top:0;inset-inline-end:26px;background:var(--orange);color:#fff;font:700 .75rem var(--sans);font-style:normal;padding:3px 12px 5px;border-radius:0 0 6px 6px}
+.of h3{font-size:1.7rem;color:var(--gold2)}
+.of p{margin:0;flex:1;direction:rtl;unicode-bidi:isolate}
+[dir=ltr] .of p{text-align:left}
+.pr{display:flex;align-items:baseline;gap:12px;border-top:1px solid rgba(230,185,77,.35);padding-top:12px}
+.pr b{font:700 2.2rem var(--kufi);color:var(--gold2)}
+.pr b span{font:500 .85rem var(--sans);color:#bfb094;margin-inline-start:6px}
+.pr s{color:#9d9078}
+/* branches */
+.brs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.br{background:var(--card);border:1px solid var(--gold);box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px #e3cf9f;border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.br .top{display:flex;gap:14px;align-items:flex-start}
+.br .pin{width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold2);display:grid;place-items:center;flex:none}
+.br h3{font-size:1.45rem}
+.br p{margin:2px 0 0;color:var(--mut);unicode-bidi:isolate}
+.br.soon{border-style:dashed;background:transparent;box-shadow:none;justify-content:center}
+.br.soon .pin{background:var(--orange);color:#1b1205}
+.br .bd{display:inline-block;margin-top:6px;padding:4px 14px;border-radius:999px;background:var(--orange);color:#1b1205;font-weight:700;font-size:.95rem}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.acts a{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:4px;font-weight:600;text-decoration:none;border:1.5px solid var(--gold);min-height:44px}
+.acts a:first-child{background:var(--ink);color:var(--gold2);border-color:var(--ink)}
+.acts a:hover{border-color:var(--orange)}
+.hot{margin-top:40px;text-align:center;background:var(--ink);color:#f7efe0;border-radius:6px;border:1px solid var(--gold);box-shadow:inset 0 0 0 6px var(--ink),inset 0 0 0 7px rgba(230,185,77,.5);padding:44px 20px}
+.hot b{display:block;font:700 clamp(3.2rem,11vw,5.5rem)/1.15 var(--kufi);color:var(--gold2);direction:ltr}
+.hot .lbl{color:#cdbf9f;font-size:1.1rem}
+.hot .btn{margin-top:14px}
+footer{background:var(--ink);color:#bfb094;text-align:center;padding:26px 5vw calc(env(safe-area-inset-bottom,0px) + 26px);font-size:.9rem;border-top:3px double var(--gold)}
+footer{position:relative;overflow:hidden;padding-top:92px}
+footer>*{position:relative;z-index:2}
+#fire{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.fglow{position:absolute;left:0;right:0;bottom:0;height:230px;z-index:0;pointer-events:none;background:radial-gradient(60% 100% at 50% 100%,rgba(240,130,34,.5),rgba(201,150,44,.2) 50%,transparent 80%);animation:flick 3.2s ease-in-out infinite alternate}
+@keyframes flick{0%{opacity:.5}20%{opacity:.95}40%{opacity:.62}65%{opacity:1}100%{opacity:.7}}
+
+.gal{background:var(--ink);color:#eadfc7;position:relative;overflow:hidden}
+.gal::before{content:"";position:absolute;inset:0;background-image:var(--star);background-size:80px 80px;opacity:.06}
+.gal .wrap{position:relative}.gal h2{color:var(--gold2)}
+.gal .sec-h{text-align:center;display:flex;flex-direction:column;align-items:center}
+.gst{position:relative;margin:34px auto 0;width:min(100%,560px,calc(70vh*4/5));aspect-ratio:4/5;border:2px solid var(--gold);border-radius:20px;box-shadow:0 0 0 6px rgba(201,150,44,.12),0 22px 60px rgba(0,0,0,.5),0 0 40px rgba(230,126,34,.15);overflow:hidden;background:#120d09;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.gst::after{content:"";position:absolute;inset:8px;border:1px solid rgba(232,196,104,.55);border-radius:13px;pointer-events:none;z-index:5}
+.gs{position:absolute;inset:0;opacity:0;will-change:transform,opacity}
+.gs.on{opacity:1}
+.gs img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none}
+.gnv{position:absolute;top:50%;translate:0 -50%;z-index:6;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);background:rgba(18,13,9,.62);color:var(--gold2);display:grid;place-items:center;cursor:pointer;font-size:20px;line-height:1;padding:0}
+.gnv.p{left:14px}.gnv.n{right:14px}
+.gnv:hover{background:var(--gold);color:#1a120a}
+.gdots{display:flex;justify-content:center;gap:9px;margin-top:18px;flex-wrap:wrap}
+.gdots button{width:9px;height:9px;border-radius:50%;border:1px solid var(--gold);background:transparent;padding:0;cursor:pointer;transition:background .3s,transform .3s}
+.gdots button.on{background:var(--gold);transform:scale(1.35)}
+@media(max-width:700px){.gst{width:min(100%,calc(72vh*4/5));aspect-ratio:4/5;border-radius:16px;margin-top:24px}.gnv{width:36px;height:36px}.gnv.p{left:8px}.gnv.n{right:8px}}
+@media(max-width:360px){.gst{border-radius:12px}.gst::after{inset:6px}}
+@media(prefers-reduced-motion:reduce){.gs{transition:none!important}}
+#mus.wait{animation:wp 1s ease-in-out infinite}@keyframes wp{50%{opacity:.45}}
+#ld{position:fixed;inset:0;z-index:99999;background:#0b0907;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s;animation:ldo 0s 9s forwards}#ld.off{opacity:0;pointer-events:none}#ld img{width:110px;height:110px;object-fit:contain}#ld i{display:block;width:140px;height:3px;background:#2a2218;overflow:hidden;border-radius:2px}#ld i:after{content:'';display:block;height:100%;width:40%;background:#d9a43a;animation:ldb 1.2s ease-in-out infinite}@keyframes ldb{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}@keyframes ldo{to{opacity:0;visibility:hidden}}
+#flamev{position:fixed;left:0;bottom:0;width:100%;height:58vh;object-fit:cover;object-position:center bottom;mix-blend-mode:screen;z-index:9998;pointer-events:none;display:none;-webkit-mask-image:linear-gradient(to top,#000 45%,transparent 100%);mask-image:linear-gradient(to top,#000 45%,transparent 100%);filter:brightness(1.55) saturate(1.25)}
+#flame{position:fixed;inset:0;width:100%;height:100%;z-index:9998;pointer-events:none;display:none}
+#smoke{position:fixed;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;opacity:.9}
+@media(prefers-reduced-motion:reduce){.fglow{animation:none;opacity:.7}#smoke,#fire,#flame,#flamev{display:none!important}}
+footer small{display:block;margin-top:4px;color:#8f8369}
+.fab{position:fixed;inset-inline-start:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:45;width:56px;height:56px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.fab .ic{width:26px;height:26px;stroke-width:1.8}
+@media(max-width:900px){.cats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){
+nav{gap:12px}nav .lk{display:none}.brand{font-size:1.25rem}.brand span{display:none}
+.hero-in{grid-template-columns:1fr;gap:24px;padding:36px 6vw 48px;min-height:0}
+.medal{order:-1;justify-content:flex-start}.arch{width:min(220px,52vw)}
+.hero p{max-width:none}
+.cats{grid-template-columns:1fr 1fr;gap:12px}
+.cat{border-radius:100px 100px 14px 14px}.cat::after{border-radius:93px 93px 9px 9px;inset:6px}.cat h3{font-size:1.1rem;padding:0 8px 14px}
+section{padding:52px 5vw}
+.about .wrap{grid-template-columns:1fr;gap:12px}
+.grid,.brs{grid-template-columns:1fr}
+.card{padding:22px 16px 16px}
+.tabs{top:56px}
+.strip div{gap:8px;padding:10px 3vw;justify-content:center}.strip .chip{font-size:.82rem;padding:5px 11px 5px 6px;min-height:44px;white-space:nowrap;gap:7px}.strip .chip::after{display:none}.strip .chip .ic{width:18px;height:18px;padding:5px}
+.lang button{padding:5px 8px;font-size:.72rem}
+}
+@media(max-width:420px){.tbl{--w:3.1rem!important;column-gap:4px}.tbl.wide{--w:4.9rem!important}.tbl>.h i{font-size:.62rem;padding:3px 3px}.btn{padding:12px 18px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Verified branch details */
+.branch-info{margin:0 0 14px;padding:12px 14px;background:rgba(201,150,44,.07);border-radius:6px;font-size:.9rem}
+.branch-info p{margin:0 0 5px}.branch-info p:last-child{margin-bottom:0}.branch-info small{display:block;color:var(--mut);line-height:1.7}.branch-info a{color:var(--price);text-underline-offset:3px}
+/* Dish search and compact mobile music controls */
+.menu-search{max-width:720px;margin:0 auto 28px}
+.menu-search label{display:block;font-weight:700;margin-bottom:8px;color:var(--ink)}
+.search-line{display:flex;gap:8px;align-items:center}
+#dish-search{min-width:0;flex:1;width:100%;font:inherit;padding:13px 16px;border:1px solid #b59b69;border-radius:8px;background:#fffaf0;color:#241a11;outline-offset:3px}
+#search-clear{font:inherit;padding:12px;border:1px solid #b59b69;background:#fffaf0;color:#241a11;border-radius:8px;cursor:pointer}
+#search-clear[hidden],#cats[hidden]{display:none}
+#search-status{min-height:1.5em;margin:8px 0 0;color:var(--mut);font-size:.9rem}
+.search-category{font-size:1.25rem;margin:22px 0 12px;color:var(--ink)}
+.search-empty{text-align:center;padding:32px 16px;border:1px dashed #b59b69;border-radius:8px}
+.music-panel{display:flex;align-items:center;gap:6px}.music-toggle{display:none}
+@media(max-width:820px){
+html{scroll-padding-bottom:90px}footer{padding-bottom:110px}
+html[dir] .mus{inset-inline-start:auto;inset-inline-end:auto;left:12px;right:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);padding:0;border-radius:50%;max-width:none}
+.music-toggle{display:grid;width:50px;height:50px;background:var(--ink);color:var(--gold2);font-size:28px;border:0}
+.music-panel{display:none;position:absolute;left:0;bottom:64px;background:rgba(22,18,15,.98);padding:12px;border:1px solid var(--gold);border-radius:18px;box-shadow:0 8px 24px #0005;max-width:calc(100vw - 24px)}
+.mus.open .music-panel{display:flex}
+html[dir] .fab{inset-inline-start:auto;inset-inline-end:auto;left:auto;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:50px;height:50px}
+.mr{width:100px}.mb.sm{width:40px;height:40px}
+}
+
+
+/* Approved mobile navigation and intrinsic-size fixes */
+nav{flex-wrap:wrap;gap:8px 22px}nav .lk{min-height:44px;display:flex;align-items:center}nav .lang{max-width:100%;flex-wrap:wrap}.about .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}.about .wrap>*{min-width:0}.about p,.about h2{overflow-wrap:anywhere}.grid,.brs{min-width:0}.card,.br,.of{min-width:0}.tbl{grid-template-columns:minmax(0,1fr) repeat(var(--n),minmax(0,var(--w)))}.tbl>*{min-width:0;overflow-wrap:anywhere}.tbl>.h i{min-width:0;max-width:100%}.tbl b{white-space:normal}.lang button{flex-shrink:0}.lang{flex-wrap:wrap}.pr{flex-wrap:wrap}.fallback-category{margin-top:30px}.nojs-menu h3{margin:20px 0}body{overflow-x:visible}
+@media(max-width:820px){nav .lk{display:flex;font-size:.8rem;padding:4px 0;order:3}nav .brand{order:0}nav .lang{order:1;margin-inline-start:auto}nav{gap:4px 18px}nav::after{content:"";flex-basis:100%;order:2}.tabs{top:112px}.about .wrap{grid-template-columns:minmax(0,1fr)}html{scroll-padding-top:126px}.subrow{top:112px}}
+@media(max-width:420px){nav{padding-inline:4vw;column-gap:12px}nav .lang{max-width:calc(100% - 52px)}.lang button{padding-inline:7px}.card{padding-inline:14px}.tbl{--w:2.7rem!important;column-gap:5px}.tbl.wide{--w:3.7rem!important}.stats{grid-template-columns:1fr}.stat+.stat{border-inline-start:0;border-top:1px solid #c9962c44}.btns{flex-wrap:wrap}.about .btn{max-width:100%}}
+@media(max-width:350px){nav .lang{margin:0;max-width:100%}.tbl{grid-template-columns:minmax(0,1fr) repeat(var(--n),minmax(0,2.7rem))}.tbl.wide{grid-template-columns:minmax(0,1fr) repeat(var(--n),minmax(0,3.2rem))}.tbl b{font-size:.9rem}.tbl>.h i{font-size:.58rem}}
+html{scroll-padding-top:calc(var(--nav-height,100px) + 15px)}.tabs,.subrow{top:var(--nav-height,100px)}
+#mc .card h3,#mc .nm,#mc .tn,#mc .d,#mc .h i{overflow-wrap:anywhere;white-space:normal}@media(max-width:420px){.tbl,.tbl.wide{grid-template-columns:minmax(0,1.7fr) repeat(var(--n),minmax(0,1fr))}}
+
+.cats>*{min-width:0}.cat h3{min-width:0;max-width:100%;overflow-wrap:anywhere}.sec-h,.sec-h h2{min-width:0;overflow-wrap:anywhere}
+
+.strip .chip{max-width:100%;white-space:normal;text-align:start}.strip .chip span{min-width:0;overflow-wrap:anywhere}.strip .chip .ic{flex-shrink:0}
+
+.br div,.br h3,.br p{min-width:0;max-width:100%;overflow-wrap:anywhere}
+
+.large-text .tbl{display:block}.large-text .tbl>.h{display:none}.large-text .tbl>.nm{display:block;width:100%;padding-top:16px}.large-text .tbl>b{display:inline-flex;flex-direction:column;vertical-align:top;align-items:flex-start;max-width:100%;margin-inline-end:12px;padding-block:7px}.large-text .tbl>b::before{content:attr(data-label);font:500 .65rem/1.5 var(--sans);color:var(--mut);white-space:normal}.large-text .tbl>.d{display:block}
+
+/* Reviewed navigation styling, existing labels and destinations preserved. */
+.site-head{border-bottom:1px solid #bc8f4566;box-shadow:0 8px 28px #140d0630}
+nav .lk,.nav>a:not(.brand){border:1px solid transparent;border-radius:999px;padding:7px 14px;font-weight:600;transition:background .2s,border-color .2s,color .2s,transform .2s}
+nav .lk:hover,.nav>a:not(.brand):hover,nav .lk:focus-visible,.nav>a:not(.brand):focus-visible{background:#e6b94d15;border-color:#d3a24b77;color:#f5d385;transform:translateY(-1px)}
+.nav>a[aria-current]{background:#e6b94d18;border-color:#d3a24b77;color:#f5d385}
+@media(max-width:820px){nav .lk,.nav>a:not(.brand){padding:6px 10px;font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){nav .lk,.nav>a:not(.brand){transition:none;transform:none}}
+
+/* A decorative walking camel gets its own narrow lane, never over the links. */
+nav{flex-wrap:wrap}
+.camel-lane{position:relative;display:block;flex:0 0 100%;height:27px;overflow:hidden;pointer-events:none;margin-top:-8px;border-bottom:1px solid #c5a16322}
+.camel-walker{position:absolute;top:0;left:-65px;width:52px;height:27px;color:#d4ae69;animation:camel-cross 38s linear infinite;animation-delay:-12s}
+.camel-walker svg{display:block;width:100%;height:100%;overflow:visible}
+.camel-body{animation:camel-bob 1.2s ease-in-out infinite}
+.camel-leg{fill:none;stroke:currentColor;stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round;transform-box:view-box}
+.camel-leg.a{transform-origin:25px 39px;animation:camel-step 1.2s ease-in-out infinite}
+.camel-leg.b{transform-origin:34px 39px;animation:camel-step 1.2s ease-in-out infinite reverse}
+.camel-leg.c{transform-origin:57px 39px;animation:camel-step 1.2s ease-in-out infinite reverse}
+.camel-leg.d{transform-origin:65px 39px;animation:camel-step 1.2s ease-in-out infinite}
+@keyframes camel-cross{from{left:-65px}to{left:100%}}
+@keyframes camel-step{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+@keyframes camel-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(.8px)}}
+@media(prefers-reduced-motion:reduce){.camel-walker{animation:none;left:50%;transform:translateX(-50%)}.camel-body,.camel-leg{animation:none!important}}
+
+.motion-toggle{position:static;flex:0 0 auto;display:inline-grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid #bc914c88;border-radius:50%;background:#211b16;color:#edc77d;cursor:pointer;align-self:center}
+.motion-toggle svg{width:13px;height:13px;fill:currentColor}.motion-toggle:hover{background:#49351d}.motion-toggle:focus-visible{outline:2px solid #f4cc77;outline-offset:3px}.motion-toggle:disabled{opacity:.55;cursor:default}
+html.motion-off{scroll-behavior:auto!important}html.motion-off *,html.motion-off *::before,html.motion-off *::after{animation-play-state:paused!important;scroll-behavior:auto!important}
+html.motion-off canvas,html.motion-off #flamev{visibility:hidden!important}html.motion-off .arch img{opacity:1!important;transform:none!important}
+
+/* Globe menu follows the supplied native-name/English-name reference. */
+.language-picker{display:flex;flex:0 0 auto;align-items:center;order:1}.language-trigger{display:flex;align-items:center;justify-content:center;gap:8px;max-width:170px;min-height:40px;padding:7px 14px;border:1px solid #bd8e40;border-radius:999px;background:#c59a49;color:#21170c;font:600 .85rem "IBM Plex Sans Arabic",system-ui,sans-serif;cursor:pointer}.language-trigger svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.4;flex:none}.language-trigger span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.language-trigger:hover{background:#e1b966}
+.motion-toggle{order:2}.camel-lane{order:10}
+.language-dialog{width:min(420px,calc(100vw - 24px));max-height:min(78dvh,740px);margin:auto;padding:20px;border:1px solid #d2aa60;border-radius:22px;background:#fbf4e3;color:#33251d;box-shadow:0 25px 100px #0009;font:400 1rem "IBM Plex Sans Arabic",system-ui,sans-serif;overscroll-behavior:contain;scrollbar-color:#bc985b #f8eed8}
+.language-dialog::backdrop{background:#100b08b3;backdrop-filter:blur(4px)}.language-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:15px}.language-dialog h2{margin:0;font:700 1.5rem "IBM Plex Sans Arabic",system-ui,sans-serif;line-height:1.5;color:#33251d}.language-dialog-head button{padding:9px 16px;min-height:42px;border:1px solid #bfae95;border-radius:99px;background:transparent;color:#5f3d2b;font:inherit;cursor:pointer}
+#language-search{width:100%;min-height:48px;border:1px solid #baa88f;border-radius:13px;background:#fffaf0;color:#33251d;padding:10px 14px;font:inherit;outline-offset:3px}#language-search:focus-visible{outline:2px solid #bf8f36}.language-options{list-style:none;padding:0;margin:12px 0 0;max-height:50dvh;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}.language-options li{margin:0;padding:0}.language-options li[hidden]{display:none}.language-options button{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:2px;width:100%;min-height:67px;border:0;border-radius:14px;background:none;color:#33251d;padding:10px 18px;text-align:start;font:500 1rem "IBM Plex Sans Arabic",system-ui,sans-serif;cursor:pointer}.language-options button span,.language-options button small{text-align:inherit}.language-options button small{font-size:.75rem;color:#715b47}.language-options button:hover,.language-options button:focus-visible{background:#eee1c4}.language-options button[aria-pressed=true]{background:#f1e3c4;padding-inline-end:32px}.language-options button[aria-pressed=true]::after{content:"";position:absolute;inset-inline-end:13px;top:22px;width:8px;height:8px;background:#9b4e2e;border-radius:50%}.language-status:empty{display:none}.language-status{font-size:.85rem;margin:8px 0;color:#83532b}.sr-language{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:820px){nav .lk{order:3}.language-picker{margin-inline-start:auto}.language-trigger{min-height:36px;max-width:130px;padding:5px 10px;font-size:.78rem}.language-trigger svg{width:18px;height:18px}.motion-toggle{width:30px;height:30px}.nav .brand{flex-basis:auto;margin-inline-end:auto}.nav{column-gap:12px}.nav>a:not(.brand){order:3}.nav .brand{font-size:.9rem}.nav>a:not(.brand){font-size:.78rem;padding:6px 8px}.camel-lane{margin-top:-7px}}
+@media(max-width:360px){.language-trigger{max-width:106px}.language-trigger span{max-width:56px}.nav,.site-head .nav{padding-inline:14px;column-gap:8px}.nav .brand{gap:6px}.nav .brand img{width:32px;height:32px}.nav>a:not(.brand){padding-inline:6px;font-size:.74rem}}
+@media(prefers-reduced-motion:reduce){.language-dialog::backdrop{backdrop-filter:none}}
+.nav-row-break{display:none}@media(max-width:820px){nav{row-gap:6px!important}.nav-row-break{display:block;flex:0 0 100%;height:0;order:2;margin-block:-3px}}
+html[dir=ltr] .toc a{padding:14px 34px 14px 16px}html[dir=ltr] .toc a::after{left:auto;right:12px;content:"→"}.language-options button{align-items:flex-start}
+
+/* Keep long translated and mixed-script headings readable, without orphan letters. */
+.intro h1,.jobs-head h1{word-break:normal;overflow-wrap:break-word;text-wrap:balance}
+html[lang=fa] .jobs-head h1,html[lang=ur] .jobs-head h1,html[lang=fa] .intro h1,html[lang=ur] .intro h1{font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.6}
+@media(max-width:620px){html:not([lang=ar]) .jobs-head h1,html:not([lang=ar]) .intro h1{font-size:clamp(1.9rem,6vw,2.5rem);line-height:1.5;word-break:normal;overflow-wrap:break-word;text-wrap:balance}}
+.brand-no-break{white-space:nowrap;display:inline-block;unicode-bidi:isolate}@media(max-width:360px){.brand-caption{display:none!important}}
+
+/* Hero video is the first screen again, with the action curtain reveal. */
+.hero h1{font-family:Amiri,Georgia,serif;line-height:1.35;text-wrap:balance;color:#fff1ce;overflow-wrap:break-word}
+.cta-reveal{position:relative;overflow:hidden;border:1px solid #c6ab7070;border-radius:10px;padding:13px;background:#1b2116a8}.food-first-actions{display:flex;flex-wrap:wrap;gap:10px}.food-first-actions .btn{flex:1 1 auto;min-height:50px;padding:10px 13px;font-size:.88rem;line-height:1.5;white-space:normal;overflow-wrap:break-word}.food-first-actions .b2{background:#f3e5bf;color:#2b2619;border-color:#bca268}.food-order{background:#383d24;border:1px solid #c6ab70;color:#fff1cf;flex-wrap:wrap;gap:7px}.food-order bdi{font-family:Arial,sans-serif;letter-spacing:.04em}
+.cta-leaf{display:none;position:absolute;top:0;bottom:0;width:50.5%;z-index:2;pointer-events:none;background-color:#643d2c;background-image:linear-gradient(90deg,#1d1e1499,transparent 15%,#b4965150 26%,#1d1e1480 48%,transparent 70%,#1d1e14aa),var(--heritage-flower);background-size:auto,58px;border-bottom:5px double #c8ac6b;box-shadow:0 6px 15px #0007}.cta-leaf-left{left:0;border-right:2px solid #ccb878}.cta-leaf-right{right:0;border-left:2px solid #ccb878}
+.has-js .cta-leaf{display:block;animation-duration:1.45s;animation-delay:.15s;animation-timing-function:cubic-bezier(.25,.65,.25,1);animation-fill-mode:forwards}.hero-reveal-ready .cta-leaf-left{animation-name:open-curtain-left}.hero-reveal-ready .cta-leaf-right{animation-name:open-curtain-right}
+@keyframes open-curtain-left{0%,12%{transform:translateX(0)}100%{transform:translateX(-103%)}}@keyframes open-curtain-right{0%,12%{transform:translateX(0)}100%{transform:translateX(103%)}}
+html.motion-off .cta-leaf{display:none!important}
+@media(max-width:820px){.food-first-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.food-first-actions .food-order{grid-column:1/-1}.food-first-actions .btn{padding:9px 8px;font-size:.85rem;gap:5px;min-width:0}.cta-reveal{padding:10px}}
+@media(max-width:620px) and (max-height:740px){.food-first-actions .btn{min-height:44px;font-size:.8rem}.cta-reveal{padding:8px}}
+@media(prefers-reduced-motion:reduce){.has-js .cta-leaf{display:none!important}}
+
+/* Original aged olive plaster and floral geometry, with quiet reading surfaces. */
+:root{--aged-grain:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22230%22%20height%3D%22230%22%3E%3Cfilter%20id%3D%22grain%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.55%22%20numOctaves%3D%223%22%20seed%3D%2231%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3CfeComponentTransfer%3E%3CfeFuncA%20type%3D%22table%22%20tableValues%3D%220%20.26%22%2F%3E%3C%2FfeComponentTransfer%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23grain%29%22%20opacity%3D%22.55%22%2F%3E%3C%2Fsvg%3E");--heritage-flower:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22110%22%20height%3D%22110%22%20viewBox%3D%220%200%20110%20110%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23d0b46a%22%20opacity%3D%22.22%22%3E%3Cpath%20d%3D%22M55%2012Q68%2029%2083%2027Q81%2042%2098%2055Q81%2068%2083%2083Q68%2081%2055%2098Q42%2081%2027%2083Q29%2068%2012%2055Q29%2042%2027%2027Q42%2029%2055%2012Z%22%2F%3E%3Cpath%20d%3D%22M55%2024Q62%2045%2083%2055Q62%2065%2055%2086Q48%2065%2027%2055Q48%2045%2055%2024Z%22%2F%3E%3Ccircle%20cx%3D%2255%22%20cy%3D%2255%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22m0%200%2021%2021M110%200%2089%2021M0%20110l21-21m89%2021L89%2089%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}
+html{background:#252a1c}body{background-color:#555738;background-image:var(--aged-grain),var(--heritage-flower);background-size:230px,110px;background-blend-mode:multiply,normal}
+.page-home #pick,.page-home #menu,.page-home #branches,.page-home #gallery{background:transparent}.page-home #pick h2,.page-home #menu>.wrap>.sec-h h2,.page-home #branches h2,.page-home #gallery h2{color:#fff0cd}.page-home #search-label,.page-home #search-status,.page-home .menu>.wrap>.note,.page-home .search-category,.page-home .search-empty{color:#fff0cd}.page-home .menu>.wrap>.note{background:#292d1fdb;border:1px solid #bca26d66;padding:12px;border-radius:6px}.page-home .about{background:#24291ef0}.page-home .tabs{background:linear-gradient(#4c5036 82%,transparent)}
+.page-about,.page-careers{background-color:#252b1c}.page-about .intro,.page-careers .jobs-head{background-color:#252b1c;background-image:var(--aged-grain),var(--heritage-flower);background-size:230px,110px}.page-about section.block{background-color:#272c1ff7}.page-careers .job{background:#2c3023}.page-careers .jobs-contact{background:#292f20e8}
+html[lang=fa] .hero h1,html[lang=ur] .hero h1{font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.5}
+</style>
+<noscript><style>.menu-search,.tabs,.strip,.subrow,.mus{display:none!important}</style></noscript><script>(()=>{document.documentElement.classList.add('has-js');const q=matchMedia('(prefers-reduced-motion: reduce)');try{if(localStorage.getItem('kazzaz-motion')==='off')document.documentElement.classList.add('motion-off')}catch(e){}window.__motionPaused=()=>document.documentElement.classList.contains('motion-off')||q.matches})();</script></head>
+<body class="page-home"><div id="ld" aria-hidden="true"><img src="assets/logo.webp" alt="" width="110" height="110"><i></i></div><noscript><style>#ld{display:none}</style></noscript>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 11.6V4.5a1 1 0 0 1 1-1h7.1l8.9 8.9a1 1 0 0 1 0 1.4l-6.7 6.7a1 1 0 0 1-1.4 0z"/><circle cx="8" cy="8" r="1.4"/><path d="M12.5 13.5l3-3"/></symbol>
+<symbol id="e-1f354" viewBox="0 0 36 36"><path fill="#D99E82" d="M18 20.411c-9.371 0-16.967-.225-16.967 6.427C1.033 33.487 8.629 35 18 35c9.371 0 16.967-1.513 16.967-8.162 0-6.651-7.596-6.427-16.967-6.427z"/><path fill="#662113" d="M34.47 20.916S26.251 19.932 18 19.89c-8.251.042-16.47 1.026-16.47 1.026C.717 27.39 7.467 30.057 18 30.057s17.283-2.667 16.47-9.141z"/><path fill="#FFCC4D" d="M33.886 18.328l-31.855.646c-1.1 0-2.021 2.229-.854 2.812 8.708 2.708 15.708 5.448 15.708 5.448.962.532 1.287.534 2.25.003 0 0 9.666-3.868 15.875-5.493.881-.23-.025-3.416-1.124-3.416z"/><path fill="#77B255" d="M34.725 18.412c-1.9-1.751-1.79-.819-3.246-1.23-.553-.156-4.51-5.271-13.529-5.271h-.02c-9.019 0-12.976 5.115-13.529 5.271-1.456.411-1.346-.521-3.246 1.23-.872.804-1.108 1.222-.188 1.43 1.386.313 1.26 1.152 2.253 1.444 1.202.353 1.696-.292 3.634-.028 1.653.225 1.761 2.369 3.429 2.369s1.668-.8 3.335-.8 2.653 2.146 4.321 2.146 2.653-2.146 4.321-2.146c1.668 0 1.668.8 3.335.8 1.668 0 1.776-2.144 3.429-2.369 1.938-.263 2.433.381 3.634.028.993-.292.867-1.13 2.253-1.444.922-.207.687-.626-.186-1.43z"/><path fill="#DD2E44" d="M34.077 16.52c0 2.984-7.198 4.393-16.077 4.393S1.923 19.504 1.923 16.52c0-5.403.966-5.403 16.077-5.403s16.077.001 16.077 5.403z"/><path fill="#D99E82" d="M18 .524C8.629.524 1.033 4.915 1.033 11.566c0 6.125 7.596 6.375 16.967 6.375s16.967-.25 16.967-6.375C34.967 4.914 27.371.524 18 .524z"/><path d="M10.784 3.695c-.498-.319-1.159-.173-1.477.325-.318.498-.173 1.16.325 1.477.498.319 1.76.557 2.079.059.318-.498-.429-1.543-.927-1.861zm9.734-1.035c-.562.182-1.549 1.006-1.366 1.568.183.562 1.464.648 2.026.466s.869-.786.686-1.348c-.182-.561-.786-.869-1.346-.686zm10.909 7.035c-.452-.38-1.585.225-1.966.677-.38.453-.321 1.127.131 1.507.452.38 1.127.321 1.507-.131.381-.453.781-1.673.328-2.053zm-3.643-5c-.498-.318-1.159-.172-1.478.326-.318.498-.172 1.159.326 1.477.498.319 1.76.557 2.078.059.319-.499-.428-1.544-.926-1.862zm-15 7c-.498-.318-1.159-.172-1.478.326-.318.497-.172 1.159.326 1.476.498.319 1.76.558 2.078.059.319-.498-.428-1.543-.926-1.861zm3.046-4.808c-.336.486-.62 1.739-.133 2.075.486.336 1.557-.374 1.893-.86.336-.486.213-1.152-.273-1.488-.485-.336-1.152-.213-1.487.273zm7.954 4.808c-.498-.318-1.159-.172-1.478.326-.318.497-.172 1.16.326 1.476.498.319 1.76.558 2.078.059.319-.498-.428-1.543-.926-1.861zM4.948 7.808c-.394.441-.833 1.648-.392 2.042.439.394 1.591-.174 1.985-.615.395-.44.357-1.116-.083-1.511-.439-.394-1.116-.356-1.51.084z" fill="#FFE8B6"/></symbol>
+<symbol id="e-1f356" viewBox="0 0 36 36"><path fill="#FFD983" d="M14.017 10.368L8.173 4.524c.847-1.017.805-2.525-.15-3.479-1.011-1.011-2.65-1.011-3.662 0-.621.621-.856 1.478-.715 2.282-.804-.141-1.661.094-2.282.715-1.011 1.011-1.011 2.651 0 3.662.954.955 2.462.996 3.479.15l5.844 5.844 3.33-3.33zm11.918 11.919l5.845 5.844c1.017-.846 2.524-.805 3.479.15 1.012 1.011 1.012 2.65 0 3.661-.621.621-1.479.856-2.282.716.142.804-.095 1.661-.716 2.281-1.011 1.012-2.65 1.012-3.661 0-.955-.954-.996-2.462-.149-3.479l-5.845-5.844 3.329-3.329z"/><path fill="#C1694F" d="M30.021 15.879c-1.632-1.633-4.113-1.543-6.234-3.665-2.121-2.121-2.032-4.602-3.665-6.235-3.515-3.515-7.018-1.467-11.313 2.829-4.296 4.296-6.343 7.799-2.829 11.313 1.633 1.633 4.114 1.544 6.235 3.665 2.122 2.121 2.032 4.603 3.665 6.234 3.515 3.515 7.018 1.468 11.314-2.828s6.341-7.798 2.827-11.313z"/><path fill="#662113" d="M14 23c-.104 0-.211-.017-.316-.052-.524-.174-.807-.74-.632-1.265 1.109-3.328 5.305-7.523 8.632-8.632.528-.176 1.09.108 1.265.632.175.524-.108 1.09-.632 1.265-2.686.895-6.473 4.682-7.368 7.368-.14.419-.53.684-.949.684z"/></symbol>
+<symbol id="e-1f357" viewBox="0 0 36 36"><path fill="#FFD983" d="M14.017 10.368L8.173 4.524c.847-1.017.805-2.525-.15-3.479-1.011-1.011-2.65-1.011-3.662 0-.621.621-.856 1.478-.715 2.282-.804-.141-1.661.094-2.282.715-1.011 1.011-1.011 2.651 0 3.662.954.955 2.462.996 3.479.15l5.844 5.844 3.33-3.33z"/><path fill="#C1694F" d="M32.954 32.636c1.665-1.665 5.874-8.81.046-14.636-4.059-4.058-7.328-3.826-13.416-5.335C17.087 11.833 13.833 8.833 13 8c-.833.833-.542 3.873-.542 3.873S8.833 12.167 8 13c.833.833 4.699 4.489 5.375 6.207 1.821 5.774 1.613 8.711 5.671 12.77 6.66 6.659 12.244 2.323 13.908.659z"/></symbol>
+<symbol id="e-1f35f" viewBox="0 0 36 36"><path fill="#BE1931" d="M18 2C9.716 2 3 6.492 3 14.5c0 .059.052.758.125 1.509C3.391 15.995 18 28 18 28s14.607-12.006 14.871-11.992c.05-.494.129-1.431.129-1.508C33 6.492 26.284 2 18 2z"/><path fill="#F4900C" d="M30.166 11.509c-.333-.038-.649.04-.918.196-.003-.432-.059-.811-.202-1.104l.376-1.128c.262-.786-.162-1.635-.948-1.897-.351-.119-.713-.093-1.032.036-.192-.72-.884-1.206-1.645-1.1-.123.017-.238.052-.348.096-.153-.565-.63-1.012-1.246-1.096-.831-.111-1.578.463-1.689 1.284L22.2 9.102c-.296-.397-.779-.642-1.306-.6-.643.046-1.157.491-1.329 1.075l-.073-.728c-.083-.825-.825-1.427-1.642-1.343-.816.082-1.412.804-1.343 1.619l-.02.01c.049-.531-.183-1.041-.6-1.346l-.417-2.084c-.163-.812-.95-1.341-1.765-1.177-.812.162-1.339.953-1.177 1.765l.718 3.591-.382 1.605-1.454-4.002c-.284-.779-1.145-1.181-1.922-.897-.779.284-1.181 1.144-.898 1.923l1.108 3.047c-.345.236-.594.61-.646 1.058l-.245 2.099-.327-1.963c-.136-.818-.911-1.372-1.726-1.233-.817.136-1.369.909-1.233 1.726l1.55 9.299h23.305c.049-.122 1.116-9.38 1.116-9.38.09-.824-.503-1.565-1.326-1.657z"/><path fill="#FFCC4D" d="M27.486 7.797c-.009-.064-.028-.123-.044-.184-.192-.72-.884-1.206-1.645-1.1-.123.017-.238.052-.348.096-.627.248-1.031.895-.935 1.593l1.956 14.343h3.028L27.486 7.797zm-4.99 2.096c-.021-.297-.131-.567-.297-.79-.296-.397-.779-.642-1.306-.6-.643.046-1.157.491-1.329 1.075-.049.167-.074.344-.061.528l.879 12.312.009.127H23.4l-.002-.027-.902-12.625zm-11.781 1.408c-.374-.043-.728.06-1.017.258-.345.236-.594.61-.646 1.058l-1.159 9.929h3.02l1.118-9.581c.096-.823-.493-1.568-1.316-1.664zm4.756-5.595c-.163-.812-.95-1.341-1.765-1.177-.812.162-1.339.953-1.177 1.765l3.25 16.252h3.059l-3.367-16.84z"/><path fill="#DD2E44" d="M29 17c0 2.762-4.373 5-11 5S7 19.762 7 17c0-1.104-1.896-1-3-1-.316 0-.609-.005-.875.009C3.186 16.644 5 31 5 31c0 2.209 1.791 4 4 4h18c2.209 0 4-1.791 4-4 0 0 1.858-14.864 1.871-14.992-.264-.014-.557-.008-.871-.008-1.104 0-3-.104-3 1z"/><circle fill="#BE1931" cx="18" cy="28" r="4"/></symbol>
+<symbol id="e-1f372" viewBox="0 0 36 36"><path fill="#292F33" d="M13.037 34.816C.794 33.013 1 20.719 1 17h34c0 1.914.087 15.77-13.125 17.918-2.042.332-6.458.249-8.838-.102z"/><path fill="#66757F" d="M33.388 13.247c2.467-5.574-8.331-5.254-11.035-4.382-1.392-.162-2.846-.254-4.353-.254-9.389 0-17 3.228-17 8.444 0 1.009.291 1.979.818 2.891-4.327 5.712 4.246 6.786 9.184 5.71 2.136.537 4.5.844 6.998.844 9.389 0 17-4.229 17-9.444 0-1.43-.589-2.704-1.612-3.809z"/><ellipse fill="#FFCC4D" cx="18" cy="18" rx="15" ry="7"/><path fill="#77B255" d="M4 16c-.542-2.169 2-6 7-5 1-1 2.838-2 6-2 2 0 5.612 1.775 4 5-1 2-5 5-10 3-1 1-6 3-7-1z"/><path fill="#5C913B" d="M12 17c-.249.036-.471.073-.678.111C16.17 18.857 20.022 15.956 21 14c1.078-2.156-.181-3.66-1.731-4.423.394 1.822-1.128 6.546-7.269 7.423z"/><path fill="#D99E82" d="M5 16c.525-1.313 5-3 10 3 1 1 4.586 1.586 6 3 1 1 0 2-4 2S3 21 5 16z"/><path fill="#B27962" d="M6.041 20.018C8.589 22.561 14.231 24 17 24c4 0 5-1 4-2-.326-.326-.77-.607-1.268-.86-3.204 1.733-11.68-.144-13.691-1.122z"/><path fill="#FFE8B6" d="M27 19.001c-.209 0-.423-.034-.633-.104l-3-1c-1.048-.35-1.614-1.482-1.265-2.53.349-1.047 1.479-1.614 2.53-1.265l3 1c1.048.35 1.614 1.482 1.265 2.53-.279.839-1.059 1.369-1.897 1.369zM26 22h-2c-.553 0-1-.447-1-1s.447-1 1-1h2c.553 0 1 .447 1 1s-.447 1-1 1z"/></symbol>
+<symbol id="e-1f37d" viewBox="0 0 36 36"><path fill="#E1E8ED" d="M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18 8.059 0 18 0s18 8.059 18 18z"/><path fill="#CCD6DD" d="M30 18c0 6.628-5.372 12-12 12S6 24.628 6 18 11.372 6 18 6s12 5.372 12 12z"/><path fill="#E1E8ED" d="M29 18c0 6.075-4.925 11-11 11-6.076 0-11-4.925-11-11 0-6.076 4.925-11 11-11s11 4.924 11 11z"/><g fill="#99AAB5"><circle cx="1" cy="1" r="1"/><path d="M0 1h2v7H0z"/><circle cx="5" cy="1" r="1"/><path d="M4 1h2v7H4z"/><circle cx="9" cy="1" r="1"/><path d="M8 1h2v7H8zM3 14h4v20H3z"/><circle cx="5" cy="34" r="2"/><path d="M8 8c0 .552-.448 1-1 1s-1-.448-1-1H4c0 .552-.448 1-1 1s-1-.448-1-1H0c0 3.866 1 7 5 7s5-3.134 5-7H8z"/><circle cx="1" cy="8" r="1"/><circle cx="5" cy="8" r="1"/><circle cx="9" cy="8" r="1"/></g><g fill="#99AAB5"><path d="M30 14h4v20h-4z"/><circle cx="32" cy="34" r="2"/><path d="M32 0c1 0 2 1 2 3v16s-7 2-7-8c0-6 3-11 5-11z"/></g></symbol>
+<symbol id="e-1f3f7" viewBox="0 0 36 36"><path fill="#FFD983" d="M32.017 20.181L17.345 5.746C16.687 5.087 15.823 5 14.96 5H4.883C3.029 5 2 6.029 2 7.883v10.082c0 .861.089 1.723.746 2.38L17.3 35.017c1.311 1.31 3.378 1.31 4.688 0l10.059-10.088c1.31-1.312 1.28-3.438-.03-4.748zm-23.596-8.76c-.585.585-1.533.585-2.118 0s-.586-1.533 0-2.118c.585-.586 1.533-.585 2.118 0 .585.586.586 1.533 0 2.118z"/><path fill="#D99E82" d="M9.952 7.772c-1.43-1.431-3.749-1.431-5.179 0-1.431 1.43-1.431 3.749 0 5.18 1.43 1.43 3.749 1.43 5.18 0 1.43-1.431 1.429-3.749-.001-5.18zm-1.53 3.65c-.585.585-1.534.585-2.119 0-.585-.585-.586-1.534 0-2.119.585-.587 1.534-.585 2.119 0 .585.585.586 1.533 0 2.119z"/><path fill="#C1694F" d="M8.507 10.501c-.391.391-1.023.391-1.415 0-.391-.391-.39-1.023 0-1.414L15.577.602c.391-.391 1.023-.391 1.415 0 .391.391.39 1.023 0 1.414l-8.485 8.485z"/></symbol>
+<symbol id="e-1f4cd" viewBox="0 0 36 36"><ellipse fill="#292F33" cx="18" cy="34.5" rx="4" ry="1.5"/><path fill="#99AAB5" d="M14.339 10.725S16.894 34.998 18.001 35c1.106.001 3.66-24.275 3.66-24.275h-7.322z"/><circle fill="#DD2E44" cx="18" cy="8" r="8"/></symbol>
+<symbol id="e-1f957" viewBox="0 0 36 36"><path fill="#CCD6DD" d="M18 35C3.042 35 1 21 1 17h34c0 2-1.958 18-17 18z"/><path fill="#66757F" d="M35 17.056c0 5.216-7.611 9.444-17 9.444S1 22.271 1 17.056c0-5.216 7.611-8.444 17-8.444 9.389-.001 17 3.228 17 8.444z"/><path fill="#77B255" d="M2.708 18.875c-.808-1.161-2.333-3.5-.708-7 .708-1.833 2.18-3.027 2.375-2.458.458 1.333 1.375 2.5 2.75 2.375-.018.473-.669-4.309 1.625-5.584 1.125-.625 2.333.375 3.708 2.583 2.202 3.537 7.811 1.884 9.385.958 1.594-.938 2.99-1.552 2.573-4.062-.092-.551.743-1.029 1.595-.573 1.431.766 3.498 2.671 3.863 4.761 1.021.271 1.786-.163 2.375-1.354.292-.59 1.292-.729 1.72.041.754 1.356 1.992 5.527.239 9.105-2 4.083-5.042 6.25-11.875 7.125s-15.625-.167-19.625-5.917z"/><path fill="#5C913B" d="M19.417 10.146c0 2.106-1.81 3.812-4.042 3.812-2.232 0-4.042-1.707-4.042-3.812 0-2.105 1.81-3.812 4.042-3.812 2.232-.001 4.042 1.707 4.042 3.812z"/><path fill="#C6E5B3" d="M18.417 10.146c0 1.585-1.362 2.869-3.042 2.869-1.68 0-3.042-1.285-3.042-2.869 0-1.585 1.362-2.87 3.042-2.87 1.68.001 3.042 1.286 3.042 2.87z"/><ellipse fill="#292F33" cx="8.167" cy="14.5" rx="2.292" ry="2"/><path fill="#DD2E44" d="M17.524 15.182c1.267 2.388-2.104.951-4.614 2.284-2.511 1.333-3.209 4.929-4.477 2.541-1.268-2.388-.26-5.404 2.25-6.737 2.511-1.332 5.574-.476 6.841 1.912z"/><ellipse fill="#292F33" cx="24.167" cy="12.5" rx="2.292" ry="2"/><path fill="#9266CC" d="M29.117 20.129c-1.564 1.48-1.178-1.412-2.734-3.056-1.558-1.644-4.466-1.415-2.903-2.896 1.563-1.481 4.094-1.349 5.65.294 1.557 1.643 1.551 4.177-.013 5.658z"/><path fill="#E1E8ED" d="M28.117 21.129c-1.564 1.48-1.178-1.412-2.734-3.057-1.558-1.643-4.466-1.415-2.903-2.896 1.563-1.481 4.094-1.349 5.65.294 1.557 1.644 1.551 4.178-.013 5.659z"/><path fill="#DD2E44" d="M24.013 19.928c.781 2.062-1.798.555-3.966 1.377-2.166.821-3.1 3.658-3.881 1.597-.781-2.06.343-4.398 2.509-5.219 2.167-.821 4.556.185 5.338 2.245z"/><path fill="#EA596E" d="M8.958 19.084c-.167-1.542 2.833-8.418 8.167-2.417-1.25.208-4.292.208-5.667 2.125s-2.625.208-2.5.292"/><path fill="#A6D388" d="M4.917 19.709c-.728-.971 1.75-3.209 3.625-1.293.792-.958 4.708-2.874 6.167 1.293.667-.75 6.125-.917 6.208 3.708.041.625-6.295.506-9.542-.25-1.792-.417-5.083-1.625-6.458-3.458zM26 22.458c-1.167.315.793-5.125 4.459-4.208.125-1 .916-4.292 3.208-3.708.083.958.041 5.832-7.667 7.916z"/></symbol>
+<symbol id="e-1f958" viewBox="0 0 36 36"><path fill="#292F33" d="M2.488 33.514c2.41 2.41 5.103 3.627 7.688 1.042 1.835-1.835 1.368-5.277-1.043-7.689-2.411-2.41-5.852-2.877-7.688-1.042-2.585 2.585-1.368 5.277 1.043 7.689zm6.553-6.554c1.808 1.808 2.158 4.39.782 5.767-1.938 1.938-3.958 1.025-5.767-.783-1.809-1.807-2.721-3.826-.782-5.766 1.376-1.376 3.958-1.026 5.767.782zM33.513 2.487c-2.41-2.411-5.102-3.627-7.688-1.042-1.835 1.835-1.368 5.277 1.043 7.688 2.411 2.411 5.851 2.878 7.688 1.042 2.585-2.585 1.368-5.278-1.043-7.688zM26.96 9.04c-1.808-1.808-2.158-4.389-.782-5.766 1.938-1.938 3.958-1.026 5.767.782 1.809 1.808 2.721 3.827.782 5.766-1.376 1.376-3.958 1.026-5.767-.782z"/><circle fill="#292F33" cx="18" cy="18" r="17"/><path fill="#FFAC33" d="M31.6 18c0 7.511-6.089 13.6-13.6 13.6-7.511 0-13.6-6.089-13.6-13.6 0-7.511 6.089-13.6 13.6-13.6 7.511 0 13.6 6.089 13.6 13.6z"/><path fill="#FFE8B6" d="M19.445 10.665l-2.539-2.539c.368-.441.349-1.096-.065-1.511-.439-.439-1.15-.439-1.59 0-.27.27-.372.643-.311.991-.349-.062-.721.042-.991.312-.439.438-.439 1.15 0 1.59.415.415 1.07.433 1.511.064l2.539 2.538 1.446-1.445z"/><path fill="#C1694F" d="M27.669 20.336c.723-.723 2.551-3.826.021-6.356-1.763-1.763-3.184-1.662-5.827-2.317-1.084-.362-2.498-1.665-2.859-2.026-.362.361-.235 1.683-.235 1.683s-1.575.128-1.937.489c.361.361 2.041 1.95 2.335 2.695.79 2.508.7 3.784 2.464 5.546 2.891 2.891 5.316 1.009 6.038.286z"/><path fill="#77B255" d="M9.333 16.5c0 1.933 3.099 3.5 1.167 3.5C8.567 20 7 18.433 7 16.5S8.567 13 10.5 13s-1.167 1.567-1.167 3.5zm8.685 9.49c1.599.771 4.136-1.167 3.364.433-.772 1.601-2.697 2.271-4.296 1.499-1.6-.774-2.271-2.697-1.498-4.297.772-1.6.831 1.593 2.43 2.365z"/><circle fill="#F4900C" cx="15" cy="17" r="2"/><circle fill="#F4900C" cx="24" cy="24" r="1"/><circle fill="#F4900C" cx="11" cy="23" r="1"/></symbol>
+<symbol id="e-1f959" viewBox="0 0 36 36"><path fill="#EDB97F" d="M33.208 6.458C29.875 2.25 4.542 4.708 1.041 14.125.167 24 7.385 35.277 20 34c13.167-1.333 18.083-12.416 13.208-27.542z"/><path fill="#FFD983" d="M4 12c2.736-2.348 13-8 25-6 8 .75-.708 7.542-9.708 9.542C11.422 17.291-1 16.292 4 12z"/><path fill="#77B255" d="M29.656 8.625c1.438-1.5 1.188-6.062.531-6.812-.968-.813-1.937 1.645-4.812 2.395-.708-1.375-1.481-1.852-1.5-1.865-.833-.593-2.625-.509-3.125 1.907-1.719-1.5-5.323-1.636-5.542-.833-1.333 4.896-3.166 5.541-5.166 7.583-3.009 3.072 2.708 3.688 8.521 1.875s11.093-4.25 11.093-4.25z"/><path fill="#77B255" d="M12.25 10.542c-.5-3.5-6.848-4.161-8.25-3.082C2 9 3.167 13.833 5.25 14.5c3.639 1.164 7-3.958 7-3.958z"/><path fill="#662113" d="M5.25 14.5c-1.336-.528.625-3.5 2.75-4.083s3.125.5 3.542 1.083c.042-.583.875-1.583 1.583-1.792.708-.208 1.542.167 1.958 1.042 0-.917.042-3.875 3.333-4.833.875-.292 3.375-.375 3.917 1 .833-.708 3.584-1.333 4.25.375.291-.5 2.625-1.375 3.541.292.667.917-.362 1.802-2.041 2.917-5.458 3.624-17.666 6.041-22.833 3.999z"/><circle fill="#C1694F" cx="7.833" cy="12.458" r="1.25"/><circle fill="#C1694F" cx="23.834" cy="10.458" r="1.25"/><path fill="#C1694F" d="M21.751 8.792c0 .875-.71 1.584-1.583 1.584-.876 0-1.584-.709-1.584-1.584s.708-1.583 1.584-1.583c.873-.001 1.583.708 1.583 1.583zM12 13.917c0 .391-.317.708-.708.708-.392 0-.708-.317-.708-.708 0-.392.317-.708.708-.708.391-.001.708.316.708.708z"/><path fill="#DD2E44" d="M16.75 10.062c.297-.604 3.341 2.123 2.562 3.875-.75.375-3.375.844-6.125 1.125 1.23-.874 2.896-3.645 3.563-5z"/><path fill="#EA596E" d="M15.938 11.562c.487-.975 2.312 1.688 1.688 2.781-.969.281-3.719.688-4.594.781.624-.812 2.406-2.562 2.906-3.562z"/><path fill="#77B255" d="M21.562 13.406c.75-.219 4.469-1.25 6.969-3.188.062-1.281-.969-2.906-2.656-.156-1.125-.687-3.906.626-4.313 3.344z"/><circle fill="#E5A157" cx="26" cy="23" r="2"/><circle fill="#E5A157" cx="23" cy="28" r="1"/><circle fill="#E5A157" cx="15.5" cy="24.5" r="1.5"/></symbol>
+<symbol id="e-1f964" viewBox="0 0 36 36"><path fill="#8899A6" d="M26.864 8H18v28c6 0 10-1 11.393-7.015.774-3.342 1.663-12.335 1.663-17.841C31.056 9.279 29.623 8 26.864 8zM8.892 8H18v28c-6 0-10-1-11.515-7.015-.838-3.327-1.724-12.335-1.724-17.841C4.761 9.279 6.132 8 8.892 8z"/><path fill="#CCD6DD" d="M31.052 10.5c0 2.071-3.13 3.75-13.057 3.75-9.926 0-13.057-1.679-13.057-3.75 0-2.072 3.131-3.75 13.057-3.75 9.927 0 13.057 1.678 13.057 3.75z"/><path fill="#CCD6DD" d="M18.025 12.997L6.516 12c0 7 1.104 14.382 1.681 16.572C8.859 31.081 11 30.981 18 30.998V31v-.002c7-.018 9.166.083 9.827-2.426C28.405 26.382 29.52 19 29.52 12l-11.495.997z"/><path fill="#55ACEE" d="M18 21v13c7 0 9-1 9.857-5.428.241-1.243.807-4.075 1.174-7.572H18zM7.019 21c.366 3.497.915 6.327 1.149 7.572C9 33 11 34 18 34V21H7.019z"/><path fill="#3B88C3" d="M18 30.16c-4.556 0-8.249.895-8.249 2 0 .009.005.018.006.028C11.154 33.598 13.578 34 18 34c4.413 0 6.836-.4 8.241-1.803.001-.012.008-.024.008-.037 0-1.105-3.693-2-8.249-2z"/><ellipse fill="#88C9F9" cx="17.995" cy="21" rx="11.016" ry="2"/><path fill="#E1E8ED" d="M33.958.936l-6.824 1.697c-.751.187-1.565.577-2.44 1.239-1.643 1.243-1.978 2.93-2.246 3.861L18.34 22h3.122L25.33 8.564c.264-.916.526-1.702 1.129-2.249.534-.484 1.417-.769 2.244-.983l5.977-1.483c.801-.199 1.293-1.016 1.095-1.817-.199-.802-1.016-1.295-1.817-1.096z"/><path fill="#88C9F9" d="M18.34 22l-2.671 9.277c-.228.793.234 1.628 1.026 1.857.793.228 1.628-.234 1.856-1.026L21.462 22H18.34z"/><path fill="#744EAA" d="M18.641 22.677l-.588.322-.273.947 2.066 3.669.776-2.696-1.261-2.241z"/><path fill="#DD2E44" d="M27.906 2.441l-1.128 3.647c.531-.347 1.242-.58 1.927-.757l.434-.108 1.035-3.346-2.268.564z"/><path fill="#744EAA" d="M17.045 26.499l-.777 2.697 1.962 3.485c.144-.162.258-.353.322-.574l.558-1.939-2.065-3.669z"/><path fill="#DD2E44" d="M20.048 16.068l-.777 2.698 1.381 2.452.472.105.626-.323.364-1.262zM34.495.907c-.175-.021-.356-.016-.537.029l-1.696.422-1.036 3.347 2.267-.563L34.495.907zM20.791 13.488l2.066 3.668.776-2.696-2.065-3.669zm3.862-9.579c-.798.617-1.285 1.338-1.601 2.022l1.32 5.968.96-3.335c.066-.23.133-.452.204-.664l-.883-3.991z"/><path fill="#55ACEE" d="M18.663 20.881L18.053 23c1.094-.001 2.15-.031 3.147-.086l.585-2.032c-.938.483-2.894.181-3.122-.001z"/><path fill="#FFF" d="M29.615 11.309c-.242-.649-.954-.975-1.584-.724-3.606 1.416-7.044 1.909-10.036 1.937v2.492c3.333-.034 7.089-.577 10.913-2.08.633-.248.95-.976.707-1.625zm-23.24 0c.242-.649.954-.975 1.584-.724 3.606 1.416 7.044 1.909 10.036 1.937v2.492c-3.333-.034-7.089-.577-10.913-2.08-.632-.248-.95-.976-.707-1.625z"/></symbol>
+<symbol id="i-pita" viewBox="0 0 24 24"><path d="M3 16a9 9 0 0 1 18 0z"/><path d="M4.5 19.5h15"/><circle cx="8.5" cy="12.6" r="1.1"/><circle cx="12" cy="10.2" r="1.1"/><circle cx="15.5" cy="12.6" r="1.1"/></symbol>
+<symbol id="i-burger" viewBox="0 0 24 24"><path d="M4 10.5a8 6.5 0 0 1 16 0z"/><path d="M3 13.6c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0"/><path d="M3.5 16.4h17"/><path d="M5 16.4a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3"/></symbol>
+<symbol id="i-chicken" viewBox="0 0 24 24"><path d="M14.6 3.6a5.6 5.6 0 0 1 4.4 9.3 5.6 5.6 0 0 1-7.5.7L5.8 19.3"/><path d="M14.6 3.6a5.6 5.6 0 0 0-5 8"/><path d="M5.8 19.3l-1.9.4.3-1.9M5.8 19.3l.3 2 1.9-.5"/><path d="M13.4 8.3a2.4 2.4 0 0 1 2.3 2.3"/></symbol>
+<symbol id="i-cloche" viewBox="0 0 24 24"><path d="M3.5 17a8.5 8.5 0 0 1 17 0z"/><path d="M2.5 20h19"/><path d="M12 8.5V6.6"/><circle cx="12" cy="5.6" r="1"/></symbol>
+<symbol id="i-tagine" viewBox="0 0 24 24"><path d="M12 3.2l-6 8.3h12z"/><path d="M12 1.9v1.3"/><path d="M3.5 11.5h17l-1.6 7.2a1.2 1.2 0 0 1-1.2.9H6.3a1.2 1.2 0 0 1-1.2-.9z"/></symbol>
+<symbol id="i-fatta" viewBox="0 0 24 24"><path d="M3 11.5h18a9 7.5 0 0 1-18 0z"/><path d="M7 11.5a5 4 0 0 1 10 0"/><path d="M8.5 20.7h7"/><path d="M10 8.3l.8-1.6M14 8.3l-.8-1.6"/></symbol>
+<symbol id="i-tray" viewBox="0 0 24 24"><ellipse cx="12" cy="13.5" rx="8" ry="4.5"/><ellipse cx="12" cy="13.5" rx="4.6" ry="2.4"/><path d="M4 13.5H1.8M22.2 13.5H20"/><path d="M8 8.4c.4-1.4 1.6-2 2.4-1M13.6 7.4c.8-1 2-.4 2.4 1"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.8v8.4M7.8 12h8.4"/></symbol>
+<symbol id="i-soup" viewBox="0 0 24 24"><path d="M3 12h18a9 7.5 0 0 1-18 0z"/><path d="M8.5 20.5h7"/><path d="M8.5 8.6c0-1.6 1.5-1.6 1.5-3.2M12.7 8.6c0-1.6 1.5-1.6 1.5-3.2"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 8.5h12l-1.3 11.2a1.2 1.2 0 0 1-1.2 1H8.5a1.2 1.2 0 0 1-1.2-1z"/><path d="M5 8.5h14"/><path d="M13 8.5l1.2-5.2 3.3-1"/><path d="M7.4 13h9.2"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.3s7-6.1 7-11.6a7 7 0 0 0-14 0c0 5.500 7 11.600 7 11.600z"/><circle cx="12" cy="9.6" r="2.6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.6l1.9 4.9-2.4 1.5a11.500 11.500 0 0 0 5.900 5.900l1.500-2.400 4.900 1.900V19a1.800 1.800 0 0 1-1.900 1.800A16.500 16.500 0 0 1 3.200 5.400 1.800 1.800 0 0 1 5 3.500z"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4.500L3.500 6.500v13L9 17.500l6 2 5.500-2v-13L15 6.500z"/><path d="M9 4.500v13M15 6.500v13"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 1.500l2.300 5.300 5.700-1.100-1.100 5.700 4.100 4.100-5.700 1.100-2.800 5-2.800-5-5.700-1.100 4.100-4.100L4 5.700l5.700 1.100z" stroke="none"/></symbol>
+</defs></svg>
+<a class="skip" href="#menu" data-i="skip"></a>
+<nav>
+<a class="brand" href="#top"><img src="assets/logo.webp" alt="" width="40" height="40"><span data-i="brand">مطاعم القزاز</span></a>
+<a class="lk" href="about.html" data-i="n1">عن القزاز</a><a class="lk" href="#menu" data-i="n2">المنيو</a><a class="lk" href="#branches" data-i="n3">فروعنا</a>
+<a class="lk" href="careers.html" data-i="n4">انضم إلى فريقنا</a><div class="lang" id="lang" role="group" aria-label="Language"><button data-l="0" lang="ar">عربي</button><button data-l="1" lang="en">EN</button><button data-l="2" lang="de">DE</button><button data-l="3" lang="fr">FR</button><button data-l="4" lang="zh">中文</button></div>
+<button class="motion-toggle" id="motion-toggle" type="button" aria-label="إيقاف الحركة" title="إيقاف الحركة" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z"/></svg></button><div class="camel-lane" aria-hidden="true"><span class="camel-walker"><svg viewBox="0 0 112 64" focusable="false"><g class="camel-body"><path class="camel-leg a" d="M25 39 22 57 17 59"/><path class="camel-leg b" d="m34 39 5 17 5 3"/><path class="camel-leg c" d="m57 39-3 18-5 2"/><path class="camel-leg d" d="m65 39 6 17 5 2"/><path d="M19 31Q10 29 13 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path fill="currentColor" d="M19 29C15 32 15 39 22 42L62 42Q70 41 74 35L82 16 91 17Q98 16 100 12L93 9 87 9 85 4Q82 3 81 7L78 10Q73 13 71 21L66 31 60 28Q56 25 52 24C49 7 40 3 35 13L29 27Q23 26 19 29Z"/><circle cx="88" cy="11" r="1.1" fill="#24190f"/></g></svg></span></div></nav>
+
+<header class="hero" id="top">
+<img class="poster" id="poster" src="media/hero-135131.webp" alt="" fetchpriority="high">
+<div class="veil"></div><div class="pat"></div>
+<div class="hero-in">
+<div>
+<span class="eyebrow"><i></i>ALL YOU CRAVE</span>
+<h1>مطاعم القزاز</h1>
+<blockquote class="verse"><p class="va" lang="ar" dir="rtl">وَقَفَ الخَلقُ يَنظُرونَ جَميعاً<br>كَيفَ أَبني قَواعِدَ المَجدِ وَحدي</p><p class="vt" data-i="vt"></p><cite data-i="vc"></cite></blockquote>
+<div class="cta-reveal"><div class="food-first-actions"><a class="btn b1" href="#menu"><svg class="ic" aria-hidden="true"><use href="#i-cloche"/></svg><span data-i="b1">شوف المنيو</span></a><a class="btn b2" href="#branches"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-i="b2">أقرب فرع</span></a><a class="btn food-order" href="tel:16903"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>اتصل للطلب</span><bdi>16903</bdi></a></div><div class="cta-leaf cta-leaf-left" aria-hidden="true"></div><div class="cta-leaf cta-leaf-right" aria-hidden="true"></div></div>
+</div>
+<div class="medal"><div class="arch"><img src="assets/logo.webp" alt="Al-Kazzaz — All You Crave" width="300" height="300"></div></div>
+</div>
+</header>
+<div class="strip"><div id="strip">
+<button type="button" class="chip" data-c="1,2" aria-expanded="false" aria-controls="sub"><svg class="ic"><use href="#i-pita"/></svg><span data-i="st1"></span></button>
+<button type="button" class="chip" data-c="3"><svg class="ic"><use href="#i-chicken"/></svg><span data-i="st2"></span></button>
+<button type="button" class="chip" data-c="4,5,6" aria-expanded="false" aria-controls="sub"><svg class="ic"><use href="#i-tagine"/></svg><span data-i="st3"></span></button>
+</div></div>
+<div class="subrow" id="sub" hidden></div>
+
+<section id="pick"><div class="wrap">
+<div class="sec-h"><h2 data-i="pk"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<ul class="cats" id="tiles"><li><a class="cat feat" href="#menu" data-c="0"><img class="ph" src="media/cat-offers.webp" alt="" loading="lazy" width="640" height="480"><h3>العروض</h3></a></li><li><a class="cat" href="#menu" data-c="1"><img class="ph" src="media/cat-orient.webp" alt="" loading="lazy" width="640" height="480"><h3>ساندويتش شرقي</h3></a></li><li><a class="cat" href="#menu" data-c="2"><img class="ph" src="media/cat-west.webp" alt="" loading="lazy" width="640" height="480"><h3>ساندويتش غربي</h3></a></li><li><a class="cat" href="#menu" data-c="3"><img class="ph" src="media/cat-fried.webp" alt="" loading="lazy" width="640" height="480"><h3>فرايد تشيكن</h3></a></li><li><a class="cat" href="#menu" data-c="4"><img class="ph" src="media/cat-meals.webp" alt="" loading="lazy" width="640" height="480"><h3>الوجبات</h3></a></li><li><a class="cat" href="#menu" data-c="5"><img class="ph" src="media/cat-tagine.webp" alt="" loading="lazy" width="640" height="480"><h3>الطواجن</h3></a></li><li><a class="cat" href="#menu" data-c="6"><img class="ph" src="media/cat-fatta.webp" alt="" loading="lazy" width="640" height="480"><h3>الفتات</h3></a></li><li><a class="cat" href="#menu" data-c="7"><img class="ph" src="media/cat-trays.webp" alt="" loading="lazy" width="640" height="480"><h3>صواني القزاز</h3></a></li><li><a class="cat" href="#menu" data-c="8"><img class="ph" src="media/cat-extras.webp" alt="" loading="lazy" width="640" height="480"><h3>طلبات إضافية</h3></a></li><li><a class="cat" href="#menu" data-c="9"><img class="ph" src="media/cat-soup.webp" alt="" loading="lazy" width="640" height="480"><h3>الشوربة والسلطات</h3></a></li><li><a class="cat" href="#menu" data-c="10"><img class="ph" src="media/cat-drinks.webp" alt="" loading="lazy" width="640" height="480"><h3>المشروبات والحلو</h3></a></li></ul>
+</div></section>
+
+
+<section class="menu" id="menu"><div class="wrap">
+<div class="sec-h"><h2 data-i="mt">المنيو</h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<form class="menu-search" role="search" id="menu-search" onsubmit="return false">
+<label for="dish-search" id="search-label"></label><div class="search-line"><input type="search" id="dish-search" autocomplete="off" maxlength="100" aria-controls="mc" placeholder=""><button type="button" id="search-clear" hidden></button></div>
+<p id="search-status" role="status" aria-live="polite"></p></form>
+<div class="tabs" role="tablist" id="cats"></div>
+<div id="mc" role="tabpanel"><section class="fallback-category"><h3>العروض</h3><div class="offers"><div class="of"><em>جديد</em><h3><span lang="ar" dir="rtl" class="ar">الدفا 1</span></h3><p lang="ar">2 وجبة بروستد (2 قطعة)</p><div class="pr"><b>172.5<span>ج.م</span></b><s>230</s></div></div><div class="of"><em>جديد</em><h3><span lang="ar" dir="rtl" class="ar">الدفا 2</span></h3><p lang="ar">2 وجبة ميكس القزاز (وجبة كاملة)</p><div class="pr"><b>322.5<span>ج.م</span></b><s>430</s></div></div><div class="of"><em>جديد</em><h3><span lang="ar" dir="rtl" class="ar">الدفا 3</span></h3><p lang="ar">فتة شاورما لحم وسط + فتة شاورما دجاج وسط</p><div class="pr"><b>215<span>ج.م</span></b><s>275</s></div></div><div class="of"><em>جديد</em><h3><span lang="ar" dir="rtl" class="ar">الدفا 4</span></h3><p lang="ar">2 ساندويتش شاورما رول (لحم + دجاج)</p><div class="pr"><b>177.5<span>ج.م</span></b><s>230</s></div></div><div class="of"><em>جديد</em><h3><span lang="ar" dir="rtl" class="ar">الدفا 5</span></h3><p lang="ar">حواوشي سجق كبير + حواوشي لحم كبير + 2 مخلل</p><div class="pr"><b>132.5<span>ج.م</span></b><s>175</s></div></div><div class="of"><em>جديد</em><h3><span lang="ar" dir="rtl" class="ar">الدفا 6</span></h3><p lang="ar">2 شوربة عدس بالزبدة</p><div class="pr"><b>75<span>ج.م</span></b><s>100</s></div></div><div class="of"><em>جديد</em><h3><span lang="ar" dir="rtl" class="ar">الدفا 7</span></h3><p lang="ar">4 ساندويتش (بطاطس صوابع + مسقعة + فول + طعمية)</p><div class="pr"><b>45<span>ج.م</span></b></div></div></div><p class="gn" style="max-width:720px;margin-inline:auto">على كل سندوتش أو وجبة هتاخد خصم 50% على الصنف التاني من نفس النوع.</p></section><section class="fallback-category"><h3>ساندويتش شرقي</h3><div class="grid"><div class="card"><h3><span lang="ar" dir="rtl" class="ar">فول</span></h3><div class="tbl" style="--n:2;--w:4.2rem"><span></span><span class="h"><i>ساندويتش شامي</i></span><span class="h"><i>علبة / طلب</i></span><span class="nm" lang="ar">فول محوج</span><b>10</b><b>35</b><span class="nm" lang="ar">فول زيت زيتون</span><b>16</b><b>45</b><span class="nm" lang="ar">فول إسكندراني</span><b>16</b><b>45</b><span class="nm" lang="ar">فول زيت ذرة</span><b>14</b><b>38</b><span class="nm" lang="ar">فول زيت حار</span><b>14</b><b>38</b><span class="nm" lang="ar">فول بالزبدة</span><b>16</b><b>45</b><span class="nm" lang="ar">فول بالأومليت</span><b>27</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">فول بالسجق</span><b>29</b><b>80</b><span class="nm" lang="ar">فول بالبيض</span><b>21</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">فول بالصلصة</span><b>14</b><b>38</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">فلافل (طعمية)</span></h3><div class="tbl" style="--n:1;--w:4.2rem"><span></span><span class="h"><i>ساندويتش شامي</i></span><span class="nm" lang="ar">فلافل</span><b>10</b><span class="nm" lang="ar">فلافل إسكندراني</span><b>16</b><span class="nm" lang="ar">فلافل بالبيض</span><b>21</b><span class="nm" lang="ar">ميكس</span><b>18</b><span class="nm" lang="ar">ديناميت</span><b>22</b><span class="nm" lang="ar">عجة طعمية</span><b>22</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">بطاطس</span></h3><div class="tbl" style="--n:3;--w:4.2rem"><span></span><span class="h"><i>ساندويتش شامي</i></span><span class="h"><i>علبة</i></span><span class="h"><i>طلب</i></span><span class="nm" lang="ar">بطاطس بانية</span><b>18</b><b class="na" aria-label="—">–</b><b>30</b><span class="nm" lang="ar">بطاطس مهروسة</span><b>15</b><b>18</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">بطاطس فارم شامي</span><b>20</b><b class="na" aria-label="—">–</b><b>35</b><span class="nm" lang="ar">بطاطس إسكندراني</span><b>24</b><b class="na" aria-label="—">–</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">بطاطس شيبسي</span><b>18</b><b class="na" aria-label="—">–</b><b>30</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">جبنة وخضار وبيض</span></h3><div class="tbl" style="--n:2;--w:4.2rem"><span></span><span class="h"><i>ساندويتش شامي</i></span><span class="h"><i>علبة</i></span><span class="nm" lang="ar">جبنة بالطماطم</span><b>15</b><b>22</b><span class="nm" lang="ar">جبنة مقلية شامي</span><b>40</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">باذنجان مقلي</span><b>18</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">باذنجان إسكندراني</span><b>23</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">بابا غنوج</span><b>15</b><b>25</b><span class="nm" lang="ar">مسقعة</span><b>15</b><b>25</b><span class="nm" lang="ar">شكشوكة</span><b>25</b><b>25</b><span class="nm" lang="ar">بيض مسلوق</span><b>20</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">بيض إسكندراني</span><b>24</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">أومليت سادة</span><b>32</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">أومليت بالسجق</span><b>63</b><b class="na" aria-label="—">–</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">جديد من القزاز</span></h3><div class="tbl" style="--n:2;--w:4.2rem"><span></span><span class="h"><i>ساندويتش شامي</i></span><span class="h"><i>طلب</i></span><span class="nm" lang="ar">فلافل بالبسطرمة</span><b>38</b><b>21</b><span class="nm" lang="ar">فلافل بالرومي</span><b>38</b><b>21</b><span class="nm" lang="ar">فلافل بالشيدر</span><b>38</b><b>21</b><span class="nm" lang="ar">فلافل ليمون معصفر</span><b>16</b><b>12</b><span class="nm" lang="ar">فلافل كيري</span><b>35</b><b>30</b><span class="nm" lang="ar">فول ليمون معصفر</span><b>16</b><b>45</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">على الفينو والرول</span></h3><div class="tbl" style="--n:3;--w:4.2rem"><span></span><span class="h"><i>فينو وسط</i></span><span class="h"><i>فينو كبير</i></span><span class="h"><i>خبز رول</i></span><span class="nm" lang="ar">أومليت بالبسطرمة</span><b>52</b><b>57</b><b>65</b><span class="nm" lang="ar">جبنة رومي</span><b>45</b><b>50</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">مربى بالقشدة</span><b>45</b><b>50</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">حلاوة بالقشدة</span><b>45</b><b>50</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">جبنة مقلية</span><b>50</b><b>60</b><b>60</b><span class="nm" lang="ar">بطاطس فارم</span><b>30</b><b>37</b><b>40</b><span class="nm" lang="ar">فلافل</span><b class="na" aria-label="—">–</b><b class="na" aria-label="—">–</b><b>30</b></div><p class="gn" lang="ar">الساندويتش في خبز بلدي بإضافة 3 جنيه.</p></div></div></section><section class="fallback-category"><h3>ساندويتش غربي</h3><div class="grid"><div class="card"><h3><span lang="ar" dir="rtl" class="ar">شاورما وبرجر</span></h3><div class="tbl wide" style="--n:3;--w:5.6rem"><span></span><span class="h"><i>كايزر</i></span><span class="h"><i>وسط</i></span><span class="h"><i>كبير</i></span><span class="nm" lang="ar">شاورما لحم</span><b>70</b><b>115</b><b>135</b><span class="nm" lang="ar">برجر سادة</span><b>65</b><b class="na" aria-label="—">–</b><b>85</b><span class="nm" lang="ar">برجر بالبيض</span><b>70</b><b class="na" aria-label="—">–</b><b>90</b><span class="nm" lang="ar">برجر بالجبنة</span><b>70</b><b class="na" aria-label="—">–</b><b>90</b><span class="nm" lang="ar">برجر بيض وجبنة</span><b>75</b><b class="na" aria-label="—">–</b><b>100</b><span class="nm" lang="ar">تريند برجر (لحم / دجاج)</span><b class="na" aria-label="—">–</b><b class="na" aria-label="—">–</b><b dir="rtl">95 / 100</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">حواوشي</span></h3><div class="tbl" style="--n:2;--w:4.2rem"><span></span><span class="h"><i>وسط</i></span><span class="h"><i>كبير</i></span><span class="nm" lang="ar">حواوشي مصري</span><b>65</b><b>85</b><span class="nm" lang="ar">حواوشي بالسجق</span><b>70</b><b>90</b><span class="nm" lang="ar">حواوشي شيدر / رومي</span><b class="na" aria-label="—">–</b><b>105</b><span class="nm" lang="ar">حواوشي ميكس جبن</span><b class="na" aria-label="—">–</b><b>110</b><span class="nm" lang="ar">حواوشي دجاج</span><b>60</b><b>75</b><span class="nm" lang="ar">حواوشي شاورما لحم</span><b>115</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">حواوشي شاورما دجاج</span><b>100</b><b class="na" aria-label="—">–</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">دجاج وجمبري</span></h3><div class="tbl" style="--n:3;--w:4.2rem"><span></span><span class="h"><i>كايزر</i></span><span class="h"><i>وسط</i></span><span class="h"><i>كبير</i></span><span class="nm" lang="ar">شاورما دجاج</span><b>60</b><b>90</b><b>105</b><span class="nm" lang="ar">دجاج بانية</span><b class="na" aria-label="—">–</b><b>80</b><b>90</b><span class="nm" lang="ar">دجاج ستربس</span><b class="na" aria-label="—">–</b><b>80</b><b>90</b><span class="nm" lang="ar">دجاج فاهيتا</span><b class="na" aria-label="—">–</b><b>80</b><b>90</b><span class="nm" lang="ar">شيش طاووق</span><b class="na" aria-label="—">–</b><b>80</b><b>90</b><span class="nm" lang="ar">دجاج مكسيكي</span><b class="na" aria-label="—">–</b><b>80</b><b>90</b><span class="nm" lang="ar">برجر دجاج</span><b>60</b><b class="na" aria-label="—">–</b><b>75</b><span class="nm" lang="ar">جمبري بانية</span><b class="na" aria-label="—">–</b><b>100</b><b>110</b><span class="nm" lang="ar">إضافة جبنة</span><b class="na" aria-label="—">–</b><b>13</b><b>18</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">ساندويتش القزاز</span></h3><div class="tbl" style="--n:2;--w:4.2rem"><span></span><span class="h"><i>وسط</i></span><span class="h"><i>كبير</i></span><span class="nm" lang="ar">كفتة جريل</span><b>65</b><b>75</b><span class="nm" lang="ar">هوت دوج مكسيكي</span><b>65</b><b>75</b><span class="nm" lang="ar">كبدة بانية</span><b>65</b><b>75</b><span class="nm" lang="ar">كبدة إسكندراني</span><b>65</b><b>75</b><span class="nm" lang="ar">سجق شرقي</span><b>65</b><b>75</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">ساندويتش رول</span></h3><div class="tbl wide" style="--n:2;--w:5.6rem"><span></span><span class="h"><i>L</i></span><span class="h"><i>XL</i></span><span class="nm" lang="ar">شاورما (دجاج / لحم) رول</span><b dir="rtl">105 / 125</b><b dir="rtl">115 / 140</b><span class="nm" lang="ar">شاورما مكس رول</span><b>135</b><b>150</b><span class="nm" lang="ar">دجاج بانية بالشيدر رول</span><b>95</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">طاووق رول</span><b>90</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">شرمب رول</span><b>105</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">ستربس بالجبنة الشيدر رول</span><b>95</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">دجاج (مكسيكي / فاهيتا) رول</span><b>90</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">(بيكيني / سجق / كفتة) رول</span><b>75</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">كبدة إسكندراني رول</span><b>75</b><b class="na" aria-label="—">–</b></div></div></div></section><section class="fallback-category"><h3>فرايد تشيكن</h3><div class="grid"><div class="card"><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">سوبر 2 سناكس</span><b>115</b><span class="nm" lang="ar">سوبر 5 دينر ستربس</span><b>185</b><span class="nm" lang="ar">سوبر 4 دينر</span><b>225</b><span class="nm" lang="ar">سوبر 9 فاميلي ميل</span><b>445</b><span class="nm" lang="ar">سوبر 8 + 4 فاميلي مكس</span><b>545</b><span class="nm" lang="ar">سوبر 8 + 8 فاميلي مكس</span><b>650</b><span class="nm" lang="ar">سوبر 10 + 10 فاميلي مكس</span><b>840</b></div><p class="gn" lang="ar">يقدم مع الوجبات: أرز بسمتي / خبز / شيبسي / توميه / كاتشب، مع إضافات أخرى لبعض الوجبات.</p></div></div></section><section class="fallback-category"><h3>الوجبات</h3><div class="grid"><div class="card"><h3><span lang="ar" dir="rtl" class="ar">وجبات مميزة</span></h3><div class="tbl wide" style="--n:1;--w:5.6rem"><span class="nm" lang="ar">وجبة دجاج ¼ (ورك / صدر)</span><b dir="rtl">140 / 130</b><span class="nm" lang="ar">وجبة دجاج ½</span><b>185</b><span class="nm" lang="ar">وجبة لحم بلدي محمر</span><b>290</b><span class="nm" lang="ar">وجبة طاجن خضار باللحم البلدي</span><b>290</b><span class="nm" lang="ar">وجبة موزة ضاني باللحم البلدي</span><b>465</b></div><p class="gn" lang="ar">جميع الوجبات يقدم معها خضار اليوم والأرز والسلطة والخبز الطازج.</p></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">وجبات القزاز</span></h3><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">ميكس القزاز (شيش طاووق مع دجاج بانية والكفتة على الجريل)</span><b>215</b><span class="nm" lang="ar">كبدة (بانية / إسكندراني)</span><b>165</b><span class="nm" lang="ar">كفتة جريل</span><b>165</b><span class="nm" lang="ar">شاورما لحم</span><b>315</b><span class="nm" lang="ar">شاورما دجاج</span><b>290</b><span class="nm" lang="ar">شيش طاووق</span><b>185</b><span class="nm" lang="ar">دجاج بانية</span><b>185</b><span class="nm" lang="ar">جمبري</span><b>225</b></div><p class="gn" lang="ar">جميع الوجبات يقدم معها الأرز البسمتي والسلطة والخبز الطازج.</p></div></div></section><section class="fallback-category"><h3>الطواجن</h3><div class="grid"><div class="card"><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">طاجن مسقعة باللحم</span><b>150</b><span class="nm" lang="ar">طاجن حمام بالفريك</span><b>180</b><span class="nm" lang="ar">طاجن ورق عنب بالكوارع البلدي</span><b>275</b><span class="nm" lang="ar">طاجن لحم بلدي بالبصل</span><b>295</b><span class="nm" lang="ar">طاجن عكاوي بلدي</span><b>350</b></div></div></div></section><section class="fallback-category"><h3>الفتات</h3><div class="grid"><div class="card"><h3><span lang="ar" dir="rtl" class="ar">فتة الشاورما</span></h3><div class="tbl" style="--n:3;--w:4.2rem"><span></span><span class="h"><i>وسط</i></span><span class="h"><i>كبير</i></span><span class="h"><i>جامبو</i></span><span class="nm" lang="ar">فتة شاورما دجاج</span><b>120</b><b>135</b><b>160</b><span class="nm" lang="ar">فتة شاورما لحم</span><b>155</b><b>175</b><b>195</b><span class="nm" lang="ar">فتة شاورما ميكس</span><b>165</b><b>185</b><b>205</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">فتات بلدي</span></h3><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">فتة كوارع بلدي</span><b>275</b><span class="nm" lang="ar">فتة موزة ضاني بلدي</span><b>450</b><span class="nm" lang="ar">فتة لحم محمر بلدي</span><b>275</b></div></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">روزي</span></h3><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">ليفر روزي</span><b>65</b><span class="nm" lang="ar">تشيكن روزي</span><b>75</b><span class="nm" lang="ar">شرمب روزي</span><b>100</b></div></div></div></section><section class="fallback-category"><h3>صواني القزاز</h3><div class="grid"><div class="card"><h3><span lang="ar" dir="rtl" class="ar">صواني لـ 3 أفراد</span></h3><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">صنية الأكيل (تكفي 3 أفراد)</span><b>300</b><span class="d" lang="ar">4 شيش طاووق – 2 كفتة لحم – 2 حواوشي دجاج ميني – 2 ممبار – 3 ورق عنب</span><span class="nm" lang="ar">صنية البركة (تكفي 3 أفراد)</span><b>360</b><span class="d" lang="ar">فرد حمام – 3 شيش طاووق – 2 حواوشي دجاج ميني – 2 كفتة لحم – 2 ممبار</span></div><p class="gn" lang="ar">يقدم مع كل صنية: نصف كيلو أرز بسمتي – 2 سمبوسك بالجبنة – بطاطس شيبسي – 2 سلطة من (طحينة / خضراء / مخلل / توميه).</p></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">صواني لـ 8 أفراد</span></h3><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">صنية العزومة (تكفي 8 أفراد)</span><b>1060</b><span class="d" lang="ar">دجاجة كاملة – 8 شيش طاووق – 8 كفتة لحم – 8 سجق شرقي – 4 حواوشي دجاج ميني</span><span class="nm" lang="ar">صنية العزوة (تكفي 8 أفراد)</span><b>2025</b><span class="d" lang="ar">2 دجاجة كاملة – 2 فرد حمام – موزة ضاني – لحم محمر – 8 كفتة لحم – 4 حواوشي دجاج ميني</span></div><p class="gn" lang="ar">يقدم مع كل صنية: كيلو أرز بسمتي – 4 سمبوسك بالجبنة – 4 ممبار – 8 ورق عنب – 8 محشي مشكل – 2 شوربة لسان عصفور – 2 خضار اليوم – 2 بطاطس شيبسي – 4 خبز طازج – 4 سلطة من اختياركم.</p></div><div class="card"><h3><span lang="ar" dir="rtl" class="ar">مقبلات ومحاشي</span></h3><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">صنية مقبلات مشكلة (وزن 1.5 كجم)</span><b>285</b><span class="d" lang="ar">4 محشي كوسة – 4 محشي فلفل – 4 محشي باذنجان – 12 محشي ورق عنب – 6 كبيبة – 3 سمبوسك جبنة – 6 سمبوسك لحمة – 6 ممبار</span><span class="nm" lang="ar">صنية محاشي مشكلة (وزن 1.5 كجم)</span><b>250</b><span class="d" lang="ar">6 محشي كوسة – 5 محشي فلفل – 6 محشي باذنجان – 16 محشي ورق عنب</span></div></div></div></section><section class="fallback-category"><h3>طلبات إضافية</h3><div class="grid"><div class="card"><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">محشي مشكل</span><b>45</b><span class="nm" lang="ar">ورق عنب</span><b>45</b><span class="nm" lang="ar">½ دجاج روستو</span><b>170</b><span class="nm" lang="ar">حمام محشي</span><b>170</b><span class="nm" lang="ar">طبق مقبلات</span><b>110</b><span class="nm" lang="ar">طلب سمبوسك</span><b>60</b><span class="nm" lang="ar">طلب كبيبة</span><b>50</b><span class="nm" lang="ar">طلب ممبار</span><b>77</b><span class="nm" lang="ar">مكرونة بشاميل (باللحم المفروم والموتزاريلا)</span><b>65</b><span class="nm" lang="ar">أرز بسمتي</span><b>25</b><span class="nm" lang="ar">أرز بالشعرية</span><b>30</b><span class="nm" lang="ar">خضار (تورلي / بامية ...)</span><b>38</b><span class="nm" lang="ar">باكت فارم</span><b>35</b></div></div></div></section><section class="fallback-category"><h3>الشوربة والسلطات</h3><div class="grid"><div class="card"><div class="tbl" style="--n:2;--w:4.2rem"><span></span><span class="h"><i>صغير</i></span><span class="h"><i>كبير</i></span><span class="nm" lang="ar">عدس سادة</span><b>40</b><b>45</b><span class="nm" lang="ar">عدس بالزبدة</span><b>45</b><b>50</b><span class="nm" lang="ar">شوربة كوارع</span><b class="na" aria-label="—">–</b><b>150</b><span class="nm" lang="ar">لسان عصفور</span><b class="na" aria-label="—">–</b><b>28</b><span class="nm" lang="ar">سلطة ثومية</span><b>12</b><b>20</b><span class="nm" lang="ar">سلطة خضراء</span><b>12</b><b>25</b><span class="nm" lang="ar">سلطة طحينة</span><b>15</b><b class="na" aria-label="—">–</b><span class="nm" lang="ar">كول سلو</span><b>12</b><b>25</b><span class="nm" lang="ar">باذنجان مخلل</span><b>15</b><b>20</b><span class="nm" lang="ar">مخلل مشكل</span><b>12</b><b>15</b><span class="nm" lang="ar">ليمون معصفر</span><b class="na" aria-label="—">–</b><b>20</b></div></div></div></section><section class="fallback-category"><h3>المشروبات والحلو</h3><div class="grid"><div class="card"><div class="tbl" style="--n:1;--w:4.2rem"><span class="nm" lang="ar">أم علي</span><b>45</b><span class="nm" lang="ar">كريم كراميل</span><b>40</b><span class="nm" lang="ar">أرز باللبن</span><b>35</b><span class="nm" lang="ar">رايب</span><b>30</b><span class="nm" lang="ar">مياه غازية (كانز)</span><b>20</b><span class="nm" lang="ar">مياه صغيرة</span><b>15</b><span class="nm" lang="ar">مياه كبيرة</span><b>19</b></div></div></div></section></div>
+<p class="note" data-i="mn"></p>
+</div></section>
+
+<section id="branches"><div class="wrap">
+<div class="sec-h"><h2 data-i="bt">فروعنا</h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<div class="brs" id="br"><div class="br"><div class="top"><span class="pin"><svg class="ic" aria-hidden="true"><use href="#i-pin"></use></svg></span><div><h3>وسط البلد – طلعت حرب</h3><p>38 شارع صبري أبو علم، متفرع من ميدان طلعت حرب</p></div></div><div class="branch-info"><p>للتأكد من التوصيل لعنوانك، اتصل بـ <a href="tel:16903">16903</a></p></div><div class="acts"><a href="tel:16903"><svg class="ic" aria-hidden="true"><use href="#i-phone"></use></svg>اتصل 16903</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Kazaz&amp;query_place_id=ChIJbcxuW8dAWBQRlfhWbBY-zcY" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-map"></use></svg>الخريطة</a></div></div><div class="br"><div class="top"><span class="pin"><svg class="ic" aria-hidden="true"><use href="#i-pin"></use></svg></span><div><h3>مصر الجديدة – الحجاز</h3><p>163 شارع الحجاز، ميدان الحجاز، مصر الجديدة</p></div></div><div class="branch-info"><p>للتأكد من التوصيل لعنوانك، اتصل بـ <a href="tel:16903">16903</a></p></div><div class="acts"><a href="tel:16903"><svg class="ic" aria-hidden="true"><use href="#i-phone"></use></svg>اتصل 16903</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Kazaz&amp;query_place_id=ChIJ9VVEkTEVWBQRMF1MpdqvKr4" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-map"></use></svg>الخريطة</a></div></div><div class="br"><div class="top"><span class="pin"><svg class="ic" aria-hidden="true"><use href="#i-pin"></use></svg></span><div><h3>عابدين – علوي</h3><p>2 أ شارع علوي، أمام وزارة الأوقاف، عابدين</p></div></div><div class="branch-info"><p>للتأكد من التوصيل لعنوانك، اتصل بـ <a href="tel:16903">16903</a></p></div><div class="acts"><a href="tel:16903"><svg class="ic" aria-hidden="true"><use href="#i-phone"></use></svg>اتصل 16903</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%D9%85%D8%B7%D8%B9%D9%85+%D8%A7%D9%84%D9%82%D8%B2%D8%A7%D8%B2+Kazaz&amp;query_place_id=ChIJcdM3u9pBWBQRZFU2MzLnZjg" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-map"></use></svg>الخريطة</a></div></div><div class="br soon"><div class="top"><span class="pin"><svg class="ic" aria-hidden="true"><use href="#i-pin"></use></svg></span><div><h3>مدينة نصر</h3><p class="bd">قريباً</p></div></div></div></div>
+<div class="hot"><div class="lbl" data-i="ht"></div><b>16903</b><a class="btn b1" href="tel:16903"><svg class="ic"><use href="#i-phone"/></svg><span data-i="cn"></span></a></div>
+</div></section>
+<section class="about" id="about"><div class="wrap"><h2 data-i="at">عن القزاز</h2><div><p data-i="abt">تعرّف على القزاز وفريق العمل وشركاء النجاح والشهادات الواردة في الملف التعريفي للشركة.</p><div class="btns"><a class="btn b1" href="about.html" data-i="abtbutton">تعرّف على القزاز</a><a class="btn b2" href="careers.html" data-i="careerbutton">انضم لفريق القزاز</a></div></div></div></section>
+<section class="gal" id="gallery"><div class="wrap">
+<div class="sec-h"><h2 data-i="gal"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<div class="gst" id="gst" role="region" aria-roledescription="عرض شرائح" aria-label="معرض الصور"><button class="gnv p" id="gp" type="button" aria-label="الصورة السابقة">‹</button><button class="gnv n" id="gn" type="button" aria-label="الصورة التالية">›</button></div>
+<div class="gdots" id="gd"></div>
+</div></section>
+<footer><div class="fglow"></div><canvas id="fire" aria-hidden="true"></canvas>© <span id="y"></span> <span data-i="brand">مطاعم القزاز</span> · <span data-i="ft"></span></footer>
+<canvas id="smoke" aria-hidden="true"></canvas><canvas id="flame" aria-hidden="true"></canvas>
+<div class="mus" id="mus" hidden role="group"><button type="button" class="mb music-toggle" id="music-toggle" aria-expanded="false" aria-controls="music-panel"><span aria-hidden="true">♫</span></button><div id="music-panel" class="music-panel"><button type="button" id="mmu" class="mb big"><svg viewBox="0 0 24 24" aria-hidden="true" class="son"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.8a7.6 7.6 0 0 1 0 10.4"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="soff"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button><button type="button" id="mpv" class="mb sm" aria-label="Previous track / السابق"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6v12M18 6l-8 6 8 6z"/></svg></button><button type="button" id="mnx" class="mb sm" aria-label="Next track / التالي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 6v12M6 6l8 6-8 6z"/></svg></button><input type="range" id="mvr" class="mr" min="0" max="100" step="1" value="35"></div></div>
+<a class="fab" href="tel:16903" aria-label="16903"><svg class="ic"><use href="#i-phone"/></svg></a>
+
+<script>
+const VIDEOS=['135131', '223565', '248445', '252077', '262458', '112040', '131220', '55718', '266835', '77540', '32537396', '38144359', '7574281', '7575431', '7575443'],FOOD=['20131338',  '30356622', '3209830', '32546598',  '39307446', '7367890','27906026','35007854','5528177','u1','u2','u3'];
+const LC=['ar','en','de','fr','zh'];
+const T={
+brand:["القزاز","Al-Kazzaz","Al-Kazzaz","Al-Kazzaz","卡扎兹"],
+abt:["تعرّف على القزاز وفريق العمل وشركاء النجاح والشهادات الواردة في الملف التعريفي للشركة.","Meet Al-Kazzaz, our team, and the partners and certificates featured in our company profile.","Lernen Sie Al-Kazzaz, unser Team sowie die Partner und Zertifikate aus unserem Firmenprofil kennen.","Découvrez Al-Kazzaz, notre équipe, ainsi que les partenaires et certificats présentés dans notre profil.","了解卡扎兹、我们的团队，以及公司简介中展示的合作伙伴和证书。"],
+abtbutton:["تعرّف على القزاز","About Al-Kazzaz","Über Al-Kazzaz","Découvrir Al-Kazzaz","了解卡扎兹"],
+careerbutton:["انضم لفريق القزاز","Join our team","Unser Team verstärken","Rejoindre notre équipe","加入我们的团队"],
+n4:["انضم إلى فريقنا","Join our team","Komm in unser Team","Rejoignez notre équipe","加入我们的团队"],
+n1:["عن القزاز","About Al-Kazzaz","Über Al-Kazzaz","À propos","关于我们"],
+n2:["المنيو","Menu","Speisekarte","Menu","菜单"],
+n3:["الفروع","Branches","Filialen","Restaurants","分店"],
+h1:["طعم القاهرة بتتبيلة القزاز","The taste of Cairo, marinated the Kazzaz way","Der Geschmack Kairos, mariniert nach Kazzaz-Art","Le goût du Caire, mariné à la façon Kazzaz","开罗的味道，卡扎兹秘制腌料"],
+hp:["فول وطعمية وشاورما وطواجن ومشويات وساندويتشات في قلب القاهرة.","Foul, ta’miya, shawarma, tagines, grills and sandwiches in the heart of Cairo.","Ful, Ta’miya, Schawarma, Tajines, Grillgerichte und Sandwiches im Herzen Kairos.","Foul, ta’miya, chawarma, tajines, grillades et sandwichs au cœur du Caire.","蚕豆泥、塔米亚、沙威玛、塔吉锅、烧烤和三明治，尽在开罗市中心。"],
+b1:["شوف المنيو","View the menu","Speisekarte ansehen","Voir le menu","查看菜单"],
+b2:["أقرب فرع","Find a branch","Filiale finden","Trouver un restaurant","查找分店"],
+at:["عن القزاز","About Al-Kazzaz","Über Al-Kazzaz","À propos de nous","关于我们"],
+ap1:["منذ ١٩٩٨ والقزاز عنوان معروف في وسط البلد، يحفظ للمائدة المصرية نكهتها الأصيلة. من الفول بعشرة أشكال إلى الطعمية والفلافل الإسكندراني، ومن الباذنجان والمسقعة إلى البطاطس والبيض، كل صنف يُقدَّم كما اعتاده المصريون: ساندويتش شامي أو علبة أو طلب كامل.", "Since 1998, Al-Kazzaz has been a well-known address in downtown Cairo, keeping the Egyptian table true to its flavours. From foul in ten styles to ta’miya and Alexandrian-style falafel, from aubergine and moussaka to potatoes and eggs, every dish is served the way Egyptians know it: as a pita sandwich, a box or a full portion.", "Seit 1998 ist Al-Kazzaz eine bekannte Adresse in der Kairoer Innenstadt und bewahrt den authentischen Geschmack der ägyptischen Tafel. Vom Foul in zehn Variationen über Ta’miya und Falafel nach alexandrinischer Art bis zu Aubergine, Moussaka, Kartoffeln und Eiern wird jedes Gericht so serviert, wie die Ägypter es kennen: als Pita-Sandwich, in der Box oder als volle Portion.", "Depuis 1998, Al-Kazzaz est une adresse bien connue du centre-ville du Caire, fidèle aux saveurs authentiques de la table égyptienne. Du foul décliné de dix façons à la ta’miya et aux falafels à l’alexandrine, des aubergines et de la moussaka aux pommes de terre et aux œufs, chaque plat est servi comme les Égyptiens l’aiment : en sandwich pita, en boîte ou en portion complète.", "自1998年起，卡扎兹就是开罗市中心家喻户晓的老字号，守护着埃及餐桌最地道的味道。从十种做法的蚕豆泥，到塔米亚和亚历山大式炸豆丸，从茄子、炖茄子到土豆和鸡蛋，每道菜都按埃及人熟悉的方式上桌：夹在皮塔饼里、装盒或整份享用。"],
+ap2:["واليوم تجمع قائمتنا بين الأصل والجديد: الشاورما والحواوشي والبرجر، والدجاج والجمبري، والفراخ المقلية بعلب العائلة، والفتة والطواجن والمشويات، وصوانٌ تتسع للعزومات. وتجمعها كلها تتبيلة القزاز المعروفة، في الفرع أو دليفري على 16903.", "Today our menu brings together the classic and the new: shawarma, hawawshi and burgers, chicken and shrimp, fried chicken in family boxes, fatta, tagines and grills, and trays made for gatherings. One thing ties them all together: the Kazzaz marinade, in the branch or delivered on 16903.", "Heute vereint unsere Karte Klassisches und Neues: Schawarma, Hawawschi und Burger, Hähnchen und Garnelen, frittiertes Hähnchen in Familienboxen, Fatta, Tajines und Grillgerichte sowie Platten für größere Runden. Sie alle verbindet die bekannte Kazzaz-Marinade, im Restaurant oder geliefert unter 16903.", "Aujourd’hui, notre carte réunit le classique et le nouveau : chawarma, hawawshi et burgers, poulet et crevettes, poulet frit en boîtes familiales, fatta, tajines et grillades, et plateaux pensés pour les grandes tablées. Tout est relevé par la marinade Kazzaz, en restaurant ou livré au 16903.", "如今，我们的菜单兼顾经典与新意：沙威玛、哈瓦维（埃及香料肉饼）、汉堡、鸡肉与大虾、家庭装炸鸡、法塔、塔金锅和烧烤，还有适合聚会的大拼盘。所有菜品都离不开卡扎兹招牌腌料，到店享用或拨打16903送上门。"],
+s1:["فروع في القاهرة","Cairo branches","Filialen in Kairo","restaurants au Caire","开罗分店"],
+s2:["الخط الساخن","Hotline","Hotline","Ligne directe","热线"],
+s3:["بداية الحكاية","Founded","Gegründet","Fondé en","创立于"],
+mt:["المنيو","Menu","Speisekarte","Menu","菜单"],
+mn:["الأسعار بالجنيه المصري وتشمل ضريبة القيمة المضافة. أسماء الأصناف بالعربية.","Prices are in Egyptian pounds and include VAT. Each dish also shows its Arabic name.","Preise in ägyptischen Pfund inkl. MwSt. Zu jedem Gericht steht auch der arabische Name.","Prix en livres égyptiennes, TVA incluse. Le nom arabe de chaque plat est indiqué en dessous.","价格以埃及镑计，含增值税。每道菜下方附有阿拉伯语原名，方便点餐。"],
+bt:["فروعنا","Our branches","Unsere Filialen","Nos restaurants","我们的分店"],
+ht:["الطلب والتوصيل","Orders & delivery","Bestellung & Lieferung","Commandes & livraison","订餐与外卖"],
+cn:["اتصل دلوقتي","Call now","Jetzt anrufen","Appeler maintenant","立即致电"],
+gal:["من مطابخنا","From our kitchens","Aus unseren Küchen","De nos cuisines","来自我们的厨房"],
+ft:["جميع الحقوق محفوظة","All rights reserved","Alle Rechte vorbehalten","Tous droits réservés","版权所有"],
+call:["اتصل","Call","Anrufen","Appeler","致电"],map:["الخريطة","Map","Karte","Carte","地图"],
+cur:["ج.م","EGP","EGP","EGP","埃镑"],newb:["جديد","New","Neu","Nouveau","新品"],
+offn:["على كل سندوتش أو وجبة هتاخد خصم 50% على الصنف التاني من نفس النوع.","On every sandwich or meal, get 50% off the second item of the same type.","Auf jedes Sandwich oder Gericht: 50 % Rabatt auf den zweiten Artikel derselben Art.","Sur chaque sandwich ou plat : 50 % de réduction sur le deuxième article du même type.","每份三明治或正餐，同类第二份享五折。"]};
+const CL={bo:["علبة / طلب","Box / portion","Box / Portion","Boîte / portion","盒装 / 份"],sh:["ساندويتش شامي","Pita sandwich","Pita-Sandwich","Sandwich pita","皮塔三明治"],bx:["علبة","Box","Box","Boîte","盒装"],od:["طلب","Portion","Portion","Portion","份"],kz:["كايزر","Kaiser","Kaiser","Kaiser","凯撒面包"],md:["وسط","Medium","Mittel","Moyen","中"],lg:["كبير","Large","Groß","Grand","大"],sm:["صغير","Small","Klein","Petit","小"],jb:["جامبو","Jumbo","Jumbo","Jumbo","特大"],fm:["فينو وسط","Medium roll","Brötchen M","Petit pain M","中号面包"],fl:["فينو كبير","Large roll","Brötchen L","Petit pain L","大号面包"],rl:["خبز رول","Wrap","Wrap","Wrap","卷饼"],L:["L","L","L","L","L"],XL:["XL","XL","XL","XL","XL"]};
+const g=(t,c,r,n)=>({t,c:c?c.split(','):[],n,r:r.trim().split('\n').map(l=>{let d='';if(l.includes('~'))[l,d]=l.split('~');const[a,...p]=l.split('|');return[a,p,d]})});
+const OF=[[1,'2 وجبة بروستد (2 قطعة)',230,172.5],[2,'2 وجبة ميكس القزاز (وجبة كاملة)',430,322.5],[3,'فتة شاورما لحم وسط + فتة شاورما دجاج وسط',275,215],[4,'2 ساندويتش شاورما رول (لحم + دجاج)',230,177.5],[5,'حواوشي سجق كبير + حواوشي لحم كبير + 2 مخلل',175,132.5],[6,'2 شوربة عدس بالزبدة',100,75],[7,'4 ساندويتش (بطاطس صوابع + مسقعة + فول + طعمية)',0,45]];
+const C=[
+{n:["العروض","Deals","Angebote","Offres","优惠套餐"],of:1},
+{n:["ساندويتش شرقي","Egyptian sandwiches","Ägyptische Sandwiches","Sandwichs égyptiens","埃及风味三明治"],g:[
+g('فول','sh,bo',`فول محوج|10|35
+فول زيت زيتون|16|45
+فول إسكندراني|16|45
+فول زيت ذرة|14|38
+فول زيت حار|14|38
+فول بالزبدة|16|45
+فول بالأومليت|27|
+فول بالسجق|29|80
+فول بالبيض|21|
+فول بالصلصة|14|38`),
+g('فلافل (طعمية)','sh',`فلافل|10
+فلافل إسكندراني|16
+فلافل بالبيض|21
+ميكس|18
+ديناميت|22
+عجة طعمية|22`),
+g('بطاطس','sh,bx,od',`بطاطس بانية|18||30
+بطاطس مهروسة|15|18|
+بطاطس فارم شامي|20||35
+بطاطس إسكندراني|24||
+بطاطس شيبسي|18||30`),
+g('جبنة وخضار وبيض','sh,bx',`جبنة بالطماطم|15|22
+جبنة مقلية شامي|40|
+باذنجان مقلي|18|
+باذنجان إسكندراني|23|
+بابا غنوج|15|25
+مسقعة|15|25
+شكشوكة|25|25
+بيض مسلوق|20|
+بيض إسكندراني|24|
+أومليت سادة|32|
+أومليت بالسجق|63|`),
+g('جديد من القزاز','sh,od',`فلافل بالبسطرمة|38|21
+فلافل بالرومي|38|21
+فلافل بالشيدر|38|21
+فلافل ليمون معصفر|16|12
+فلافل كيري|35|30
+فول ليمون معصفر|16|45`),
+g('على الفينو والرول','fm,fl,rl',`أومليت بالبسطرمة|52|57|65
+جبنة رومي|45|50|
+مربى بالقشدة|45|50|
+حلاوة بالقشدة|45|50|
+جبنة مقلية|50|60|60
+بطاطس فارم|30|37|40
+فلافل|||30`,'الساندويتش في خبز بلدي بإضافة 3 جنيه.')]},
+{n:["ساندويتش غربي","Western sandwiches","Westliche Sandwiches","Sandwichs à l’occidentale","西式三明治"],g:[
+g('شاورما وبرجر','kz,md,lg',`شاورما لحم|70|115|135
+برجر سادة|65||85
+برجر بالبيض|70||90
+برجر بالجبنة|70||90
+برجر بيض وجبنة|75||100
+تريند برجر (لحم / دجاج)|||95 / 100`),
+g('حواوشي','md,lg',`حواوشي مصري|65|85
+حواوشي بالسجق|70|90
+حواوشي شيدر / رومي||105
+حواوشي ميكس جبن||110
+حواوشي دجاج|60|75
+حواوشي شاورما لحم|115|
+حواوشي شاورما دجاج|100|`),
+g('دجاج وجمبري','kz,md,lg',`شاورما دجاج|60|90|105
+دجاج بانية||80|90
+دجاج ستربس||80|90
+دجاج فاهيتا||80|90
+شيش طاووق||80|90
+دجاج مكسيكي||80|90
+برجر دجاج|60||75
+جمبري بانية||100|110
+إضافة جبنة||13|18`),
+g('ساندويتش القزاز','md,lg',`كفتة جريل|65|75
+هوت دوج مكسيكي|65|75
+كبدة بانية|65|75
+كبدة إسكندراني|65|75
+سجق شرقي|65|75`),
+g('ساندويتش رول','L,XL',`شاورما (دجاج / لحم) رول|105 / 125|115 / 140
+شاورما مكس رول|135|150
+دجاج بانية بالشيدر رول|95|
+طاووق رول|90|
+شرمب رول|105|
+ستربس بالجبنة الشيدر رول|95|
+دجاج (مكسيكي / فاهيتا) رول|90|
+(بيكيني / سجق / كفتة) رول|75|
+كبدة إسكندراني رول|75|`)]},
+{n:["فرايد تشيكن","Fried chicken","Fried Chicken","Poulet frit","炸鸡"],g:[
+g('','',`سوبر 2 سناكس|115
+سوبر 5 دينر ستربس|185
+سوبر 4 دينر|225
+سوبر 9 فاميلي ميل|445
+سوبر 8 + 4 فاميلي مكس|545
+سوبر 8 + 8 فاميلي مكس|650
+سوبر 10 + 10 فاميلي مكس|840`,'يقدم مع الوجبات: أرز بسمتي / خبز / شيبسي / توميه / كاتشب، مع إضافات أخرى لبعض الوجبات.')]},
+{n:["الوجبات","Meals","Hauptgerichte","Plats","正餐"],g:[
+g('وجبات مميزة','',`وجبة دجاج ¼ (ورك / صدر)|140 / 130
+وجبة دجاج ½|185
+وجبة لحم بلدي محمر|290
+وجبة طاجن خضار باللحم البلدي|290
+وجبة موزة ضاني باللحم البلدي|465`,'جميع الوجبات يقدم معها خضار اليوم والأرز والسلطة والخبز الطازج.'),
+g('وجبات القزاز','',`ميكس القزاز (شيش طاووق مع دجاج بانية والكفتة على الجريل)|215
+كبدة (بانية / إسكندراني)|165
+كفتة جريل|165
+شاورما لحم|315
+شاورما دجاج|290
+شيش طاووق|185
+دجاج بانية|185
+جمبري|225`,'جميع الوجبات يقدم معها الأرز البسمتي والسلطة والخبز الطازج.')]},
+{n:["الطواجن","Tagines","Tajines","Tajines","塔吉锅"],g:[
+g('','',`طاجن مسقعة باللحم|150
+طاجن حمام بالفريك|180
+طاجن ورق عنب بالكوارع البلدي|275
+طاجن لحم بلدي بالبصل|295
+طاجن عكاوي بلدي|350`)]},
+{n:["الفتات","Fatta","Fatta","Fatta","法塔"],g:[
+g('فتة الشاورما','md,lg,jb',`فتة شاورما دجاج|120|135|160
+فتة شاورما لحم|155|175|195
+فتة شاورما ميكس|165|185|205`),
+g('فتات بلدي','',`فتة كوارع بلدي|275
+فتة موزة ضاني بلدي|450
+فتة لحم محمر بلدي|275`),
+g('روزي','',`ليفر روزي|65
+تشيكن روزي|75
+شرمب روزي|100`)]},
+{n:["صواني القزاز","Kazzaz trays","Kazzaz-Platten","Plateaux Kazzaz","卡扎兹拼盘"],g:[
+g('صواني لـ 3 أفراد','',`صنية الأكيل (تكفي 3 أفراد)|300~4 شيش طاووق – 2 كفتة لحم – 2 حواوشي دجاج ميني – 2 ممبار – 3 ورق عنب
+صنية البركة (تكفي 3 أفراد)|360~فرد حمام – 3 شيش طاووق – 2 حواوشي دجاج ميني – 2 كفتة لحم – 2 ممبار`,'يقدم مع كل صنية: نصف كيلو أرز بسمتي – 2 سمبوسك بالجبنة – بطاطس شيبسي – 2 سلطة من (طحينة / خضراء / مخلل / توميه).'),
+g('صواني لـ 8 أفراد','',`صنية العزومة (تكفي 8 أفراد)|1060~دجاجة كاملة – 8 شيش طاووق – 8 كفتة لحم – 8 سجق شرقي – 4 حواوشي دجاج ميني
+صنية العزوة (تكفي 8 أفراد)|2025~2 دجاجة كاملة – 2 فرد حمام – موزة ضاني – لحم محمر – 8 كفتة لحم – 4 حواوشي دجاج ميني`,'يقدم مع كل صنية: كيلو أرز بسمتي – 4 سمبوسك بالجبنة – 4 ممبار – 8 ورق عنب – 8 محشي مشكل – 2 شوربة لسان عصفور – 2 خضار اليوم – 2 بطاطس شيبسي – 4 خبز طازج – 4 سلطة من اختياركم.'),
+g('مقبلات ومحاشي','',`صنية مقبلات مشكلة (وزن 1.5 كجم)|285~4 محشي كوسة – 4 محشي فلفل – 4 محشي باذنجان – 12 محشي ورق عنب – 6 كبيبة – 3 سمبوسك جبنة – 6 سمبوسك لحمة – 6 ممبار
+صنية محاشي مشكلة (وزن 1.5 كجم)|250~6 محشي كوسة – 5 محشي فلفل – 6 محشي باذنجان – 16 محشي ورق عنب`)]},
+{n:["طلبات إضافية","Extras","Beilagen","Accompagnements","加购"],g:[
+g('','',`محشي مشكل|45
+ورق عنب|45
+½ دجاج روستو|170
+حمام محشي|170
+طبق مقبلات|110
+طلب سمبوسك|60
+طلب كبيبة|50
+طلب ممبار|77
+مكرونة بشاميل (باللحم المفروم والموتزاريلا)|65
+أرز بسمتي|25
+أرز بالشعرية|30
+خضار (تورلي / بامية ...)|38
+باكت فارم|35`)]},
+{n:["الشوربة والسلطات","Soups & salads","Suppen & Salate","Soupes & salades","汤与沙拉"],g:[
+g('','sm,lg',`عدس سادة|40|45
+عدس بالزبدة|45|50
+شوربة كوارع||150
+لسان عصفور||28
+سلطة ثومية|12|20
+سلطة خضراء|12|25
+سلطة طحينة|15|
+كول سلو|12|25
+باذنجان مخلل|15|20
+مخلل مشكل|12|15
+ليمون معصفر||20`)]},
+{n:["المشروبات والحلو","Drinks & sweets","Getränke & Süßes","Boissons & douceurs","饮品与甜点"],g:[
+g('','',`أم علي|45
+كريم كراميل|40
+أرز باللبن|35
+رايب|30
+مياه غازية (كانز)|20
+مياه صغيرة|15
+مياه كبيرة|19`)]}];
+const en1=["38 Sabry Abou Alam St., off Talaat Harb Sq.","163 Hegaz St., Hegaz Square, Heliopolis","2A Alawi St., opposite the Ministry of Awqaf, Abdeen"];
+const B=[
+[["وسط البلد – طلعت حرب","Downtown – Talaat Harb","Innenstadt – Talaat Harb","Centre-ville – Talaat Harb","市中心·塔拉特哈布"],"38 شارع صبري أبو علم، متفرع من ميدان طلعت حرب"],
+[["مصر الجديدة – الحجاز","Heliopolis – Hegaz","Heliopolis – Hegaz","Héliopolis – Hegaz","赫利奥波利斯·希贾兹"],"163 شارع الحجاز، ميدان الحجاز، مصر الجديدة"],
+[["عابدين – علوي","Abdeen – Alawi St.","Abdeen – Alawi-Straße","Abdine – rue Alawi","阿卜丁·阿拉维街"],"2 أ شارع علوي، أمام وزارة الأوقاف، عابدين"],
+[["مدينة نصر","Nasr City","Nasr City (Madinat Nasr)","Nasr City (Madinat Nasr)","纳赛尔城"],"",1]];
+
+const TR={"فول": ["Foul (fava beans)", "Ful (Saubohnen)", "Foul (fèves)", "蚕豆（福尔）"], "فلافل (طعمية)": ["Falafel (ta’miya)", "Falafel (Ta’miya)", "Falafel (ta’miya)", "法拉费（塔米亚）"], "بطاطس": ["Potatoes", "Kartoffeln", "Pommes de terre", "土豆"], "جبنة وخضار وبيض": ["Cheese, vegetables & eggs", "Käse, Gemüse & Eier", "Fromage, légumes et œufs", "奶酪、蔬菜与鸡蛋"], "جديد من القزاز": ["New from Al-Kazzaz", "Neu bei Al-Kazzaz", "Nouveautés Al-Kazzaz", "卡扎兹新品"], "على الفينو والرول": ["On fino rolls & wraps", "Auf Fino-Brötchen & Wraps", "Sur petits pains fino et wraps", "面包卷与卷饼"], "شاورما وبرجر": ["Shawarma & burgers", "Schawarma & Burger", "Chawarma et burgers", "沙威玛与汉堡"], "حواوشي": ["Hawawshi (Egyptian spiced meat bread)", "Hawawschi (ägyptisches Hackfleischbrot)", "Hawawchi (pain égyptien à la viande épicée)", "哈瓦维希（埃及香料肉馅面包）"], "دجاج وجمبري": ["Chicken & shrimp", "Hähnchen & Garnelen", "Poulet et crevettes", "鸡肉与虾"], "ساندويتش القزاز": ["Al-Kazzaz sandwiches", "Al-Kazzaz-Sandwiches", "Sandwichs Al-Kazzaz", "卡扎兹三明治"], "ساندويتش رول": ["Wrap sandwiches", "Wrap-Sandwiches", "Sandwichs wraps", "卷饼三明治"], "وجبات مميزة": ["Special meals", "Spezialgerichte", "Plats spéciaux", "特色正餐"], "وجبات القزاز": ["Al-Kazzaz meals", "Al-Kazzaz-Gerichte", "Plats Al-Kazzaz", "卡扎兹正餐"], "فتة الشاورما": ["Shawarma fatta", "Schawarma-Fatta", "Fatta au chawarma", "沙威玛法塔"], "فتات بلدي": ["Baladi fatta", "Fatta nach Landesart", "Fatta baladi", "传统法塔"], "روزي": ["Rosé (creamy pink sauce)", "Rosé (cremige rosa Soße)", "Rosé (sauce crémeuse rosée)", "玫瑰酱（奶油粉红酱）"], "صواني لـ 3 أفراد": ["Trays for 3 people", "Platten für 3 Personen", "Plateaux pour 3 personnes", "3人拼盘"], "صواني لـ 8 أفراد": ["Trays for 8 people", "Platten für 8 Personen", "Plateaux pour 8 personnes", "8人拼盘"], "مقبلات ومحاشي": ["Appetizers & stuffed vegetables", "Vorspeisen & Gefülltes", "Entrées et légumes farcis", "开胃小食与酿菜"], "الساندويتش في خبز بلدي بإضافة 3 جنيه.": ["Sandwich on baladi bread for an extra 3 EGP.", "Sandwich auf Baladi-Brot gegen 3 EGP Aufpreis.", "Sandwich sur pain baladi avec un supplément de 3 EGP.", "改用传统馕饼（巴拉迪面包）加收3埃镑。"], "يقدم مع الوجبات: أرز بسمتي / خبز / شيبسي / توميه / كاتشب، مع إضافات أخرى لبعض الوجبات.": ["Meals are served with: basmati rice / bread / chips / toum (garlic sauce) / ketchup, with other extras for some meals.", "Die Gerichte werden serviert mit: Basmatireis / Brot / Chips / Toum (Knoblauchsoße) / Ketchup, bei einigen Gerichten mit weiteren Beilagen.", "Les plats sont servis avec : riz basmati / pain / chips / toum (sauce à l’ail) / ketchup, et d’autres accompagnements pour certains plats.", "正餐配：印度香米饭 / 面包 / 薯片 / 蒜蓉酱 / 番茄酱，部分正餐另配其他小食。"], "جميع الوجبات يقدم معها خضار اليوم والأرز والسلطة والخبز الطازج.": ["All meals come with the vegetable of the day, rice, salad and fresh bread.", "Alle Gerichte werden mit Tagesgemüse, Reis, Salat und frischem Brot serviert.", "Tous les plats sont servis avec les légumes du jour, du riz, une salade et du pain frais.", "所有正餐均配当日蔬菜、米饭、沙拉和新鲜面包。"], "جميع الوجبات يقدم معها الأرز البسمتي والسلطة والخبز الطازج.": ["All meals come with basmati rice, salad and fresh bread.", "Alle Gerichte werden mit Basmatireis, Salat und frischem Brot serviert.", "Tous les plats sont servis avec du riz basmati, une salade et du pain frais.", "所有正餐均配印度香米饭、沙拉和新鲜面包。"], "يقدم مع كل صنية: نصف كيلو أرز بسمتي – 2 سمبوسك بالجبنة – بطاطس شيبسي – 2 سلطة من (طحينة / خضراء / مخلل / توميه).": ["Each tray comes with: ½ kg basmati rice – 2 cheese sambousek – chips – 2 salads of your choice (tahini / green / pickles / toum).", "Zu jeder Platte: ½ kg Basmatireis – 2 Käse-Sambusek – Chips – 2 Salate nach Wahl (Tahini / grün / Pickles / Toum).", "Chaque plateau est servi avec : ½ kg de riz basmati – 2 sambousek au fromage – chips – 2 salades au choix (tahini / verte / pickles / toum).", "每份拼盘配：半公斤印度香米饭 – 2个奶酪萨姆萨 – 薯片 – 2份沙拉（芝麻酱 / 青菜 / 腌菜 / 蒜蓉酱任选）。"], "يقدم مع كل صنية: كيلو أرز بسمتي – 4 سمبوسك بالجبنة – 4 ممبار – 8 ورق عنب – 8 محشي مشكل – 2 شوربة لسان عصفور – 2 خضار اليوم – 2 بطاطس شيبسي – 4 خبز طازج – 4 سلطة من اختياركم.": ["Each tray comes with: 1 kg basmati rice – 4 cheese sambousek – 4 mumbar – 8 stuffed vine leaves – 8 assorted stuffed vegetables – 2 orzo soups – 2 vegetables of the day – 2 chips – 4 fresh bread – 4 salads of your choice.", "Zu jeder Platte: 1 kg Basmatireis – 4 Käse-Sambusek – 4 Mumbar – 8 gefüllte Weinblätter – 8 gemischte Gefüllte – 2 Nudelsuppen (Lisan Asfour) – 2 Tagesgemüse – 2 Chips – 4 frisches Brot – 4 Salate nach Wahl.", "Chaque plateau est servi avec : 1 kg de riz basmati – 4 sambousek au fromage – 4 mumbar – 8 feuilles de vigne farcies – 8 légumes farcis assortis – 2 soupes d’orzo – 2 légumes du jour – 2 chips – 4 pains frais – 4 salades au choix.", "每份拼盘配：1公斤印度香米饭 – 4个奶酪萨姆萨 – 4份曼巴尔 – 8个葡萄叶卷 – 8个什锦酿菜 – 2份小鸟舌汤 – 2份当日蔬菜 – 2份薯片 – 4份新鲜面包 – 4份沙拉（任选）。"], "فول محوج": ["Seasoned foul (mehawwag)", "Gewürzter Ful (Mehawwag)", "Foul assaisonné (mehawwag)", "香料蚕豆（梅哈瓦格）"], "فول زيت زيتون": ["Foul with olive oil", "Ful mit Olivenöl", "Foul à l’huile d’olive", "橄榄油蚕豆"], "فول إسكندراني": ["Alexandrian-style foul", "Ful nach Alexandriner Art", "Foul à l’alexandrine", "亚历山大式蚕豆"], "فول زيت ذرة": ["Foul with corn oil", "Ful mit Maisöl", "Foul à l’huile de maïs", "玉米油蚕豆"], "فول زيت حار": ["Foul with hot oil", "Ful mit scharfem Öl", "Foul à l’huile pimentée", "辣油蚕豆"], "فول بالزبدة": ["Foul with butter", "Ful mit Butter", "Foul au beurre", "黄油蚕豆"], "فول بالأومليت": ["Foul with omelette", "Ful mit Omelett", "Foul à l’omelette", "蚕豆配煎蛋卷"], "فول بالسجق": ["Foul with sausage", "Ful mit Wurst", "Foul à la saucisse", "蚕豆配香肠"], "فول بالبيض": ["Foul with egg", "Ful mit Ei", "Foul à l’œuf", "蚕豆配鸡蛋"], "فول بالصلصة": ["Foul with tomato sauce", "Ful mit Tomatensoße", "Foul à la sauce tomate", "番茄酱蚕豆"], "فلافل": ["Falafel", "Falafel", "Falafel", "法拉费"], "فلافل إسكندراني": ["Alexandrian-style falafel", "Falafel nach Alexandriner Art", "Falafel à l’alexandrine", "亚历山大式法拉费"], "فلافل بالبيض": ["Falafel with egg", "Falafel mit Ei", "Falafel à l’œuf", "法拉费配鸡蛋"], "ميكس": ["Mix", "Mix", "Mixte", "什锦"], "ديناميت": ["Dynamite (spicy)", "Dynamit (scharf)", "Dynamite (épicé)", "爆辣"], "عجة طعمية": ["Falafel egg omelette", "Falafel-Eieromelett (Egga)", "Omelette au falafel", "法拉费蛋饼"], "بطاطس بانية": ["Breaded potatoes", "Panierte Kartoffeln", "Pommes de terre panées", "脆皮土豆"], "بطاطس مهروسة": ["Mashed potatoes", "Kartoffelpüree", "Purée de pommes de terre", "土豆泥"], "بطاطس فارم شامي": ["Farm fries", "Farm-Pommes", "Frites « farm »", "农场薯条"], "بطاطس إسكندراني": ["Alexandrian-style potatoes", "Kartoffeln nach Alexandriner Art", "Pommes de terre à l’alexandrine", "亚历山大式土豆"], "بطاطس شيبسي": ["Potato chips", "Kartoffelchips", "Chips de pommes de terre", "薯片"], "جبنة بالطماطم": ["Cheese with tomato", "Käse mit Tomate", "Fromage à la tomate", "奶酪番茄"], "جبنة مقلية شامي": ["Fried cheese", "Gebratener Käse", "Fromage frit", "煎奶酪"], "باذنجان مقلي": ["Fried aubergine", "Gebratene Aubergine", "Aubergine frite", "炸茄子"], "باذنجان إسكندراني": ["Alexandrian-style aubergine", "Aubergine nach Alexandriner Art", "Aubergine à l’alexandrine", "亚历山大式茄子"], "بابا غنوج": ["Baba ghanoush", "Baba Ghanoush", "Baba ghanouj", "茄泥（巴巴加努什）"], "مسقعة": ["Moussaka (Egyptian aubergine stew)", "Moussaka (ägyptischer Auberginen-Eintopf)", "Moussaka (ragoût d’aubergines à l’égyptienne)", "穆萨卡（埃及炖茄子）"], "شكشوكة": ["Shakshuka", "Schakschuka", "Chakchouka", "沙克舒卡（番茄炖蛋）"], "بيض مسلوق": ["Boiled egg", "Gekochtes Ei", "Œuf dur", "水煮蛋"], "بيض إسكندراني": ["Alexandrian-style eggs", "Eier nach Alexandriner Art", "Œufs à l’alexandrine", "亚历山大式鸡蛋"], "أومليت سادة": ["Plain omelette", "Einfaches Omelett", "Omelette nature", "原味煎蛋卷"], "أومليت بالسجق": ["Omelette with sausage", "Omelett mit Wurst", "Omelette à la saucisse", "香肠煎蛋卷"], "فلافل بالبسطرمة": ["Falafel with basterma (spiced cured beef)", "Falafel mit Basterma (gewürztes Rinder-Pökelfleisch)", "Falafel au basturma (bœuf séché épicé)", "法拉费配巴斯特尔马（香料腌牛肉）"], "فلافل بالرومي": ["Falafel with Roumi cheese", "Falafel mit Rumi-Käse", "Falafel au fromage roumi", "法拉费配鲁米奶酪"], "فلافل بالشيدر": ["Falafel with cheddar", "Falafel mit Cheddar", "Falafel au cheddar", "法拉费配切达奶酪"], "فلافل ليمون معصفر": ["Falafel with pickled lemon", "Falafel mit eingelegter Zitrone", "Falafel au citron confit", "法拉费配腌柠檬"], "فلافل كيري": ["Falafel with Kiri cream cheese", "Falafel mit Kiri-Frischkäse", "Falafel au fromage Kiri", "法拉费配奇利奶酪"], "فول ليمون معصفر": ["Foul with pickled lemon", "Ful mit eingelegter Zitrone", "Foul au citron confit", "蚕豆配腌柠檬"], "أومليت بالبسطرمة": ["Omelette with basterma", "Omelett mit Basterma", "Omelette au basturma", "巴斯特尔马煎蛋卷"], "جبنة رومي": ["Roumi cheese", "Rumi-Käse", "Fromage roumi", "鲁米奶酪"], "مربى بالقشدة": ["Jam with cream (qishta)", "Marmelade mit Sahne (Eischta)", "Confiture à la crème (qichta)", "果酱配奶油（盖什塔）"], "حلاوة بالقشدة": ["Halawa (sesame halva) with cream", "Halawa (Sesam-Halva) mit Sahne", "Halawa (halva au sésame) à la crème", "芝麻哈尔瓦配奶油"], "جبنة مقلية": ["Fried cheese", "Gebratener Käse", "Fromage frit", "煎奶酪"], "بطاطس فارم": ["Farm fries", "Farm-Pommes", "Frites « farm »", "农场薯条"], "شاورما لحم": ["Beef shawarma", "Rindfleisch-Schawarma", "Chawarma de bœuf", "牛肉沙威玛"], "برجر سادة": ["Plain burger", "Burger pur", "Burger nature", "原味汉堡"], "برجر بالبيض": ["Burger with egg", "Burger mit Ei", "Burger à l’œuf", "鸡蛋汉堡"], "برجر بالجبنة": ["Cheeseburger", "Cheeseburger", "Cheeseburger", "芝士汉堡"], "برجر بيض وجبنة": ["Burger with egg & cheese", "Burger mit Ei & Käse", "Burger œuf et fromage", "鸡蛋芝士汉堡"], "تريند برجر (لحم / دجاج)": ["Trend burger (beef / chicken)", "Trend-Burger (Rind / Hähnchen)", "Burger Trend (bœuf / poulet)", "潮流汉堡（牛肉 / 鸡肉）"], "حواوشي مصري": ["Egyptian hawawshi", "Ägyptisches Hawawschi", "Hawawchi égyptien", "埃及哈瓦维希"], "حواوشي بالسجق": ["Hawawshi with sausage", "Hawawschi mit Wurst", "Hawawchi à la saucisse", "香肠哈瓦维希"], "حواوشي شيدر / رومي": ["Hawawshi with cheddar / Roumi cheese", "Hawawschi mit Cheddar / Rumi-Käse", "Hawawchi cheddar / roumi", "哈瓦维希配切达 / 鲁米奶酪"], "حواوشي ميكس جبن": ["Hawawshi with mixed cheeses", "Hawawschi mit Käsemix", "Hawawchi aux fromages mélangés", "什锦奶酪哈瓦维希"], "حواوشي دجاج": ["Chicken hawawshi", "Hähnchen-Hawawschi", "Hawawchi au poulet", "鸡肉哈瓦维希"], "حواوشي شاورما لحم": ["Beef shawarma hawawshi", "Hawawschi mit Rind-Schawarma", "Hawawchi chawarma de bœuf", "牛肉沙威玛哈瓦维希"], "حواوشي شاورما دجاج": ["Chicken shawarma hawawshi", "Hawawschi mit Hähnchen-Schawarma", "Hawawchi chawarma de poulet", "鸡肉沙威玛哈瓦维希"], "شاورما دجاج": ["Chicken shawarma", "Hähnchen-Schawarma", "Chawarma de poulet", "鸡肉沙威玛"], "دجاج بانية": ["Breaded chicken", "Paniertes Hähnchen", "Poulet pané", "脆皮炸鸡排"], "دجاج ستربس": ["Chicken strips", "Chicken Strips", "Lamelles de poulet (strips)", "鸡柳条"], "دجاج فاهيتا": ["Chicken fajita", "Hähnchen-Fajita", "Poulet fajita", "法士达鸡肉"], "شيش طاووق": ["Shish tawook", "Schisch Taouk", "Chiche taouk", "烤鸡肉串（希什塔乌克）"], "دجاج مكسيكي": ["Mexican chicken", "Mexikanisches Hähnchen", "Poulet mexicain", "墨西哥风味鸡肉"], "برجر دجاج": ["Chicken burger", "Hähnchen-Burger", "Burger de poulet", "鸡肉汉堡"], "جمبري بانية": ["Breaded shrimp", "Panierte Garnelen", "Crevettes panées", "脆皮炸虾"], "إضافة جبنة": ["Extra cheese", "Extra Käse", "Fromage supplémentaire", "加奶酪"], "كفتة جريل": ["Grilled kofta", "Gegrillte Kofta", "Kefta grillée", "烤肉丸（科夫塔）"], "هوت دوج مكسيكي": ["Mexican hot dog", "Mexikanischer Hotdog", "Hot-dog mexicain", "墨西哥热狗"], "كبدة بانية": ["Breaded liver", "Panierte Leber", "Foie pané", "脆皮炸肝"], "كبدة إسكندراني": ["Alexandrian-style liver", "Leber nach Alexandriner Art", "Foie à l’alexandrine", "亚历山大式炒肝"], "سجق شرقي": ["Egyptian-style sausage", "Ägyptische Wurst", "Saucisse à l’égyptienne", "埃及风味香肠"], "شاورما (دجاج / لحم) رول": ["Shawarma wrap (chicken / beef)", "Schawarma-Wrap (Hähnchen / Rind)", "Wrap chawarma (poulet / bœuf)", "沙威玛卷（鸡肉 / 牛肉）"], "شاورما مكس رول": ["Mixed shawarma wrap", "Gemischter Schawarma-Wrap", "Wrap chawarma mixte", "混合沙威玛卷"], "دجاج بانية بالشيدر رول": ["Breaded chicken & cheddar wrap", "Wrap mit paniertem Hähnchen & Cheddar", "Wrap poulet pané et cheddar", "脆皮鸡排切达卷"], "طاووق رول": ["Tawook wrap", "Taouk-Wrap", "Wrap taouk", "塔乌克鸡肉卷"], "شرمب رول": ["Shrimp wrap", "Garnelen-Wrap", "Wrap crevettes", "鲜虾卷"], "ستربس بالجبنة الشيدر رول": ["Chicken strips & cheddar wrap", "Wrap mit Chicken Strips & Cheddar", "Wrap strips de poulet et cheddar", "鸡柳切达卷"], "دجاج (مكسيكي / فاهيتا) رول": ["Chicken wrap (Mexican / fajita)", "Hähnchen-Wrap (mexikanisch / Fajita)", "Wrap poulet (mexicain / fajita)", "鸡肉卷（墨西哥 / 法士达）"], "(بيكيني / سجق / كفتة) رول": ["Wrap (bikini / sausage / kofta)", "Wrap (Bikini / Wurst / Kofta)", "Wrap (bikini / saucisse / kefta)", "卷饼（比基尼 / 香肠 / 肉丸）"], "كبدة إسكندراني رول": ["Alexandrian-style liver wrap", "Wrap mit Leber nach Alexandriner Art", "Wrap foie à l’alexandrine", "亚历山大式炒肝卷"], "سوبر 2 سناكس": ["Super 2 Snacks", "Super 2 Snacks", "Super 2 Snacks", "超级2号小食"], "سوبر 5 دينر ستربس": ["Super 5 Dinner Strips", "Super 5 Dinner Strips", "Super 5 Dinner Strips", "超级5号鸡柳晚餐"], "سوبر 4 دينر": ["Super 4 Dinner", "Super 4 Dinner", "Super 4 Dinner", "超级4号晚餐"], "سوبر 9 فاميلي ميل": ["Super 9 Family Meal", "Super 9 Family Meal", "Super 9 Family Meal", "超级9号家庭套餐"], "سوبر 8 + 4 فاميلي مكس": ["Super 8 + 4 Family Mix", "Super 8 + 4 Family Mix", "Super 8 + 4 Family Mix", "超级8+4家庭什锦"], "سوبر 8 + 8 فاميلي مكس": ["Super 8 + 8 Family Mix", "Super 8 + 8 Family Mix", "Super 8 + 8 Family Mix", "超级8+8家庭什锦"], "سوبر 10 + 10 فاميلي مكس": ["Super 10 + 10 Family Mix", "Super 10 + 10 Family Mix", "Super 10 + 10 Family Mix", "超级10+10家庭什锦"], "وجبة دجاج ¼ (ورك / صدر)": ["Chicken meal ¼ (leg / breast)", "Hähnchengericht ¼ (Keule / Brust)", "Plat de poulet ¼ (cuisse / blanc)", "鸡肉套餐¼只（鸡腿 / 鸡胸）"], "وجبة دجاج ½": ["Chicken meal ½", "Hähnchengericht ½", "Plat de poulet ½", "鸡肉套餐半只"], "وجبة لحم بلدي محمر": ["Pan-roasted local beef meal", "Gericht mit geschmortem Landrind", "Plat de bœuf baladi rôti", "红烧本地牛肉套餐"], "وجبة طاجن خضار باللحم البلدي": ["Vegetable tagine with local beef meal", "Gemüse-Tajine mit Landrind", "Plat tajine de légumes au bœuf baladi", "蔬菜炖本地牛肉塔吉锅套餐"], "وجبة موزة ضاني باللحم البلدي": ["Lamb shank (mozza) meal", "Lammhaxe (Mozza) mit Gericht", "Plat de souris d’agneau (mozza)", "羊腿（莫扎）套餐"], "ميكس القزاز (شيش طاووق مع دجاج بانية والكفتة على الجريل)": ["Al-Kazzaz mix (shish tawook, breaded chicken and grilled kofta)", "Al-Kazzaz-Mix (Schisch Taouk, paniertes Hähnchen und gegrillte Kofta)", "Mix Al-Kazzaz (chiche taouk, poulet pané et kefta grillée)", "卡扎兹什锦（烤鸡肉串、脆皮鸡排和烤肉丸）"], "كبدة (بانية / إسكندراني)": ["Liver (breaded / Alexandrian-style)", "Leber (paniert / nach Alexandriner Art)", "Foie (pané / à l’alexandrine)", "炸肝（脆皮 / 亚历山大式）"], "جمبري": ["Shrimp", "Garnelen", "Crevettes", "虾"], "طاجن مسقعة باللحم": ["Moussaka tagine with beef", "Moussaka-Tajine mit Rindfleisch", "Tajine de moussaka au bœuf", "牛肉穆萨卡塔吉锅"], "طاجن حمام بالفريك": ["Pigeon tagine with freekeh", "Tauben-Tajine mit Freekeh", "Tajine de pigeon au freekeh", "弗里克麦鸽肉塔吉锅"], "طاجن ورق عنب بالكوارع البلدي": ["Stuffed vine leaves tagine with baladi trotters", "Tajine mit gefüllten Weinblättern und Kuhfüßen", "Tajine de feuilles de vigne farcies aux pieds de bœuf", "葡萄叶卷牛蹄塔吉锅"], "طاجن لحم بلدي بالبصل": ["Local beef tagine with onions", "Tajine mit Landrind und Zwiebeln", "Tajine de bœuf baladi aux oignons", "洋葱炖本地牛肉塔吉锅"], "طاجن عكاوي بلدي": ["Baladi okawi tagine (oxtail)", "Baladi-Okawi-Tajine (Ochsenschwanz)", "Tajine okawi baladi (queue de bœuf)", "传统欧卡维塔吉锅（牛尾）"], "فتة شاورما دجاج": ["Chicken shawarma fatta", "Fatta mit Hähnchen-Schawarma", "Fatta au chawarma de poulet", "鸡肉沙威玛法塔"], "فتة شاورما لحم": ["Beef shawarma fatta", "Fatta mit Rind-Schawarma", "Fatta au chawarma de bœuf", "牛肉沙威玛法塔"], "فتة شاورما ميكس": ["Mixed shawarma fatta", "Fatta mit gemischter Schawarma", "Fatta au chawarma mixte", "混合沙威玛法塔"], "فتة كوارع بلدي": ["Baladi trotters fatta", "Fatta mit Kuhfüßen", "Fatta aux pieds de bœuf baladi", "传统牛蹄法塔"], "فتة موزة ضاني بلدي": ["Baladi lamb shank fatta", "Fatta mit Lammhaxe", "Fatta à la souris d’agneau baladi", "传统羊腿法塔"], "فتة لحم محمر بلدي": ["Baladi pan-roasted beef fatta", "Fatta mit geschmortem Rindfleisch", "Fatta au bœuf rôti baladi", "传统红烧牛肉法塔"], "ليفر روزي": ["Liver rosé", "Leber Rosé", "Foie rosé", "肝片玫瑰酱饭"], "تشيكن روزي": ["Chicken rosé", "Hähnchen Rosé", "Poulet rosé", "鸡肉玫瑰酱饭"], "شرمب روزي": ["Shrimp rosé", "Garnelen Rosé", "Crevettes rosé", "鲜虾玫瑰酱饭"], "صنية الأكيل (تكفي 3 أفراد)": ["Al-Akeel tray (serves 3)", "Al-Akeel-Platte (für 3 Personen)", "Plateau Al-Akeel (pour 3 personnes)", "阿基尔拼盘（3人份）"], "صنية البركة (تكفي 3 أفراد)": ["Al-Baraka tray (serves 3)", "Al-Baraka-Platte (für 3 Personen)", "Plateau Al-Baraka (pour 3 personnes)", "巴拉卡拼盘（3人份）"], "صنية العزومة (تكفي 8 أفراد)": ["Al-Azouma tray (serves 8)", "Al-Azouma-Platte (für 8 Personen)", "Plateau Al-Azouma (pour 8 personnes)", "阿祖玛拼盘（8人份）"], "صنية العزوة (تكفي 8 أفراد)": ["Al-Ezwa tray (serves 8)", "Al-Ezwa-Platte (für 8 Personen)", "Plateau Al-Ezwa (pour 8 personnes)", "伊兹瓦拼盘（8人份）"], "صنية مقبلات مشكلة (وزن 1.5 كجم)": ["Assorted appetizers tray (1.5 kg)", "Gemischte Vorspeisenplatte (1,5 kg)", "Plateau d’entrées assorties (1,5 kg)", "什锦开胃拼盘（1.5公斤）"], "صنية محاشي مشكلة (وزن 1.5 كجم)": ["Assorted stuffed vegetables tray (1.5 kg)", "Gemischte Platte mit Gefülltem (1,5 kg)", "Plateau de légumes farcis assortis (1,5 kg)", "什锦酿菜拼盘（1.5公斤）"], "4 شيش طاووق – 2 كفتة لحم – 2 حواوشي دجاج ميني – 2 ممبار – 3 ورق عنب": ["4 shish tawook – 2 beef kofta – 2 mini chicken hawawshi – 2 mumbar – 3 stuffed vine leaves", "4 Schisch Taouk – 2 Rind-Kofta – 2 Mini-Hähnchen-Hawawschi – 2 Mumbar – 3 gefüllte Weinblätter", "4 chiche taouk – 2 kefta de bœuf – 2 mini hawawchi au poulet – 2 mumbar – 3 feuilles de vigne farcies", "4串烤鸡肉 – 2个牛肉丸 – 2个迷你鸡肉哈瓦维希 – 2份曼巴尔 – 3个葡萄叶卷"], "فرد حمام – 3 شيش طاووق – 2 حواوشي دجاج ميني – 2 كفتة لحم – 2 ممبار": ["1 pigeon – 3 shish tawook – 2 mini chicken hawawshi – 2 beef kofta – 2 mumbar", "1 Taube – 3 Schisch Taouk – 2 Mini-Hähnchen-Hawawschi – 2 Rind-Kofta – 2 Mumbar", "1 pigeon – 3 chiche taouk – 2 mini hawawchi au poulet – 2 kefta de bœuf – 2 mumbar", "1只鸽子 – 3串烤鸡肉 – 2个迷你鸡肉哈瓦维希 – 2个牛肉丸 – 2份曼巴尔"], "دجاجة كاملة – 8 شيش طاووق – 8 كفتة لحم – 8 سجق شرقي – 4 حواوشي دجاج ميني": ["1 whole chicken – 8 shish tawook – 8 beef kofta – 8 Egyptian-style sausages – 4 mini chicken hawawshi", "1 ganzes Hähnchen – 8 Schisch Taouk – 8 Rind-Kofta – 8 ägyptische Würste – 4 Mini-Hähnchen-Hawawschi", "1 poulet entier – 8 chiche taouk – 8 kefta de bœuf – 8 saucisses à l’égyptienne – 4 mini hawawchi au poulet", "1只整鸡 – 8串烤鸡肉 – 8个牛肉丸 – 8根埃及风味香肠 – 4个迷你鸡肉哈瓦维希"], "2 دجاجة كاملة – 2 فرد حمام – موزة ضاني – لحم محمر – 8 كفتة لحم – 4 حواوشي دجاج ميني": ["2 whole chickens – 2 pigeons – lamb shank – pan-roasted beef – 8 beef kofta – 4 mini chicken hawawshi", "2 ganze Hähnchen – 2 Tauben – Lammhaxe – geschmortes Rindfleisch – 8 Rind-Kofta – 4 Mini-Hähnchen-Hawawschi", "2 poulets entiers – 2 pigeons – souris d’agneau – bœuf rôti – 8 kefta de bœuf – 4 mini hawawchi au poulet", "2只整鸡 – 2只鸽子 – 羊腿 – 红烧牛肉 – 8个牛肉丸 – 4个迷你鸡肉哈瓦维希"], "4 محشي كوسة – 4 محشي فلفل – 4 محشي باذنجان – 12 محشي ورق عنب – 6 كبيبة – 3 سمبوسك جبنة – 6 سمبوسك لحمة – 6 ممبار": ["4 stuffed zucchini – 4 stuffed peppers – 4 stuffed aubergines – 12 stuffed vine leaves – 6 kibbeh – 3 cheese sambousek – 6 meat sambousek – 6 mumbar", "4 gefüllte Zucchini – 4 gefüllte Paprika – 4 gefüllte Auberginen – 12 gefüllte Weinblätter – 6 Kibbeh – 3 Käse-Sambusek – 6 Fleisch-Sambusek – 6 Mumbar", "4 courgettes farcies – 4 poivrons farcis – 4 aubergines farcies – 12 feuilles de vigne farcies – 6 kibbeh – 3 sambousek au fromage – 6 sambousek à la viande – 6 mumbar", "4个酿西葫芦 – 4个酿甜椒 – 4个酿茄子 – 12个葡萄叶卷 – 6个库贝 – 3个奶酪萨姆萨 – 6个肉馅萨姆萨 – 6份曼巴尔"], "6 محشي كوسة – 5 محشي فلفل – 6 محشي باذنجان – 16 محشي ورق عنب": ["6 stuffed zucchini – 5 stuffed peppers – 6 stuffed aubergines – 16 stuffed vine leaves", "6 gefüllte Zucchini – 5 gefüllte Paprika – 6 gefüllte Auberginen – 16 gefüllte Weinblätter", "6 courgettes farcies – 5 poivrons farcis – 6 aubergines farcies – 16 feuilles de vigne farcies", "6个酿西葫芦 – 5个酿甜椒 – 6个酿茄子 – 16个葡萄叶卷"], "محشي مشكل": ["Assorted stuffed vegetables (mahshi)", "Gemischte Gefüllte (Mahschi)", "Légumes farcis assortis (mahchi)", "什锦酿菜（马赫希）"], "ورق عنب": ["Stuffed vine leaves", "Gefüllte Weinblätter", "Feuilles de vigne farcies", "葡萄叶卷"], "½ دجاج روستو": ["½ roast chicken", "½ Brathähnchen", "½ poulet rôti", "烤鸡半只"], "حمام محشي": ["Stuffed pigeon", "Gefüllte Taube", "Pigeon farci", "酿鸽子"], "طبق مقبلات": ["Appetizer plate", "Vorspeisenteller", "Assiette d’entrées", "开胃拼盘"], "طلب سمبوسك": ["Sambousek (portion)", "Sambusek (Portion)", "Sambousek (portion)", "萨姆萨（一份）"], "طلب كبيبة": ["Kibbeh (portion)", "Kibbeh (Portion)", "Kibbeh (portion)", "库贝（一份）"], "طلب ممبار": ["Mumbar (portion, rice-stuffed sausage)", "Mumbar (Portion, mit Reis gefüllte Wurst)", "Mumbar (portion, boyau farci au riz)", "曼巴尔（一份，米饭灌肠）"], "مكرونة بشاميل (باللحم المفروم والموتزاريلا)": ["Béchamel pasta (with minced meat and mozzarella)", "Béchamel-Nudelauflauf (mit Hackfleisch und Mozzarella)", "Pâtes à la béchamel (viande hachée et mozzarella)", "白酱焗意面（肉末和马苏里拉）"], "أرز بسمتي": ["Basmati rice", "Basmatireis", "Riz basmati", "印度香米饭"], "أرز بالشعرية": ["Vermicelli rice", "Reis mit Fadennudeln", "Riz aux vermicelles", "香米饭配细面"], "خضار (تورلي / بامية ...)": ["Vegetables (turli / okra …)", "Gemüse (Turli / Okra …)", "Légumes (turli / gombo …)", "蔬菜（杂菜煲 / 秋葵等）"], "باكت فارم": ["Farm fries pack", "Farm-Pommes-Packung", "Barquette de frites « farm »", "农场薯条装"], "عدس سادة": ["Plain lentil soup", "Linsensuppe pur", "Soupe de lentilles nature", "原味扁豆汤"], "عدس بالزبدة": ["Lentil soup with butter", "Linsensuppe mit Butter", "Soupe de lentilles au beurre", "黄油扁豆汤"], "شوربة كوارع": ["Trotter soup", "Kuhfußsuppe", "Soupe de pieds de bœuf", "牛蹄汤"], "لسان عصفور": ["Orzo soup (lisan asfour)", "Nudelsuppe (Lisan Asfour)", "Soupe d’orzo (lissan asfour)", "小鸟舌汤（意式小麦粒汤）"], "سلطة ثومية": ["Garlic salad (toum)", "Knoblauchsalat (Toum)", "Salade à l’ail (toum)", "蒜香沙拉"], "سلطة خضراء": ["Green salad", "Grüner Salat", "Salade verte", "青菜沙拉"], "سلطة طحينة": ["Tahini salad", "Tahini-Salat", "Salade au tahini", "芝麻酱沙拉"], "كول سلو": ["Coleslaw", "Coleslaw", "Coleslaw", "凉拌卷心菜"], "باذنجان مخلل": ["Pickled aubergine", "Eingelegte Aubergine", "Aubergine marinée", "腌茄子"], "مخلل مشكل": ["Mixed pickles", "Gemischte Pickles", "Pickles assortis", "什锦腌菜"], "ليمون معصفر": ["Pickled lemon", "Eingelegte Zitrone", "Citron confit", "腌柠檬"], "أم علي": ["Om Ali (Egyptian bread pudding)", "Om Ali (ägyptischer Brotpudding)", "Om Ali (pudding de pain égyptien)", "奥姆阿里（埃及面包布丁）"], "كريم كراميل": ["Crème caramel", "Crème caramel", "Crème caramel", "焦糖布丁"], "أرز باللبن": ["Rice pudding", "Milchreis", "Riz au lait", "奶香米布丁"], "رايب": ["Rayeb (Egyptian soured milk)", "Rayeb (ägyptische Sauermilch)", "Rayeb (lait fermenté égyptien)", "拉耶布（埃及酸奶饮品）"], "مياه غازية (كانز)": ["Soft drink (can)", "Erfrischungsgetränk (Dose)", "Boisson gazeuse (canette)", "汽水（罐装）"], "مياه صغيرة": ["Water, small", "Wasser, klein", "Eau, petite bouteille", "矿泉水（小）"], "مياه كبيرة": ["Water, large", "Wasser, groß", "Eau, grande bouteille", "矿泉水（大）"], "2 وجبة بروستد (2 قطعة)": ["2 broasted meals (2 pieces)", "2 Broasted-Gerichte (2 Stück)", "2 menus poulet broasted (2 morceaux)", "2份脆皮炸鸡套餐（2块）"], "2 وجبة ميكس القزاز (وجبة كاملة)": ["2 Al-Kazzaz mix meals (full meal)", "2 Al-Kazzaz-Mix-Gerichte (volle Portion)", "2 menus mix Al-Kazzaz (repas complet)", "2份卡扎兹什锦套餐（完整套餐）"], "فتة شاورما لحم وسط + فتة شاورما دجاج وسط": ["Beef shawarma fatta (medium) + chicken shawarma fatta (medium)", "Fatta mit Rind-Schawarma (mittel) + Fatta mit Hähnchen-Schawarma (mittel)", "Fatta chawarma de bœuf (moyenne) + fatta chawarma de poulet (moyenne)", "牛肉沙威玛法塔（中）+ 鸡肉沙威玛法塔（中）"], "2 ساندويتش شاورما رول (لحم + دجاج)": ["2 shawarma wraps (beef + chicken)", "2 Schawarma-Wraps (Rind + Hähnchen)", "2 wraps chawarma (bœuf + poulet)", "2个沙威玛卷（牛肉 + 鸡肉）"], "حواوشي سجق كبير + حواوشي لحم كبير + 2 مخلل": ["Large sausage hawawshi + large beef hawawshi + 2 pickles", "Großes Wurst-Hawawschi + großes Rind-Hawawschi + 2 Pickles", "Grand hawawchi saucisse + grand hawawchi bœuf + 2 pickles", "大号香肠哈瓦维希 + 大号牛肉哈瓦维希 + 2份腌菜"], "2 شوربة عدس بالزبدة": ["2 lentil soups with butter", "2 Linsensuppen mit Butter", "2 soupes de lentilles au beurre", "2份黄油扁豆汤"], "4 ساندويتش (بطاطس صوابع + مسقعة + فول + طعمية)": ["4 sandwiches (finger fries + moussaka + foul + falafel)", "4 Sandwiches (Pommes + Moussaka + Ful + Falafel)", "4 sandwichs (frites + moussaka + foul + falafel)", "4个三明治（薯条 + 穆萨卡 + 蚕豆 + 法拉费）"]};
+
+const T2={
+mu6:["مستوى الصوت","Volume","Lautstärke","Volume","音量"],
+mu3:["كتم الصوت","Mute","Stummschalten","Couper le son","静音"],
+mu4:["تشغيل الصوت","Unmute","Ton an","Activer le son","取消静音"],
+mu5:["موسيقى الموقع","Site music","Hintergrundmusik","Musique du site","背景音乐"],
+soon:["قريباً","Opening soon","Bald verfügbar","Ouverture prochaine","即将开业"],
+vt:["","All creation stood and watched, as I alone laid the foundations of glory.","Die ganze Schöpfung stand und sah zu, wie ich allein die Grundfesten des Ruhmes legte.","Toute la création s’est tenue là, à regarder comment je bâtissais seule les fondations de la gloire.","万物驻足凝望，看我独自奠定荣耀的根基。"],
+vc:["حافظ إبراهيم · شاعر النيل","Hafez Ibrahim · the Poet of the Nile","Hafez Ibrahim · der Dichter des Nils","Hafez Ibrahim · le poète du Nil","哈菲兹·易卜拉欣 · 尼罗河诗人"],
+skip:["تخطّى إلى المنيو","Skip to menu","Zur Speisekarte","Aller au menu","跳到菜单"],
+pk:["كُل اللي نفسك فيه","Pick what you crave","Worauf haben Sie Lust?","Qu’est-ce qui vous tente ?","选择你的最爱"],
+st1:["ساندويتش شرقي وغربي","Egyptian & western sandwiches","Ägyptische & westliche Sandwiches","Sandwichs égyptiens et occidentaux","埃及与西式三明治"],
+st2:["فرايد تشيكن","Fried chicken","Fried Chicken","Poulet frit","炸鸡"],
+st3:["وجبات وفتات وطواجن","Meals, fatta & tagines","Gerichte, Fatta & Tajines","Plats, fatta et tajines","正餐、法塔与塔吉锅"],
+desc:["مطاعم القزاز: فول وطعمية وشاورما وطواجن ومشويات في قلب القاهرة. الخط الساخن 16903.","Al-Kazzaz restaurants: foul, ta’miya, shawarma, tagines and grills in the heart of Cairo. Hotline 16903.","Al-Kazzaz: Ful, Ta’miya, Schawarma, Tajines und Grillgerichte im Herzen Kairos. Hotline 16903.","Al-Kazzaz : foul, ta’miya, chawarma, tajines et grillades au cœur du Caire. Ligne directe 16903.","卡扎兹餐厅：蚕豆泥、塔米亚、沙威玛、塔吉锅和烧烤，位于开罗市中心。热线16903。"]};
+Object.assign(T,T2);
+const CATK=['offers','orient','west','fried','meals','tagine','fatta','trays','extras','soup','drinks'];
+const ICONS=['1f3f7', '1f959', '1f354', '1f357', '1f37d', '1f372', '1f958', '1f356', '1f35f', '1f957', '1f964'];
+const em=e=>`<svg class="em" aria-hidden="true" viewBox="0 0 36 36"><use href="#e-${e}"/></svg>`;
+const ic=n=>`<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const $=s=>document.querySelector(s);let L=0,cat=0;
+const branchMaps=["https://www.google.com/maps/search/?api=1&query=Kazaz&query_place_id=ChIJbcxuW8dAWBQRlfhWbBY-zcY", "https://www.google.com/maps/search/?api=1&query=Kazaz&query_place_id=ChIJ9VVEkTEVWBQRMF1MpdqvKr4", "https://www.google.com/maps/search/?api=1&query=%D9%85%D8%B7%D8%B9%D9%85+%D8%A7%D9%84%D9%82%D8%B2%D8%A7%D8%B2+Kazaz&query_place_id=ChIJcdM3u9pBWBQRZFU2MzLnZjg"];
+const deliveryPrompt=['للتأكد من التوصيل لعنوانك، اتصل بـ','To confirm delivery to your address, call','Für die Lieferung an Ihre Adresse anrufen:','Pour confirmer la livraison à votre adresse, appelez le','确认是否配送到您的地址，请致电'];
+const branchDetails=i=>`<div class="branch-info"><p>${deliveryPrompt[L]} <a href="tel:16903">16903</a></p></div>`;
+const SQ={label:['ابحث باسم الصنف','Search by dish name','Nach Gericht suchen','Rechercher un plat','搜索菜品'],hint:['مثلاً: شاورما أو حواوشي','Try shawarma or hawawshi','Zum Beispiel Schawarma','Ex. chawarma ou hawawchi','例如：沙威玛'],clear:['مسح','Clear','Löschen','Effacer','清除'],empty:['مفيش أصناف مطابقة. جرّب اسم تاني.','No matching dishes. Try another name.','Keine passenden Gerichte.','Aucun plat trouvé. Essayez un autre nom.','没有匹配的菜品，请换个名称。'],found:['نتائج البحث','Search results','Suchergebnisse','Résultats','搜索结果']};
+let dishQuery='';
+const normDish=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0640]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').trim();
+function renderMenu(){
+const q=normDish(dishQuery),words=q.split(/\s+/).filter(Boolean),match=s=>words.every(w=>normDish(s).includes(w));
+$('#cats').hidden=!!q;$('#search-clear').hidden=!dishQuery;$('#search-label').textContent=SQ.label[L];$('#dish-search').placeholder=SQ.hint[L];$('#search-clear').textContent=SQ.clear[L];
+if(!q){const c=C[cat];$('#mc').setAttribute('aria-labelledby','t'+cat);$('#mc').innerHTML=c.of?offers():`<div class="grid">${c.g.map(grp).join('')}</div>`;$('#search-status').textContent='';return}
+let count=0,html='';
+C.forEach(c=>{if(c.of){const rows=OF.filter(o=>match('الدفا '+o[0]+' '+o[1]+' '+tr(o[1])));if(rows.length){count+=rows.length;html+=`<h3 class="search-category">${c.n[L]}</h3>`+offers(rows)}return}
+const gs=c.g.map(g=>({...g,r:g.r.filter(r=>match(r[0]+' '+tr(r[0])))})).filter(g=>g.r.length);
+if(gs.length){count+=gs.reduce((n,g)=>n+g.r.length,0);html+=`<h3 class="search-category">${c.n[L]}</h3><div class="grid">${gs.map(grp).join('')}</div>`}});
+$('#mc').setAttribute('aria-labelledby','search-label');$('#mc').innerHTML=html||`<p class="search-empty">${SQ.empty[L]}</p>`;$('#search-status').textContent=SQ.found[L]+': '+count;
+}
+$('#dish-search').oninput=e=>{dishQuery=e.target.value;renderMenu();window.__kzzApply&&window.__kzzApply()};
+$('#search-clear').onclick=()=>{dishQuery='';$('#dish-search').value='';renderMenu();$('#dish-search').focus()};
+function resetDishSearch(){dishQuery='';$('#dish-search').value=''}
+const AR=s=>`<span lang="ar" dir="rtl" class="ar">${s}</span>`;
+const tr=s=>window.__kzzTranslateRaw?window.__kzzTranslateRaw(s):(L&&TR[s]&&TR[s][L-1])||s;
+const nm=s=>{const code=window.__kzzCurrent?window.__kzzCurrent():LC[L];return code!=='ar'?`<span class="nm"><span class="tn" lang="${code}">${tr(s)}</span><small class="original-ar" lang="ar" dir="rtl">${s}</small></span>`:`<span class="nm" lang="ar">${s}</span>`};
+const grp=x=>{const n=x.c.length;const wide=x.r.some(([a,p])=>p.some(v=>v.includes('/')));
+let h=`<div class="card">${x.t?`<h3>${L?`<span lang="${LC[L]}">${tr(x.t)}</span><small class="ar2" lang="ar" dir="rtl">${x.t}</small>`:AR(x.t)}</h3>`:''}<div class="tbl${wide?' wide':''}" style="--n:${n||1};--w:${wide?'5.6rem':'4.2rem'}">`;
+if(n)h+=`<span></span>${x.c.map(k=>`<span class="h"><i>${CL[k][L]}</i></span>`).join('')}`;
+x.r.forEach(([a,p,d])=>{h+=nm(a);for(let i=0;i<(n||1);i++){const label=String(n?CL[x.c[i]][L]:T.cur[L]).replace(/&/g,"&amp;").replace(/"/g,"&quot;");const v=p[i];h+=v?`<b data-label="${label}"${v.includes('/')?' dir="rtl"':''}>${v}</b>`:`<b data-label="${label}" class="na" aria-label="—">–</b>`}if(d)h+=`<span class="d" lang="${L?LC[L]:'ar'}">${tr(d)}</span>`});
+h+='</div>';if(x.n)h+=`<p class="gn" lang="${L?LC[L]:'ar'}">${tr(x.n)}</p>`;return h+'</div>'};
+const offers=(rows=OF)=>`<div class="offers">${rows.map(o=>`<div class="of"><em>${T.newb[L]}</em><h3>${L?'Al-Dafa '+o[0]:AR('الدفا '+o[0])}</h3><p lang="${L?LC[L]:'ar'}">${tr(o[1])}${window.__kzzCurrent&&window.__kzzCurrent()!=='ar'?`<small class="original-ar" lang="ar" dir="rtl">${o[1]}</small>`:''}</p><div class="pr"><b>${o[3]}<span>${T.cur[L]}</span></b>${o[2]?`<s>${o[2]}</s>`:''}</div></div>`).join('')}</div><p class="gn" style="max-width:720px;margin-inline:auto">${T.offn[L]}</p>`;
+function render(){document.documentElement.classList.toggle("large-text",innerWidth<=480&&parseFloat(getComputedStyle(document.documentElement).fontSize)>=24);
+document.documentElement.lang=LC[L];document.documentElement.dir=L?'ltr':'rtl';
+document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T[e.dataset.i][L]);
+
+$('#tiles').innerHTML=C.map((c,i)=>`<li><a class="cat${i===0?' feat':''}" href="#menu" data-c="${i}"><img class="ph" src="media/cat-${CATK[i]}.webp" alt="" loading="lazy" width="640" height="480"><h3>${c.n[L]}</h3></a></li>`).join('');
+$('#cats').innerHTML=C.map((c,i)=>`<button role="tab" id="t${i}" aria-selected="${i===cat}" data-c="${i}">${em(ICONS[i])}${c.n[L]}</button>`).join('');
+renderMenu();
+$('#br').innerHTML=B.map((b,i)=>{if(b[2])return`<div class="br soon"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p class="bd">${T.soon[L]}</p></div></div></div>`;const a=L?en1[i]:b[1];return`<div class="br"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p>${a}</p></div></div>${branchDetails(i)}<div class="acts"><a href="tel:16903">${ic('phone')}${T.call[L]} 16903</a><a href="${branchMaps[i]}" target="_blank" rel="noopener">${ic('map')}${T.map[L]}</a></div></div>`}).join('');
+const t=L?(L==4?'卡扎兹餐厅 | Al-Kazzaz':'Al-Kazzaz Restaurants'):'مطاعم القزاز | Al-Kazzaz';document.title=t;
+const md=document.querySelector('meta[name=description]');if(md)md.content=T.desc[L];
+try{localStorage.setItem('lng',L)}catch(e){}}
+
+$('#cats').onclick=e=>{const b=e.target.closest('button');if(b){resetDishSearch();cat=+b.dataset.c;render();$('#t'+cat).focus({preventScroll:true});$('#t'+cat).scrollIntoView({block:'nearest',inline:'center'})}};
+const sub=$('#sub');const closeSub=()=>{sub.hidden=true;document.querySelectorAll('#strip .chip').forEach(x=>x.setAttribute('aria-expanded','false'))};
+const goMenu=()=>$('#menu').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+$('#strip').onclick=e=>{const b=e.target.closest('button[data-c]');if(!b)return;const ids=b.dataset.c.split(',').map(Number);
+if(ids.length===1){closeSub();resetDishSearch();cat=ids[0];render();goMenu();return}
+const open=b.getAttribute('aria-expanded')==='true';closeSub();if(open)return;
+sub.innerHTML=ids.map(i=>`<button type="button" data-c="${i}">${em(ICONS[i])}${C[i].n[L]}</button>`).join('');sub.hidden=false;b.setAttribute('aria-expanded','true');sub.querySelector('button').focus({preventScroll:true});const st=document.querySelector('.strip');scrollTo({top:Math.max(0,scrollY+st.getBoundingClientRect().top-72),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})};
+sub.onclick=e=>{const b=e.target.closest('button[data-c]');if(b){resetDishSearch();cat=+b.dataset.c;closeSub();render();goMenu()}};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sub.hidden){const o=document.querySelector('#strip .chip[aria-expanded=true]');closeSub();o&&o.focus()}});
+document.addEventListener('click',e=>{if(!sub.hidden&&!e.target.closest('#strip,#sub'))closeSub()});
+$('#tiles').onclick=e=>{const a=e.target.closest('a[data-c]');if(a){resetDishSearch();cat=+a.dataset.c;render()}};
+L=0;
+$('#y').textContent=new Date().getFullYear();
+{const r0=render;render=function(){r0();window.__musLabels&&window.__musLabels();window.__kzzApply&&window.__kzzApply()}}
+render();
+/* hero video pool: random on every load, then keeps rotating */
+window.__rdy={v:0,a:0};{const t0=Date.now(),cn=navigator.connection||{},sl=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||''),max=sl?2500:7000;const ld=document.getElementById('ld');const done=()=>{if(!ld||ld.classList.contains('off'))return;ld.classList.add('off');setTimeout(()=>{ld.remove();document.documentElement.classList.add('hero-reveal-ready')},700)};
+const chk=()=>{const el=Date.now()-t0;if((window.__rdy.v&&window.__rdy.a&&el>500)||el>=max)done();else setTimeout(chk,150)};setTimeout(chk,150);window.__ldDone=done}
+function startHeritageVideo(){
+const poster=$('#poster'),hero=$('#top');
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cn=navigator.connection||{};const slow=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||'');
+let last=null;try{last=localStorage.getItem('hv')}catch(e){}
+const bag=(k,L)=>{const GAP=180000;let q=[],T={};try{q=JSON.parse(localStorage.getItem(k)||'[]').filter(x=>L.includes(x));T=JSON.parse(localStorage.getItem(k+'t')||'{}')}catch(e){}return ex=>{const now=Date.now();if(!q.length){q=L.slice();for(let i=q.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[q[i],q[j]]=[q[j],q[i]]}}
+let i=q.length-1;while(i>=0&&(q[i]===ex||now-(T[q[i]]||0)<GAP))i--;let r;
+if(i>=0)r=q.splice(i,1)[0];else{const c=L.filter(x=>x!==ex).sort((a,b)=>(T[a]||0)-(T[b]||0));r=c[0]||L[0];const j=q.indexOf(r);if(j>=0)q.splice(j,1)}
+T[r]=now;try{localStorage.setItem(k,JSON.stringify(q));localStorage.setItem(k+'t',JSON.stringify(T))}catch(e){}return r}};
+const pick=bag('hbH',VIDEOS),pickF=bag('hbF',FOOD);
+let cur=pick(last),foodNext=true,lastH=cur,lastF=null;try{localStorage.setItem('hv',cur)}catch(e){}
+poster.src='media/hero-'+cur+'.webp';
+if(rm||slow){window.__rdy.v=1;return}
+const mk=()=>{const v=document.createElement('video');v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='auto';v.setAttribute('aria-hidden','true');v.tabIndex=-1;hero.insertBefore(v,poster.nextSibling);return v};
+let active=null,nextPre=null;
+const prefetch=()=>{if(nextPre)return;const id=foodNext?pickF(lastF):pick(lastH);if(foodNext)lastF=id;else lastH=id;const v=mk();if(/^u/.test(id))v.classList.add('pv');v.preload='auto';v.src='media/hero-'+id+'.mp4';nextPre={id,v}};
+const play=(id,pv)=>{const v=pv||mk();if(/^u/.test(id))v.classList.add('pv');if(!pv)v.src='media/hero-'+id+'.mp4';
+const go=()=>{if(window.__motionPaused()){active=v;window.__rdy.v=1;return}v.play().then(()=>{v.classList.add('on');poster.src='media/hero-'+id+'.webp';poster.classList.toggle('pb',/^u/.test(id));window.__rdy.v=1;if(active){const o=active;o.classList.remove('on');setTimeout(()=>o.remove(),1400)}active=v;setTimeout(prefetch,1500)}).catch(()=>{v.remove();window.__rdy.v=1})};
+if(v.readyState>=3)go();else v.addEventListener('canplaythrough',go,{once:true});
+v.addEventListener('ended',()=>{let n=nextPre;nextPre=null;if(n){cur=n.id}else if(foodNext){cur=pickF(lastF);lastF=cur}else{cur=pick(lastH);lastH=cur}foodNext=!foodNext;play(cur,n&&n.v)},{once:true});
+v.addEventListener('error',()=>{v.remove();window.__rdy.v=1},{once:true})};
+play(cur);
+
+const syncMotion=()=>{if(!active)return;if(document.hidden||window.__motionPaused())active.pause();else active.play().then(()=>{active.classList.add('on');setTimeout(prefetch,1500)}).catch(()=>{})};document.addEventListener('visibilitychange',syncMotion);addEventListener('kazzaz-motion',syncMotion);
+}
+startHeritageVideo();
+
+/* Shared music controls. Playback may need a user gesture. */
+(()=>{
+const TR=['ney-faiyum','oud-alec','oud-mountain','oud-india','egypt-elijah','egypt-echo-ancient','egypt-echo-the','egypt-echo','pyramids','egypt-hitslab','egypt-krasno','egypt-starostin','egypt-mfcc','abydos-moon','cairo-lounge','clip'];
+const box=document.getElementById('mus');if(!box)return;
+let saved=null,vol=.35,muted=false;
+try{saved=JSON.parse(sessionStorage.getItem('kazzaz-music')||'null');const v=parseFloat(sessionStorage.getItem('mvol'));if(v>=0&&v<=1)vol=v;muted=sessionStorage.getItem('mmute')==='1'}catch(e){}
+let ti=saved&&TR.includes(saved.track)?TR.indexOf(saved.track):Math.floor(Math.random()*TR.length),started=false,activeIntent=!!(saved&&saved.active),positioned=false,restored=!!(saved&&TR.includes(saved.track)),fade=null,lastStore=0,resume=false,pf=null,pfi=-1;
+const au=new Audio(),cn=navigator.connection||{};au.preload=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||'')?'metadata':'auto';au.loop=false;au.volume=vol;au.muted=muted;
+const store=()=>{try{sessionStorage.setItem('kazzaz-music',JSON.stringify({track:TR[ti],time:Number.isFinite(au.currentTime)?au.currentTime:0,active:activeIntent}));sessionStorage.setItem('mvol',vol);sessionStorage.setItem('mmute',muted?'1':'0')}catch(e){}};
+const position=()=>{if(positioned||!Number.isFinite(au.duration)||au.duration<=0)return;positioned=true;try{if(restored&&saved&&saved.time>=0)au.currentTime=Math.min(saved.time,Math.max(0,au.duration-1));else if(au.duration>20&&TR[ti]!=='clip')au.currentTime=au.duration*(.05+Math.random()*.8)}catch(e){}};
+const events=['pointerdown','keydown','touchend','click'];
+const go=()=>{if(started)return;started=true;activeIntent=true;position();clearInterval(fade);au.volume=0;au.muted=muted;au.play().then(()=>{events.forEach(e=>removeEventListener(e,go,true));store();let t=0;fade=setInterval(()=>{t+=.05;au.volume=Math.min(vol,vol*t/1.2);if(t>=1.2){clearInterval(fade);au.volume=vol}},50)}).catch(()=>{started=false;events.forEach(e=>addEventListener(e,go,true))})};
+const skip=d=>{clearInterval(fade);ti=(ti+d+TR.length)%TR.length;restored=false;positioned=true;started=false;au.src='media/music-'+TR[ti]+'.mp3';go()};
+const sl=document.getElementById('mvr');
+const text=(key,fallback)=>typeof T!=='undefined'&&typeof L!=='undefined'&&T[key]?T[key][L]:fallback;
+const paint=()=>{sl.value=Math.round((muted?0:vol)*100);sl.style.setProperty('--p',sl.value+'%');box.classList.toggle('muted',muted||vol===0);au.volume=vol;au.muted=muted;const m=document.getElementById('mmu');m.setAttribute('aria-label',muted?text('mu4','تشغيل الصوت'):text('mu3','كتم الصوت'));m.setAttribute('aria-pressed',String(muted));store()};
+const labels=()=>{const label=text('mu5','إعدادات الموسيقى');document.getElementById('music-toggle').setAttribute('aria-label',label);box.setAttribute('aria-label',label);sl.setAttribute('aria-label',text('mu6','مستوى الصوت'));paint()};
+window.__musLabels=labels;
+au.addEventListener('loadedmetadata',()=>{box.hidden=false;position();labels();if(activeIntent)go()});
+au.addEventListener('canplaythrough',()=>{(window.__rdy||(window.__rdy={})).a=1},{once:true});
+au.addEventListener('error',()=>{started=false;box.hidden=true;(window.__rdy||(window.__rdy={})).a=1});
+setTimeout(()=>{(window.__rdy||(window.__rdy={})).a=1},6500);
+au.addEventListener('timeupdate',()=>{if(Date.now()-lastStore>2000){lastStore=Date.now();store()}if(au.duration>0&&au.currentTime/au.duration>.5&&pfi!==ti&&!cn.saveData){pfi=ti;pf=new Audio();pf.preload='auto';pf.src='media/music-'+TR[(ti+1)%TR.length]+'.mp3'}});
+au.addEventListener('ended',()=>skip(1));
+const hide=()=>{store();if(started&&!au.paused){resume=true;au.pause()}};
+document.addEventListener('visibilitychange',()=>{if(document.hidden)hide();else if(resume){resume=false;started=false;go()}});
+addEventListener('pagehide',hide);addEventListener('pageshow',()=>{if(resume&&!document.hidden){resume=false;started=false;go()}});
+sl.oninput=()=>{vol=sl.value/100;muted=false;paint()};
+document.getElementById('mpv').onclick=()=>skip(-1);document.getElementById('mnx').onclick=()=>skip(1);
+document.getElementById('mmu').onclick=()=>{muted=!muted;if(!muted&&vol===0)vol=.3;paint()};
+const toggle=document.getElementById('music-toggle');const collapse=()=>{box.classList.remove('open');toggle.setAttribute('aria-expanded','false')};
+toggle.onclick=()=>{const open=box.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))};
+document.addEventListener('click',e=>{if(!box.contains(e.target))collapse()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open')){collapse();toggle.focus()}});addEventListener('scroll',collapse,{passive:true});
+events.forEach(e=>addEventListener(e,go,true));au.src='media/music-'+TR[ti]+'.mp3';labels();window.__aud=au;window.__musId=()=>TR[ti];
+})();
+
+
+/* subtle grill VFX: faint smoke drift over the site + embers at the footer. Pure canvas, paused off-screen/hidden, off for reduced motion */
+(()=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const mob=innerWidth<820;const rnd=(a,b)=>a+Math.random()*(b-a);
+const sc=document.getElementById('smoke'),sx=sc.getContext('2d'),fc=document.getElementById('fire'),fx=fc.getContext('2d');
+const K=.5;let W,H,FW,FH;
+const fit=()=>{W=sc.width=Math.ceil(innerWidth*K);H=sc.height=Math.ceil(innerHeight*K);const r=fc.getBoundingClientRect();FW=fc.width=Math.ceil(r.width);FH=fc.height=Math.ceil(r.height)};
+fit();addEventListener('resize',fit);
+const spr=document.createElement('canvas');spr.width=spr.height=128;{const g=spr.getContext('2d'),gr=g.createRadialGradient(64,64,0,64,64,64);gr.addColorStop(0,'rgba(92,74,60,1)');gr.addColorStop(.5,'rgba(92,74,60,.45)');gr.addColorStop(1,'rgba(92,74,60,0)');g.fillStyle=gr;g.fillRect(0,0,128,128)}
+const N=mob?4:7;const sm=[];const mk=(init)=>({x:rnd(0,W),y:init?rnd(0,H):H+rnd(40,160),r:rnd(.16,.3)*Math.max(W,H),vy:rnd(9,16),vx:rnd(-3,3),a:rnd(.07,.13),ph:rnd(0,6.28)});
+for(let i=0;i<N;i++)sm.push(mk(true));
+const E=[];const EN=mob?22:44;const me=(init)=>({x:rnd(0,FW),y:init?rnd(0,FH):FH+rnd(0,20),vy:rnd(22,58),vx:rnd(-8,8),r:rnd(1.3,3.2),life:rnd(.6,1),t:rnd(0,6.28)});
+for(let i=0;i<EN;i++)E.push(me(true));
+let last=0,vis=true,fvis=false,raf=0;
+if("IntersectionObserver" in window)new IntersectionObserver(e=>{fvis=e[0].isIntersecting}).observe(fc.parentNode);else fvis=true;
+const tick=t=>{raf=requestAnimationFrame(tick);if(window.__motionPaused())return;if(t-last<33)return;const dt=Math.min(.1,(t-last)/1000);last=t;
+ sx.clearRect(0,0,W,H);for(const p of sm){p.y-=p.vy*dt;p.x+=(p.vx+Math.sin(t/4000+p.ph)*4)*dt;if(p.y<-p.r)Object.assign(p,mk(false));const f=Math.min(1,(H+p.r-p.y)/(p.r*1.2),(p.y+p.r)/(p.r*1.2));sx.globalAlpha=Math.max(0,p.a*f);sx.drawImage(spr,p.x-p.r,p.y-p.r,p.r*2,p.r*2)}
+ if(fvis){fx.clearRect(0,0,FW,FH);for(const e of E){e.y-=e.vy*dt;e.x+=(e.vx+Math.sin(t/700+e.t)*6)*dt;e.life-=dt*.22;if(e.life<=0||e.y<-10)Object.assign(e,me(false));const a=Math.min(1,e.life*1.6)*(.7+.3*Math.sin(t/150+e.t));fx.globalAlpha=Math.max(0,a*.35);fx.fillStyle='#ff8a1f';fx.beginPath();fx.arc(e.x,e.y,e.r*2.6,0,6.283);fx.fill();fx.globalAlpha=Math.max(0,a);fx.fillStyle=e.life>.6?'#ffd27a':'#ff9a2e';fx.beginPath();fx.arc(e.x,e.y,e.r,0,6.283);fx.fill()}}};
+const go=()=>{if(!raf)raf=requestAnimationFrame(tick)},stop=()=>{cancelAnimationFrame(raf);raf=0};
+
+/* flame sweep: every ~90s a real-looking fire enters from both side edges, sweeps toward the centre for ~3.2s and fades out. Top layer, no pointer events. */
+const rmF=matchMedia('(prefers-reduced-motion: reduce)').matches,cnF=navigator.connection||{},slowF=cnF.saveData||/(^|-)2g$/.test(cnF.effectiveType||'');
+let FV=null,busy=false;
+const ignite=f=>{const scene=document.getElementById('top');if(scene){const r=scene.getBoundingClientRect();if(r.bottom<=0||r.top>=innerHeight)return}if(rmF||slowF||window.__motionPaused()||busy||(f!==true&&document.hidden))return;
+ if(!FV){FV=document.createElement('video');FV.id='flamev';FV.muted=true;FV.defaultMuted=true;FV.playsInline=true;FV.setAttribute('playsinline','');FV.preload='none';FV.setAttribute('aria-hidden','true');FV.tabIndex=-1;FV.src='media/fire.mp4';document.body.appendChild(FV)}
+ busy=true;const done=()=>{FV.pause();FV.style.display='none';busy=false};
+ FV.currentTime=0;FV.style.display='block';FV.style.opacity='0';
+ FV.play().then(()=>{if(!FV.animate){FV.style.opacity='.9';setTimeout(done,4500);return}
+  FV.animate([{opacity:0,transform:'translateY(38%)'},{opacity:.95,transform:'translateY(0)',offset:.16},{opacity:.95,transform:'translateY(0)',offset:.72},{opacity:0,transform:'translateY(-6%)'}],{duration:5200,easing:'cubic-bezier(.2,.7,.3,1)',fill:'forwards'}).onfinish=done}).catch(done)};
+window.__haltFlame=()=>{if(FV){FV.getAnimations().forEach(a=>a.cancel());FV.pause();FV.style.display='none';busy=false}};window.__ignite=ignite;setTimeout(()=>{ignite();setInterval(ignite,90000)},9000);
+document.addEventListener('visibilitychange',()=>document.hidden?stop():go());go();window.__fx=1})();
+
+/* gallery: stacked slides, springy rotating transitions, auto 5s, pauses on hover/hold/focus, swipe */
+(()=>{const st=document.getElementById('gst');if(!st)return;const N=29,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const alts=Array(29).fill('');const sl=[],dots=document.getElementById('gd');
+for(let i=1;i<=N;i++){const d=document.createElement('div');d.className='gs'+(i===1?' on':'');const im=new Image();im.src='media/gal-'+i+'.webp';im.alt=alts[i-1];im.onload=()=>{if(im.naturalWidth===im.naturalHeight)im.style.objectFit='contain'};im.decoding='async';if(i>1)im.loading='lazy';im.draggable=false;d.appendChild(im);st.insertBefore(d,st.firstChild);sl.unshift(d);const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',i+' / '+N);b.onclick=()=>go(i-1,i-1>cur?1:-1);dots.appendChild(b)}
+sl.reverse();const db=[...dots.children];let cur=0,busy=false,tm=0,hold=false,vis=false,fx=0;db[0].classList.add('on');
+const EF=['slide','fade','zoom','tilt','slide','blur'];const SP='cubic-bezier(.34,1.45,.5,1)',SM='cubic-bezier(.22,.8,.3,1)';
+const rtl=()=>document.documentElement.dir==='rtl';
+const go=(n,dir)=>{n=(n+N)%N;if(n===cur||busy)return;const a=sl[cur],b=sl[n],e=EF[fx++%EF.length],sg=(rtl()?-1:1)*dir;dots&&db.forEach((x,i)=>x.classList.toggle('on',i===n));
+ if(rm||window.__motionPaused()||!a.animate){a.classList.remove('on');b.classList.add('on');cur=n;sched();return}
+ busy=true;b.classList.add('on');b.style.zIndex=2;a.style.zIndex=1;const T=e==='fade'||e==='blur'?900:820;let ka,kb,ea=SM,eb=SP;
+ if(e==='slide'){kb=[{transform:`translateX(${sg*100}%)`,opacity:1},{transform:'translateX(0)',opacity:1}];ka=[{transform:'translateX(0)',opacity:1},{transform:`translateX(${-sg*32}%)`,opacity:0}]}
+ else if(e==='fade'){kb=[{opacity:0},{opacity:1}];ka=[{opacity:1},{opacity:0}];eb=ea='ease-in-out'}
+ else if(e==='zoom'){kb=[{transform:'scale(1.22)',opacity:0},{transform:'scale(1)',opacity:1}];ka=[{transform:'scale(1)',opacity:1},{transform:'scale(.9)',opacity:0}]}
+ else if(e==='tilt'){kb=[{transform:`translateX(${sg*40}%) rotate(${sg*6}deg) scale(.9)`,opacity:0},{transform:'translateX(0) rotate(0) scale(1)',opacity:1}];ka=[{transform:'translateX(0) rotate(0)',opacity:1},{transform:`translateX(${-sg*40}%) rotate(${-sg*6}deg) scale(.9)`,opacity:0}]}
+ else{kb=[{opacity:0,filter:'blur(14px)',transform:'scale(1.06)'},{opacity:1,filter:'blur(0)',transform:'scale(1)'}];ka=[{opacity:1,filter:'blur(0)'},{opacity:0,filter:'blur(14px)'}];eb=ea='ease-out'}
+ a.animate(ka,{duration:T,easing:ea,fill:'forwards'});const an=b.animate(kb,{duration:T,easing:eb,fill:'forwards'});
+ an.onfinish=()=>{a.classList.remove('on');b.style.zIndex='';a.style.zIndex='';a.getAnimations().forEach(x=>x.cancel());b.getAnimations().forEach(x=>x.cancel());cur=n;busy=false;sched()}};
+const sched=()=>{clearTimeout(tm);if(rm||window.__motionPaused()||!vis||hold)return;tm=setTimeout(()=>go(cur+1,1),5000)};
+document.getElementById('gp').onclick=()=>go(cur-1,-1);document.getElementById('gn').onclick=()=>go(cur+1,1);
+if("IntersectionObserver" in window)new IntersectionObserver(e=>{vis=e[0].isIntersecting;vis?sched():clearTimeout(tm)},{threshold:.25}).observe(st);else{vis=true;sched()}
+st.addEventListener('mouseenter',()=>{hold=true;clearTimeout(tm)});st.addEventListener('mouseleave',()=>{hold=false;sched()});
+st.addEventListener('focusin',()=>{hold=true;clearTimeout(tm)});st.addEventListener('focusout',()=>{hold=false;sched()});
+let x0=null;st.addEventListener('pointerdown',e=>{hold=true;clearTimeout(tm);x0=e.clientX});
+const up=e=>{if(x0===null)return;const dx=e.clientX-x0;x0=null;if(Math.abs(dx)>40){const nx=(dx<0)!==rtl();go(cur+(nx?1:-1),nx?1:-1)}if(!st.matches(':hover'))hold=false;sched()};
+st.addEventListener('pointerup',up);st.addEventListener('pointercancel',()=>{x0=null;hold=false;sched()});
+document.addEventListener('visibilitychange',()=>document.hidden?clearTimeout(tm):sched());addEventListener('kazzaz-motion',sched);
+window.__gal={go:()=>go(cur+1,1),cur:()=>cur}})();
+
+/* logo + phoenix intro: loads after the page is idle, skipped on data-saver / very slow links / reduced motion; the static logo stays otherwise */
+(()=>{const c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const go=()=>{const s=document.createElement('script');s.src='media/logoanim.js';s.async=true;document.body.appendChild(s)};const idle=()=>('requestIdleCallback'in window?requestIdleCallback(go,{timeout:4000}):setTimeout(go,2500));if(document.readyState==='complete')idle();else addEventListener('load',idle,{once:true})})();
+</script>
+<script>(()=>{const n=document.querySelector("nav");const fit=()=>{document.documentElement.style.setProperty("--nav-height",Math.ceil(n.getBoundingClientRect().height)+"px");document.documentElement.classList.toggle("large-text",innerWidth<=480&&parseFloat(getComputedStyle(document.documentElement).fontSize)>=24)};fit();addEventListener("resize",fit);if("ResizeObserver" in window)new ResizeObserver(fit).observe(n)})();</script><script src="kazzaz-ui.js?v=5"></script></body>
+</html>
+<!-- v3 -->
