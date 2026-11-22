@@ -343,9 +343,29 @@ html[dir=ltr] .toc a{padding:14px 34px 14px 16px}html[dir=ltr] .toc a::after{lef
 html[lang=fa] .jobs-head h1,html[lang=ur] .jobs-head h1,html[lang=fa] .intro h1,html[lang=ur] .intro h1{font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.6}
 @media(max-width:620px){html:not([lang=ar]) .jobs-head h1,html:not([lang=ar]) .intro h1{font-size:clamp(1.9rem,6vw,2.5rem);line-height:1.5;word-break:normal;overflow-wrap:break-word;text-wrap:balance}}
 .brand-no-break{white-space:nowrap;display:inline-block;unicode-bidi:isolate}@media(max-width:360px){.brand-caption{display:none!important}}
+
+/* Food is the first screen. The heritage scene remains farther down the page. */
+.food-first-hero{position:relative;isolation:isolate;color:#fbefcf;border-bottom:4px double #c4a26577;background-color:#41432b;background-image:var(--aged-grain),var(--heritage-flower);background-size:230px,110px}
+.food-first-in{max-width:1320px;margin:auto;padding:46px 4vw;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:36px;min-height:500px}.food-first-copy{min-width:0}.food-first-copy h1{margin:0 0 24px;font-family:Amiri,Georgia,serif;font-size:clamp(2.4rem,4.5vw,4.5rem);line-height:1.35;text-wrap:balance;color:#fff1ce;text-shadow:0 3px 12px #14170c80;overflow-wrap:break-word}
+.food-first-figure{margin:0;padding:8px;border:1px solid #c6ab70aa;border-radius:74px 9px 9px;background:#302e1d88;box-shadow:0 20px 38px #10120c60;min-width:0}.food-first-photo{display:block;width:100%;height:clamp(280px,30vw,410px);object-fit:cover;object-position:center;border-radius:65px 5px 5px;filter:none}
+.cta-reveal{position:relative;overflow:hidden;border:1px solid #c6ab7070;border-radius:10px;padding:13px;background:#1b2116a8}.food-first-actions{display:flex;flex-wrap:wrap;gap:10px}.food-first-actions .btn{flex:1 1 auto;min-height:50px;padding:10px 13px;font-size:.88rem;line-height:1.5;white-space:normal;overflow-wrap:break-word}.food-first-actions .b2{background:#f3e5bf;color:#2b2619;border-color:#bca268}.food-order{background:#383d24;border:1px solid #c6ab70;color:#fff1cf;flex-wrap:wrap;gap:7px}.food-order bdi{font-family:Arial,sans-serif;letter-spacing:.04em}
+.cta-leaf{display:none;position:absolute;top:0;bottom:0;width:50.5%;z-index:2;pointer-events:none;background-color:#643d2c;background-image:linear-gradient(90deg,#1d1e1499,transparent 15%,#b4965150 26%,#1d1e1480 48%,transparent 70%,#1d1e14aa),var(--heritage-flower);background-size:auto,58px;border-bottom:5px double #c8ac6b;box-shadow:0 6px 15px #0007}.cta-leaf-left{left:0;border-right:2px solid #ccb878}.cta-leaf-right{right:0;border-left:2px solid #ccb878}
+.has-js .cta-leaf{display:block;animation-duration:1.45s;animation-delay:.15s;animation-timing-function:cubic-bezier(.25,.65,.25,1);animation-fill-mode:forwards}.hero-reveal-ready .cta-leaf-left{animation-name:open-curtain-left}.hero-reveal-ready .cta-leaf-right{animation-name:open-curtain-right}
+@keyframes open-curtain-left{0%,12%{transform:translateX(0)}100%{transform:translateX(-103%)}}@keyframes open-curtain-right{0%,12%{transform:translateX(0)}100%{transform:translateX(103%)}}
+html.motion-off .cta-leaf{display:none!important}.heritage-scene .hero-in{min-height:390px;padding-block:54px;grid-template-columns:minmax(0,1fr) 210px;max-width:1180px}.heritage-scene .arch{width:180px;max-width:100%}.heritage-scene .medal{justify-content:center}.heritage-scene .verse .va{font-size:clamp(1.65rem,3vw,2.8rem)}
+@media(max-width:820px){.food-first-in{grid-template-columns:1fr;padding:22px 5vw 26px;gap:19px;min-height:0}.food-first-figure{grid-row:1;border-radius:45px 7px 7px;padding:6px}.food-first-photo{height:clamp(175px,29vh,245px);border-radius:39px 4px 4px}.food-first-copy h1{font-size:clamp(1.8rem,7vw,2.5rem);margin-bottom:14px;line-height:1.35}.food-first-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.food-first-actions .food-order{grid-column:1/-1}.food-first-actions .btn{padding:9px 8px;font-size:.85rem;gap:5px;min-width:0}.cta-reveal{padding:10px}.heritage-scene .hero-in{grid-template-columns:1fr;padding:32px 6vw;gap:22px}.heritage-scene .medal{grid-row:auto}.heritage-scene .arch{width:115px}.heritage-scene .verse .va{font-size:1.8rem}}
+@media(max-width:620px) and (max-height:740px){.food-first-in{padding-block:16px;gap:12px}.food-first-photo{height:145px}.food-first-copy h1{margin-bottom:10px;font-size:1.85rem}.food-first-actions .btn{min-height:44px;font-size:.8rem}.cta-reveal{padding:8px}}
+@media(prefers-reduced-motion:reduce){.has-js .cta-leaf{display:none!important}}
+
+/* Original aged olive plaster and floral geometry, with quiet reading surfaces. */
+:root{--aged-grain:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22230%22%20height%3D%22230%22%3E%3Cfilter%20id%3D%22grain%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.55%22%20numOctaves%3D%223%22%20seed%3D%2231%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3CfeComponentTransfer%3E%3CfeFuncA%20type%3D%22table%22%20tableValues%3D%220%20.26%22%2F%3E%3C%2FfeComponentTransfer%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23grain%29%22%20opacity%3D%22.55%22%2F%3E%3C%2Fsvg%3E");--heritage-flower:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22110%22%20height%3D%22110%22%20viewBox%3D%220%200%20110%20110%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23d0b46a%22%20opacity%3D%22.22%22%3E%3Cpath%20d%3D%22M55%2012Q68%2029%2083%2027Q81%2042%2098%2055Q81%2068%2083%2083Q68%2081%2055%2098Q42%2081%2027%2083Q29%2068%2012%2055Q29%2042%2027%2027Q42%2029%2055%2012Z%22%2F%3E%3Cpath%20d%3D%22M55%2024Q62%2045%2083%2055Q62%2065%2055%2086Q48%2065%2027%2055Q48%2045%2055%2024Z%22%2F%3E%3Ccircle%20cx%3D%2255%22%20cy%3D%2255%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22m0%200%2021%2021M110%200%2089%2021M0%20110l21-21m89%2021L89%2089%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}
+html{background:#252a1c}body{background-color:#555738;background-image:var(--aged-grain),var(--heritage-flower);background-size:230px,110px;background-blend-mode:multiply,normal}
+.page-home #pick,.page-home #menu,.page-home #branches,.page-home #gallery{background:transparent}.page-home #pick h2,.page-home #menu>.wrap>.sec-h h2,.page-home #branches h2,.page-home #gallery h2{color:#fff0cd}.page-home #search-label,.page-home #search-status,.page-home .menu>.wrap>.note,.page-home .search-category,.page-home .search-empty{color:#fff0cd}.page-home .menu>.wrap>.note{background:#292d1fdb;border:1px solid #bca26d66;padding:12px;border-radius:6px}.page-home .about{background:#24291ef0}.page-home .tabs{background:linear-gradient(#4c5036 82%,transparent)}
+.page-about,.page-careers{background-color:#252b1c}.page-about .intro,.page-careers .jobs-head{background-color:#252b1c;background-image:var(--aged-grain),var(--heritage-flower);background-size:230px,110px}.page-about section.block{background-color:#272c1ff7}.page-careers .job{background:#2c3023}.page-careers .jobs-contact{background:#292f20e8}
+html[lang=fa] .food-first-copy h1,html[lang=ur] .food-first-copy h1{font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.5}
 </style>
-<noscript><style>.menu-search,.tabs,.strip,.subrow,.mus{display:none!important}</style></noscript><script>(()=>{const q=matchMedia('(prefers-reduced-motion: reduce)');try{if(localStorage.getItem('kazzaz-motion')==='off')document.documentElement.classList.add('motion-off')}catch(e){}window.__motionPaused=()=>document.documentElement.classList.contains('motion-off')||q.matches})();</script></head>
-<body><div id="ld" aria-hidden="true"><img src="assets/logo.webp" alt="" width="110" height="110"><i></i></div><noscript><style>#ld{display:none}</style></noscript>
+<noscript><style>.menu-search,.tabs,.strip,.subrow,.mus{display:none!important}</style></noscript><script>(()=>{document.documentElement.classList.add('has-js');const q=matchMedia('(prefers-reduced-motion: reduce)');try{if(localStorage.getItem('kazzaz-motion')==='off')document.documentElement.classList.add('motion-off')}catch(e){}window.__motionPaused=()=>document.documentElement.classList.contains('motion-off')||q.matches})();</script></head>
+<body class="page-home"><div id="ld" aria-hidden="true"><img src="assets/logo.webp" alt="" width="110" height="110"><i></i></div><noscript><style>#ld{display:none}</style></noscript>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 11.6V4.5a1 1 0 0 1 1-1h7.1l8.9 8.9a1 1 0 0 1 0 1.4l-6.7 6.7a1 1 0 0 1-1.4 0z"/><circle cx="8" cy="8" r="1.4"/><path d="M12.5 13.5l3-3"/></symbol>
 <symbol id="e-1f354" viewBox="0 0 36 36"><path fill="#D99E82" d="M18 20.411c-9.371 0-16.967-.225-16.967 6.427C1.033 33.487 8.629 35 18 35c9.371 0 16.967-1.513 16.967-8.162 0-6.651-7.596-6.427-16.967-6.427z"/><path fill="#662113" d="M34.47 20.916S26.251 19.932 18 19.89c-8.251.042-16.47 1.026-16.47 1.026C.717 27.39 7.467 30.057 18 30.057s17.283-2.667 16.47-9.141z"/><path fill="#FFCC4D" d="M33.886 18.328l-31.855.646c-1.1 0-2.021 2.229-.854 2.812 8.708 2.708 15.708 5.448 15.708 5.448.962.532 1.287.534 2.25.003 0 0 9.666-3.868 15.875-5.493.881-.23-.025-3.416-1.124-3.416z"/><path fill="#77B255" d="M34.725 18.412c-1.9-1.751-1.79-.819-3.246-1.23-.553-.156-4.51-5.271-13.529-5.271h-.02c-9.019 0-12.976 5.115-13.529 5.271-1.456.411-1.346-.521-3.246 1.23-.872.804-1.108 1.222-.188 1.43 1.386.313 1.26 1.152 2.253 1.444 1.202.353 1.696-.292 3.634-.028 1.653.225 1.761 2.369 3.429 2.369s1.668-.8 3.335-.8 2.653 2.146 4.321 2.146 2.653-2.146 4.321-2.146c1.668 0 1.668.8 3.335.8 1.668 0 1.776-2.144 3.429-2.369 1.938-.263 2.433.381 3.634.028.993-.292.867-1.13 2.253-1.444.922-.207.687-.626-.186-1.43z"/><path fill="#DD2E44" d="M34.077 16.52c0 2.984-7.198 4.393-16.077 4.393S1.923 19.504 1.923 16.52c0-5.403.966-5.403 16.077-5.403s16.077.001 16.077 5.403z"/><path fill="#D99E82" d="M18 .524C8.629.524 1.033 4.915 1.033 11.566c0 6.125 7.596 6.375 16.967 6.375s16.967-.25 16.967-6.375C34.967 4.914 27.371.524 18 .524z"/><path d="M10.784 3.695c-.498-.319-1.159-.173-1.477.325-.318.498-.173 1.16.325 1.477.498.319 1.76.557 2.079.059.318-.498-.429-1.543-.927-1.861zm9.734-1.035c-.562.182-1.549 1.006-1.366 1.568.183.562 1.464.648 2.026.466s.869-.786.686-1.348c-.182-.561-.786-.869-1.346-.686zm10.909 7.035c-.452-.38-1.585.225-1.966.677-.38.453-.321 1.127.131 1.507.452.38 1.127.321 1.507-.131.381-.453.781-1.673.328-2.053zm-3.643-5c-.498-.318-1.159-.172-1.478.326-.318.498-.172 1.159.326 1.477.498.319 1.76.557 2.078.059.319-.499-.428-1.544-.926-1.862zm-15 7c-.498-.318-1.159-.172-1.478.326-.318.497-.172 1.159.326 1.476.498.319 1.76.558 2.078.059.319-.498-.428-1.543-.926-1.861zm3.046-4.808c-.336.486-.62 1.739-.133 2.075.486.336 1.557-.374 1.893-.86.336-.486.213-1.152-.273-1.488-.485-.336-1.152-.213-1.487.273zm7.954 4.808c-.498-.318-1.159-.172-1.478.326-.318.497-.172 1.16.326 1.476.498.319 1.76.558 2.078.059.319-.498-.428-1.543-.926-1.861zM4.948 7.808c-.394.441-.833 1.648-.392 2.042.439.394 1.591-.174 1.985-.615.395-.44.357-1.116-.083-1.511-.439-.394-1.116-.356-1.51.084z" fill="#FFE8B6"/></symbol>
@@ -382,18 +402,7 @@ html[lang=fa] .jobs-head h1,html[lang=ur] .jobs-head h1,html[lang=fa] .intro h1,
 <a class="lk" href="careers.html" data-i="n4">انضم إلى فريقنا</a><div class="lang" id="lang" role="group" aria-label="Language"><button data-l="0" lang="ar">عربي</button><button data-l="1" lang="en">EN</button><button data-l="2" lang="de">DE</button><button data-l="3" lang="fr">FR</button><button data-l="4" lang="zh">中文</button></div>
 <button class="motion-toggle" id="motion-toggle" type="button" aria-label="إيقاف الحركة" title="إيقاف الحركة" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z"/></svg></button><div class="camel-lane" aria-hidden="true"><span class="camel-walker"><svg viewBox="0 0 112 64" focusable="false"><g class="camel-body"><path class="camel-leg a" d="M25 39 22 57 17 59"/><path class="camel-leg b" d="m34 39 5 17 5 3"/><path class="camel-leg c" d="m57 39-3 18-5 2"/><path class="camel-leg d" d="m65 39 6 17 5 2"/><path d="M19 31Q10 29 13 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path fill="currentColor" d="M19 29C15 32 15 39 22 42L62 42Q70 41 74 35L82 16 91 17Q98 16 100 12L93 9 87 9 85 4Q82 3 81 7L78 10Q73 13 71 21L66 31 60 28Q56 25 52 24C49 7 40 3 35 13L29 27Q23 26 19 29Z"/><circle cx="88" cy="11" r="1.1" fill="#24190f"/></g></svg></span></div></nav>
 
-<header class="hero" id="top">
-<img class="poster" id="poster" src="media/hero-135131.webp" alt="" fetchpriority="high">
-<div class="veil"></div><div class="pat"></div>
-<div class="hero-in">
-<div>
-<span class="eyebrow"><i></i>ALL YOU CRAVE</span>
-<blockquote class="verse"><p class="va" lang="ar" dir="rtl">وَقَفَ الخَلقُ يَنظُرونَ جَميعاً<br>كَيفَ أَبني قَواعِدَ المَجدِ وَحدي</p><p class="vt" data-i="vt"></p><cite data-i="vc"></cite></blockquote>
-<div class="btns"><a class="btn b1" href="#menu"><svg class="ic"><use href="#i-cloche"/></svg><span data-i="b1"></span></a><a class="btn b2" href="#branches"><svg class="ic"><use href="#i-pin"/></svg><span data-i="b2"></span></a></div>
-</div>
-<div class="medal"><div class="arch"><img src="assets/logo.webp" alt="Al-Kazzaz — All You Crave" width="300" height="300"></div></div>
-</div>
-</header>
+<header class="food-first-hero" id="top"><div class="food-first-in"><div class="food-first-copy"><h1>مطاعم القزاز</h1><div class="cta-reveal"><div class="food-first-actions"><a class="btn b1" href="#menu"><svg class="ic" aria-hidden="true"><use href="#i-cloche"/></svg><span data-i="b1">شوف المنيو</span></a><a class="btn b2" href="#branches"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-i="b2">أقرب فرع</span></a><a class="btn food-order" href="tel:16903"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>اتصل للطلب</span><bdi>16903</bdi></a></div><div class="cta-leaf cta-leaf-left" aria-hidden="true"></div><div class="cta-leaf cta-leaf-right" aria-hidden="true"></div></div></div><figure class="food-first-figure"><img class="food-first-photo" src="profile-hero.svg" width="827" height="435" alt="حواوشي القزاز مع الخضروات" fetchpriority="high" decoding="async"></figure></div></header>
 <div class="strip"><div id="strip">
 <button type="button" class="chip" data-c="1,2" aria-expanded="false" aria-controls="sub"><svg class="ic"><use href="#i-pita"/></svg><span data-i="st1"></span></button>
 <button type="button" class="chip" data-c="3"><svg class="ic"><use href="#i-chicken"/></svg><span data-i="st2"></span></button>
@@ -423,6 +432,18 @@ html[lang=fa] .jobs-head h1,html[lang=ur] .jobs-head h1,html[lang=fa] .intro h1,
 <div class="hot"><div class="lbl" data-i="ht"></div><b>16903</b><a class="btn b1" href="tel:16903"><svg class="ic"><use href="#i-phone"/></svg><span data-i="cn"></span></a></div>
 </div></section>
 <section class="about" id="about"><div class="wrap"><h2 data-i="at">عن القزاز</h2><div><p data-i="abt">تعرّف على القزاز وفريق العمل وشركاء النجاح والشهادات الواردة في الملف التعريفي للشركة.</p><div class="btns"><a class="btn b1" href="about.html" data-i="abtbutton">تعرّف على القزاز</a><a class="btn b2" href="careers.html" data-i="careerbutton">انضم لفريق القزاز</a></div></div></div></section>
+<section class="hero heritage-scene" id="heritage-scene">
+<img class="poster" id="poster" src="media/hero-135131.webp" alt="" loading="lazy" fetchpriority="low">
+<div class="veil"></div><div class="pat"></div>
+<div class="hero-in">
+<div>
+<span class="eyebrow"><i></i>ALL YOU CRAVE</span>
+<blockquote class="verse"><p class="va" lang="ar" dir="rtl">وَقَفَ الخَلقُ يَنظُرونَ جَميعاً<br>كَيفَ أَبني قَواعِدَ المَجدِ وَحدي</p><p class="vt" data-i="vt"></p><cite data-i="vc"></cite></blockquote>
+<div class="btns"><a class="btn b1" href="#menu"><svg class="ic"><use href="#i-cloche"/></svg><span data-i="b1"></span></a><a class="btn b2" href="#branches"><svg class="ic"><use href="#i-pin"/></svg><span data-i="b2"></span></a></div>
+</div>
+<div class="medal"><div class="arch"><img src="assets/logo.webp" alt="Al-Kazzaz — All You Crave" width="300" height="300"></div></div>
+</div>
+</section>
 <section class="gal" id="gallery"><div class="wrap">
 <div class="sec-h"><h2 data-i="gal"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
 <div class="gst" id="gst" role="region" aria-roledescription="عرض شرائح" aria-label="معرض الصور"><button class="gnv p" id="gp" type="button" aria-label="الصورة السابقة">‹</button><button class="gnv n" id="gn" type="button" aria-label="الصورة التالية">›</button></div>
@@ -717,10 +738,10 @@ $('#y').textContent=new Date().getFullYear();
 {const r0=render;render=function(){r0();window.__musLabels&&window.__musLabels();window.__kzzApply&&window.__kzzApply()}}
 render();
 /* hero video pool: random on every load, then keeps rotating */
-window.__rdy={v:0,a:0};{const t0=Date.now(),cn=navigator.connection||{},sl=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||''),max=sl?2500:7000;const ld=document.getElementById('ld');const done=()=>{if(!ld||ld.classList.contains('off'))return;ld.classList.add('off');setTimeout(()=>ld.remove(),700)};
-const chk=()=>{const el=Date.now()-t0;if((window.__rdy.v&&window.__rdy.a&&el>500)||el>=max)done();else setTimeout(chk,150)};setTimeout(chk,150);window.__ldDone=done}
-(function(){
-const poster=$('#poster'),hero=$('#top');
+window.__rdy={v:0,a:0};{const image=document.querySelector('.food-first-photo');const ready=()=>window.__rdy.v=1;if(image.complete)ready();else{image.addEventListener('load',ready,{once:true});image.addEventListener('error',ready,{once:true})}}{const t0=Date.now(),cn=navigator.connection||{},sl=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||''),max=sl?2500:3000;const ld=document.getElementById('ld');const done=()=>{if(!ld||ld.classList.contains('off'))return;ld.classList.add('off');setTimeout(()=>{ld.remove();document.documentElement.classList.add('hero-reveal-ready')},700)};
+const chk=()=>{const el=Date.now()-t0;if((window.__rdy.v&&el>250)||el>=max)done();else setTimeout(chk,150)};setTimeout(chk,150);window.__ldDone=done}
+function startHeritageVideo(){
+const poster=$('#poster'),hero=$('#heritage-scene');
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const cn=navigator.connection||{};const slow=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||'');
 let last=null;try{last=localStorage.getItem('hv')}catch(e){}
@@ -743,7 +764,8 @@ v.addEventListener('error',()=>{v.remove();window.__rdy.v=1},{once:true})};
 play(cur);
 
 const syncMotion=()=>{if(!active)return;if(document.hidden||window.__motionPaused())active.pause();else active.play().then(()=>{active.classList.add('on');setTimeout(prefetch,1500)}).catch(()=>{})};document.addEventListener('visibilitychange',syncMotion);addEventListener('kazzaz-motion',syncMotion);
-})();
+}
+{const scene=document.getElementById('heritage-scene');if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();startHeritageVideo()}},{rootMargin:'200px'});observer.observe(scene)}else startHeritageVideo()}
 
 /* Shared music controls. Playback may need a user gesture. */
 (()=>{
@@ -805,7 +827,7 @@ const go=()=>{if(!raf)raf=requestAnimationFrame(tick)},stop=()=>{cancelAnimation
 /* flame sweep: every ~90s a real-looking fire enters from both side edges, sweeps toward the centre for ~3.2s and fades out. Top layer, no pointer events. */
 const rmF=matchMedia('(prefers-reduced-motion: reduce)').matches,cnF=navigator.connection||{},slowF=cnF.saveData||/(^|-)2g$/.test(cnF.effectiveType||'');
 let FV=null,busy=false;
-const ignite=f=>{if(rmF||slowF||window.__motionPaused()||busy||(f!==true&&document.hidden))return;
+const ignite=f=>{const scene=document.getElementById('heritage-scene');if(scene){const r=scene.getBoundingClientRect();if(r.bottom<=0||r.top>=innerHeight)return}if(rmF||slowF||window.__motionPaused()||busy||(f!==true&&document.hidden))return;
  if(!FV){FV=document.createElement('video');FV.id='flamev';FV.muted=true;FV.defaultMuted=true;FV.playsInline=true;FV.setAttribute('playsinline','');FV.preload='none';FV.setAttribute('aria-hidden','true');FV.tabIndex=-1;FV.src='media/fire.mp4';document.body.appendChild(FV)}
  busy=true;const done=()=>{FV.pause();FV.style.display='none';busy=false};
  FV.currentTime=0;FV.style.display='block';FV.style.opacity='0';
@@ -843,7 +865,7 @@ document.addEventListener('visibilitychange',()=>document.hidden?clearTimeout(tm
 window.__gal={go:()=>go(cur+1,1),cur:()=>cur}})();
 
 /* logo + phoenix intro: loads after the page is idle, skipped on data-saver / very slow links / reduced motion; the static logo stays otherwise */
-(()=>{const c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const go=()=>{const s=document.createElement('script');s.src='media/logoanim.js';s.async=true;document.body.appendChild(s)};const idle=()=>('requestIdleCallback'in window?requestIdleCallback(go,{timeout:4000}):setTimeout(go,2500));if(document.readyState==='complete')idle();else addEventListener('load',idle,{once:true})})();
+(()=>{const c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const go=()=>{const s=document.createElement('script');s.src='media/logoanim.js';s.async=true;document.body.appendChild(s)};const idle=()=>('requestIdleCallback'in window?requestIdleCallback(go,{timeout:4000}):setTimeout(go,2500));const scene=document.getElementById('heritage-scene');if(scene&&'IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();idle()}},{rootMargin:'100px'});observer.observe(scene)}else if(document.readyState==='complete')idle();else addEventListener('load',idle,{once:true})})();
 </script>
 <script>(()=>{const n=document.querySelector("nav");const fit=()=>{document.documentElement.style.setProperty("--nav-height",Math.ceil(n.getBoundingClientRect().height)+"px");document.documentElement.classList.toggle("large-text",innerWidth<=480&&parseFloat(getComputedStyle(document.documentElement).fontSize)>=24)};fit();addEventListener("resize",fit);if("ResizeObserver" in window)new ResizeObserver(fit).observe(n)})();</script><script src="kazzaz-ui.js?v=4"></script></body>
 </html>
