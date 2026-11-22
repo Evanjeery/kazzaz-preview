@@ -4,7 +4,7 @@
 set -euo pipefail
 OUT="${1:-_site}"
 mkdir -p "$OUT/assets" "$OUT/media"
-cp index.html about.html careers.html profile-hero.svg profile-team.svg "$OUT/"
+cp index.html about.html careers.html profile-hero.svg profile-team.svg kazzaz-ui.js lang-bundle-*.json "$OUT/"
 base64 -d assets/logo.b64 > "$OUT/assets/logo.webp"
 base64 -d assets/favicon-32.b64 > "$OUT/assets/favicon-32.png"
 
@@ -44,7 +44,7 @@ du -ch "$OUT"/media/cat-*.webp | tail -1
 for f in assets/cat-*-own.b64; do [ -e "$f" ] || continue; n=$(basename "$f" -own.b64); base64 -d "$f" > "$OUT/media/$n.webp"; done
 for f in assets/gal-*.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/$n.webp"; done
 
-cp assets/logoanim.js "$OUT/media/logoanim.js"
+cp logoanim.js "$OUT/media/logoanim.js"
 
 # New hero clips supplied by the owner (portrait phone videos, stored as base64 text)
 for f in assets/hero-u*.mp4.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/$n"; done
