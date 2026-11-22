@@ -93,10 +93,17 @@ html[dir=rtl] .mus{inset-inline-end:auto;right:auto;left:18px}
 @media(min-width:821px){[dir=ltr] .medal{order:-1;justify-content:flex-start}[dir=ltr] .hero-in{grid-template-columns:.8fr 1.2fr}[dir=rtl] .medal{justify-content:flex-start}}
 .arch{position:relative;width:min(360px,70vw);display:grid;place-items:center}
 .arch img{width:100%;height:auto;filter:drop-shadow(0 12px 30px rgba(201,150,44,.4))}
-.strip{background:var(--gold2);color:#1b1205;border-block:3px double #1b1205}
-.strip div{max-width:1200px;margin:auto;display:flex;gap:12px 40px;justify-content:center;padding:12px 5vw;font-weight:700;flex-wrap:wrap}
-.strip span{display:flex;gap:8px;align-items:center}
-.strip a{text-decoration:none}
+.strip{background:linear-gradient(180deg,#1d1712,#14100d);color:#f3e6c8;border-block:1px solid rgba(230,185,77,.28);position:relative;z-index:2}
+.strip div{max-width:1200px;margin:auto;display:flex;gap:12px 14px;justify-content:center;padding:14px 5vw;flex-wrap:wrap}
+.strip .chip{appearance:none;display:flex;gap:10px;align-items:center;padding:9px 20px 9px 10px;border-radius:999px;background:rgba(255,248,234,.05);border:1px solid rgba(230,185,77,.32);color:#f3e6c8;font:600 .98rem var(--sans);cursor:pointer;min-height:46px;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .25s,border-color .25s,box-shadow .25s,color .25s}
+.strip .chip .ic{box-sizing:content-box;width:20px;height:20px;padding:6px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1205;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.strip .chip::after{content:"";width:7px;height:7px;border-inline-end:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.55;transition:transform .25s,opacity .25s}
+.strip .chip:hover,.strip .chip:focus-visible{transform:translateY(-3px);background:rgba(230,185,77,.14);border-color:var(--gold2);color:#fff3d0;box-shadow:0 8px 22px rgba(0,0,0,.4),0 0 0 3px rgba(232,112,42,.18)}
+.strip .chip:hover .ic{transform:rotate(-12deg) scale(1.12)}
+.strip .chip:hover::after{opacity:1;transform:rotate(45deg) translate(2px,0)}
+.strip .chip:active{transform:translateY(0) scale(.97)}
+.strip .chip:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.strip .chip,.strip .chip .ic,.strip .chip::after{transition:none}}
 /* sections */
 section{padding:76px 5vw}
 .wrap{max-width:1240px;margin:auto}
@@ -233,7 +240,7 @@ section{padding:52px 5vw}
 .grid,.brs{grid-template-columns:1fr}
 .card{padding:22px 16px 16px}
 .tabs{top:56px}
-.strip div{gap:8px 20px;font-size:.9rem}
+.strip div{gap:8px;padding:10px 4vw;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}.strip .chip{font-size:.84rem;padding:6px 12px 6px 7px;min-height:44px;white-space:nowrap;flex:none}
 .lang button{padding:5px 8px;font-size:.72rem}
 }
 @media(max-width:420px){.tbl{--w:3.1rem!important;column-gap:4px}.tbl.wide{--w:4.9rem!important}.tbl>.h i{font-size:.62rem;padding:3px 3px}.btn{padding:12px 18px}}
@@ -289,10 +296,10 @@ section{padding:52px 5vw}
 <div class="medal"><div class="arch"><img src="assets/logo.webp" alt="Al-Kazzaz — All You Crave" width="300" height="300"></div></div>
 </div>
 </header>
-<div class="strip"><div>
-<span><svg class="ic"><use href="#i-pita"/></svg><span data-i="st1"></span></span>
-<span><svg class="ic"><use href="#i-chicken"/></svg><span data-i="st2"></span></span>
-<span><svg class="ic"><use href="#i-tagine"/></svg><span data-i="st3"></span></span>
+<div class="strip"><div id="strip">
+<button type="button" class="chip" data-c="1"><svg class="ic"><use href="#i-pita"/></svg><span data-i="st1"></span></button>
+<button type="button" class="chip" data-c="3"><svg class="ic"><use href="#i-chicken"/></svg><span data-i="st2"></span></button>
+<button type="button" class="chip" data-c="4"><svg class="ic"><use href="#i-tagine"/></svg><span data-i="st3"></span></button>
 </div></div>
 
 <section id="pick"><div class="wrap">
@@ -540,7 +547,7 @@ soon:["قريباً","Opening soon","Bald verfügbar","Ouverture prochaine","即
 vt:["","All creation stood and watched, as I alone laid the foundations of glory.","Die ganze Schöpfung stand und sah zu, wie ich allein die Grundfesten des Ruhmes legte.","Toute la création s’est tenue là, à regarder comment je bâtissais seule les fondations de la gloire.","万物驻足凝望，看我独自奠定荣耀的根基。"],
 vc:["حافظ إبراهيم · شاعر النيل","Hafez Ibrahim · the Poet of the Nile","Hafez Ibrahim · der Dichter des Nils","Hafez Ibrahim · le poète du Nil","哈菲兹·易卜拉欣 · 尼罗河诗人"],
 skip:["تخطّى إلى المنيو","Skip to menu","Zur Speisekarte","Aller au menu","跳到菜单"],
-pk:["اختار اللي نفسك فيه","Pick what you crave","Worauf haben Sie Lust?","Qu’est-ce qui vous tente ?","选择你的最爱"],
+pk:["كُل اللي نفسك فيه","Pick what you crave","Worauf haben Sie Lust?","Qu’est-ce qui vous tente ?","选择你的最爱"],
 st1:["ساندويتش شرقي وغربي","Egyptian & western sandwiches","Ägyptische & westliche Sandwiches","Sandwichs égyptiens et occidentaux","埃及与西式三明治"],
 st2:["فرايد تشيكن","Fried chicken","Fried Chicken","Poulet frit","炸鸡"],
 st3:["وجبات وفتات وطواجن","Meals, fatta & tagines","Gerichte, Fatta & Tajines","Plats, fatta et tajines","正餐、法塔与塔吉锅"],
@@ -573,6 +580,7 @@ const md=document.querySelector('meta[name=description]');if(md)md.content=T.des
 try{localStorage.setItem('lng',L)}catch(e){}}
 $('#lang').onclick=e=>{const b=e.target.closest('button');if(b){L=+b.dataset.l;render()}};
 $('#cats').onclick=e=>{const b=e.target.closest('button');if(b){cat=+b.dataset.c;render();$('#t'+cat).focus({preventScroll:true});$('#t'+cat).scrollIntoView({block:'nearest',inline:'center'})}};
+$('#strip').onclick=e=>{const b=e.target.closest('button[data-c]');if(b){cat=+b.dataset.c;render();const m=$('#menu');m.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}};
 $('#tiles').onclick=e=>{const a=e.target.closest('a[data-c]');if(a){cat=+a.dataset.c;render()}};
 try{const q=new URLSearchParams(location.search).get('lang');const i=LC.indexOf(q);if(i>=0)L=i;else{const s=+localStorage.getItem('lng');if(s>=0&&s<5&&localStorage.getItem('lng')!==null)L=s}}catch(e){}
 $('#y').textContent=new Date().getFullYear();
