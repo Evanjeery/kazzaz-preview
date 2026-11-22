@@ -1,5 +1,6 @@
 /* TEMPORARY no-bird version: logo holds 10 s -> burns to ash/smoke -> gone 20 s -> flames rebuild the logo bottom to top. Previous bird version is in git history. Original header: phoenix (Phoenix by NORBERTO-3D, CC-BY 4.0, rendered sprite sheet) flies in -> fog -> logo (60 s) -> burns to ash -> phoenix rises, shakes off ash, flies away -> repeats 30 s later. Set scene deferred. */
 (()=>{
+if(typeof IntersectionObserver!=='function')return;
 const img=document.querySelector('.arch img');if(!img)return;
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm)return;
 const cfg=Object.assign({hold:10,gap:20,speed:1,first:.4},window.__logoCfg||{});
