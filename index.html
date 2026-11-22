@@ -2,6 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-HM8J73QwBc8CN2i+JhVmLZ35NeqEY8QlAtsxgI6HRB4=' 'sha256-Ob6sMjhwRCsPTs7biitgmh40eziwvPnAiOQshAC7Y1M=' 'sha256-ORTNQo6esd4kTycIvJNekjXSsf6alndMUt8A5AO/ei4='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>مطاعم القزاز | Al-Kazzaz</title>
 <meta name="description" content="مطاعم القزاز: فول وطعمية وشاورما وطواجن ومشويات في قلب القاهرة. الخط الساخن 16903.">
@@ -428,7 +431,7 @@ html[lang=fa] .hero h1,html[lang=ur] .hero h1{font-family:"IBM Plex Sans Arabic"
 
 <section class="menu" id="menu"><div class="wrap">
 <div class="sec-h"><h2 data-i="mt">المنيو</h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
-<form class="menu-search" role="search" id="menu-search" onsubmit="return false">
+<form class="menu-search" role="search" id="menu-search">
 <label for="dish-search" id="search-label"></label><div class="search-line"><input type="search" id="dish-search" autocomplete="off" maxlength="100" aria-controls="mc" placeholder=""><button type="button" id="search-clear" hidden></button></div>
 <p id="search-status" role="status" aria-live="polite"></p></form>
 <div class="tabs" role="tablist" id="cats"></div>
@@ -696,6 +699,7 @@ const gs=c.g.map(g=>({...g,r:g.r.filter(r=>match(r[0]+' '+tr(r[0])))})).filter(g
 if(gs.length){count+=gs.reduce((n,g)=>n+g.r.length,0);html+=`<h3 class="search-category">${c.n[L]}</h3><div class="grid">${gs.map(grp).join('')}</div>`}});
 $('#mc').setAttribute('aria-labelledby','search-label');$('#mc').innerHTML=html||`<p class="search-empty">${SQ.empty[L]}</p>`;$('#search-status').textContent=SQ.found[L]+': '+count;
 }
+$('#menu-search').addEventListener('submit',e=>e.preventDefault());
 $('#dish-search').oninput=e=>{dishQuery=e.target.value;renderMenu();window.__kzzApply&&window.__kzzApply()};
 $('#search-clear').onclick=()=>{dishQuery='';$('#dish-search').value='';renderMenu();$('#dish-search').focus()};
 function resetDishSearch(){dishQuery='';$('#dish-search').value=''}
