@@ -49,5 +49,5 @@ base64 -d assets/phoenix-sheet.b64 > "$OUT/media/phoenix-sheet.webp"
 cp assets/logoanim.js "$OUT/media/logoanim.js"
 
 # New hero clips supplied by the owner (portrait phone videos, stored as base64 text)
-for f in assets/hero-u*.mp4.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/hero-${n%.mp4}.mp4"; done
-for f in assets/hero-u*.webp.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/hero-${n%.webp}.webp"; done
+for f in assets/hero-u*.mp4.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/$n"; done
+for f in assets/hero-u*.webp.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/$n"; done
