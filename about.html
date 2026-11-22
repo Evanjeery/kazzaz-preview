@@ -110,7 +110,7 @@ html.motion-off canvas,html.motion-off #flamev{visibility:hidden!important}html.
 @media(prefers-reduced-motion:reduce){.language-dialog::backdrop{backdrop-filter:none}}
 
 /* Small Arabic embroidered side curtains, hover only, never a constant distraction. */
-.arabic-drapery{width:clamp(30px,5vw,82px);height:clamp(160px,18vw,260px);pointer-events:auto}.arabic-drapery svg{transform-origin:top left}
+.arabic-drapery{z-index:2;width:clamp(30px,5vw,82px);height:clamp(160px,18vw,260px);pointer-events:auto}.arabic-drapery svg{transform-origin:top left}
 @media(hover:hover){.arabic-drapery:hover svg{animation:curtain-sway 1s ease-in-out}}
 @keyframes curtain-sway{0%,100%{transform:rotate(0)}25%{transform:rotate(1.1deg)}60%{transform:rotate(-.7deg)}82%{transform:rotate(.35deg)}}
 @media(max-width:620px){.arabic-drapery{width:30px;height:170px}.intro-in{padding-inline:39px}}
