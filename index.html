@@ -103,6 +103,16 @@ html[dir=rtl] .mus{inset-inline-end:auto;right:auto;left:18px}
 .strip .chip:hover::after{opacity:1;transform:rotate(45deg) translate(2px,0)}
 .strip .chip:active{transform:translateY(0) scale(.97)}
 .strip .chip:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.subrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px 5vw 14px;background:#14100d;border-bottom:1px solid rgba(230,185,77,.28);animation:subin .25s ease}
+.subrow[hidden]{display:none}
+.subrow button{display:flex;align-items:center;gap:8px;padding:8px 16px;min-height:44px;border-radius:999px;background:rgba(230,185,77,.12);border:1px solid rgba(230,185,77,.45);color:#f3e6c8;font:600 .92rem var(--sans);cursor:pointer;transition:background .2s,transform .2s,border-color .2s}
+.subrow button:hover,.subrow button:focus-visible{background:rgba(230,185,77,.28);border-color:var(--gold2);transform:translateY(-2px);outline:none}
+.subrow .em{width:1.3em;height:1.3em}
+.strip .chip[aria-expanded=true]{background:rgba(230,185,77,.2);border-color:var(--gold2)}
+.strip .chip[aria-expanded=true]::after{transform:rotate(-135deg) translateY(-2px);opacity:1}
+@keyframes subin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.subrow{animation:none}.subrow button{transition:none}}
+@media(max-width:600px){.subrow{justify-content:flex-start;padding:8px 4vw 12px}.subrow button{font-size:.84rem;padding:6px 12px}}
 @media(prefers-reduced-motion:reduce){.strip .chip,.strip .chip .ic,.strip .chip::after{transition:none}}
 /* sections */
 section{padding:76px 5vw}
@@ -297,10 +307,11 @@ section{padding:52px 5vw}
 </div>
 </header>
 <div class="strip"><div id="strip">
-<button type="button" class="chip" data-c="1"><svg class="ic"><use href="#i-pita"/></svg><span data-i="st1"></span></button>
+<button type="button" class="chip" data-c="1,2" aria-expanded="false" aria-controls="sub"><svg class="ic"><use href="#i-pita"/></svg><span data-i="st1"></span></button>
 <button type="button" class="chip" data-c="3"><svg class="ic"><use href="#i-chicken"/></svg><span data-i="st2"></span></button>
-<button type="button" class="chip" data-c="4"><svg class="ic"><use href="#i-tagine"/></svg><span data-i="st3"></span></button>
+<button type="button" class="chip" data-c="4,5,6" aria-expanded="false" aria-controls="sub"><svg class="ic"><use href="#i-tagine"/></svg><span data-i="st3"></span></button>
 </div></div>
+<div class="subrow" id="sub" hidden></div>
 
 <section id="pick"><div class="wrap">
 <div class="sec-h"><h2 data-i="pk"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
@@ -578,9 +589,17 @@ $('#br').innerHTML=B.map((b,i)=>{if(b[2])return`<div class="br soon"><div class=
 const t=L?(L==4?'卡扎兹餐厅 | Al-Kazzaz':'Al-Kazzaz Restaurants'):'مطاعم القزاز | Al-Kazzaz';document.title=t;
 const md=document.querySelector('meta[name=description]');if(md)md.content=T.desc[L];
 try{localStorage.setItem('lng',L)}catch(e){}}
-$('#lang').onclick=e=>{const b=e.target.closest('button');if(b){L=+b.dataset.l;render()}};
+$('#lang').onclick=e=>{const b=e.target.closest('button');if(b){L=+b.dataset.l;render();if(typeof closeSub==='function')closeSub()}};
 $('#cats').onclick=e=>{const b=e.target.closest('button');if(b){cat=+b.dataset.c;render();$('#t'+cat).focus({preventScroll:true});$('#t'+cat).scrollIntoView({block:'nearest',inline:'center'})}};
-$('#strip').onclick=e=>{const b=e.target.closest('button[data-c]');if(b){cat=+b.dataset.c;render();const m=$('#menu');m.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}};
+const sub=$('#sub');const closeSub=()=>{sub.hidden=true;document.querySelectorAll('#strip .chip').forEach(x=>x.setAttribute('aria-expanded','false'))};
+const goMenu=()=>$('#menu').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+$('#strip').onclick=e=>{const b=e.target.closest('button[data-c]');if(!b)return;const ids=b.dataset.c.split(',').map(Number);
+if(ids.length===1){closeSub();cat=ids[0];render();goMenu();return}
+const open=b.getAttribute('aria-expanded')==='true';closeSub();if(open)return;
+sub.innerHTML=ids.map(i=>`<button type="button" data-c="${i}">${em(ICONS[i])}${C[i].n[L]}</button>`).join('');sub.hidden=false;b.setAttribute('aria-expanded','true');sub.querySelector('button').focus({preventScroll:true})};
+sub.onclick=e=>{const b=e.target.closest('button[data-c]');if(b){cat=+b.dataset.c;closeSub();render();goMenu()}};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sub.hidden){const o=document.querySelector('#strip .chip[aria-expanded=true]');closeSub();o&&o.focus()}});
+document.addEventListener('click',e=>{if(!sub.hidden&&!e.target.closest('#strip,#sub'))closeSub()});
 $('#tiles').onclick=e=>{const a=e.target.closest('a[data-c]');if(a){cat=+a.dataset.c;render()}};
 try{const q=new URLSearchParams(location.search).get('lang');const i=LC.indexOf(q);if(i>=0)L=i;else{const s=+localStorage.getItem('lng');if(s>=0&&s<5&&localStorage.getItem('lng')!==null)L=s}}catch(e){}
 $('#y').textContent=new Date().getFullYear();
