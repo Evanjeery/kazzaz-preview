@@ -47,3 +47,7 @@ for f in assets/gal-*.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); 
 # Phoenix intro (strict black and white): sprite sheet of "Phoenix" by NORBERTO-3D (CC-BY 4.0), rendered by the owner's pipeline, and its player script
 base64 -d assets/phoenix-sheet.b64 > "$OUT/media/phoenix-sheet.webp"
 cp assets/logoanim.js "$OUT/media/logoanim.js"
+
+# New hero clips supplied by the owner (portrait phone videos, stored as base64 text)
+for f in assets/hero-u*.mp4.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/hero-${n%.mp4}.mp4"; done
+for f in assets/hero-u*.webp.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/hero-${n%.webp}.webp"; done
