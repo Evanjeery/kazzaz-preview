@@ -596,7 +596,7 @@ const goMenu=()=>$('#menu').scrollIntoView({behavior:matchMedia('(prefers-reduce
 $('#strip').onclick=e=>{const b=e.target.closest('button[data-c]');if(!b)return;const ids=b.dataset.c.split(',').map(Number);
 if(ids.length===1){closeSub();cat=ids[0];render();goMenu();return}
 const open=b.getAttribute('aria-expanded')==='true';closeSub();if(open)return;
-sub.innerHTML=ids.map(i=>`<button type="button" data-c="${i}">${em(ICONS[i])}${C[i].n[L]}</button>`).join('');sub.hidden=false;b.setAttribute('aria-expanded','true');sub.querySelector('button').focus({preventScroll:true})};
+sub.innerHTML=ids.map(i=>`<button type="button" data-c="${i}">${em(ICONS[i])}${C[i].n[L]}</button>`).join('');sub.hidden=false;b.setAttribute('aria-expanded','true');sub.querySelector('button').focus({preventScroll:true});const st=document.querySelector('.strip');scrollTo({top:Math.max(0,scrollY+st.getBoundingClientRect().top-72),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})};
 sub.onclick=e=>{const b=e.target.closest('button[data-c]');if(b){cat=+b.dataset.c;closeSub();render();goMenu()}};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sub.hidden){const o=document.querySelector('#strip .chip[aria-expanded=true]');closeSub();o&&o.focus()}});
 document.addEventListener('click',e=>{if(!sub.hidden&&!e.target.closest('#strip,#sub'))closeSub()});
