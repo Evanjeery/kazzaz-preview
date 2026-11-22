@@ -835,8 +835,8 @@ window.__haltFlame=()=>{if(FV){FV.getAnimations().forEach(a=>a.cancel());FV.paus
 document.addEventListener('visibilitychange',()=>document.hidden?stop():go());go();window.__fx=1})();
 
 /* gallery: stacked slides, springy rotating transitions, auto 5s, pauses on hover/hold/focus, swipe */
-(()=>{const st=document.getElementById('gst');if(!st)return;const N=20,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const alts=Array(20).fill('');const sl=[],dots=document.getElementById('gd');
+(()=>{const st=document.getElementById('gst');if(!st)return;const N=29,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const alts=Array(29).fill('');const sl=[],dots=document.getElementById('gd');
 for(let i=1;i<=N;i++){const d=document.createElement('div');d.className='gs'+(i===1?' on':'');const im=new Image();im.src='media/gal-'+i+'.webp';im.alt=alts[i-1];im.onload=()=>{if(im.naturalWidth===im.naturalHeight)im.style.objectFit='contain'};im.decoding='async';if(i>1)im.loading='lazy';im.draggable=false;d.appendChild(im);st.insertBefore(d,st.firstChild);sl.unshift(d);const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',i+' / '+N);b.onclick=()=>go(i-1,i-1>cur?1:-1);dots.appendChild(b)}
 sl.reverse();const db=[...dots.children];let cur=0,busy=false,tm=0,hold=false,vis=false,fx=0;db[0].classList.add('on');
 const EF=['slide','fade','zoom','tilt','slide','blur'];const SP='cubic-bezier(.34,1.45,.5,1)',SM='cubic-bezier(.22,.8,.3,1)';
