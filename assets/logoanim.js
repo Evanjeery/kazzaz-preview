@@ -57,10 +57,10 @@ const rect=()=>{const r=img.getBoundingClientRect();sz=Math.round(r.width/SC*SC)
 window.__logo={get ph(){return ph},get t(){return pt},go(p,t){ph=p;pt=t||0;struck=false;fogDone=false}};
 const setPh=(p)=>{ph=p;pt=0};
 let last=performance.now();
-function tick(now){requestAnimationFrame(tick);let dt=Math.min(.12,(now-last)/1000)*cfg.speed;last=now;if(!on)return;
+function tick(now){requestAnimationFrame(tick);let rdt=Math.min(1,(now-last)/1000)*cfg.speed,dt=Math.min(.05,(now-last)/1000)*cfg.speed;last=now;if(!on)return;
  const r=rect();const viewable=vis;
  g.setTransform(D,0,0,D,0,0);g.clearRect(0,0,W,H);
- pt+=dt;hcx=cx;hs=u*.9;
+ pt+=rdt;hcx=cx;hs=u*.9;
  const ux=u*1.25,S=u*1.2; /* figure scales */
  const hoverX=cx,hoverY=cy+8*u;
  if(dead)return;if(!ready){return}
