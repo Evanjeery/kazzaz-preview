@@ -255,6 +255,28 @@ section{padding:52px 5vw}
 }
 @media(max-width:420px){.tbl{--w:3.1rem!important;column-gap:4px}.tbl.wide{--w:4.9rem!important}.tbl>.h i{font-size:.62rem;padding:3px 3px}.btn{padding:12px 18px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Dish search and compact mobile music controls */
+.menu-search{max-width:720px;margin:0 auto 28px}
+.menu-search label{display:block;font-weight:700;margin-bottom:8px;color:var(--ink)}
+.search-line{display:flex;gap:8px;align-items:center}
+#dish-search{min-width:0;flex:1;width:100%;font:inherit;padding:13px 16px;border:1px solid #b59b69;border-radius:8px;background:#fffaf0;color:#241a11;outline-offset:3px}
+#search-clear{font:inherit;padding:12px;border:1px solid #b59b69;background:#fffaf0;color:#241a11;border-radius:8px;cursor:pointer}
+#search-clear[hidden],#cats[hidden]{display:none}
+#search-status{min-height:1.5em;margin:8px 0 0;color:var(--mut);font-size:.9rem}
+.search-category{font-size:1.25rem;margin:22px 0 12px;color:var(--ink)}
+.search-empty{text-align:center;padding:32px 16px;border:1px dashed #b59b69;border-radius:8px}
+.music-panel{display:flex;align-items:center;gap:6px}.music-toggle{display:none}
+@media(max-width:820px){
+html{scroll-padding-bottom:90px}footer{padding-bottom:110px}
+html[dir] .mus{left:12px;right:auto;inset-inline-end:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);padding:0;border-radius:50%;max-width:none}
+.music-toggle{display:grid;width:50px;height:50px;background:var(--ink);color:var(--gold2);font-size:28px;border:0}
+.music-panel{display:none;position:absolute;left:0;bottom:64px;background:rgba(22,18,15,.98);padding:12px;border:1px solid var(--gold);border-radius:18px;box-shadow:0 8px 24px #0005;max-width:calc(100vw - 24px)}
+.mus.open .music-panel{display:flex}
+html[dir] .fab{left:auto;right:12px;inset-inline-start:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:50px;height:50px}
+.mr{width:100px}.mb.sm{width:40px;height:40px}
+}
+
 </style>
 </head>
 <body><div id="ld" aria-hidden="true"><img src="assets/logo.webp" alt="" width="110" height="110"><i></i></div><noscript><style>#ld{display:none}</style></noscript>
@@ -321,6 +343,9 @@ section{padding:52px 5vw}
 
 <section class="menu" id="menu"><div class="wrap">
 <div class="sec-h"><h2 data-i="mt"></h2><div class="orn"><svg><use href="#i-star"/></svg></div></div>
+<form class="menu-search" role="search" id="menu-search" onsubmit="return false">
+<label for="dish-search" id="search-label"></label><div class="search-line"><input type="search" id="dish-search" autocomplete="off" maxlength="100" aria-controls="mc" placeholder=""><button type="button" id="search-clear" hidden></button></div>
+<p id="search-status" role="status" aria-live="polite"></p></form>
 <div class="tabs" role="tablist" id="cats"></div>
 <div id="mc" role="tabpanel"></div>
 <p class="note" data-i="mn"></p>
@@ -342,7 +367,7 @@ section{padding:52px 5vw}
 </div></section>
 <footer><div class="fglow"></div><canvas id="fire" aria-hidden="true"></canvas>© <span id="y"></span> <span data-i="brand"></span> · <span data-i="ft"></span><small>Stock hero videos: Pixabay, Pexels · Emoji graphics: Twemoji (CC-BY 4.0) · Phoenix 3D model: <a href="https://sketchfab.com/3d-models/phoenix-243fea4f846f44d18d37bf371272b7ec" target="_blank" rel="noopener">"Phoenix" by NORBERTO-3D</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a>)</small></footer>
 <canvas id="smoke" aria-hidden="true"></canvas><canvas id="flame" aria-hidden="true"></canvas>
-<div class="mus" id="mus" hidden role="group"><button type="button" id="mmu" class="mb big"><svg viewBox="0 0 24 24" aria-hidden="true" class="son"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.8a7.6 7.6 0 0 1 0 10.4"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="soff"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button><button type="button" id="mpv" class="mb sm" aria-label="Previous track / السابق"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6v12M18 6l-8 6 8 6z"/></svg></button><button type="button" id="mnx" class="mb sm" aria-label="Next track / التالي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 6v12M6 6l8 6-8 6z"/></svg></button><input type="range" id="mvr" class="mr" min="0" max="100" step="1" value="35"></div>
+<div class="mus" id="mus" hidden role="group"><button type="button" class="mb music-toggle" id="music-toggle" aria-expanded="false" aria-controls="music-panel"><span aria-hidden="true">♫</span></button><div id="music-panel" class="music-panel"><button type="button" id="mmu" class="mb big"><svg viewBox="0 0 24 24" aria-hidden="true" class="son"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.8a7.6 7.6 0 0 1 0 10.4"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="soff"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button><button type="button" id="mpv" class="mb sm" aria-label="Previous track / السابق"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6v12M18 6l-8 6 8 6z"/></svg></button><button type="button" id="mnx" class="mb sm" aria-label="Next track / التالي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 6v12M6 6l8 6-8 6z"/></svg></button><input type="range" id="mvr" class="mr" min="0" max="100" step="1" value="35"></div></div>
 <a class="fab" href="tel:16903" aria-label="16903"><svg class="ic"><use href="#i-phone"/></svg></a>
 
 <script>
@@ -569,6 +594,22 @@ const ICONS=['1f3f7', '1f959', '1f354', '1f357', '1f37d', '1f372', '1f958', '1f3
 const em=e=>`<svg class="em" aria-hidden="true" viewBox="0 0 36 36"><use href="#e-${e}"/></svg>`;
 const ic=n=>`<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 const $=s=>document.querySelector(s);let L=0,cat=0;
+const SQ={label:['ابحث باسم الصنف','Search by dish name','Nach Gericht suchen','Rechercher un plat','搜索菜品'],hint:['مثلاً: شاورما أو حواوشي','Try shawarma or hawawshi','Zum Beispiel Schawarma','Ex. chawarma ou hawawchi','例如：沙威玛'],clear:['مسح','Clear','Löschen','Effacer','清除'],empty:['مفيش أصناف مطابقة. جرّب اسم تاني.','No matching dishes. Try another name.','Keine passenden Gerichte.','Aucun plat trouvé. Essayez un autre nom.','没有匹配的菜品，请换个名称。'],found:['نتائج البحث','Search results','Suchergebnisse','Résultats','搜索结果']};
+let dishQuery='';
+const normDish=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0640]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').trim();
+function renderMenu(){
+const q=normDish(dishQuery),words=q.split(/\s+/).filter(Boolean),match=s=>words.every(w=>normDish(s).includes(w));
+$('#cats').hidden=!!q;$('#search-clear').hidden=!dishQuery;$('#search-label').textContent=SQ.label[L];$('#dish-search').placeholder=SQ.hint[L];$('#search-clear').textContent=SQ.clear[L];
+if(!q){const c=C[cat];$('#mc').setAttribute('aria-labelledby','t'+cat);$('#mc').innerHTML=c.of?offers():`<div class="grid">${c.g.map(grp).join('')}</div>`;$('#search-status').textContent='';return}
+let count=0,html='';
+C.forEach(c=>{if(c.of){const rows=OF.filter(o=>match('الدفا '+o[0]+' '+o[1]+' '+tr(o[1])));if(rows.length){count+=rows.length;html+=`<h3 class="search-category">${c.n[L]}</h3>`+offers(rows)}return}
+const gs=c.g.map(g=>({...g,r:g.r.filter(r=>match(r[0]+' '+tr(r[0])+' '+(g.t||'')+' '+tr(g.t||'')))})).filter(g=>g.r.length);
+if(gs.length){count+=gs.reduce((n,g)=>n+g.r.length,0);html+=`<h3 class="search-category">${c.n[L]}</h3><div class="grid">${gs.map(grp).join('')}</div>`}});
+$('#mc').setAttribute('aria-labelledby','search-label');$('#mc').innerHTML=html||`<p class="search-empty">${SQ.empty[L]}</p>`;$('#search-status').textContent=SQ.found[L]+': '+count;
+}
+$('#dish-search').oninput=e=>{dishQuery=e.target.value;renderMenu()};
+$('#search-clear').onclick=()=>{dishQuery='';$('#dish-search').value='';renderMenu();$('#dish-search').focus()};
+function resetDishSearch(){dishQuery='';$('#dish-search').value=''}
 const AR=s=>`<span lang="ar" dir="rtl" class="ar">${s}</span>`;
 const tr=s=>(L&&TR[s]&&TR[s][L-1])||s;
 const nm=s=>L?`<span class="nm"><span class="tn" lang="${LC[L]}">${tr(s)}</span><small lang="ar" dir="rtl">${s}</small></span>`:`<span class="nm" lang="ar">${s}</span>`;
@@ -577,30 +618,30 @@ let h=`<div class="card">${x.t?`<h3>${L?`<span lang="${LC[L]}">${tr(x.t)}</span>
 if(n)h+=`<span></span>${x.c.map(k=>`<span class="h"><i>${CL[k][L]}</i></span>`).join('')}`;
 x.r.forEach(([a,p,d])=>{h+=nm(a);for(let i=0;i<(n||1);i++){const v=p[i];h+=v?`<b${v.includes('/')?' dir="rtl"':''}>${v}</b>`:`<b class="na" aria-label="—">–</b>`}if(d)h+=`<span class="d" lang="${L?LC[L]:'ar'}">${tr(d)}</span>`});
 h+='</div>';if(x.n)h+=`<p class="gn" lang="${L?LC[L]:'ar'}">${tr(x.n)}</p>`;return h+'</div>'};
-const offers=()=>`<div class="offers">${OF.map(o=>`<div class="of"><em>${T.newb[L]}</em><h3>${L?'Al-Dafa '+o[0]:AR('الدفا '+o[0])}</h3><p lang="${L?LC[L]:'ar'}">${tr(o[1])}${L?`<small lang="ar" dir="rtl">${o[1]}</small>`:''}</p><div class="pr"><b>${o[3]}<span>${T.cur[L]}</span></b>${o[2]?`<s>${o[2]}</s>`:''}</div></div>`).join('')}</div><p class="gn" style="max-width:720px;margin-inline:auto">${T.offn[L]}</p>`;
+const offers=(rows=OF)=>`<div class="offers">${rows.map(o=>`<div class="of"><em>${T.newb[L]}</em><h3>${L?'Al-Dafa '+o[0]:AR('الدفا '+o[0])}</h3><p lang="${L?LC[L]:'ar'}">${tr(o[1])}${L?`<small lang="ar" dir="rtl">${o[1]}</small>`:''}</p><div class="pr"><b>${o[3]}<span>${T.cur[L]}</span></b>${o[2]?`<s>${o[2]}</s>`:''}</div></div>`).join('')}</div><p class="gn" style="max-width:720px;margin-inline:auto">${T.offn[L]}</p>`;
 function render(){
 document.documentElement.lang=LC[L];document.documentElement.dir=L?'ltr':'rtl';
 document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T[e.dataset.i][L]);
 document.querySelectorAll('#lang button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.l===L));
 $('#tiles').innerHTML=C.map((c,i)=>`<li><a class="cat${i===0?' feat':''}" href="#menu" data-c="${i}"><img class="ph" src="media/cat-${CATK[i]}.webp" alt="" loading="lazy" width="640" height="480"><h3>${c.n[L]}</h3></a></li>`).join('');
 $('#cats').innerHTML=C.map((c,i)=>`<button role="tab" id="t${i}" aria-selected="${i===cat}" data-c="${i}">${em(ICONS[i])}${c.n[L]}</button>`).join('');
-const c=C[cat];$('#mc').setAttribute('aria-labelledby','t'+cat);$('#mc').innerHTML=c.of?offers():`<div class="grid">${c.g.map(grp).join('')}</div>`;
+renderMenu();
 $('#br').innerHTML=B.map((b,i)=>{if(b[2])return`<div class="br soon"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p class="bd">${T.soon[L]}</p></div></div></div>`;const a=L?en1[i]:b[1];return`<div class="br"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p>${a}</p></div></div><div class="acts"><a href="tel:16903">${ic('phone')}${T.call[L]} 16903</a><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Al-Kazzaz restaurant '+en1[i])}" target="_blank" rel="noopener">${ic('map')}${T.map[L]}</a></div></div>`}).join('');
 const t=L?(L==4?'卡扎兹餐厅 | Al-Kazzaz':'Al-Kazzaz Restaurants'):'مطاعم القزاز | Al-Kazzaz';document.title=t;
 const md=document.querySelector('meta[name=description]');if(md)md.content=T.desc[L];
 try{localStorage.setItem('lng',L)}catch(e){}}
 $('#lang').onclick=e=>{const b=e.target.closest('button');if(b){L=+b.dataset.l;render();if(typeof closeSub==='function')closeSub()}};
-$('#cats').onclick=e=>{const b=e.target.closest('button');if(b){cat=+b.dataset.c;render();$('#t'+cat).focus({preventScroll:true});$('#t'+cat).scrollIntoView({block:'nearest',inline:'center'})}};
+$('#cats').onclick=e=>{const b=e.target.closest('button');if(b){resetDishSearch();cat=+b.dataset.c;render();$('#t'+cat).focus({preventScroll:true});$('#t'+cat).scrollIntoView({block:'nearest',inline:'center'})}};
 const sub=$('#sub');const closeSub=()=>{sub.hidden=true;document.querySelectorAll('#strip .chip').forEach(x=>x.setAttribute('aria-expanded','false'))};
 const goMenu=()=>$('#menu').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
 $('#strip').onclick=e=>{const b=e.target.closest('button[data-c]');if(!b)return;const ids=b.dataset.c.split(',').map(Number);
-if(ids.length===1){closeSub();cat=ids[0];render();goMenu();return}
+if(ids.length===1){closeSub();resetDishSearch();cat=ids[0];render();goMenu();return}
 const open=b.getAttribute('aria-expanded')==='true';closeSub();if(open)return;
 sub.innerHTML=ids.map(i=>`<button type="button" data-c="${i}">${em(ICONS[i])}${C[i].n[L]}</button>`).join('');sub.hidden=false;b.setAttribute('aria-expanded','true');sub.querySelector('button').focus({preventScroll:true});const st=document.querySelector('.strip');scrollTo({top:Math.max(0,scrollY+st.getBoundingClientRect().top-72),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})};
-sub.onclick=e=>{const b=e.target.closest('button[data-c]');if(b){cat=+b.dataset.c;closeSub();render();goMenu()}};
+sub.onclick=e=>{const b=e.target.closest('button[data-c]');if(b){resetDishSearch();cat=+b.dataset.c;closeSub();render();goMenu()}};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sub.hidden){const o=document.querySelector('#strip .chip[aria-expanded=true]');closeSub();o&&o.focus()}});
 document.addEventListener('click',e=>{if(!sub.hidden&&!e.target.closest('#strip,#sub'))closeSub()});
-$('#tiles').onclick=e=>{const a=e.target.closest('a[data-c]');if(a){cat=+a.dataset.c;render()}};
+$('#tiles').onclick=e=>{const a=e.target.closest('a[data-c]');if(a){resetDishSearch();cat=+a.dataset.c;render()}};
 try{const q=new URLSearchParams(location.search).get('lang');const i=LC.indexOf(q);if(i>=0)L=i;else{const s=+localStorage.getItem('lng');if(s>=0&&s<5&&localStorage.getItem('lng')!==null)L=s}}catch(e){}
 $('#y').textContent=new Date().getFullYear();
 {const r0=render;render=function(){r0();window.__musLabels&&window.__musLabels()}}
@@ -647,7 +688,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)hide();else
 addEventListener('pagehide',hide);addEventListener('pageshow',()=>{if(resume&&!document.hidden){resume=false;au.play().catch(()=>{})}});
 const sl=document.getElementById('mvr');
 const paint=()=>{sl.value=Math.round((muted?0:vol)*100);sl.style.setProperty('--p',sl.value+'%');box.classList.toggle('muted',muted||vol===0);au.volume=vol;au.muted=muted;const m=document.getElementById('mmu');m.setAttribute('aria-label',muted?T.mu4[L]:T.mu3[L]);m.setAttribute('aria-pressed',muted);try{sessionStorage.setItem('mvol',vol);sessionStorage.setItem('mmute',muted?'1':'0')}catch(e){}};
-const labels=()=>{box.setAttribute('aria-label',T.mu5[L]);sl.setAttribute('aria-label',T.mu6[L]);paint()};
+const labels=()=>{document.getElementById('music-toggle').setAttribute('aria-label',T.mu5[L]);box.setAttribute('aria-label',T.mu5[L]);sl.setAttribute('aria-label',T.mu6[L]);paint()};
 window.__musLabels=labels;
 let dur=0;const go=()=>{if(started)return;started=true;['pointerdown','keydown','touchend','click'].forEach(e=>removeEventListener(e,go,true));
  const d=au.duration;if(isFinite(d)&&d>20&&TR[ti]!=='clip'){try{au.currentTime=d*(.05+Math.random()*.8)}catch(e){}}
@@ -658,6 +699,12 @@ au.addEventListener('error',()=>{box.hidden=true});
 sl.oninput=()=>{vol=sl.value/100;muted=false;paint()};
 document.getElementById('mpv').onclick=()=>skip(-1);document.getElementById('mnx').onclick=()=>skip(1);
 document.getElementById('mmu').onclick=()=>{muted=!muted;if(!muted&&vol===0)vol=.3;paint()};
+const toggle=document.getElementById('music-toggle');
+const collapse=()=>{box.classList.remove('open');toggle.setAttribute('aria-expanded','false')};
+toggle.onclick=()=>{const open=box.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))};
+document.addEventListener('click',e=>{if(!box.contains(e.target))collapse()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open')){collapse();toggle.focus()}});
+addEventListener('scroll',collapse,{passive:true});
 paint();window.__aud=au;window.__musId=()=>TR[ti]})();
 
 /* subtle grill VFX: faint smoke drift over the site + embers at the footer. Pure canvas, paused off-screen/hidden, off for reduced motion */
