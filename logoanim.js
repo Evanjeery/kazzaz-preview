@@ -59,7 +59,7 @@ window.__logo={get ph(){return ph},get t(){return pt},go(p,t){ph=p;pt=t||0;struc
 const setPh=(p)=>{ph=p;pt=0};
 let last=performance.now();
 function tick(now){requestAnimationFrame(tick);let rdt=Math.min(1,(now-last)/1000)*cfg.speed,dt=Math.min(.05,(now-last)/1000)*cfg.speed;last=now;if(!on||window.__motionPaused&&window.__motionPaused())return;
- const r=rect();const viewable=vis;
+ const r=rect();const viewable=vis;if(!vis){g.clearRect(0,0,W*D,H*D);return;}
  g.setTransform(D,0,0,D,0,0);g.clearRect(0,0,W,H);
  pt+=rdt;hcx=cx;hs=u*.9;
  const ux=u*1.25,S=u*1.2; /* figure scales */
