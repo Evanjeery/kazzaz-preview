@@ -43,6 +43,7 @@ nav .lk:hover{color:var(--gold2);border-color:var(--orange)}
 /* hero */
 .hero{position:relative;background:var(--ink);color:#f7efe0;overflow:hidden;isolation:isolate}
 .hero .poster,.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+@media(min-aspect-ratio:1/1){.hero video.pv{object-fit:contain}.hero .poster.pb{filter:blur(28px) brightness(.75);transform:scale(1.2)}}
 .hero video{opacity:0;transition:opacity 1.2s ease}
 .hero video.on{opacity:1}
 .hero .veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(22,18,15,.8),rgba(22,18,15,.35) 60%,rgba(22,18,15,.6)),linear-gradient(rgba(22,18,15,.15),rgba(22,18,15,.7))}
@@ -196,7 +197,7 @@ footer>*{position:relative;z-index:2}
 .gal::before{content:"";position:absolute;inset:0;background-image:var(--star);background-size:80px 80px;opacity:.06}
 .gal .wrap{position:relative}.gal h2{color:var(--gold2)}
 .gal .sec-h{text-align:center;display:flex;flex-direction:column;align-items:center}
-.gst{position:relative;margin:34px auto 0;width:min(100%,880px,calc(68vh*4/3));aspect-ratio:4/3;border:2px solid var(--gold);border-radius:20px;box-shadow:0 0 0 6px rgba(201,150,44,.12),0 22px 60px rgba(0,0,0,.5),0 0 40px rgba(230,126,34,.15);overflow:hidden;background:#120d09;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.gst{position:relative;margin:34px auto 0;width:min(100%,560px,calc(70vh*4/5));aspect-ratio:4/5;border:2px solid var(--gold);border-radius:20px;box-shadow:0 0 0 6px rgba(201,150,44,.12),0 22px 60px rgba(0,0,0,.5),0 0 40px rgba(230,126,34,.15);overflow:hidden;background:#120d09;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
 .gst::after{content:"";position:absolute;inset:8px;border:1px solid rgba(232,196,104,.55);border-radius:13px;pointer-events:none;z-index:5}
 .gs{position:absolute;inset:0;opacity:0;will-change:transform,opacity}
 .gs.on{opacity:1}
@@ -207,7 +208,7 @@ footer>*{position:relative;z-index:2}
 .gdots{display:flex;justify-content:center;gap:9px;margin-top:18px;flex-wrap:wrap}
 .gdots button{width:9px;height:9px;border-radius:50%;border:1px solid var(--gold);background:transparent;padding:0;cursor:pointer;transition:background .3s,transform .3s}
 .gdots button.on{background:var(--gold);transform:scale(1.35)}
-@media(max-width:700px){.gst{width:min(100%,calc(72vh));aspect-ratio:1/1;border-radius:16px;margin-top:24px}.gnv{width:36px;height:36px}.gnv.p{left:8px}.gnv.n{right:8px}}
+@media(max-width:700px){.gst{width:min(100%,calc(72vh*4/5));aspect-ratio:4/5;border-radius:16px;margin-top:24px}.gnv{width:36px;height:36px}.gnv.p{left:8px}.gnv.n{right:8px}}
 @media(max-width:360px){.gst{border-radius:12px}.gst::after{inset:6px}}
 @media(prefers-reduced-motion:reduce){.gs{transition:none!important}}
 #mus.wait{animation:wp 1s ease-in-out infinite}@keyframes wp{50%{opacity:.45}}
@@ -327,7 +328,7 @@ section{padding:52px 5vw}
 <a class="fab" href="tel:16903" aria-label="16903"><svg class="ic"><use href="#i-phone"/></svg></a>
 
 <script>
-const VIDEOS=['135131', '223565', '248445', '252077', '262458', '112040', '131220', '55718', '266835', '77540', '32537396', '38144359', '7574281', '7575431', '7575443'],FOOD=['20131338',  '30356622', '3209830', '32546598',  '39307446', '7367890','27906026','35007854','5528177'];
+const VIDEOS=['135131', '223565', '248445', '252077', '262458', '112040', '131220', '55718', '266835', '77540', '32537396', '38144359', '7574281', '7575431', '7575443'],FOOD=['20131338',  '30356622', '3209830', '32546598',  '39307446', '7367890','27906026','35007854','5528177','u1','u2','u3'];
 const LC=['ar','en','de','fr','zh'];
 const T={
 brand:["القزاز","Al-Kazzaz","Al-Kazzaz","Al-Kazzaz","卡扎兹"],
@@ -595,9 +596,9 @@ poster.src='media/hero-'+cur+'.webp';
 if(rm||slow){window.__rdy.v=1;return}
 const mk=()=>{const v=document.createElement('video');v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='auto';v.setAttribute('aria-hidden','true');v.tabIndex=-1;hero.insertBefore(v,poster.nextSibling);return v};
 let active=null,nextPre=null;
-const prefetch=()=>{if(nextPre)return;const id=foodNext?pickF(lastF):pick(lastH);if(foodNext)lastF=id;else lastH=id;const v=mk();v.preload='auto';v.src='media/hero-'+id+'.mp4';nextPre={id,v}};
-const play=(id,pv)=>{const v=pv||mk();if(!pv)v.src='media/hero-'+id+'.mp4';
-const go=()=>{v.play().then(()=>{v.classList.add('on');poster.src='media/hero-'+id+'.webp';window.__rdy.v=1;if(active){const o=active;o.classList.remove('on');setTimeout(()=>o.remove(),1400)}active=v;setTimeout(prefetch,1500)}).catch(()=>{v.remove();window.__rdy.v=1})};
+const prefetch=()=>{if(nextPre)return;const id=foodNext?pickF(lastF):pick(lastH);if(foodNext)lastF=id;else lastH=id;const v=mk();if(/^u/.test(id))v.classList.add('pv');v.preload='auto';v.src='media/hero-'+id+'.mp4';nextPre={id,v}};
+const play=(id,pv)=>{const v=pv||mk();if(/^u/.test(id))v.classList.add('pv');if(!pv)v.src='media/hero-'+id+'.mp4';
+const go=()=>{v.play().then(()=>{v.classList.add('on');poster.src='media/hero-'+id+'.webp';poster.classList.toggle('pb',/^u/.test(id));window.__rdy.v=1;if(active){const o=active;o.classList.remove('on');setTimeout(()=>o.remove(),1400)}active=v;setTimeout(prefetch,1500)}).catch(()=>{v.remove();window.__rdy.v=1})};
 if(v.readyState>=3)go();else v.addEventListener('canplaythrough',go,{once:true});
 v.addEventListener('ended',()=>{let n=nextPre;nextPre=null;if(n){cur=n.id}else if(foodNext){cur=pickF(lastF);lastF=cur}else{cur=pick(lastH);lastH=cur}foodNext=!foodNext;play(cur,n&&n.v)},{once:true});
 v.addEventListener('error',()=>{v.remove();window.__rdy.v=1},{once:true})};
@@ -664,9 +665,9 @@ window.__ignite=ignite;setTimeout(()=>{ignite();setInterval(ignite,90000)},9000)
 document.addEventListener('visibilitychange',()=>document.hidden?stop():go());go();window.__fx=1})();
 
 /* gallery: stacked slides, springy rotating transitions, auto 5s, pauses on hover/hold/focus, swipe */
-(()=>{const st=document.getElementById('gst');if(!st)return;const N=8,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const alts=['','','','','','','',''];const sl=[],dots=document.getElementById('gd');
-for(let i=1;i<=N;i++){const d=document.createElement('div');d.className='gs'+(i===1?' on':'');const im=new Image();im.src='media/gal-'+i+'.webp';im.alt=alts[i-1];im.decoding='async';if(i>1)im.loading='lazy';im.draggable=false;d.appendChild(im);st.insertBefore(d,st.firstChild);sl.unshift(d);const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',i+' / '+N);b.onclick=()=>go(i-1,i-1>cur?1:-1);dots.appendChild(b)}
+(()=>{const st=document.getElementById('gst');if(!st)return;const N=20,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const alts=Array(20).fill('');const sl=[],dots=document.getElementById('gd');
+for(let i=1;i<=N;i++){const d=document.createElement('div');d.className='gs'+(i===1?' on':'');const im=new Image();im.src='media/gal-'+i+'.webp';im.alt=alts[i-1];im.onload=()=>{if(im.naturalWidth===im.naturalHeight)im.style.objectFit='contain'};im.decoding='async';if(i>1)im.loading='lazy';im.draggable=false;d.appendChild(im);st.insertBefore(d,st.firstChild);sl.unshift(d);const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',i+' / '+N);b.onclick=()=>go(i-1,i-1>cur?1:-1);dots.appendChild(b)}
 sl.reverse();const db=[...dots.children];let cur=0,busy=false,tm=0,hold=false,vis=false,fx=0;db[0].classList.add('on');
 const EF=['slide','fade','zoom','tilt','slide','blur'];const SP='cubic-bezier(.34,1.45,.5,1)',SM='cubic-bezier(.22,.8,.3,1)';
 const rtl=()=>document.documentElement.dir==='rtl';
