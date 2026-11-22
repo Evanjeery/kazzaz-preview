@@ -256,6 +256,9 @@ section{padding:52px 5vw}
 @media(max-width:420px){.tbl{--w:3.1rem!important;column-gap:4px}.tbl.wide{--w:4.9rem!important}.tbl>.h i{font-size:.62rem;padding:3px 3px}.btn{padding:12px 18px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+/* Verified branch details */
+.branch-info{margin:0 0 14px;padding:12px 14px;background:rgba(201,150,44,.07);border-radius:6px;font-size:.9rem}
+.branch-info p{margin:0 0 5px}.branch-info p:last-child{margin-bottom:0}.branch-info small{display:block;color:var(--mut);line-height:1.7}.branch-info a{color:var(--price);text-underline-offset:3px}
 /* Dish search and compact mobile music controls */
 .menu-search{max-width:720px;margin:0 auto 28px}
 .menu-search label{display:block;font-weight:700;margin-bottom:8px;color:var(--ink)}
@@ -269,11 +272,11 @@ section{padding:52px 5vw}
 .music-panel{display:flex;align-items:center;gap:6px}.music-toggle{display:none}
 @media(max-width:820px){
 html{scroll-padding-bottom:90px}footer{padding-bottom:110px}
-html[dir] .mus{left:12px;right:auto;inset-inline-end:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);padding:0;border-radius:50%;max-width:none}
+html[dir] .mus{inset-inline-start:auto;inset-inline-end:auto;left:12px;right:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);padding:0;border-radius:50%;max-width:none}
 .music-toggle{display:grid;width:50px;height:50px;background:var(--ink);color:var(--gold2);font-size:28px;border:0}
 .music-panel{display:none;position:absolute;left:0;bottom:64px;background:rgba(22,18,15,.98);padding:12px;border:1px solid var(--gold);border-radius:18px;box-shadow:0 8px 24px #0005;max-width:calc(100vw - 24px)}
 .mus.open .music-panel{display:flex}
-html[dir] .fab{left:auto;right:12px;inset-inline-start:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:50px;height:50px}
+html[dir] .fab{inset-inline-start:auto;inset-inline-end:auto;left:auto;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:50px;height:50px}
 .mr{width:100px}.mb.sm{width:40px;height:40px}
 }
 
@@ -594,6 +597,9 @@ const ICONS=['1f3f7', '1f959', '1f354', '1f357', '1f37d', '1f372', '1f958', '1f3
 const em=e=>`<svg class="em" aria-hidden="true" viewBox="0 0 36 36"><use href="#e-${e}"/></svg>`;
 const ic=n=>`<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 const $=s=>document.querySelector(s);let L=0,cat=0;
+const branchHours={1:{url:'https://www.google.com/maps/search/?api=1&query=Kazaz&query_place_id=ChIJ9VVEkTEVWBQRMF1MpdqvKr4'}};
+const BI={hours:['يوميًا: ٧ صباحًا – ٣ صباح اليوم التالي','Daily: 7 AM – 3 AM next day','Täglich: 7 Uhr bis 3 Uhr am Folgetag','Tous les jours : 7 h à 3 h le lendemain','每天：早上7点至次日凌晨3点'],source:['حسب خرائط Google · مراجعة ٢٢ نوفمبر ٢٠٢٦','Google Maps · checked 22 Nov 2026','Google Maps · geprüft am 22.11.2026','Google Maps · vérifié le 22 nov. 2026','Google地图 · 核查于2026年11月22日'],note:['قد تختلف المواعيد في الإجازات.','Holiday hours may differ.','Feiertagszeiten können abweichen.','Les horaires peuvent changer les jours fériés.','节假日营业时间可能不同。'],delivery:['للتأكد من التوصيل لعنوانك، اتصل بـ','To confirm delivery to your address, call','Für die Lieferung an Ihre Adresse anrufen:','Pour confirmer la livraison à votre adresse, appelez le','确认是否配送到您的地址，请致电']};
+const branchDetails=i=>`<div class="branch-info">${branchHours[i]?`<p>${BI.hours[L]}</p><small><a href="${branchHours[i].url}" target="_blank" rel="noopener">${BI.source[L]}</a><br>${BI.note[L]}</small>`:''}<p>${BI.delivery[L]} <a href="tel:16903">16903</a></p></div>`;
 const SQ={label:['ابحث باسم الصنف','Search by dish name','Nach Gericht suchen','Rechercher un plat','搜索菜品'],hint:['مثلاً: شاورما أو حواوشي','Try shawarma or hawawshi','Zum Beispiel Schawarma','Ex. chawarma ou hawawchi','例如：沙威玛'],clear:['مسح','Clear','Löschen','Effacer','清除'],empty:['مفيش أصناف مطابقة. جرّب اسم تاني.','No matching dishes. Try another name.','Keine passenden Gerichte.','Aucun plat trouvé. Essayez un autre nom.','没有匹配的菜品，请换个名称。'],found:['نتائج البحث','Search results','Suchergebnisse','Résultats','搜索结果']};
 let dishQuery='';
 const normDish=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0640]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').trim();
@@ -603,7 +609,7 @@ $('#cats').hidden=!!q;$('#search-clear').hidden=!dishQuery;$('#search-label').te
 if(!q){const c=C[cat];$('#mc').setAttribute('aria-labelledby','t'+cat);$('#mc').innerHTML=c.of?offers():`<div class="grid">${c.g.map(grp).join('')}</div>`;$('#search-status').textContent='';return}
 let count=0,html='';
 C.forEach(c=>{if(c.of){const rows=OF.filter(o=>match('الدفا '+o[0]+' '+o[1]+' '+tr(o[1])));if(rows.length){count+=rows.length;html+=`<h3 class="search-category">${c.n[L]}</h3>`+offers(rows)}return}
-const gs=c.g.map(g=>({...g,r:g.r.filter(r=>match(r[0]+' '+tr(r[0])+' '+(g.t||'')+' '+tr(g.t||'')))})).filter(g=>g.r.length);
+const gs=c.g.map(g=>({...g,r:g.r.filter(r=>match(r[0]+' '+tr(r[0])))})).filter(g=>g.r.length);
 if(gs.length){count+=gs.reduce((n,g)=>n+g.r.length,0);html+=`<h3 class="search-category">${c.n[L]}</h3><div class="grid">${gs.map(grp).join('')}</div>`}});
 $('#mc').setAttribute('aria-labelledby','search-label');$('#mc').innerHTML=html||`<p class="search-empty">${SQ.empty[L]}</p>`;$('#search-status').textContent=SQ.found[L]+': '+count;
 }
@@ -626,7 +632,7 @@ document.querySelectorAll('#lang button').forEach(b=>b.setAttribute('aria-presse
 $('#tiles').innerHTML=C.map((c,i)=>`<li><a class="cat${i===0?' feat':''}" href="#menu" data-c="${i}"><img class="ph" src="media/cat-${CATK[i]}.webp" alt="" loading="lazy" width="640" height="480"><h3>${c.n[L]}</h3></a></li>`).join('');
 $('#cats').innerHTML=C.map((c,i)=>`<button role="tab" id="t${i}" aria-selected="${i===cat}" data-c="${i}">${em(ICONS[i])}${c.n[L]}</button>`).join('');
 renderMenu();
-$('#br').innerHTML=B.map((b,i)=>{if(b[2])return`<div class="br soon"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p class="bd">${T.soon[L]}</p></div></div></div>`;const a=L?en1[i]:b[1];return`<div class="br"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p>${a}</p></div></div><div class="acts"><a href="tel:16903">${ic('phone')}${T.call[L]} 16903</a><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Al-Kazzaz restaurant '+en1[i])}" target="_blank" rel="noopener">${ic('map')}${T.map[L]}</a></div></div>`}).join('');
+$('#br').innerHTML=B.map((b,i)=>{if(b[2])return`<div class="br soon"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p class="bd">${T.soon[L]}</p></div></div></div>`;const a=L?en1[i]:b[1];return`<div class="br"><div class="top"><span class="pin">${ic('pin')}</span><div><h3>${b[0][L]}</h3><p>${a}</p></div></div>${branchDetails(i)}<div class="acts"><a href="tel:16903">${ic('phone')}${T.call[L]} 16903</a><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Al-Kazzaz restaurant '+en1[i])}" target="_blank" rel="noopener">${ic('map')}${T.map[L]}</a></div></div>`}).join('');
 const t=L?(L==4?'卡扎兹餐厅 | Al-Kazzaz':'Al-Kazzaz Restaurants'):'مطاعم القزاز | Al-Kazzaz';document.title=t;
 const md=document.querySelector('meta[name=description]');if(md)md.content=T.desc[L];
 try{localStorage.setItem('lng',L)}catch(e){}}
