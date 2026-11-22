@@ -642,7 +642,7 @@ if(n)h+=`<span></span>${x.c.map(k=>`<span class="h"><i>${CL[k][L]}</i></span>`).
 x.r.forEach(([a,p,d])=>{h+=nm(a);for(let i=0;i<(n||1);i++){const label=String(n?CL[x.c[i]][L]:T.cur[L]).replace(/&/g,"&amp;").replace(/"/g,"&quot;");const v=p[i];h+=v?`<b data-label="${label}"${v.includes('/')?' dir="rtl"':''}>${v}</b>`:`<b data-label="${label}" class="na" aria-label="—">–</b>`}if(d)h+=`<span class="d" lang="${L?LC[L]:'ar'}">${tr(d)}</span>`});
 h+='</div>';if(x.n)h+=`<p class="gn" lang="${L?LC[L]:'ar'}">${tr(x.n)}</p>`;return h+'</div>'};
 const offers=(rows=OF)=>`<div class="offers">${rows.map(o=>`<div class="of"><em>${T.newb[L]}</em><h3>${L?'Al-Dafa '+o[0]:AR('الدفا '+o[0])}</h3><p lang="${L?LC[L]:'ar'}">${tr(o[1])}${L?`<small lang="ar" dir="rtl">${o[1]}</small>`:''}</p><div class="pr"><b>${o[3]}<span>${T.cur[L]}</span></b>${o[2]?`<s>${o[2]}</s>`:''}</div></div>`).join('')}</div><p class="gn" style="max-width:720px;margin-inline:auto">${T.offn[L]}</p>`;
-function render(){
+function render(){document.documentElement.classList.toggle("large-text",innerWidth<=480&&parseFloat(getComputedStyle(document.documentElement).fontSize)>=24);
 document.documentElement.lang=LC[L];document.documentElement.dir=L?'ltr':'rtl';
 document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T[e.dataset.i][L]);
 document.querySelectorAll('#lang button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.l===L));
