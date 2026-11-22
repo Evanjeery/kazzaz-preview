@@ -294,6 +294,8 @@ html{scroll-padding-top:calc(var(--nav-height,100px) + 15px)}.tabs,.subrow{top:v
 .strip .chip{max-width:100%;white-space:normal;text-align:start}.strip .chip span{min-width:0;overflow-wrap:anywhere}.strip .chip .ic{flex-shrink:0}
 
 .br div,.br h3,.br p{min-width:0;max-width:100%;overflow-wrap:anywhere}
+
+.large-text .tbl{display:block}.large-text .tbl>.h{display:none}.large-text .tbl>.nm{display:block;width:100%;padding-top:16px}.large-text .tbl>b{display:inline-flex;flex-direction:column;vertical-align:top;align-items:flex-start;max-width:100%;margin-inline-end:12px;padding-block:7px}.large-text .tbl>b::before{content:attr(data-label);font:500 .65rem/1.5 var(--sans);color:var(--mut);white-space:normal}.large-text .tbl>.d{display:block}
 </style>
 <noscript><style>.menu-search,.tabs,.strip,.subrow,.mus{display:none!important}</style></noscript></head>
 <body><div id="ld" aria-hidden="true"><img src="assets/logo.webp" alt="" width="110" height="110"><i></i></div><noscript><style>#ld{display:none}</style></noscript>
@@ -637,7 +639,7 @@ const nm=s=>L?`<span class="nm"><span class="tn" lang="${LC[L]}">${tr(s)}</span>
 const grp=x=>{const n=x.c.length;const wide=x.r.some(([a,p])=>p.some(v=>v.includes('/')));
 let h=`<div class="card">${x.t?`<h3>${L?`<span lang="${LC[L]}">${tr(x.t)}</span><small class="ar2" lang="ar" dir="rtl">${x.t}</small>`:AR(x.t)}</h3>`:''}<div class="tbl${wide?' wide':''}" style="--n:${n||1};--w:${wide?'5.6rem':'4.2rem'}">`;
 if(n)h+=`<span></span>${x.c.map(k=>`<span class="h"><i>${CL[k][L]}</i></span>`).join('')}`;
-x.r.forEach(([a,p,d])=>{h+=nm(a);for(let i=0;i<(n||1);i++){const v=p[i];h+=v?`<b${v.includes('/')?' dir="rtl"':''}>${v}</b>`:`<b class="na" aria-label="—">–</b>`}if(d)h+=`<span class="d" lang="${L?LC[L]:'ar'}">${tr(d)}</span>`});
+x.r.forEach(([a,p,d])=>{h+=nm(a);for(let i=0;i<(n||1);i++){const label=String(n?CL[x.c[i]][L]:T.cur[L]).replace(/&/g,"&amp;").replace(/"/g,"&quot;");const v=p[i];h+=v?`<b data-label="${label}"${v.includes('/')?' dir="rtl"':''}>${v}</b>`:`<b data-label="${label}" class="na" aria-label="—">–</b>`}if(d)h+=`<span class="d" lang="${L?LC[L]:'ar'}">${tr(d)}</span>`});
 h+='</div>';if(x.n)h+=`<p class="gn" lang="${L?LC[L]:'ar'}">${tr(x.n)}</p>`;return h+'</div>'};
 const offers=(rows=OF)=>`<div class="offers">${rows.map(o=>`<div class="of"><em>${T.newb[L]}</em><h3>${L?'Al-Dafa '+o[0]:AR('الدفا '+o[0])}</h3><p lang="${L?LC[L]:'ar'}">${tr(o[1])}${L?`<small lang="ar" dir="rtl">${o[1]}</small>`:''}</p><div class="pr"><b>${o[3]}<span>${T.cur[L]}</span></b>${o[2]?`<s>${o[2]}</s>`:''}</div></div>`).join('')}</div><p class="gn" style="max-width:720px;margin-inline:auto">${T.offn[L]}</p>`;
 function render(){
@@ -790,6 +792,6 @@ window.__gal={go:()=>go(cur+1,1),cur:()=>cur}})();
 /* logo + phoenix intro: loads after the page is idle, skipped on data-saver / very slow links / reduced motion; the static logo stays otherwise */
 (()=>{const c=navigator.connection||{};if(c.saveData||/(^|-)2g$/.test(c.effectiveType||'')||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const go=()=>{const s=document.createElement('script');s.src='media/logoanim.js';s.async=true;document.body.appendChild(s)};const idle=()=>('requestIdleCallback'in window?requestIdleCallback(go,{timeout:4000}):setTimeout(go,2500));if(document.readyState==='complete')idle();else addEventListener('load',idle,{once:true})})();
 </script>
-<script>(()=>{const n=document.querySelector("nav");const fit=()=>document.documentElement.style.setProperty("--nav-height",Math.ceil(n.getBoundingClientRect().height)+"px");fit();addEventListener("resize",fit);if("ResizeObserver" in window)new ResizeObserver(fit).observe(n)})();</script></body>
+<script>(()=>{const n=document.querySelector("nav");const fit=()=>{document.documentElement.style.setProperty("--nav-height",Math.ceil(n.getBoundingClientRect().height)+"px");document.documentElement.classList.toggle("large-text",innerWidth<=480&&parseFloat(getComputedStyle(document.documentElement).fontSize)>=24)};fit();addEventListener("resize",fit);if("ResizeObserver" in window)new ResizeObserver(fit).observe(n)})();</script></body>
 </html>
 <!-- v3 -->
