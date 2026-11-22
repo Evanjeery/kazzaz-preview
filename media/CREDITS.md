@@ -22,3 +22,7 @@ All clips are from Pixabay and used under the Pixabay Content License (free for 
 # Pexels clips (Pexels licence, free to use, no watermark)
 
 Food on fire: 20131338, 30356622, 3209830, 32546598, 39307446, 7367890 (checked: no visible brand or logo). Egyptian artifacts and sculptures: 32537396, 38144359, 7574281, 7575431, 7575443. Page URL pattern: https://www.pexels.com/video/ID/ . The hero alternates a heritage clip and a cooking clip.
+
+# Historical Phoenix sprite
+
+The retired Phoenix sprite in `assets/phoenix-sheet.b64` was rendered from "Phoenix" by NORBERTO-3D: https://sketchfab.com/3d-models/phoenix-243fea4f846f44d18d37bf371272b7ec . Licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ . Changes: rendered into a monochrome animated sprite sheet. It is retained here for history, is not used by the current animation, and is no longer included in the deployed preview.
