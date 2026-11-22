@@ -1,8 +1,8 @@
-/* TEMPORARY no-bird version (owner request Nov 22): logo holds 60 s -> burns to ash/smoke -> gone 60 s -> smoke and fire return and the logo reappears. Previous bird version is in git history. Original header: phoenix (Phoenix by NORBERTO-3D, CC-BY 4.0, rendered sprite sheet) flies in -> fog -> logo (60 s) -> burns to ash -> phoenix rises, shakes off ash, flies away -> repeats 30 s later. Set scene deferred. */
+/* TEMPORARY no-bird version: logo holds 60 s -> burns to ash/smoke -> gone 30 s -> smoke and fire return and the logo reappears. Previous bird version is in git history. Original header: phoenix (Phoenix by NORBERTO-3D, CC-BY 4.0, rendered sprite sheet) flies in -> fog -> logo (60 s) -> burns to ash -> phoenix rises, shakes off ash, flies away -> repeats 30 s later. Set scene deferred. */
 (()=>{
 const img=document.querySelector('.arch img');if(!img)return;
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm)return;
-const cfg=Object.assign({hold:60,gap:60,speed:1,first:.4},window.__logoCfg||{});
+const cfg=Object.assign({hold:60,gap:30,speed:1,first:.4},window.__logoCfg||{});
 const mob=innerWidth<820,rnd=(a,b)=>a+Math.random()*(b-a),cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),ez=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,eo=t=>1-Math.pow(1-t,3);
 const cv=document.createElement('canvas');cv.setAttribute('aria-hidden','true');cv.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:60;pointer-events:none';document.body.appendChild(cv);
 const g=cv.getContext('2d');let W,H,D=Math.min(devicePixelRatio||1,mob?1.25:1.6);
@@ -34,8 +34,11 @@ const SM=[],FL=[],AS=[];let heap=0;
 const smoke=(x,y,r,a,vx,vy,life)=>SM.push({x,y,r,a,vx,vy,t:0,life,gr:rnd(.6,1.4)});
 function drawSmoke(dt){for(let i=SM.length-1;i>=0;i--){const p=SM[i];p.t+=dt;if(p.t>p.life){SM.splice(i,1);continue}p.x+=p.vx*dt;p.y+=p.vy*dt;p.vx*=.985;const k=p.t/p.life,r=p.r*(1+k*p.gr),al=p.a*Math.sin(Math.PI*Math.min(1,k*1.15))*(1-k*.3);
  const gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,r);gr.addColorStop(0,'rgba(6,6,8,'+al+')');gr.addColorStop(.6,'rgba(10,10,12,'+al*.55+')');gr.addColorStop(1,'rgba(10,10,12,0)');g.fillStyle=gr;g.beginPath();g.arc(p.x,p.y,r,0,7);g.fill()}}
-function drawFire(dt){g.globalCompositeOperation='lighter';for(let i=FL.length-1;i>=0;i--){const p=FL[i];p.t+=dt;if(p.t>p.life){FL.splice(i,1);continue}p.x+=p.vx*dt+Math.sin(p.t*9+p.ph)*10*dt;p.y+=p.vy*dt;const k=p.t/p.life,r=p.r*(1-k*.6);
- const gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,r);gr.addColorStop(0,'rgba(255,255,255,'+(1-k)*.8+')');gr.addColorStop(.5,'rgba(170,170,170,'+(1-k)*.5+')');gr.addColorStop(1,'rgba(60,60,60,0)');g.fillStyle=gr;g.beginPath();g.arc(p.x,p.y,r,0,7);g.fill()}g.globalCompositeOperation='source-over'}
+const FC=window.__fireColor!=='gray'?{o:'255,120,20',m:'255,190,70',c:'255,245,200'}:{o:'150,150,150',m:'215,215,215',c:'255,255,255'};
+function drawFire(dt){g.globalCompositeOperation='lighter';for(let i=FL.length-1;i>=0;i--){const p=FL[i];p.t+=dt;if(p.t>p.life){FL.splice(i,1);continue}p.x+=p.vx*dt+Math.sin(p.t*9+p.ph)*16*dt;p.y+=p.vy*dt;const k=p.t/p.life,h=p.r*4.2*(1-k*.6),w=p.r*(1-k*.7)*.9,al=Math.sin(Math.PI*Math.min(1,k*1.1+.08))*.55;
+ const sw=Math.sin(p.t*12+p.ph)*w*.6;
+ const tongue=(ww,hh,col,a)=>{const gr=g.createLinearGradient(0,0,0,-hh);gr.addColorStop(0,'rgba('+col+','+a+')');gr.addColorStop(.6,'rgba('+col+','+a*.5+')');gr.addColorStop(1,'rgba('+col+',0)');g.fillStyle=gr;g.beginPath();g.moveTo(-ww,0);g.bezierCurveTo(-ww*1.2,-hh*.3,-ww*.3+sw*.5,-hh*.7,sw,-hh);g.bezierCurveTo(ww*.3+sw*.5,-hh*.65,ww*1.2,-hh*.3,ww,0);g.closePath();g.fill()};
+ g.save();g.translate(p.x,p.y);tongue(w*1.5,h,FC.o,al*.45);tongue(w,h*.8,FC.m,al*.6);tongue(w*.5,h*.5,FC.c,al*.8);g.restore()}g.globalCompositeOperation='source-over'}
 function drawAsh(dt,gy){for(let i=AS.length-1;i>=0;i--){const p=AS[i];p.vy+=160*dt*p.m;p.x+=p.vx*dt+Math.sin(p.t*5+p.ph)*8*dt;p.y+=p.vy*dt;p.t+=dt;const gnd=gy-heapH(p.x-p.cx0)*.6;if(p.y>=gnd){if(p.land){heap=Math.min(heap+p.s*.5,260)}AS.splice(i,1);continue}g.fillStyle='rgba('+p.c+','+p.c+','+p.c+','+p.a+')';g.fillRect(p.x,p.y,p.s,p.s*.7)}}
 let hcx=0,hs=1;const heapH=dx=>{const w=70*hs;return Math.max(0,(heap/260)*26*hs*(1-Math.min(1,Math.abs(dx)/w)))};
 function drawHeap(cx,gy,a){return;if(heap<1)return;const h=(heap/260)*26*hs,w=70*hs;g.save();g.globalAlpha=a;const gr=g.createLinearGradient(0,gy-h,0,gy);gr.addColorStop(0,'#9a9a9a');gr.addColorStop(1,'#2b2b2b');g.fillStyle=gr;g.beginPath();g.moveTo(cx-w,gy);g.quadraticCurveTo(cx-w*.35,gy-h*1.5,cx,gy-h);g.quadraticCurveTo(cx+w*.35,gy-h*1.5,cx+w,gy);g.closePath();g.fill();g.restore()}
@@ -45,7 +48,7 @@ const mkNoise=()=>{NZ=new Float32Array(N*N);let a=new Float32Array(N*N).map(()=>
 function prepBase(sz){oc.width=oc.height=sz;oz.clearRect(0,0,sz,sz);oz.drawImage(img,0,0,sz,sz);try{base=oz.getImageData(0,0,sz,sz)}catch(e){base=null}if(!NZ)mkNoise()}
 function burnFrame(p,x0,y0,sz,dt){/* p 0..1, x0/y0 top-left */ if(!base)return false;const out=oz.createImageData(sz,sz),s=base.data,o=out.data;const band=.16;let cnt=0;
  for(let y=0;y<sz;y++){const gy=y/sz;for(let x=0;x<sz;x++){const i=(y*sz+x)*4;if(s[i+3]<8)continue;const fx=x*N/sz,fy=y*N/sz,ix=fx|0,iy=fy|0,tx=fx-ix,ty=fy-iy,jx=(ix+1)%N,jy=(iy+1)%N,nv=(NZ[iy*N+ix]*(1-tx)+NZ[iy*N+jx]*tx)*(1-ty)+(NZ[jy*N+ix]*(1-tx)+NZ[jy*N+jx]*tx)*ty;const b=(1-gy)*.4+nv*.6;const th=p*(1+band+.05);
-  if(b<th-band){/*burned*/continue}if(b<th){const k=(th-b)/band;const v=cl(235*(1-k)+25*k,0,255);o[i]=o[i+1]=o[i+2]=v;o[i+3]=s[i+3]*(1-k*k*.85);if(Math.random()<.002*60*dt&&cnt<8){cnt++;FL.push({x:cx+(x0+x-cx)*SC,y:cy+(y0+y-cy)*SC,vx:rnd(-12,12),vy:rnd(-90,-40),r:rnd(5,12)*sz/300*SC,t:0,life:rnd(.5,1.1),ph:rnd(0,6)});if(Math.random()<.5)AS.push({x:cx+(x0+x-cx)*SC,y:cy+(y0+y-cy)*SC,vx:rnd(-20,20),vy:rnd(-10,20),m:rnd(.5,1),s:rnd(1.5,3.2)*sz/300*SC,c:(120+Math.random()*110)|0,a:rnd(.6,1),t:0,ph:rnd(0,6),land:true,cx0:hcx})}}else{o[i]=s[i];o[i+1]=s[i+1];o[i+2]=s[i+2];o[i+3]=s[i+3]}}}
+  if(b<th-band){/*burned*/continue}if(b<th){const k=(th-b)/band;const v=cl(235*(1-k)+25*k,0,255);o[i]=o[i+1]=o[i+2]=v;o[i+3]=s[i+3]*(1-k*k*.85);if(Math.random()<.003*60*dt&&cnt<14){cnt++;FL.push({x:cx+(x0+x-cx)*SC,y:cy+(y0+y-cy)*SC,vx:rnd(-12,12),vy:rnd(-70,-30),r:rnd(6,12)*sz/300*SC,t:0,life:rnd(.7,1.3),ph:rnd(0,6)});if(Math.random()<.5)AS.push({x:cx+(x0+x-cx)*SC,y:cy+(y0+y-cy)*SC,vx:rnd(-20,20),vy:rnd(-10,20),m:rnd(.5,1),s:rnd(1.5,3.2)*sz/300*SC,c:(120+Math.random()*110)|0,a:rnd(.6,1),t:0,ph:rnd(0,6),land:true,cx0:hcx})}}else{o[i]=s[i];o[i+1]=s[i+1];o[i+2]=s[i+2];o[i+3]=s[i+3]}}}
  oz.putImageData(out,0,0);g.drawImage(oc,x0,y0);return true}
 /* timeline */
 let ph='hold',pt=0,dir=1,seed=0;const T={fly:2.8,morph:1.0,rise:1.1,strike:.35,fog:3.2,burn:5.5,emerge:2.0,shake:1.6,away:3.2};
