@@ -44,8 +44,6 @@ du -ch "$OUT"/media/cat-*.webp | tail -1
 for f in assets/cat-*-own.b64; do [ -e "$f" ] || continue; n=$(basename "$f" -own.b64); base64 -d "$f" > "$OUT/media/$n.webp"; done
 for f in assets/gal-*.b64; do [ -e "$f" ] || continue; n=$(basename "$f" .b64); base64 -d "$f" > "$OUT/media/$n.webp"; done
 
-# Phoenix intro (strict black and white): sprite sheet of "Phoenix" by NORBERTO-3D (CC-BY 4.0), rendered by the owner's pipeline, and its player script
-base64 -d assets/phoenix-sheet.b64 > "$OUT/media/phoenix-sheet.webp"
 cp assets/logoanim.js "$OUT/media/logoanim.js"
 
 # New hero clips supplied by the owner (portrait phone videos, stored as base64 text)
