@@ -34,10 +34,10 @@ const SM=[],FL=[],AS=[];let heap=0;
 const smoke=(x,y,r,a,vx,vy,life)=>SM.push({x,y,r,a,vx,vy,t:0,life,gr:rnd(.6,1.4)});
 function drawSmoke(dt){for(let i=SM.length-1;i>=0;i--){const p=SM[i];p.t+=dt;if(p.t>p.life){SM.splice(i,1);continue}p.x+=p.vx*dt;p.y+=p.vy*dt;p.vx*=.985;const k=p.t/p.life,r=p.r*(1+k*p.gr),al=p.a*Math.sin(Math.PI*Math.min(1,k*1.15))*(1-k*.3);
  const gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,r);gr.addColorStop(0,'rgba(6,6,8,'+al+')');gr.addColorStop(.6,'rgba(10,10,12,'+al*.55+')');gr.addColorStop(1,'rgba(10,10,12,0)');g.fillStyle=gr;g.beginPath();g.arc(p.x,p.y,r,0,7);g.fill()}}
-const FC=window.__fireColor!=='gray'?{o:'255,120,20',m:'255,190,70',c:'255,245,200'}:{o:'150,150,150',m:'215,215,215',c:'255,255,255'};
-function drawFire(dt){g.globalCompositeOperation='lighter';for(let i=FL.length-1;i>=0;i--){const p=FL[i];p.t+=dt;if(p.t>p.life){FL.splice(i,1);continue}p.x+=p.vx*dt+Math.sin(p.t*9+p.ph)*16*dt;p.y+=p.vy*dt;const k=p.t/p.life,h=p.r*4.2*(1-k*.6),w=p.r*(1-k*.7)*.9,al=Math.sin(Math.PI*Math.min(1,k*1.1+.08))*.55;
+const FC=window.__fireColor==='warm'?{o:'255,120,20',m:'255,190,70',c:'255,245,200'}:{o:'150,150,150',m:'215,215,215',c:'255,255,255'};
+function drawFire(dt){g.globalCompositeOperation='lighter';for(let i=FL.length-1;i>=0;i--){const p=FL[i];p.t+=dt;if(p.t>p.life){FL.splice(i,1);continue}p.x+=p.vx*dt+Math.sin(p.t*9+p.ph)*16*dt;p.y+=p.vy*dt;const k=p.t/p.life,h=p.r*3.3*(1-k*.6),w=p.r*(1-k*.6)*1.15,al=Math.sin(Math.PI*Math.min(1,k*1.1+.08))*.42;
  const sw=Math.sin(p.t*12+p.ph)*w*.6;
- const tongue=(ww,hh,col,a)=>{const gr=g.createLinearGradient(0,0,0,-hh);gr.addColorStop(0,'rgba('+col+','+a+')');gr.addColorStop(.6,'rgba('+col+','+a*.5+')');gr.addColorStop(1,'rgba('+col+',0)');g.fillStyle=gr;g.beginPath();g.moveTo(-ww,0);g.bezierCurveTo(-ww*1.2,-hh*.3,-ww*.3+sw*.5,-hh*.7,sw,-hh);g.bezierCurveTo(ww*.3+sw*.5,-hh*.65,ww*1.2,-hh*.3,ww,0);g.closePath();g.fill()};
+ const tongue=(ww,hh,col,a)=>{const gr=g.createLinearGradient(0,0,0,-hh);gr.addColorStop(0,'rgba('+col+','+a+')');gr.addColorStop(.6,'rgba('+col+','+a*.5+')');gr.addColorStop(1,'rgba('+col+',0)');g.fillStyle=gr;g.shadowColor='rgba('+col+',.6)';g.shadowBlur=ww*1.1;g.beginPath();g.moveTo(-ww,0);g.bezierCurveTo(-ww*1.2,-hh*.3,-ww*.3+sw*.5,-hh*.7,sw,-hh);g.bezierCurveTo(ww*.3+sw*.5,-hh*.65,ww*1.2,-hh*.3,ww,0);g.closePath();g.fill()};
  g.save();g.translate(p.x,p.y);tongue(w*1.5,h,FC.o,al*.45);tongue(w,h*.8,FC.m,al*.6);tongue(w*.5,h*.5,FC.c,al*.8);g.restore()}g.globalCompositeOperation='source-over'}
 function drawAsh(dt,gy){for(let i=AS.length-1;i>=0;i--){const p=AS[i];p.vy+=160*dt*p.m;p.x+=p.vx*dt+Math.sin(p.t*5+p.ph)*8*dt;p.y+=p.vy*dt;p.t+=dt;const gnd=gy-heapH(p.x-p.cx0)*.6;if(p.y>=gnd){if(p.land){heap=Math.min(heap+p.s*.5,260)}AS.splice(i,1);continue}g.fillStyle='rgba('+p.c+','+p.c+','+p.c+','+p.a+')';g.fillRect(p.x,p.y,p.s,p.s*.7)}}
 let hcx=0,hs=1;const heapH=dx=>{const w=70*hs;return Math.max(0,(heap/260)*26*hs*(1-Math.min(1,Math.abs(dx)/w)))};
@@ -72,7 +72,7 @@ function tick(now){requestAnimationFrame(tick);let dt=Math.min(.05,(now-last)/10
  else if(ph==='strike'){const k=cl(pt/T.strike);const l=46*(1-k*k);setFig(hoverX-14*S,hoverY+88*S,S,l,1);if(k>=1&&!struck){struck=true;
    const gx=hoverX-14*S+34*S,gyy=hoverY+88*S;for(let i=0;i<(mob?26:44);i++)smoke(gx+rnd(-20,20)*u,gyy+rnd(-8,6)*u,rnd(35,90)*u,rnd(.55,.9),rnd(-140,140)*u,rnd(-110,-5)*u,rnd(2.4,3.8))}
   if(pt>=T.strike+.05)setPh('fog')}
- else if(ph==='fog'){const k=cl(pt/T.fog);phoenix(hoverX,hoverY+Math.sin(pt*4)*3,ux*.95,0,0,dir,1-ez(cl(k*1.6)),0);if(pt<2.4&&Math.random()<.7)FL.push({x:cx+rnd(-70,70)*u,y:cy+rnd(10,80)*u,vx:rnd(-12,12),vy:rnd(-110,-50),r:rnd(10,22)*u,t:0,life:rnd(.6,1.2),ph:rnd(0,6)});if(pt<2&&Math.random()<.6)smoke(hoverX+rnd(-70,70)*u,hoverY+rnd(0,80)*u,rnd(40,80)*u,.6,rnd(-60,60)*u,rnd(-40,-5)*u,rnd(1.8,3));
+ else if(ph==='fog'){const k=cl(pt/T.fog);phoenix(hoverX,hoverY+Math.sin(pt*4)*3,ux*.95,0,0,dir,1-ez(cl(k*1.6)),0);if(pt<2.4)for(let q=0;q<3;q++)if(Math.random()<.8)FL.push({x:cx+rnd(-60,60)*u,y:cy+rnd(-5,85)*u,vx:rnd(-12,12),vy:rnd(-60,-30),r:rnd(7,13)*u,t:0,life:rnd(.8,1.4),ph:rnd(0,6)});
   img.style.opacity=String(ez(cl((pt-.7)/1.8)));if(pt>=T.fog){img.style.opacity='1';setPh('hold');}}
  else if(ph==='hold'){img.style.opacity='1';if(pt>=cfg.hold){prepBase(Math.round(r.width/SC*SC));setPh('burn');img.style.opacity='1'}}
  else if(ph==='burn'){const p=cl(pt/T.burn);const s2=Math.round(r.width/SC*SC);const x0=cx-r.width/2,y0=cy-r.height/2;/* draw burning logo at scaled size */
