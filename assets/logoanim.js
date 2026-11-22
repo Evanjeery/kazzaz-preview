@@ -2,7 +2,7 @@
 (()=>{
 const img=document.querySelector('.arch img');if(!img)return;
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm)return;
-const cfg=Object.assign({hold:60,gap:30,speed:1,first:.4},window.__logoCfg||{});
+const cfg=Object.assign({hold:10,gap:20,speed:1,first:.4},window.__logoCfg||{});
 const mob=innerWidth<820,rnd=(a,b)=>a+Math.random()*(b-a),cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),ez=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,eo=t=>1-Math.pow(1-t,3);
 const cv=document.createElement('canvas');cv.setAttribute('aria-hidden','true');cv.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:60;pointer-events:none';document.body.appendChild(cv);
 const g=cv.getContext('2d');let W,H,D=Math.min(devicePixelRatio||1,mob?1.25:1.6);
